@@ -47,7 +47,7 @@ Copyright (c) 2019-present, Haoyang (Vincent) Wang
 [total-download-image]:https://img.shields.io/npm/dt/@vect/callable.svg?style=flat-square
 [license-image]: https://img.shields.io/npm/l/@vect/callable.svg?style=flat-square
 [commit-image]: https://img.shields.io/github/commit-activity/y/hoyeungw/@vect/callable?style=flat-square
-[size]: https://packagephobia.now.sh/badge?p=@vect/callable
+[size]: https://packagephobia.now.sh/badge?p=@vect/callable?style=flat-square
 
 [//]: <> (Link)
 [npm-url]: https://npmjs.org/package/@vect/callable
