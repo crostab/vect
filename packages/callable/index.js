@@ -1,2 +1,1 @@
-import { Temp } from './src/temp'
-
+export { Callable } from './src/callable'

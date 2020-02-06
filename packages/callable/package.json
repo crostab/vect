@@ -1,5 +1,5 @@
 {
-  "name": "@vect/temp",
+  "name": "@vect/callable",
   "version": "0.0.0",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
