@@ -1,0 +1,36 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "prewatch": "npm run bootstrap",
+    "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=hatsu-says -- rollup -c ../../rollup.config.js",
+    "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
+    "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-external-helpers": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-proposal-pipeline-operator": "^7.8.3",
+    "@babel/plugin-proposal-private-methods": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "lerna": "^3.20.2",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-terser": "^5.2.0"
+  }
+}
