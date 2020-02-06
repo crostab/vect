@@ -21,7 +21,18 @@ $ npm install @vect/callable
 ## Usage
 ```js
 import { Callable } from '@vect/callable'
-class CallableClass inherits
+
+class CallableClass extends Callable {
+  constructor (a, b) {
+    super(x => this.a + this.b + x)
+    this.a = a
+    this.b = b
+  }
+}
+
+const callableClass = new CallableClass(5, 4)
+console.log(callableClass(3)) // 12
+
 ```
 
 ## Meta
