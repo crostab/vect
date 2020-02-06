@@ -1,5 +1,5 @@
 .idea
 temp
 node_modules
-yarn.lock
 packages/*/dist
+yarn.lock
