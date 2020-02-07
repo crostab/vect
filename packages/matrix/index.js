@@ -1,0 +1,5 @@
+export { isMatrix, isMatrixLoose } from './src/isMatrix'
+export { transpose } from './src/transpose'
+export { width } from './src/width'
+export { size } from './src/size'
+export { coins } from './src/coins'
