@@ -1,4 +1,4 @@
-# @vect/vector
+# @vect/matrix
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,19 +10,19 @@
 [![pp install size][badge-pp-install-size]][url-pp]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/vector
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/vector
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/vector
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/vector
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/vector
-[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/@vect/vector
-[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/@vect/vector
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/vector
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/matrix
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/matrix
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/matrix
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/matrix
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/matrix
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/@vect/matrix
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/@vect/matrix
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/matrix
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/vector
-[url-github]: https://github.com/hoyeungw/@vect/vector
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector
+[url-npm]: https://npmjs.org/package/@vect/matrix
+[url-github]: https://github.com/hoyeungw/@vect/matrix
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/matrix
 
 ##### Util for array
 
@@ -32,7 +32,7 @@
 
 #### Install
 ```console
-$ npm install @vect/vector
+$ npm install @vect/matrix
 ```
 
 #### Usage

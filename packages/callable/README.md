@@ -1,13 +1,20 @@
 ## @vect/callable
 Make a class callable by inherit the class Callable.
 
-[![npm version][npm-image]][npm-url]
-[![npm quality][quality-image]][quality-url]
-[![npm download][download-image]][npm-url]
-[![npm total-download][total-download-image]][npm-url]
-[![size][size]][size-url]
-[![github commit activity][commit-image]][github-url]
-[![npm license][license-image]][npm-url]
+[//]: <> (Shields)
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/callable
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/callable
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/callable
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/callable
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/callable
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/@vect/callable
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/@vect/callable
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/callable
+
+[//]: <> (Link)
+[url-npm]: https://npmjs.org/package/@vect/callable
+[url-github]: https://github.com/hoyeungw/@vect/callable
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/callable
 
 ## Features
 

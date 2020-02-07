@@ -1,17 +1,18 @@
 # @vect
 :clubs: Simplified data analysis in JS. Easier to use array, 2d-array, objects
 
-[![npm version][npm-image]][npm-url]
-[![npm quality][quality-image]][quality-url]
-[![npm download][download-image]][npm-url]
-[![npm total-download][total-download-image]][npm-url]
-[![github commit activity][commit-image]][github-url]
-[![npm license][license-image]][npm-url]
+[![github commit last][badge-github-last-commit]][url-github]
+[![github commit total][badge-github-commit-count]][url-github]
+
+[//]: <> (Shields)
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
+[url-github]: https://github.com/hoyeungw/vect
 
 ## Features
 
 - Use out-of-box
-- ES2015 syntax
+- ES-module support
 
 ## Install
 
@@ -21,10 +22,12 @@ $ npm install @vect/<tool-name>
 
 ## Tools
 
-|                                  |                         |
-| -------------------------------- | ----------------------- |
-| [callable](packages/callable)    | Create a callable class |
-|                                  |                         |
+|                                   |                         |
+| --------------------------------- | ----------------------- |
+| [**callable**](packages/callable) | Create a callable class |
+| [**vector**](packages/vector)     | Helper for array        |
+| [**matrix**](packages/matrix)     | Helper for 2d-array     |
+|                                   |                         |
 
 ## Meta
 [LICENSE (MIT)](/LICENSE)
