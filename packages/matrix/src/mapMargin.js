@@ -5,7 +5,7 @@ export const copyRowMargin = (row, i, fn, l, r, w) => {
   return ve
 }
 
-export const mapMxMargin = (mx, fn, t, b, l, r, h, w) => {
+export const mapMargin = (mx, fn, t, b, l, r, h, w) => {
   const x = Array(h), bs = h - b
   for (let i = 0; i < t; i++) x[i] = copyRowMargin(mx[i], i, fn, l, r, w)
   for (let i = bs; i < h; i++) x[i] = copyRowMargin(mx[i], i, fn, l, r, w)

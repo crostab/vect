@@ -1,3 +1,5 @@
+export { copyMargin } from './src/copyMargin'
+export { mapMargin } from './src/mapMargin'
 export { isMatrix, isMatrixLoose } from './src/isMatrix'
 export { transpose } from './src/transpose'
 export { width } from './src/width'
