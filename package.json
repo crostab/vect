@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "build-specific": "lerna exec --scope=hatsu-says -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=@vect/foobar -- rollup -c ../../rollup.config.js",
     "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },
@@ -27,11 +27,17 @@
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "@spare/deco": "^0.0.4",
+    "@spare/logger": "^0.0.4",
+    "@spare/xr": "^0.0.4",
+    "elprimero": "^0.1.45",
     "lerna": "^3.20.2",
     "rollup": "^1.28.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-filesize": "^6.2.1",
-    "rollup-plugin-terser": "^5.2.0"
+    "rollup-plugin-terser": "^5.2.0",
+    "xbrief": "^1.0.4",
+    "@foba/foo": "^0.0.2"
   },
   "version": "0.0.0"
 }
