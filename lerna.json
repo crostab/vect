@@ -1,5 +1,7 @@
 {
   "packages": [
+    "mapper/*",
+    "miscellaneous/*",
     "packages/*"
   ],
   "version": "independent",

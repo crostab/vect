@@ -1,3 +1,4 @@
-export { copyMargin } from './src/copyMargin'
-export { mapMargin } from './src/mapMargin'
-export { map, mapMut } from './src/map'
+export { copyMargin } from './src/vector-margin/copyMargin'
+export { mapMargin } from './src/vector-margin/mapMargin'
+export { zip } from './src/zip'
+export { mapper, mutate } from '@vect/vector-mapper'

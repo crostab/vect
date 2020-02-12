@@ -24,7 +24,7 @@ $ npm install @vect/<tool-name>
 
 |                                   |                         |
 | --------------------------------- | ----------------------- |
-| [**callable**](packages/callable) | Create a callable class |
+| [**callable**](miscellaneous/callable) | Create a callable class |
 | [**vector**](packages/vector)     | Helper for array        |
 | [**matrix**](packages/matrix)     | Helper for 2d-array     |
 |                                   |                         |

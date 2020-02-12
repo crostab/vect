@@ -1,7 +1,7 @@
 {
-  "name": "@vect/matrix",
-  "version": "0.0.2",
-  "description": "Util for 2d-array",
+  "name": "@vect/columns-mapper",
+  "version": "0.0.0",
+  "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,21 +12,21 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/test.index.js"
+    "test": "node -r @babel/register test/columns-mapper.test.js"
   },
   "dependencies": {
-    "@vect/matrix-mapper": "^0.0.0",
-    "@vect/matrix-transpose": "^0.0.0",
-    "@vect/size": "^0.0.0",
-    "@vect/vector": "^0.0.1"
+  },
+  "devDependencies": {
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "keywords": [
+    "array",
+    "vector",
     "matrix",
-    "2d-array"
+    "object"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

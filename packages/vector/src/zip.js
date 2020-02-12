@@ -1,14 +1,14 @@
 /**
  * zip two arrays, return the zipped array
- * @param {Array} lv
- * @param {Array} rv
+ * @param {Array} a
+ * @param {Array} b
  * @param {function(*,*,number?):*} zipper
  * @param {number} l
  * @returns {*[]}
  */
-export const zip = (lv, rv, zipper, l) => {
-  l = l || lv.length
-  const ar = Array(l)
-  for (--l; l >= 0; l--) ar[l] = zipper(lv[l], rv[l], l)
-  return ar
+export const zip = (a, b, zipper, l) => {
+  l = l || a && a.length
+  const v = Array(l)
+  for (--l; l >= 0; l--) v[l] = zipper(a[l], b[l], l)
+  return v
 }

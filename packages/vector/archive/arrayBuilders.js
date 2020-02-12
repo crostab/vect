@@ -70,7 +70,7 @@ export function decartes (ar1, ar2, product) {
   }
   return arr
   // for (let x of ar1) {
-  //   arr.push(...ar2.map(y => product(x, y)))
+  //   arr.push(...ar2.mapper(y => product(x, y)))
   // }
 }
 

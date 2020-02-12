@@ -1,7 +1,7 @@
 import { SimpleEntries } from '@foba/foo'
 import { logger, logNeL } from '@spare/logger'
 import { deco } from '@spare/deco'
-import { unwind } from '..'
+import { unwind } from '../index'
 import { xr } from '@spare/xr'
 
 export class EntriesUnwindTest {
