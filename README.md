@@ -1,3 +1,7 @@
+<div style="text-align:center">
+	<img src="media/logo.default.png" />
+</div>
+
 # @vect
 :clubs: Simplified data analysis in JS. Easier to use array, 2d-array, objects
 
@@ -37,7 +41,7 @@ $ npm install @vect/<tool-name>
 |                                                       |                                        |
 
 ## Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)
 
 Copyright (c) 2019-present, Haoyang (Vincent) Wang
 
