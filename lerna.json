@@ -1,8 +1,8 @@
 {
   "packages": [
-    "mapper/*",
-    "miscellaneous/*",
-    "packages/*"
+    "pkg-core/*",
+    "pkg-mapper/*",
+    "pkg-util/*"
   ],
   "version": "independent",
   "npmClient": "yarn",

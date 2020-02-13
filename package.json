@@ -2,15 +2,15 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "mapper/*",
-    "miscellaneous/*",
-    "packages/*"
+    "pkg-core/*",
+    "pkg-mapper/*",
+    "pkg-util/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "build-specific": "lerna exec --scope=@vect/foobar -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=@vect/object-mapper -- rollup -c ../../rollup.config.js",
     "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },

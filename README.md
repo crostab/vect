@@ -11,7 +11,8 @@
 
 ## Features
 
-- Use out-of-box
+- Modules decoupled, so install submodule if you only need specific function
+- Lightweight and fast
 - ES-module support
 
 ## Install
@@ -22,12 +23,18 @@ $ npm install @vect/<tool-name>
 
 ## Tools
 
-|                                   |                         |
-| --------------------------------- | ----------------------- |
-| [**callable**](miscellaneous/callable) | Create a callable class |
-| [**vector**](packages/vector)     | Helper for array        |
-| [**matrix**](packages/matrix)     | Helper for 2d-array     |
-|                                   |                         |
+|                                                       |                                        |
+| ----------------------------------------------------- | -------------------------------------- |
+| [**callable**](pkg-util/callable)                     | Create a callable class                |
+| [**vector**](pkg-core/vector)                        | Functions for 1d-array(vector)         |
+| [**matrix**](pkg-core/matrix)                        | Functions for 2d-array(matrix)         |
+| [**vector-mapper**](pkg-mapper/vector-mapper)         | Mapper & mutate for vector             |
+| [**matrix-mapper**](pkg-mapper/matrix-mapper)         | Mapper & mutate for matrix             |
+| [**column-mapper**](pkg-mapper/column-mapper)         | Mapper & mutate for column in matrix   |
+| [**columns-mapper**](pkg-mapper/columns-mapper)       | Mapper & mutate for columns in matrix  |
+| [**entries-mapper**](pkg-mapper/entries-mapper)       | Mapper & mutate for entries            |
+| [**object-mapper**](pkg-mapper/object-mapper)         | Mapper & mutate for object             |
+|                                                       |                                        |
 
 ## Meta
 [LICENSE (MIT)](/LICENSE)
