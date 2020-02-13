@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Util for 2d-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,10 +15,10 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@vect/matrix-mapper": "^0.0.1",
-    "@vect/matrix-transpose": "^0.0.1",
-    "@vect/matrix-size": "^0.0.1",
-    "@vect/vector": "^0.0.2"
+    "@vect/matrix-mapper": "^0.0.4",
+    "@vect/matrix-size": "^0.0.4",
+    "@vect/matrix-transpose": "^0.0.4",
+    "@vect/vector": "^0.0.4"
   },
   "repository": {
     "type": "git",
