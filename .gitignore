@@ -1,5 +1,7 @@
 .idea
 temp
 node_modules
-packages/*/dist
+pkg-core/*/dist
+pkg-mapper/*/dist
+pkg-util/*/dist
 yarn.lock
