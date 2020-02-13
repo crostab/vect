@@ -40,4 +40,4 @@ $ npm install @vect/matrix
 ```
 
 #### Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)

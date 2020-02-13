@@ -40,4 +40,4 @@ $ npm install @vect/entries-unwind
 ```
 
 #### Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)

@@ -52,7 +52,7 @@ console.log(callableClass(3)) // 12
 ```
 
 ## Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)
 
 Copyright (c) 2019-present, Haoyang (Vincent) Wang
 

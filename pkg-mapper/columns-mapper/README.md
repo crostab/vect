@@ -41,4 +41,4 @@ $ npm install @vect/column-mapper
 ```
 
 #### Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)

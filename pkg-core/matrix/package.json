@@ -17,7 +17,7 @@
   "dependencies": {
     "@vect/matrix-mapper": "^0.0.1",
     "@vect/matrix-transpose": "^0.0.1",
-    "@vect/size": "^0.0.0",
+    "@vect/matrix-size": "^0.0.1",
     "@vect/vector": "^0.0.2"
   },
   "repository": {

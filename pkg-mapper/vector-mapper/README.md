@@ -41,4 +41,4 @@ $ npm install @vect/vector-mapper
 ```
 
 #### Meta
-[LICENSE (MIT)](/LICENSE)
+[LICENSE (MIT)](LICENSE)
