@@ -3,7 +3,7 @@
  * @param {Array} a
  * @param {Array} b
  * @param {function(*,*,number?):*} zipper
- * @param {number} l
+ * @param {number} [l]
  * @returns {*[]}
  */
 export const zip = (a, b, zipper, l) => {
