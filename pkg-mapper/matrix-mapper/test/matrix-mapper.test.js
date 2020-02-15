@@ -1,22 +1,21 @@
-import { mapper } from '../src/mapper'
-import { mutate } from '../src/mutate'
 import { logger } from '@spare/logger'
-import { decoLog } from '@spare/deco'
+import { delogger } from '@spare/deco'
+import { SimpleMatrices } from '@foba/foo'
+import { mapper } from '../src/mapper'
 
-class MapVectorTest {
+class MatrixMapperTest {
   static test () {
-    const mx = [
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9]
-    ]
-    'mapper' |> logger
-    mapper(mx, x => x * 2) |> decoLog
-    mx |> decoLog
-    'mutate' |> logger
-    mutate(mx, x => x * 2) |> decoLog
-    mx |> decoLog
+    for (const [key, mx] of Object.entries(SimpleMatrices)) {
+      key |> logger
+      'mapper' |> logger
+      mapper(mx, (x, i, j) => `(${i},${j}) ${x}`) |> delogger
+      mx |> delogger
+      'mutate' |> logger
+      mapper(mx, x => x * 2) |> delogger
+      mx |> delogger
+    }
+
   }
 }
 
-MapVectorTest.test()
+MatrixMapperTest.test()

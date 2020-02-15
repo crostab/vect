@@ -18,6 +18,7 @@
     "@vect/matrix-mapper": "^0.0.6",
     "@vect/matrix-size": "^0.0.6",
     "@vect/matrix-transpose": "^0.0.6",
+    "@vect/matrix-zipper": "^0.0.0",
     "@vect/vector": "^0.0.6"
   },
   "repository": {

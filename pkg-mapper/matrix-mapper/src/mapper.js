@@ -1,4 +1,4 @@
-import { mapper as mapAr } from '@vect/vector-mapper'
+import { mapper as mapVec } from '@vect/vector-mapper'
 import { size } from '@vect/matrix-size'
 
 /**
@@ -7,7 +7,7 @@ import { size } from '@vect/matrix-size'
  * @param {function} fn
  * @returns {*[]}
  */
-export function mapper (mx, fn) {
+export const mapper = (mx, fn) => {
   const [ht, wd] = size(mx)
-  return mapAr(mx, (r, i) => mapAr(r, (x, j) => fn(x, i, j), wd), ht)
+  return mapVec(mx, (r, i) => mapVec(r, (x, j) => fn(x, i, j), wd), ht)
 }

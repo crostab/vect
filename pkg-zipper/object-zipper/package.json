@@ -1,7 +1,7 @@
 {
-  "name": "@vect/vector",
-  "version": "0.0.6",
-  "description": "Util for array",
+  "name": "@vect/object-zipper",
+  "version": "0.0.0",
+  "description": "Zip function",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -10,13 +10,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@vect/vector-mapper": "^0.0.6",
-    "@vect/vector-zipper": "^0.0.0"
-  },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/test.index.js"
+    "test": "node -r @babel/register test/object-zipper.test.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +20,9 @@
   },
   "keywords": [
     "array",
-    "vector"
+    "vector",
+    "matrix",
+    "object"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

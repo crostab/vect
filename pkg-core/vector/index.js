@@ -1,4 +1,5 @@
 export { mapper as mapper, mutate as mutate } from './src/mapper'
+export { zipper, mutazip } from '@vect/vector-zipper'
 export { copyMargin } from './src/vector-margin/copyMargin'
 export { mapMargin } from './src/vector-margin/mapMargin'
 export { zip } from './src/zip'

@@ -4,7 +4,8 @@
   "workspaces": [
     "pkg-core/*",
     "pkg-mapper/*",
-    "pkg-util/*"
+    "pkg-util/*",
+    "pkg-zipper/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",

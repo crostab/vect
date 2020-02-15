@@ -2,7 +2,8 @@
   "packages": [
     "pkg-core/*",
     "pkg-mapper/*",
-    "pkg-util/*"
+    "pkg-util/*",
+    "pkg-zipper/*"
   ],
   "version": "0.0.6",
   "npmClient": "yarn",
