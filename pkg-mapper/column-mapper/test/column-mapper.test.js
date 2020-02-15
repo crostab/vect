@@ -1,21 +1,23 @@
-import { mapper } from '../src/mapper'
-import { logger } from '@spare/logger'
-import { decoLog } from '@spare/deco'
+import { logger, logNeL } from '@spare/logger'
+import { deca, delogNeL } from '@spare/deco'
 import { mutate } from '../src/mutate'
 import { SimpleMatrices } from '@foba/foo'
+import { ColumnMapper } from '../src/ColumnMapper'
+
+SimpleMatrices |> deca({ vu: 1 }) |> logNeL
 
 class ColumnMapperTest {
   static testMapper () {
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(mapper(v, 2, x => x * 2))
+      ColumnMapper(0)(v, x => x * 2) |> delogNeL
     }
   }
 
   static testMutate () {
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(mutate(v, 2, x => x * 2))
+      mutate(v, 2, x => x * 2) |> delogNeL
     }
   }
 }
