@@ -19,7 +19,7 @@ function columnZipper(ma, mb, fn, l) {
  * @constructor
  */
 
-const ColumnMapper = y => columnZipper.bind({
+const ColumnZipper = y => columnZipper.bind({
   y
 });
 
@@ -45,7 +45,7 @@ function columnMutazip(ma, mb, fn, l) {
  * @constructor
  */
 
-const ColumnMutate = y => columnMutazip.bind({
+const ColumnMutazip = y => columnMutazip.bind({
   y
 });
 
@@ -53,4 +53,4 @@ const mutazip = (ma, mb, y, fn, l) => columnMutazip.call({
   y
 }, ma, mb, fn, l);
 
-export { ColumnMapper, ColumnMutate, mutazip, zipper };
+export { ColumnMutazip, ColumnZipper, mutazip, zipper };

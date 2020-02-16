@@ -2,6 +2,7 @@
   "packages": [
     "pkg-core/*",
     "pkg-mapper/*",
+    "pkg-quantifier/*",
     "pkg-util/*",
     "pkg-zipper/*"
   ],

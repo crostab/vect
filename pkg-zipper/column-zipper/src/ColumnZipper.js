@@ -15,7 +15,7 @@ export function columnZipper (ma, mb, fn, l) {
  * @returns {function(*[][],function(*):*,[number]):*[][]}
  * @constructor
  */
-export const ColumnMapper = (y) => columnZipper.bind({ y })
+export const ColumnZipper = (y) => columnZipper.bind({ y })
 
 
 

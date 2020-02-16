@@ -13,4 +13,4 @@ export function columnMutazip (ma, mb, fn, l) {
  * @returns {function(*[][],function(*):*,[number]):*[][]}
  * @constructor
  */
-export const ColumnMutate = (y) => columnMutazip.bind({ y })
+export const ColumnMutazip = (y) => columnMutazip.bind({ y })
