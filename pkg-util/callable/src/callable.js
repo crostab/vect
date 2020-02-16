@@ -5,4 +5,3 @@ export class Callable extends Function {
     return f
   }
 }
-
