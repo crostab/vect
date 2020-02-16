@@ -7,7 +7,7 @@ import { size } from '@vect/matrix-size'
  * @param {function(*,number?,number?):*} crit
  * @returns {boolean}
  */
-export function some (mx, crit) {
+export const some = (mx, crit) => {
   const [ht, wd] = size(mx)
   for (let i = 0, j, r; i < ht; i++)
     for (j = 0, r = mx[i]; j < wd; j++)

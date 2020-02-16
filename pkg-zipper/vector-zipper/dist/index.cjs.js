@@ -2,6 +2,14 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+/**
+ * zip two arrays, return the zipped array
+ * @param {Array} a
+ * @param {Array} b
+ * @param {function(*,*,number?):*} fn
+ * @param {number} [l]
+ * @returns {*[]}
+ */
 const zipper = (a, b, fn, l) => {
   l = l || a && a.length;
   const vec = Array(l);

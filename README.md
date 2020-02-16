@@ -34,6 +34,7 @@ $ npm install @vect/<tool-name>
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |
 | [**vector**](pkg-core/vector)                              | Functions for 1d-array(vector)     | core       |
 | [**matrix**](pkg-core/matrix)                              | Functions for 2d-array(matrix)     | core       |
+| [**column**](pkg-core/column)                              | Functions for matrix column        | core       |
 | [**vector-mapper**](pkg-mapper/vector-mapper)              | Mapper for vector                  | mapper     |
 | [**matrix-mapper**](pkg-mapper/matrix-mapper)              | Mapper for matrix elements         | mapper     |
 | [**column-mapper**](pkg-mapper/column-mapper)              | Mapper for matrix column           | mapper     |

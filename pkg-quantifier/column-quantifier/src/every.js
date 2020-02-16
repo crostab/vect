@@ -9,8 +9,6 @@ import { columnEvery } from './ColumnEvery'
  * @param {function(*,number?,number?):*} crit
  * @returns {boolean}
  */
-export function every (mx, y, crit) {
-  return columnEvery.call({ y }, mx, crit)
-}
+export const every = (mx, y, crit) => columnEvery.call({ y }, mx, crit)
 
 

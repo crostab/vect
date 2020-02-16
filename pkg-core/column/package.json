@@ -18,6 +18,7 @@
     "@vect/column-mapper": "^0.0.10",
     "@vect/column-quantifier": "^0.0.10",
     "@vect/column-zipper": "^0.0.10",
+    "@vect/column-getter": "^0.0.0",
     "@vect/vector": "^0.0.10"
   },
   "repository": {

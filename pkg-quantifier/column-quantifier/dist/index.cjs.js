@@ -36,11 +36,9 @@ const ColumnEvery = y => columnEvery.bind({
  * @returns {boolean}
  */
 
-function every(mx, y, crit) {
-  return columnEvery.call({
-    y
-  }, mx, crit);
-}
+const every = (mx, y, crit) => columnEvery.call({
+  y
+}, mx, crit);
 
 /**
  * Return true if at least one element in a specified column of a matrix matches the input criteria.
@@ -50,11 +48,9 @@ function every(mx, y, crit) {
  * @param {function(*,number?,number?):*} crit
  * @returns {boolean}
  */
-function some(mx, y, crit) {
-  return columnSome.call({
-    y
-  }, mx, crit);
-}
+const some = (mx, y, crit) => columnSome.call({
+  y
+}, mx, crit);
 
 /**
  * Return true if some element in a specified column of a matrix matches the input criteria.

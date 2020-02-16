@@ -8,7 +8,7 @@ import { size } from '@vect/matrix-size'
  * @param {function} fn
  * @returns {*[]}
  */
-export function zipper (ma, mb, fn) {
+export const zipper = (ma, mb, fn) => {
   const [ht, wd] = size(ma)
   return zipVec(ma, mb, (ra, rb, i) => zipVec(ra, rb, (x, y, j) => fn(x, y, i, j), wd), ht)
 }

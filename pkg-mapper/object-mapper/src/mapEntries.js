@@ -1,4 +1,4 @@
-export function mapEntries (o, fn, l) {
+export const mapEntries = (o, fn, l) => {
   const ob = {}, ents = Object.entries(o)
   l = l || ents.length
   for (let i = 0, k, v; i < l; i++) {

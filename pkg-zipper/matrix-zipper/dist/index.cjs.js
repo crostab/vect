@@ -13,18 +13,18 @@ var matrixSize = require('@vect/matrix-size');
  * @returns {*[]}
  */
 
-function zipper(ma, mb, fn) {
+const zipper = (ma, mb, fn) => {
   const [ht, wd] = matrixSize.size(ma);
   return vectorZipper.zipper(ma, mb, (ra, rb, i) => vectorZipper.zipper(ra, rb, (x, y, j) => fn(x, y, i, j), wd), ht);
-}
+};
 
-function mutazip(ma, mb, fn) {
+const mutazip = (ma, mb, fn) => {
   const [ht, wd] = matrixSize.size(ma);
 
   for (let i = 0, j, ra, rb; i < ht; i++) for (j = 0, ra = ma[i], rb = mb[i]; j < wd; j++) ra[j] = fn(ra[j], rb[j], i, j);
 
   return ma;
-}
+};
 
 exports.mutazip = mutazip;
 exports.zipper = zipper;

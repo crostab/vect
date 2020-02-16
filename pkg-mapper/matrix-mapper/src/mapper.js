@@ -6,7 +6,7 @@ import { size } from '@vect/matrix-size'
  * @param {function} fn
  * @returns {*[]}
  */
-export function mapper (mx, fn) {
+export const mapper = (mx, fn) => {
   const [ht, wd] = size(mx), tx = Array(ht)
   for (let i = 0, j, r, tr; i < ht; i++)
     for (tx[i] = tr = Array(wd), r = mx[i], j = 0; j < wd; j++)
