@@ -1,7 +1,7 @@
 {
-  "name": "@vect/matrix-mapper",
-  "version": "0.0.7",
-  "description": "A debugging tool",
+  "name": "@vect/matrix-quantifier",
+  "version": "0.0.0",
+  "description": "Every and some for 2-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,24 +12,22 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/matrix-mapper.test.js"
-  },
-  "dependencies": {
-    "@vect/matrix-size": "^0.0.7",
-    "@vect/vector-mapper": "^0.0.7"
-  },
-  "devDependencies": {
-    "@vect/object-mapper": "^0.0.7"
+    "test": "node -r @babel/register test/matrix-quantifier.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
+  "dependencies": {
+    "@vect/matrix-size": "^0.0.7"
+  },
   "keywords": [
-    "array",
-    "vector",
     "matrix",
-    "object"
+    "2-d array",
+    "quantifier",
+    "every",
+    "some",
+    "any"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

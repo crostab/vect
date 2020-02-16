@@ -19,6 +19,7 @@
     "@vect/matrix-size": "^0.0.7",
     "@vect/matrix-transpose": "^0.0.7",
     "@vect/matrix-zipper": "^0.0.7",
+    "@vect/matrix-quantifier": "^0.0.0",
     "@vect/vector": "^0.0.7"
   },
   "repository": {

@@ -8,10 +8,8 @@ import { size } from '@vect/matrix-size'
  */
 export function mapper (mx, fn) {
   const [ht, wd] = size(mx), tx = Array(ht)
-  for (let i = 0, j, r, tr; i < ht; i++) {
-    tr = Array(wd)
-    for (r = mx[i], j = 0; j < wd; j++)
+  for (let i = 0, j, r, tr; i < ht; i++)
+    for (tx[i] = tr = Array(wd), r = mx[i], j = 0; j < wd; j++)
       tr[j] = fn(r[j], i, j)
-    tx[i] = tr
-  }
+  return tx
 }
