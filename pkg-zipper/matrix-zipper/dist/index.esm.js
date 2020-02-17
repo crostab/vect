@@ -66,7 +66,11 @@ const Duozipper = (fn, {
   l,
   r
 } = {}) => duozipper.bind({
-  fn
+  fn,
+  t,
+  b,
+  l,
+  r
 });
 const Trizipper = (fn, {
   t,
@@ -74,7 +78,11 @@ const Trizipper = (fn, {
   l,
   r
 } = {}) => trizipper.bind({
-  fn
+  fn,
+  t,
+  b,
+  l,
+  r
 });
 const Quazipper = (fn, {
   t,
@@ -82,7 +90,11 @@ const Quazipper = (fn, {
   l,
   r
 } = {}) => quazipper.bind({
-  fn
+  fn,
+  t,
+  b,
+  l,
+  r
 });
 
 /**

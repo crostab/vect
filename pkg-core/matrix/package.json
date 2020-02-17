@@ -15,11 +15,13 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
+    "@vect/matrix-init": "^0.0.12",
     "@vect/matrix-mapper": "^0.0.12",
     "@vect/matrix-quantifier": "^0.0.12",
     "@vect/matrix-size": "^0.0.12",
     "@vect/matrix-transpose": "^0.0.12",
     "@vect/matrix-zipper": "^0.0.12",
+    "@vect/columns-mapper": "^0.0.12",
     "@vect/vector": "^0.0.12"
   },
   "repository": {

@@ -39,6 +39,6 @@ export function quazipper (ma, mb, mc, md) {
   return mx
 }
 
-export const Duozipper = (fn, { t, b, l, r } = {}) => duozipper.bind({ fn })
-export const Trizipper = (fn, { t, b, l, r } = {}) => trizipper.bind({ fn })
-export const Quazipper = (fn, { t, b, l, r } = {}) => quazipper.bind({ fn })
+export const Duozipper = (fn, { t, b, l, r } = {}) => duozipper.bind({ fn, t, b, l, r })
+export const Trizipper = (fn, { t, b, l, r } = {}) => trizipper.bind({ fn, t, b, l, r })
+export const Quazipper = (fn, { t, b, l, r } = {}) => quazipper.bind({ fn, t, b, l, r })
