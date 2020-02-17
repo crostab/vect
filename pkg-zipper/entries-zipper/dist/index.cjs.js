@@ -10,7 +10,7 @@ function duozipper(ea, eb) {
     hi
   } = this;
   lo = lo || 0;
-  const entries = Array(hi || ea && ea.length);
+  const entries = Array(hi || (hi = ea && ea.length));
 
   for (let i = --hi, ra, rb; i >= lo; i--) {
     ra = ea[i], rb = eb[i];
@@ -27,7 +27,7 @@ function trizipper(ea, eb, ec) {
     hi
   } = this;
   lo = lo || 0;
-  const entries = Array(hi || ea && ea.length);
+  const entries = Array(hi || (hi = ea && ea.length));
 
   for (let i = --hi, ra, rb, rc; i >= lo; i--) {
     ra = ea[i], rb = eb[i], rc = ec[i];
@@ -44,7 +44,7 @@ function quazipper(ea, eb, ec, ed) {
     hi
   } = this;
   lo = lo || 0;
-  const entries = Array(hi || ea && ea.length);
+  const entries = Array(hi || (hi = ea && ea.length));
 
   for (let i = --hi, ra, rb, rc, rd; i >= lo; i--) {
     ra = ea[i], rb = eb[i], rc = ec[i], rd = ed[i];
