@@ -3,6 +3,7 @@
   "private": true,
   "workspaces": [
     "pkg-core/*",
+    "pkg-init/*",
     "pkg-mapper/*",
     "pkg-quantifier/*",
     "pkg-util/*",
@@ -12,7 +13,7 @@
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "build-specific": "lerna exec --scope=@vect/column -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=@vect/matrix-init -- rollup -c ../../rollup.config.js",
     "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },

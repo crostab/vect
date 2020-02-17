@@ -2,62 +2,120 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function columnZipper(ma, mb, fn, l) {
-  const {
-    y
+var matrixInit = require('@vect/matrix-init');
+
+function duozipper(ma, mb) {
+  let {
+    y,
+    fn,
+    mx,
+    t,
+    b
   } = this;
-  l = l || ma && ma.length;
-  const mt = Array(l--);
+  t = t || 0;
+  b = b || ma && ma.length;
+  mx = mx || matrixInit.fab(b, y);
 
-  for (let ra; l >= 0 && (ra = ma[l].slice()); l--) {
-    ra[y] = fn(ra[y], mb[l][y], l);
-    mt[l] = ra;
-  }
+  for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], i);
 
-  return mt;
+  return mx;
 }
-/**
- * Return a zipper function that iterate through each element in column indexed by 'y'.
- * @param {number} y
- * @returns {function(*[][],function(*):*,[number]):*[][]}
- * @constructor
- */
+function trizipper(ma, mb, mc) {
+  let {
+    y,
+    fn,
+    mx,
+    t,
+    b
+  } = this;
+  t = t || 0;
+  b = b || ma && ma.length;
+  mx = mx || matrixInit.fab(b, y);
 
-const ColumnZipper = y => columnZipper.bind({
-  y
+  for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], i);
+
+  return mx;
+}
+function quazipper(ma, mb, mc, md) {
+  let {
+    y,
+    fn,
+    mx,
+    t,
+    b
+  } = this;
+  t = t || 0;
+  b = b || ma && ma.length;
+  mx = mx || matrixInit.fab(b, y);
+
+  for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], md[i][y], i);
+
+  return mx;
+}
+const Duozipper = (y, fn, {
+  mx,
+  t,
+  b
+} = {}) => duozipper.bind({
+  y,
+  fn,
+  mx,
+  t,
+  b
+});
+const Trizipper = (y, fn, {
+  mx,
+  t,
+  b
+} = {}) => trizipper.bind({
+  y,
+  fn,
+  mx,
+  t,
+  b
+});
+const Quazipper = (y, fn, {
+  mx,
+  t,
+  b
+} = {}) => quazipper.bind({
+  y,
+  fn,
+  mx,
+  t,
+  b
 });
 
-const zipper = (ma, mb, y, fn, l) => columnZipper.call({
-  y
-}, ma, mb, fn, l);
+const zipper = (ma, mb, y, fn, l) => duozipper.call({
+  y,
+  fn,
+  b: l
+}, ma, mb);
 
-function columnMutazip(ma, mb, fn, l) {
-  const {
-    y
-  } = this;
-  l = l || ma && ma.length;
-  l--;
+const mutazip = (ma, mb, y, fn, l) => duozipper.call({
+  y,
+  fn,
+  mx: ma,
+  b: l
+}, ma, mb);
 
-  for (let r; l >= 0 && (r = ma[l]); l--) r[y] = fn(r[y], mb[l][y], l);
+const ColumnZipper = y => (ma, mb, fn, l) => duozipper.call({
+  y,
+  fn,
+  b: l
+}, ma, mb);
 
-  return ma;
-}
-/**
- * Return a mutazip function that iterate through each element in column indexed by 'y'.
- * @param {number} y
- * @returns {function(*[][],function(*):*,[number]):*[][]}
- * @constructor
- */
-
-const ColumnMutazip = y => columnMutazip.bind({
-  y
-});
-
-const mutazip = (ma, mb, y, fn, l) => columnMutazip.call({
-  y
-}, ma, mb, fn, l);
+const ColumnMutazip = y => (ma, mb, fn, l) => duozipper.call({
+  y,
+  fn,
+  mx: ma,
+  b: l
+}, ma, mb);
 
 exports.ColumnMutazip = ColumnMutazip;
 exports.ColumnZipper = ColumnZipper;
+exports.Duozipper = Duozipper;
+exports.Quazipper = Quazipper;
+exports.Trizipper = Trizipper;
 exports.mutazip = mutazip;
 exports.zipper = zipper;

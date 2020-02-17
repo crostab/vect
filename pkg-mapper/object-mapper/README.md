@@ -1,4 +1,4 @@
-# @vect/object-mapper
+# @vect/object-fn
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,37 +10,37 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/object-mapper
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/object-mapper
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/object-mapper
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/object-mapper
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/object-mapper
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/object-mapper
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/object-fn
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/object-fn
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/object-fn
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/object-fn
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/object-fn
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/object-fn
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/object-mapper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-mapper
+[url-npm]: https://npmjs.org/package/@vect/object-fn
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-fn
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array
 
 #### Install
 ```console
-$ npm install @vect/object-mapper
+$ npm install @vect/object-fn
 ```
 
 #### Functions
 
-- **mapper** map object values and return a new object
+- **fn** map object values and return a new object
 - **mutate** map object values and return the object itself
 - **mapKeys** map object keys and return a new object
 - **mapEntries** map object entries and return a new object
 
 #### Usage
 ```js
-import { mapper, mutate, mapKeys, mapEntries } from '@vect/object-mapper'
+import { fn, mutate, mapKeys, mapEntries } from '@vect/object-fn'
 
 const ob = {
   AMEE: 'Red Planet',
@@ -49,7 +49,7 @@ const ob = {
   Terminatrix: 'Terminator 3',
 }
 
-mapper(ob, value => value.length)
+fn(ob, value => value.length)
 mapKeys(ob, key => key.slice(0, 4))
 mapEntries(ob, ([key, value], i) => [`${key}_${i}`, value.length])
 mutate(ob, value => value.length)

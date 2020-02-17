@@ -2,6 +2,6 @@
 temp
 node_modules
 pkg-core/*/dist
-pkg-mapper/*/dist
+pkg-fn/*/dist
 pkg-util/*/dist
 yarn.lock

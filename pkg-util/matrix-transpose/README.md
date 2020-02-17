@@ -1,4 +1,4 @@
-# @vect/matrix-mapper
+# @vect/matrix-fn
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]

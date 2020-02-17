@@ -2,21 +2,104 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var vectorZipper = require('@vect/vector-zipper');
 var matrixSize = require('@vect/matrix-size');
 
+function duozipper(ma, mb) {
+  let {
+    fn,
+    t,
+    b,
+    l,
+    r
+  } = this;
+  const [ht, wd] = matrixSize.size(ma);
+  t = t || 0, b = b || ht, l = l || 0, r = r || wd;
+  const mx = Array(b);
+
+  for (let i = t, j, ro, ra, rb; i < b; i++) {
+    ra = ma[i], rb = mb[i];
+
+    for (j = l, mx[i] = ro = Array(r); j < r; j++) ro[j] = fn(ra[j], rb[j], i, j);
+  }
+
+  return mx;
+}
+function trizipper(ma, mb, mc) {
+  let {
+    fn,
+    t,
+    b,
+    l,
+    r
+  } = this;
+  const [ht, wd] = matrixSize.size(ma);
+  t = t || 0, b = b || ht, l = l || 0, r = r || wd;
+  const mx = Array(b);
+
+  for (let i = t, j, ro, ra, rb, rc; i < b; i++) {
+    ra = ma[i], rb = mb[i], rc = mc[i];
+
+    for (j = l, mx[i] = ro = Array(r); j < r; j++) ro[j] = fn(ra[j], rb[j], rc[j], i, j);
+  }
+
+  return mx;
+}
+function quazipper(ma, mb, mc, md) {
+  let {
+    fn,
+    t,
+    b,
+    l,
+    r
+  } = this;
+  const [ht, wd] = matrixSize.size(ma);
+  t = t || 0, b = b || ht, l = l || 0, r = r || wd;
+  const mx = Array(b);
+
+  for (let i = t, j, ro, ra, rb, rc, rd; i < b; i++) {
+    ra = ma[i], rb = mb[i], rc = mc[i], rd = md[i];
+
+    for (j = l, mx[i] = ro = Array(r); j < r; j++) ro[j] = fn(ra[j], rb[j], rc[j], rd[j], i, j);
+  }
+
+  return mx;
+}
+const Duozipper = (fn, {
+  t,
+  b,
+  l,
+  r
+} = {}) => duozipper.bind({
+  fn
+});
+const Trizipper = (fn, {
+  t,
+  b,
+  l,
+  r
+} = {}) => trizipper.bind({
+  fn
+});
+const Quazipper = (fn, {
+  t,
+  b,
+  l,
+  r
+} = {}) => quazipper.bind({
+  fn
+});
+
 /**
- * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.
+ * Zip 2 matrices by each elements from both.
  * @param {*[][]} ma
  * @param {*[][]} mb
  * @param {function} fn
  * @returns {*[]}
  */
 
-const zipper = (ma, mb, fn) => {
-  const [ht, wd] = matrixSize.size(ma);
-  return vectorZipper.zipper(ma, mb, (ra, rb, i) => vectorZipper.zipper(ra, rb, (x, y, j) => fn(x, y, i, j), wd), ht);
-};
+const zipper = (ma, mb, fn) => duozipper.call({
+  fn
+}, ma, mb);
 
 const mutazip = (ma, mb, fn) => {
   const [ht, wd] = matrixSize.size(ma);
@@ -26,5 +109,8 @@ const mutazip = (ma, mb, fn) => {
   return ma;
 };
 
+exports.Duozipper = Duozipper;
+exports.Quazipper = Quazipper;
+exports.Trizipper = Trizipper;
 exports.mutazip = mutazip;
 exports.zipper = zipper;

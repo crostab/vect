@@ -61,7 +61,7 @@ Copyright (c) 2019-present, Haoyang (Vincent) Wang
 [quality-image]: http://npm.packagequality.com/shield/@vect/callable.svg?style=flat-square
 [download-image]: https://img.shields.io/npm/dm/@vect/callable.svg?style=flat-square
 [total-download-image]:https://img.shields.io/npm/dt/@vect/callable.svg?style=flat-square
-[license-image]: https://img.shields.io/npm/l/@vect/callable.svg?style=flat-square
+[license-image]: https://img.shields.io/npm/hi/@vect/callable.svg?style=flat-square
 [commit-image]: https://img.shields.io/github/commit-activity/y/hoyeungw/@vect/callable?style=flat-square
 [size]: https://packagephobia.now.sh/badge?p=@vect/callable?style=flat-square
 

@@ -1,7 +1,7 @@
 {
-  "name": "@vect/matrix-zipper",
-  "version": "0.0.11",
-  "description": "Zip function",
+  "name": "@vect/matrix-init",
+  "version": "0.0.0",
+  "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,10 +12,7 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/matrix-zipper.test.js"
-  },
-  "dependencies": {
-    "@vect/matrix-size": "^0.0.11"
+    "test": "node -r @babel/register test/matrix-init.test.js"
   },
   "repository": {
     "type": "git",

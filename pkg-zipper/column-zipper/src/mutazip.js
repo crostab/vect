@@ -1,4 +1,4 @@
-import { columnMutazip } from './ColumnMutazip'
+import { duozipper } from './seriesZipper'
 
 export const mutazip = (ma, mb, y, fn, l) =>
-  columnMutazip.call({ y }, ma, mb, fn, l)
+  duozipper.call({ y, fn, mx: ma, b: l }, ma, mb)

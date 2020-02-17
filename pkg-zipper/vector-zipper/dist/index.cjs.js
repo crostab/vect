@@ -2,6 +2,70 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+function duozipper(a, b) {
+  let {
+    fn,
+    lo,
+    hi
+  } = this;
+  lo = lo || 0;
+  const vec = Array(hi = hi || a && a.length);
+
+  for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], hi);
+
+  return vec;
+}
+function trizipper(a, b, c) {
+  let {
+    fn,
+    lo,
+    hi
+  } = this;
+  lo = lo || 0;
+  const vec = Array(hi = hi || a && a.length);
+
+  for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], c[hi], hi);
+
+  return vec;
+}
+function quazipper(a, b, c, d) {
+  let {
+    fn,
+    lo,
+    hi
+  } = this;
+  lo = lo || 0;
+  const vec = Array(hi = hi || a && a.length);
+
+  for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], c[hi], d[hi], hi);
+
+  return vec;
+}
+const Duozipper = (fn, {
+  lo,
+  hi
+} = {}) => duozipper.bind({
+  fn,
+  lo,
+  hi
+});
+const Trizipper = (fn, {
+  lo,
+  hi
+} = {}) => trizipper.bind({
+  fn,
+  lo,
+  hi
+});
+const Quazipper = (fn, {
+  lo,
+  hi
+} = {}) => quazipper.bind({
+  fn,
+  lo,
+  hi
+});
+
 /**
  * zip two arrays, return the zipped array
  * @param {Array} a
@@ -10,14 +74,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @param {number} [l]
  * @returns {*[]}
  */
-const zipper = (a, b, fn, l) => {
-  l = l || a && a.length;
-  const vec = Array(l);
 
-  for (--l; l >= 0; l--) vec[l] = fn(a[l], b[l], l);
-
-  return vec;
-};
+const zipper = (a, b, fn, l) => duozipper.call({
+  fn,
+  hi: l
+}, a, b);
 
 const mutazip = (va, vb, fn, l) => {
   l = l || va && va.length;
@@ -27,5 +88,8 @@ const mutazip = (va, vb, fn, l) => {
   return va;
 };
 
+exports.Duozipper = Duozipper;
+exports.Quazipper = Quazipper;
+exports.Trizipper = Trizipper;
 exports.mutazip = mutazip;
 exports.zipper = zipper;

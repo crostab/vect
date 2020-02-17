@@ -1,6 +1,6 @@
-import { columnZipper } from './ColumnZipper'
+import { duozipper } from './seriesZipper'
 
 export const zipper = (ma, mb, y, fn, l) =>
-  columnZipper.call({ y }, ma, mb, fn, l)
+  duozipper.call({ y, fn, b: l }, ma, mb)
 
 

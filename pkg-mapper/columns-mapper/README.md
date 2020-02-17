@@ -1,4 +1,4 @@
-# @vect/columns-mapper
+# @vect/columns-fn
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/columns-mapper
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/columns-mapper
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/columns-mapper
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/columns-mapper
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/columns-mapper
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/columns-mapper
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/columns-fn
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/columns-fn
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/columns-fn
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/columns-fn
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/columns-fn
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/columns-fn
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/columns-mapper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/columns-mapper
+[url-npm]: https://npmjs.org/package/@vect/columns-fn
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/columns-fn
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Map through each columns of a 2-d array.
@@ -33,7 +33,7 @@
 
 #### Install
 ```console
-$ npm install @vect/column-mapper
+$ npm install @vect/column-fn
 ```
 
 #### Usage
