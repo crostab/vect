@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-transpose",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,8 +15,8 @@
     "test": "node -r @babel/register test/transpose.test.js"
   },
   "dependencies": {
-    "@vect/matrix-size": "^0.0.12",
-    "@vect/vector-mapper": "^0.0.12"
+    "@vect/matrix-size": "^0.0.13",
+    "@vect/vector-mapper": "^0.0.13"
   },
   "repository": {
     "type": "git",
