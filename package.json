@@ -5,6 +5,7 @@
     "pkg-core/*",
     "pkg-init/*",
     "pkg-mapper/*",
+    "pkg-margin/*",
     "pkg-quantifier/*",
     "pkg-util/*",
     "pkg-zipper/*"
