@@ -1,0 +1,35 @@
+{
+  "name": "@vect/matrix-margin",
+  "version": "0.0.0",
+  "description": "Util for 2d-array",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "dependencies": {
+    "@vect/vector-margin": "^0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "matrix",
+    "2d-array"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+}

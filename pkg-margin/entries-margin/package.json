@@ -1,0 +1,34 @@
+{
+  "name": "@vect/entries-margin",
+  "version": "0.0.0",
+  "description": "Util for array",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "array",
+    "vector"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+}
