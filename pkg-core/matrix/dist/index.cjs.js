@@ -2,14 +2,15 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var Initializer = require('@vect/matrix-init');
 var Mapper = require('@vect/matrix-mapper');
+var Margin = require('@vect/matrix-margin');
 var Zipper = require('@vect/matrix-zipper');
 var Quantifier = require('@vect/matrix-quantifier');
 var Size = require('@vect/matrix-size');
 var Transpose = require('@vect/matrix-transpose');
 var ColumnsMapper = require('@vect/columns-mapper');
-var Initializer = require('@vect/matrix-init');
-var vector = require('@vect/vector');
+var ColumnGetter = require('@vect/column-getter');
 
 /**
  *
@@ -19,38 +20,6 @@ var vector = require('@vect/vector');
 const coins = mx => !Array.isArray(mx) || !Array.isArray(mx[0]) ? [] : mx[0].map((_, i) => i);
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
-
-const copyMargin = (mx, t, b, l, r, h, w) => {
-  const x = Array(h),
-        bs = h - b;
-
-  for (let i = 0; i < t; i++) x[i] = vector.copyMargin(mx[i], l, r, w);
-
-  for (let i = bs; i < h; i++) x[i] = vector.copyMargin(mx[i], l, r, w);
-
-  return x;
-};
-
-const copyRowMargin = (row, i, fn, l, r, w) => {
-  const ve = Array(w),
-        s = w - r;
-
-  for (--l; l >= 0; l--) ve[l] = fn(row[l], i, l);
-
-  for (--w; w >= s; w--) ve[w] = fn(row[w], i, w);
-
-  return ve;
-};
-const mapMargin = (mx, fn, t, b, l, r, h, w) => {
-  const x = Array(h),
-        bs = h - b;
-
-  for (let i = 0; i < t; i++) x[i] = copyRowMargin(mx[i], i, fn, l, r, w);
-
-  for (let i = bs; i < h; i++) x[i] = copyRowMargin(mx[i], i, fn, l, r, w);
-
-  return x;
-};
 
 const POINTWISE = 0;
 const ROWWISE = 1;
@@ -62,12 +31,26 @@ const Directs = {
 };
 
 const {
+  fab,
+  iso,
+  ini,
+  starter
+} = Initializer;
+const {
   mutate,
   mapper
 } = Mapper;
 const {
+  marginCopy,
+  marginMapper,
+  marginMutate
+} = Margin;
+const {
   zipper,
-  mutazip
+  mutazip,
+  Duozipper,
+  Trizipper,
+  Quazipper
 } = Zipper;
 const {
   every,
@@ -85,27 +68,31 @@ const {
   mapper: columnsMapper
 } = ColumnsMapper;
 const {
-  fab,
-  iso,
-  ini,
-  starter
-} = Initializer;
+  column,
+  Columns
+} = ColumnGetter;
 
 exports.COLUMNWISE = COLUMNWISE;
+exports.Columns = Columns;
 exports.Directs = Directs;
+exports.Duozipper = Duozipper;
 exports.POINTWISE = POINTWISE;
+exports.Quazipper = Quazipper;
 exports.ROWWISE = ROWWISE;
+exports.Trizipper = Trizipper;
 exports.coins = coins;
+exports.column = column;
 exports.columnsMapper = columnsMapper;
-exports.copyMargin = copyMargin;
 exports.every = every;
 exports.fab = fab;
 exports.height = height;
 exports.ini = ini;
 exports.isMatrix = isMatrix;
 exports.iso = iso;
-exports.mapMargin = mapMargin;
 exports.mapper = mapper;
+exports.marginCopy = marginCopy;
+exports.marginMapper = marginMapper;
+exports.marginMutate = marginMutate;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
 exports.size = size;

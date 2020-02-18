@@ -2,33 +2,36 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var Mappers = require('@vect/column-mapper');
-var Zippers = require('@vect/column-zipper');
-var Quantifiers = require('@vect/column-quantifier');
-var ColumnGetters = require('@vect/column-getter');
+var Mapper = require('@vect/column-mapper');
+var Zipper = require('@vect/column-zipper');
+var Quantifier = require('@vect/column-quantifier');
+var ColumnGetter = require('@vect/column-getter');
 
 const {
   mapper,
   mutate,
   ColumnMapper,
   ColumnMutate
-} = Mappers;
+} = Mapper;
 const {
   zipper,
   mutazip,
   ColumnZipper,
-  ColumnMutazip
-} = Zippers;
+  ColumnMutazip,
+  Duozipper,
+  Trizipper,
+  Quazipper
+} = Zipper;
 const {
   every,
   some,
   ColumnEvery,
   ColumnSome
-} = Quantifiers;
+} = Quantifier;
 const {
   column,
   Columns
-} = ColumnGetters;
+} = ColumnGetter;
 
 exports.ColumnEvery = ColumnEvery;
 exports.ColumnMapper = ColumnMapper;
@@ -37,6 +40,9 @@ exports.ColumnMutazip = ColumnMutazip;
 exports.ColumnSome = ColumnSome;
 exports.ColumnZipper = ColumnZipper;
 exports.Columns = Columns;
+exports.Duozipper = Duozipper;
+exports.Quazipper = Quazipper;
+exports.Trizipper = Trizipper;
 exports.column = column;
 exports.every = every;
 exports.mapper = mapper;

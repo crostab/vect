@@ -1,29 +1,32 @@
-import * as Mappers from '@vect/column-mapper';
-import * as Zippers from '@vect/column-zipper';
-import * as Quantifiers from '@vect/column-quantifier';
-import * as ColumnGetters from '@vect/column-getter';
+import * as Mapper from '@vect/column-mapper';
+import * as Zipper from '@vect/column-zipper';
+import * as Quantifier from '@vect/column-quantifier';
+import * as ColumnGetter from '@vect/column-getter';
 
 const {
   mapper,
   mutate,
   ColumnMapper,
   ColumnMutate
-} = Mappers;
+} = Mapper;
 const {
   zipper,
   mutazip,
   ColumnZipper,
-  ColumnMutazip
-} = Zippers;
+  ColumnMutazip,
+  Duozipper,
+  Trizipper,
+  Quazipper
+} = Zipper;
 const {
   every,
   some,
   ColumnEvery,
   ColumnSome
-} = Quantifiers;
+} = Quantifier;
 const {
   column,
   Columns
-} = ColumnGetters;
+} = ColumnGetter;
 
-export { ColumnEvery, ColumnMapper, ColumnMutate, ColumnMutazip, ColumnSome, ColumnZipper, Columns, column, every, mapper, mutate, mutazip, some, zipper };
+export { ColumnEvery, ColumnMapper, ColumnMutate, ColumnMutazip, ColumnSome, ColumnZipper, Columns, Duozipper, Quazipper, Trizipper, column, every, mapper, mutate, mutazip, some, zipper };

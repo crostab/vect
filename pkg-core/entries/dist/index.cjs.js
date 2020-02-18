@@ -2,9 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var Mapper = require('@vect/vector-mapper');
-var Margin = require('@vect/vector-margin');
-var Zipper = require('@vect/vector-zipper');
+var Mapper = require('@vect/entries-mapper');
+var Margin = require('@vect/entries-margin');
+var Zipper = require('@vect/entries-zipper');
+var Unwind = require('@vect/entries-unwind');
 
 const {
   mapper,
@@ -22,6 +23,9 @@ const {
   Trizipper,
   Quazipper
 } = Zipper;
+const {
+  unwind
+} = Unwind;
 
 exports.Duozipper = Duozipper;
 exports.Quazipper = Quazipper;
@@ -32,4 +36,5 @@ exports.marginMapper = marginMapper;
 exports.marginMutate = marginMutate;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
+exports.unwind = unwind;
 exports.zipper = zipper;

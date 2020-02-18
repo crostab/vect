@@ -1,10 +1,8 @@
-import * as Mappers from '@vect/vector-mapper'
-import * as Zippers from '@vect/vector-zipper'
+import * as Mapper from '@vect/vector-mapper'
+import * as Margin from '@vect/vector-margin'
+import * as Zipper from '@vect/vector-zipper'
 
-export const mapper = Mappers.mapper
-export const mutate = Mappers.mutate
-export const zipper = Zippers.zipper
-export const mutazip = Zippers.mutazip
+export const { mapper, mutate } = Mapper
+export const { marginCopy, marginMapper, marginMutate } = Margin
+export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
 
-export { copyMargin } from './src/vector-margin/copyMargin'
-export { mapMargin } from './src/vector-margin/mapMargin'
