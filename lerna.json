@@ -1,6 +1,7 @@
 {
   "packages": [
     "pkg-core/*",
+    "pkg-indicator/*",
     "pkg-init/*",
     "pkg-mapper/*",
     "pkg-margin/*",

@@ -1,22 +1,15 @@
+import { mapper as mapper$1 } from '@vect/vector-mapper';
+
 const size = mx => {
   let h, r;
   return mx && (h = mx.length) && (r = mx[0]) ? [h, r.length] : [h, r];
 };
 
-const mapper = (ar, fn, l) => {
-  l = l || ar && ar.length;
-  const vec = Array(l);
-
-  for (--l; l >= 0; l--) vec[l] = fn(ar[l], l);
-
-  return vec;
-};
-
 const column = function (c, h) {
-  return mapper(this, r => r[c], h);
+  return mapper$1(this, r => r[c], h);
 };
 
-const mapper$1 = (mx, mapOnColumns) => {
+const mapper = (mx, mapOnColumns) => {
   const [h, w] = size(mx),
         columns = Array(w);
 
@@ -25,4 +18,4 @@ const mapper$1 = (mx, mapOnColumns) => {
   return columns;
 };
 
-export { mapper$1 as mapper };
+export { mapper };
