@@ -10,4 +10,13 @@ const zipper = (ma, mb, zipOnColumns) => {
   return banner;
 };
 
-export { zipper };
+const zipperBand = (matrix, band, zipColBand) => {
+  const [ht, wd] = size(matrix),
+        vec = Array(wd);
+
+  for (let ci = 0, columns = Columns(matrix); ci < wd; ci++) vec[ci] = zipColBand(columns(ci, ht), band, ci);
+
+  return vec;
+};
+
+export { zipper, zipperBand };

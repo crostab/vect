@@ -14,4 +14,14 @@ const zipper = (ma, mb, zipOnColumns) => {
   return banner;
 };
 
+const zipperBand = (matrix, band, zipColBand) => {
+  const [ht, wd] = matrixSize.size(matrix),
+        vec = Array(wd);
+
+  for (let ci = 0, columns = columnGetter.Columns(matrix); ci < wd; ci++) vec[ci] = zipColBand(columns(ci, ht), band, ci);
+
+  return vec;
+};
+
 exports.zipper = zipper;
+exports.zipperBand = zipperBand;
