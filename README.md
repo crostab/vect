@@ -60,6 +60,15 @@ $ npm install @vect/<tool-name>
 | [**entries-zipper**](pkg-zipper/entries-zipper)            | Zipper for entries                 | zipper     |
 | [**object-zipper**](pkg-zipper/object-zipper)              | Zipper for object                  | zipper     |
 
+#### Indicators
+|                                                            |                                    |            |
+| ---------------------------------------------------------- | ---------------------------------- | ---------- |
+| [**vector-indicator**](pkg-indicator/vector-indicator)     | Max & min for vector               | indicator  |
+| [**matrix-indicator**](pkg-indicator/matrix-indicator)     | Max & min for matrix elements      | indicator  |
+| [**column-indicator**](pkg-indicator/column-indicator)     | Max & min for matrix column        | indicator  |
+| [**columns-indicator**](pkg-indicator/columns-indicator)   | Max & min for matrix columns       | indicator  |
+| [**entries-indicator**](pkg-indicator/entries-indicator)   | Max & min for entries              | indicator  |
+
 #### Margins
 |                                                            |                                    |            |
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |
