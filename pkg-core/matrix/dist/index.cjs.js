@@ -7,6 +7,7 @@ var Mapper = require('@vect/matrix-mapper');
 var Margin = require('@vect/matrix-margin');
 var Zipper = require('@vect/matrix-zipper');
 var Quantifier = require('@vect/matrix-quantifier');
+var Indicator = require('@vect/matrix-indicator');
 var Size = require('@vect/matrix-size');
 var Transpose = require('@vect/matrix-transpose');
 var ColumnsMapper = require('@vect/columns-mapper');
@@ -53,6 +54,12 @@ const {
   Quazipper
 } = Zipper;
 const {
+  maxBy,
+  minBy,
+  Max,
+  Min
+} = Indicator;
+const {
   every,
   some
 } = Quantifier;
@@ -76,6 +83,8 @@ exports.COLUMNWISE = COLUMNWISE;
 exports.Columns = Columns;
 exports.Directs = Directs;
 exports.Duozipper = Duozipper;
+exports.Max = Max;
+exports.Min = Min;
 exports.POINTWISE = POINTWISE;
 exports.Quazipper = Quazipper;
 exports.ROWWISE = ROWWISE;
@@ -93,6 +102,8 @@ exports.mapper = mapper;
 exports.marginCopy = marginCopy;
 exports.marginMapper = marginMapper;
 exports.marginMutate = marginMutate;
+exports.maxBy = maxBy;
+exports.minBy = minBy;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
 exports.size = size;

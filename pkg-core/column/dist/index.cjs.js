@@ -5,6 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var Mapper = require('@vect/column-mapper');
 var Zipper = require('@vect/column-zipper');
 var Quantifier = require('@vect/column-quantifier');
+var Indicator = require('@vect/column-indicator');
 var ColumnGetter = require('@vect/column-getter');
 
 const {
@@ -29,6 +30,12 @@ const {
   ColumnSome
 } = Quantifier;
 const {
+  maxBy,
+  minBy,
+  Max,
+  Min
+} = Indicator;
+const {
   column,
   Columns
 } = ColumnGetter;
@@ -41,11 +48,15 @@ exports.ColumnSome = ColumnSome;
 exports.ColumnZipper = ColumnZipper;
 exports.Columns = Columns;
 exports.Duozipper = Duozipper;
+exports.Max = Max;
+exports.Min = Min;
 exports.Quazipper = Quazipper;
 exports.Trizipper = Trizipper;
 exports.column = column;
 exports.every = every;
 exports.mapper = mapper;
+exports.maxBy = maxBy;
+exports.minBy = minBy;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
 exports.some = some;

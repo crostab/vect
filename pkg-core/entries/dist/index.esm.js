@@ -2,6 +2,7 @@ import * as Mapper from '@vect/entries-mapper';
 import * as Margin from '@vect/entries-margin';
 import * as Zipper from '@vect/entries-zipper';
 import * as Unwind from '@vect/entries-unwind';
+import * as Indicator from '@vect/entries-indicator';
 
 const {
   mapper,
@@ -20,7 +21,13 @@ const {
   Quazipper
 } = Zipper;
 const {
+  maxBy,
+  minBy,
+  Max,
+  Min
+} = Indicator;
+const {
   unwind
 } = Unwind;
 
-export { Duozipper, Quazipper, Trizipper, mapper, marginCopy, marginMapper, marginMutate, mutate, mutazip, unwind, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, unwind, zipper };

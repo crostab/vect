@@ -3,6 +3,7 @@ import * as Mapper from '@vect/matrix-mapper';
 import * as Margin from '@vect/matrix-margin';
 import * as Zipper from '@vect/matrix-zipper';
 import * as Quantifier from '@vect/matrix-quantifier';
+import * as Indicator from '@vect/matrix-indicator';
 import * as Size from '@vect/matrix-size';
 import * as Transpose from '@vect/matrix-transpose';
 import * as ColumnsMapper from '@vect/columns-mapper';
@@ -49,6 +50,12 @@ const {
   Quazipper
 } = Zipper;
 const {
+  maxBy,
+  minBy,
+  Max,
+  Min
+} = Indicator;
+const {
   every,
   some
 } = Quantifier;
@@ -68,4 +75,4 @@ const {
   Columns
 } = ColumnGetter;
 
-export { COLUMNWISE, Columns, Directs, Duozipper, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, every, fab, height, ini, isMatrix, iso, mapper, marginCopy, marginMapper, marginMutate, mutate, mutazip, size, some, starter, transpose, width, zipper };
+export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, every, fab, height, ini, isMatrix, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, size, some, starter, transpose, width, zipper };
