@@ -11,6 +11,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@vect/entries-indicator": "^0.0.0",
     "@vect/entries-mapper": "^0.0.16",
     "@vect/entries-margin": "^0.0.16",
     "@vect/entries-unwind": "^0.0.16",

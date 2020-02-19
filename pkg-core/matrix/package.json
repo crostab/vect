@@ -17,14 +17,14 @@
   "dependencies": {
     "@vect/column-getter": "^0.0.16",
     "@vect/columns-mapper": "^0.0.16",
+    "@vect/matrix-indicator": "^0.0.0",
     "@vect/matrix-init": "^0.0.16",
     "@vect/matrix-mapper": "^0.0.16",
     "@vect/matrix-margin": "^0.0.16",
     "@vect/matrix-quantifier": "^0.0.16",
     "@vect/matrix-size": "^0.0.16",
     "@vect/matrix-transpose": "^0.0.16",
-    "@vect/matrix-zipper": "^0.0.16",
-    "@vect/vector": "^0.0.16"
+    "@vect/matrix-zipper": "^0.0.16"
   },
   "repository": {
     "type": "git",
