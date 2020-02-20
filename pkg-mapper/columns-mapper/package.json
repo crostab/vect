@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-mapper",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/columns-mapper.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.0.17"
+    "@vect/vector-mapper": "^0.0.18"
   },
   "repository": {
     "type": "git",
