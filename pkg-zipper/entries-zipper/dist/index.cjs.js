@@ -9,6 +9,7 @@ function duozipper(ea, eb) {
     lo,
     hi
   } = this;
+  value = value || key;
   lo = lo || 0;
   const entries = Array(hi || (hi = ea && ea.length));
 
@@ -26,6 +27,7 @@ function trizipper(ea, eb, ec) {
     lo,
     hi
   } = this;
+  value = value || key;
   lo = lo || 0;
   const entries = Array(hi || (hi = ea && ea.length));
 
@@ -43,6 +45,7 @@ function quazipper(ea, eb, ec, ed) {
     lo,
     hi
   } = this;
+  value = value || key;
   lo = lo || 0;
   const entries = Array(hi || (hi = ea && ea.length));
 
@@ -53,6 +56,15 @@ function quazipper(ea, eb, ec, ed) {
 
   return entries;
 }
+/**
+ *
+ * @param {function(*,*,number):*} key
+ * @param {function(*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],number?):[*,*][]}
+ */
+
 const Duozipper = (key, value, {
   lo,
   hi
@@ -62,6 +74,15 @@ const Duozipper = (key, value, {
   lo,
   hi
 });
+/**
+ *
+ * @param {function(*,*,*,number):*} key
+ * @param {function(*,*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],[*,*][],number?):[*,*][]}
+ */
+
 const Trizipper = (key, value, {
   lo,
   hi
@@ -71,6 +92,15 @@ const Trizipper = (key, value, {
   lo,
   hi
 });
+/**
+ *
+ * @param {function(*,*,*,*,number):*} key
+ * @param {function(*,*,*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],[*,*][],[*,*][],number?):[*,*][]}
+ */
+
 const Quazipper = (key, value, {
   lo,
   hi
@@ -81,19 +111,39 @@ const Quazipper = (key, value, {
   hi
 });
 
-const zipper = (ea, eb, keyFn, valFn, l) => duozipper.call({
-  key: keyFn,
-  value: valFn,
+/**
+ *
+ * @param {[*,*][]} ea
+ * @param {[*,*][]} eb
+ * @param {function} keyMap
+ * @param {function} [valMap]
+ * @param {number} [l]
+ * @returns {[*,*][]}
+ */
+
+const zipper = (ea, eb, keyMap, valMap, l) => duozipper.call({
+  key: keyMap,
+  value: valMap,
   hi: l
 }, ea, eb);
 
-const mutazip = (ea, eb, keyFn, valFn, l) => {
+/**
+ *
+ * @param {[*,*][]} ea
+ * @param {[*,*][]} eb
+ * @param {function} keyMap
+ * @param {function} [valMap]
+ * @param {number} [l]
+ * @returns {[*,*][]}
+ */
+const mutazip = (ea, eb, keyMap, valMap, l) => {
+  valMap = valMap || keyMap;
   l = l || ea && ea.length;
   l--;
 
   for (let ra, rb; l >= 0 && (ra = ea[l]) && (rb = eb[l]); l--) {
-    ra[0] = keyFn(ra[0], rb[0], l);
-    ra[1] = valFn(ra[1], rb[1], l);
+    ra[0] = keyMap(ra[0], rb[0], l);
+    ra[1] = valMap(ra[1], rb[1], l);
   }
 
   return ea;

@@ -1,5 +1,6 @@
 export function duozipper (ea, eb) {
   let { key, value, lo, hi } = this
+  value = value || key
   lo = lo || 0
   const entries = Array(hi || (hi = ea && ea.length))
   for (let i = --hi, ra, rb; i >= lo; i--) {
@@ -11,6 +12,7 @@ export function duozipper (ea, eb) {
 
 export function trizipper (ea, eb, ec) {
   let { key, value, lo, hi } = this
+  value = value || key
   lo = lo || 0
   const entries = Array(hi || (hi = ea && ea.length))
   for (let i = --hi, ra, rb, rc; i >= lo; i--) {
@@ -22,6 +24,7 @@ export function trizipper (ea, eb, ec) {
 
 export function quazipper (ea, eb, ec, ed) {
   let { key, value, lo, hi } = this
+  value = value || key
   lo = lo || 0
   const entries = Array(hi || (hi = ea && ea.length))
   for (let i = --hi, ra, rb, rc, rd; i >= lo; i--) {
@@ -31,7 +34,33 @@ export function quazipper (ea, eb, ec, ed) {
   return entries
 }
 
+/**
+ *
+ * @param {function(*,*,number):*} key
+ * @param {function(*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],number?):[*,*][]}
+ */
 export const Duozipper = (key, value, { lo, hi } = {}) => duozipper.bind({ key, value, lo, hi })
+
+/**
+ *
+ * @param {function(*,*,*,number):*} key
+ * @param {function(*,*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],[*,*][],number?):[*,*][]}
+ */
 export const Trizipper = (key, value, { lo, hi } = {}) => trizipper.bind({ key, value, lo, hi })
+
+/**
+ *
+ * @param {function(*,*,*,*,number):*} key
+ * @param {function(*,*,*,*,number):*} [value]
+ * @param {number} [lo]
+ * @param {number} [hi]
+ * @returns {function|function([*,*][],[*,*][],[*,*][],[*,*][],number?):[*,*][]}
+ */
 export const Quazipper = (key, value, { lo, hi } = {}) => quazipper.bind({ key, value, lo, hi })
 
