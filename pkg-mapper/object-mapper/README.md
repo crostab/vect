@@ -10,7 +10,7 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/object-fn
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/object-fn
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/object-fn
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/object-fn
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/object-fn
@@ -34,13 +34,13 @@ $ npm install @vect/object-fn
 #### Functions
 
 - **fn** map object values and return a new object
-- **mutate** map object values and return the object itself
+- **append** map object values and return the object itself
 - **mapKeys** map object keys and return a new object
 - **mapEntries** map object entries and return a new object
 
 #### Usage
 ```js
-import { fn, mutate, mapKeys, mapEntries } from '@vect/object-fn'
+import { fn, append, mapKeys, mapEntries } from '@vect/object-fn'
 
 const ob = {
   AMEE: 'Red Planet',
@@ -52,7 +52,7 @@ const ob = {
 fn(ob, value => value.length)
 mapKeys(ob, key => key.slice(0, 4))
 mapEntries(ob, ([key, value], i) => [`${key}_${i}`, value.length])
-mutate(ob, value => value.length)
+append(ob, value => value.length)
 ```
 
 #### Meta

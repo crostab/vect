@@ -9,8 +9,8 @@ import { isMatrix } from '../src/isMatrix'
 
 // CrosXMatricesRobust |> deco |> logger
 //
-// for (let [k, mx] of Object.entries(CrosXMatricesRobust))
-//   xr(k).coins(mx |> coins) |> logger
+// for (let [k, m] of Object.entries(CrosXMatricesRobust))
+//   xr(k).coins(m |> coins) |> logger
 
 export function CoinsTest () {
   const { lapse, result } = Chrono.strategies({

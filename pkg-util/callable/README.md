@@ -11,7 +11,7 @@ Make a class callable by inherit the class Callable.
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/callable
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/callable
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/callable
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/callable
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/callable
@@ -40,7 +40,7 @@ import { Callable } from '@vect/callable'
 
 class CallableClass extends Callable {
   constructor (a, b) {
-    super(x => this.a + this.b + x)
+    super(row => this.a + this.b + row)
     this.a = a
     this.b = b
   }
@@ -57,12 +57,12 @@ console.log(callableClass(3)) // 12
 Copyright (c) 2019-present, Haoyang (Vincent) Wang
 
 [//]: <> (Shields)
-[npm-image]: https://img.shields.io/npm/v/@vect/callable.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/cell/@vect/callable.svg?style=flat-square
 [quality-image]: http://npm.packagequality.com/shield/@vect/callable.svg?style=flat-square
 [download-image]: https://img.shields.io/npm/dm/@vect/callable.svg?style=flat-square
 [total-download-image]:https://img.shields.io/npm/dt/@vect/callable.svg?style=flat-square
 [license-image]: https://img.shields.io/npm/hi/@vect/callable.svg?style=flat-square
-[commit-image]: https://img.shields.io/github/commit-activity/y/hoyeungw/@vect/callable?style=flat-square
+[commit-image]: https://img.shields.io/github/commit-activity/col/hoyeungw/@vect/callable?style=flat-square
 [size]: https://packagephobia.now.sh/badge?p=@vect/callable?style=flat-square
 
 [//]: <> (Link)

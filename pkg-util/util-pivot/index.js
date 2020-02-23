@@ -1,3 +1,2 @@
-// export { fab, iso, ini, starter } from './src/functions'
-
-export const PIVOT = 'pivot'
+export { Pivot } from './src/Pivot'
+export { Cubic } from './src/Cubic'

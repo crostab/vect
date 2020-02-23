@@ -25,7 +25,7 @@ export class FlatVsMapperStrategies {
         native: mx => mx.map(r => Array.isArray(r) ? r.map(fn) : r),
         mapperEmbed: mx => mapperEmbed(mx, fn),
         mapperIter: mx => mapperIter(mx, fn),
-        // flatMapper: mx => mx.flat(1).map(fn),
+        // flatMapper: m => m.flat(1).map(fn),
       }
     })
     'lapse' |> console.log

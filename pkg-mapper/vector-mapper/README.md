@@ -10,7 +10,7 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/vector-fn
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/vector-fn
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/vector-fn
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/vector-fn
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/vector-fn

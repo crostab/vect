@@ -1,6 +1,6 @@
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
 import { Chrono } from 'elprimero'
-import { isMatrix } from '../src/isMatrix'
+import { isMatrix } from '../function/isMatrix'
 import { CrosTabX, deco } from 'xbrief'
 import { logger } from '@spare/logger'
 

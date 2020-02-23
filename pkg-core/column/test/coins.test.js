@@ -1,16 +1,16 @@
 import { logger } from '@spare/logger'
 import { deco } from '@spare/deco'
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
-import { coins } from '../src/coins'
+import { coins } from '../function/coins'
 import { xr } from '@spare/xr'
 import { Chrono } from 'elprimero'
 import { CrosTabX } from 'xbrief'
-import { isMatrix } from '../src/isMatrix'
+import { isMatrix } from '../function/isMatrix'
 
 // CrosXMatricesRobust |> deco |> logger
 //
-// for (let [k, mx] of Object.entries(CrosXMatricesRobust))
-//   xr(k).coins(mx |> coins) |> logger
+// for (let [k, m] of Object.entries(CrosXMatricesRobust))
+//   xr(k).coins(m |> coins) |> logger
 
 export function CoinsTest () {
   const { lapse, result } = Chrono.strategies({

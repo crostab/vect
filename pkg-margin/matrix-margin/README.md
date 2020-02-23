@@ -10,7 +10,7 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/matrix-margin
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/matrix-margin
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/matrix-margin
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/matrix-margin
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/matrix-margin

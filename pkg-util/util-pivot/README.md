@@ -10,7 +10,7 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/util-pivot
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/util-pivot
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/util-pivot
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/util-pivot
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/util-pivot

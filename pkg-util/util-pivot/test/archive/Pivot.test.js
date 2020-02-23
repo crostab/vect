@@ -1,11 +1,8 @@
-import { Samples } from '../../src/Samples'
-import { Pivot } from '../../src/utils/pivot/Pivot'
+import { Pivot } from '../../function/Pivot'
 import { Chrono } from 'elprimero'
-import { PivotModes } from '../src/PivotModes'
-import { Mx } from '../../src/Mx'
-import { isNumeric } from '@typen/num-strict'
-import { Stat } from 'borel'
+import { PivotModes, SUM } from '../../resources/PivotModes'
 import { decoCrostab, logger, says, logNeL } from '@spare/logger'
+import { delogger } from '@spare/deco'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],
@@ -28,9 +25,8 @@ const duties = {
   ]
 }
 
-/*
- nyTimes |> logger
-*/
+const result = new Pivot(duties).pivot([0, 1, 2], { mode: SUM, include: x => !isNaN(x) })
+result|> delogger
 
 export class PivotTest {
   static testMulti () {
@@ -41,15 +37,16 @@ export class PivotTest {
       repeat: 1E+4,
       paramsList,
       funcList: {
-        stable: (rows, xy, cells, config) => new Pivot(rows).pivotMulti(xy, cells, config)
+        stable: (rows, xy, cells, config) => new Pivot(rows).bandPivot(xy, cells, config)
       }
     })
     lapse |> decoCrostab |> says.lapse
-    result.brief() |> says.result
+    result |> decoCrostab |> says.result
 
     'stable' |> logger
     for (let key of Object.keys(paramsList)) {
       key |> logger
+      result.queryCell(key, 'stable') |> delogger
       result.queryCell(key, 'stable') |> decoCrostab |> logger
       '' |> logger
     }
@@ -58,7 +55,7 @@ export class PivotTest {
 
   static test () {
     const paramsList = {
-      duties: [duties, ['day', 'name', 'served'], { mode: PivotModes.sum, include: x => !isNaN(x) }]
+      duties: [duties, ['day', 'name', 'served'], { mode: SUM, include: x => !isNaN(x) }]
     }
     const { lapse, result } = Chrono.strategies({
       repeat: 1E+4,
@@ -68,7 +65,7 @@ export class PivotTest {
       }
     })
     lapse |> decoCrostab |> says.lapse
-    result.brief() |> says.result
+    result |> decoCrostab |> says.result
 
     'stable' |> logger
     for (let key of Object.keys(paramsList)) {
@@ -79,4 +76,6 @@ export class PivotTest {
 
   }
 }
+
+PivotTest.test()
 

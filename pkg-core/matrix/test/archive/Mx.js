@@ -100,7 +100,7 @@ export function columns (mx, fnOnColumn) {
  */
 export function map (mx, fn) {
   const [ht, wd] = Mx.size(mx)
-  // return mx.mapper((r, i) => r.mapper((el, j) => fn(el, i, j)))
+  // return m.mapper((r, i) => r.mapper((el, j) => fn(el, i, j)))
   return mapAr(mx,
     (r, i) => mapAr(r,
       (x, j) => fn(x, i, j),
