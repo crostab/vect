@@ -1,7 +1,7 @@
 {
-  "name": "@vect/column-indicator",
+  "name": "@vect/util-pivot",
   "version": "0.0.18",
-  "description": "Indicators for column",
+  "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,23 +12,17 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/column-indicator.test.js"
+    "test": "node -r @babel/register test/util-pivot.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
-  "dependencies": {
-    "@aryth/comparer": "^0.0.9"
-  },
   "keywords": [
+    "array",
+    "vector",
     "matrix",
-    "2-d array",
-    "column",
-    "indicator",
-    "max",
-    "min",
-    "reduce"
+    "object"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

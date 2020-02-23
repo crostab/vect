@@ -1,1 +1,1 @@
-export { fab, iso, ini, starter } from './src/functions'
+export { draft, iso, init, starter, draft as fab, init as ini } from './src'

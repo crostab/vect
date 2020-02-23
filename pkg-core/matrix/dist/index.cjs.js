@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var Initializer = require('@vect/matrix-init');
+var Init = require('@vect/matrix-init');
 var Mapper = require('@vect/matrix-mapper');
 var Margin = require('@vect/matrix-margin');
 var Zipper = require('@vect/matrix-zipper');
@@ -32,11 +32,13 @@ const Directs = {
 };
 
 const {
+  draft,
   fab,
   iso,
+  init,
   ini,
   starter
-} = Initializer;
+} = Init;
 const {
   mutate,
   mapper
@@ -92,10 +94,12 @@ exports.Trizipper = Trizipper;
 exports.coins = coins;
 exports.column = column;
 exports.columnsMapper = columnsMapper;
+exports.draft = draft;
 exports.every = every;
 exports.fab = fab;
 exports.height = height;
 exports.ini = ini;
+exports.init = init;
 exports.isMatrix = isMatrix;
 exports.iso = iso;
 exports.mapper = mapper;

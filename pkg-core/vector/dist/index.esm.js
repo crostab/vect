@@ -2,6 +2,7 @@ import * as Mapper from '@vect/vector-mapper';
 import * as Margin from '@vect/vector-margin';
 import * as Zipper from '@vect/vector-zipper';
 import * as Indicator from '@vect/vector-indicator';
+import * as Init from '@vect/vector-init';
 
 const {
   mapper,
@@ -25,5 +26,12 @@ const {
   Max,
   Min
 } = Indicator;
+const {
+  draft,
+  iso,
+  init,
+  seq,
+  range
+} = Init;
 
-export { Duozipper, Max, Min, Quazipper, Trizipper, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, draft, init, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, range, seq, zipper };

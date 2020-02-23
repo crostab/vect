@@ -1,4 +1,4 @@
-import * as Initializer from '@vect/matrix-init'
+import * as Init from '@vect/matrix-init'
 import * as Mapper from '@vect/matrix-mapper'
 import * as Margin from '@vect/matrix-margin'
 import * as Zipper from '@vect/matrix-zipper'
@@ -10,7 +10,7 @@ import * as Transpose from '@vect/matrix-transpose'
 import * as ColumnsMapper from '@vect/columns-mapper'
 import * as ColumnGetter from '@vect/column-getter'
 
-export const { fab, iso, ini, starter } = Initializer
+export const { draft, fab, iso, init, ini, starter } = Init
 export const { mutate, mapper } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
 export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper

@@ -1,4 +1,4 @@
-import * as Initializer from '@vect/matrix-init';
+import * as Init from '@vect/matrix-init';
 import * as Mapper from '@vect/matrix-mapper';
 import * as Margin from '@vect/matrix-margin';
 import * as Zipper from '@vect/matrix-zipper';
@@ -28,11 +28,13 @@ const Directs = {
 };
 
 const {
+  draft,
   fab,
   iso,
+  init,
   ini,
   starter
-} = Initializer;
+} = Init;
 const {
   mutate,
   mapper
@@ -75,4 +77,4 @@ const {
   Columns
 } = ColumnGetter;
 
-export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, every, fab, height, ini, isMatrix, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, size, some, starter, transpose, width, zipper };
+export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, draft, every, fab, height, ini, init, isMatrix, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, size, some, starter, transpose, width, zipper };

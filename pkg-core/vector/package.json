@@ -11,6 +11,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@vect/vector-init": "^0.0.18",
     "@vect/vector-indicator": "^0.0.18",
     "@vect/vector-mapper": "^0.0.18",
     "@vect/vector-margin": "^0.0.18",

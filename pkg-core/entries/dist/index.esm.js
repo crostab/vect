@@ -1,9 +1,15 @@
+import * as Init from '@vect/entries-init';
 import * as Mapper from '@vect/entries-mapper';
 import * as Margin from '@vect/entries-margin';
 import * as Zipper from '@vect/entries-zipper';
 import * as Unwind from '@vect/entries-unwind';
 import * as Indicator from '@vect/entries-indicator';
 
+const {
+  draft,
+  wind,
+  iso
+} = Init;
 const {
   mapper,
   mutate
@@ -30,4 +36,4 @@ const {
   unwind
 } = Unwind;
 
-export { Duozipper, Max, Min, Quazipper, Trizipper, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, unwind, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, draft, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, unwind, wind, zipper };
