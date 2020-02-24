@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-mapper",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,11 +15,11 @@
     "test": "node -r @babel/register test/matrix-mapper.test.js"
   },
   "dependencies": {
-    "@vect/matrix-size": "^0.0.22",
-    "@vect/vector-mapper": "^0.0.22"
+    "@vect/matrix-size": "^0.0.23",
+    "@vect/vector-mapper": "^0.0.23"
   },
   "devDependencies": {
-    "@vect/object-mapper": "^0.0.22"
+    "@vect/object-mapper": "^0.0.23"
   },
   "repository": {
     "type": "git",

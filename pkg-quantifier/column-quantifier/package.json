@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-quantifier",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Every and some for 2-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@vect/matrix-size": "^0.0.22"
+    "@vect/matrix-size": "^0.0.23"
   },
   "keywords": [
     "matrix",
