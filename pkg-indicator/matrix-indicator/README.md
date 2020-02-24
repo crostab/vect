@@ -29,10 +29,10 @@
 #### Features
 
 ##### every:
-- Return true if every element in a specified col of a matrix matches the input criteria.
+- Return true if every element in a specified column of a matrix matches the input criteria.
 - Return true if either height or width is zero.
 ##### some:
-- Return true if at least one element in a specified col of a matrix matches the input criteria.
+- Return true if at least one element in a specified column of a matrix matches the input criteria.
 - Return false if either height or width is zero.
 
 #### Install

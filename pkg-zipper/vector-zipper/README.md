@@ -1,4 +1,4 @@
-# @vect/vector-fn
+# @vect/vector-zipper
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/vector-fn
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/vector-fn
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/vector-fn
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/vector-fn
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/vector-fn
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/vector-fn
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/vector-zipper
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/vector-zipper
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/vector-zipper
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/vector-zipper
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/vector-zipper
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/vector-zipper
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/vector-fn
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-fn
+[url-npm]: https://npmjs.org/package/@vect/vector-zipper
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-zipper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Map through each element of an array.
@@ -33,7 +33,7 @@
 
 #### Install
 ```console
-$ npm install @vect/vector-fn
+$ npm install @vect/vector-zipper
 ```
 
 #### Usage

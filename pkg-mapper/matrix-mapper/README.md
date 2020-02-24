@@ -1,4 +1,4 @@
-# @vect/matrix-fn
+# @vect/matrix-mapper
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/matrix-fn
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/matrix-fn
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/matrix-fn
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/matrix-fn
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/matrix-fn
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/matrix-fn
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/matrix-mapper
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/matrix-mapper
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/matrix-mapper
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/matrix-mapper
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/matrix-mapper
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/matrix-mapper
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/matrix-fn
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/matrix-fn
+[url-npm]: https://npmjs.org/package/@vect/matrix-mapper
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/matrix-mapper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array
@@ -32,7 +32,7 @@
 
 #### Install
 ```console
-$ npm install @vect/matrix-fn
+$ npm install @vect/matrix-mapper
 ```
 
 #### Usage

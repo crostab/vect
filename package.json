@@ -8,6 +8,8 @@
     "pkg-mapper/*",
     "pkg-margin/*",
     "pkg-quantifier/*",
+    "pkg-select/*",
+    "pkg-update/*",
     "pkg-util/*",
     "pkg-zipper/*"
   ],
@@ -15,7 +17,7 @@
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "build-specific": "lerna exec --scope=@vect/matrix-init -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=@vect/vector-select -- rollup -c ../../rollup.config.js",
     "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },
@@ -35,6 +37,7 @@
     "@foba/foo": "^0.0.7",
     "@foba/util": "^0.0.7",
     "@foba/vector": "^0.0.7",
+    "@foba/object": "^0.0.7",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",

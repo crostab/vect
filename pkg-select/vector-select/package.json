@@ -1,0 +1,32 @@
+{
+  "name": "@vect/vector-select",
+  "version": "0.0.0",
+  "description": "A math util library",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/rank.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "math",
+    "numeric",
+    "analysis"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme"
+}

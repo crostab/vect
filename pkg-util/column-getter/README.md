@@ -1,4 +1,4 @@
-# @vect/col-getter
+# @vect/column-getter
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/col-getter
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/col-getter
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/col-getter
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/col-getter
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/col-getter
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/col-getter
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/column-getter
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/column-getter
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/column-getter
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/column-getter
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/column-getter
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/column-getter
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/col-getter
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/col-getter
+[url-npm]: https://npmjs.org/package/@vect/column-getter
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/column-getter
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array
@@ -32,7 +32,7 @@
 
 #### Install
 ```console
-$ npm install @vect/col-getter
+$ npm install @vect/column-getter
 ```
 
 #### Usage

@@ -1,4 +1,4 @@
-# @vect/object-fn
+# @vect/object-zipper
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,37 +10,37 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/object-fn
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/object-fn
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/object-fn
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/object-fn
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/object-fn
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/object-fn
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/object-zipper
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/object-zipper
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/object-zipper
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/object-zipper
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/object-zipper
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/object-zipper
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/object-fn
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-fn
+[url-npm]: https://npmjs.org/package/@vect/object-zipper
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-zipper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array
 
 #### Install
 ```console
-$ npm install @vect/object-fn
+$ npm install @vect/object-zipper
 ```
 
 #### Functions
 
-- **fn** map object values and return a new object
+- **zipper** map object values and return a new object
 - **mutazip** map object values and return the object itself
 - **mapKeys** map object keys and return a new object
 - **mapEntries** map object entries and return a new object
 
 #### Usage
 ```js
-import { fn, mutazip, mapKeys, mapEntries } from '@vect/object-fn'
+import { zipper, mutazip, mapKeys, mapEntries } from '@vect/object-zipper'
 
 const ot = {
   AMEE: 'Red Planet',
@@ -49,7 +49,7 @@ const ot = {
   Terminatrix: 'Terminator 3',
 }
 
-fn(ot, value => value.length)
+zipper(ot, value => value.length)
 mapKeys(ot, key => key.slice(0, 4))
 mapEntries(ot, ([key, value], i) => [`${key}_${i}`, value.length])
 mutazip(ot, value => value.length)

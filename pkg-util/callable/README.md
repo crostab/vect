@@ -53,20 +53,3 @@ console.log(callableClass(3)) // 12
 
 ## Meta
 [LICENSE (MIT)](LICENSE)
-
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
-
-[//]: <> (Shields)
-[npm-image]: https://img.shields.io/npm/cell/@vect/callable.svg?style=flat-square
-[quality-image]: http://npm.packagequality.com/shield/@vect/callable.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/@vect/callable.svg?style=flat-square
-[total-download-image]:https://img.shields.io/npm/dt/@vect/callable.svg?style=flat-square
-[license-image]: https://img.shields.io/npm/hi/@vect/callable.svg?style=flat-square
-[commit-image]: https://img.shields.io/github/commit-activity/col/hoyeungw/@vect/callable?style=flat-square
-[size]: https://packagephobia.now.sh/badge?p=@vect/callable?style=flat-square
-
-[//]: <> (Link)
-[npm-url]: https://npmjs.org/package/@vect/callable
-[quality-url]: http://packagequality.com/#?package=@vect/callable
-[github-url]: https://github.com/hoyeungw/@vect/callable
-[size-url]: https://packagephobia.now.sh/result?p=@vect/callable

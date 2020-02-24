@@ -15,7 +15,8 @@
     "test": "node -r @babel/register test/column-getter.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.0.20"
+    "@vect/vector-mapper": "^0.0.20",
+    "@vect/column-getter": "^0.0.20"
   },
   "repository": {
     "type": "git",

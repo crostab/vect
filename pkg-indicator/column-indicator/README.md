@@ -1,4 +1,4 @@
-# @vect/col-indicator
+# @vect/column-indicator
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/col-indicator
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/col-indicator
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/col-indicator
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/col-indicator
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/col-indicator
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/col-indicator
+[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/column-indicator
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/column-indicator
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/column-indicator
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/column-indicator
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/column-indicator
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/column-indicator
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/col-indicator
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/col-indicator
+[url-npm]: https://npmjs.org/package/@vect/column-indicator
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/column-indicator
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### 'Every' and 'some' for 2-d array 
@@ -29,15 +29,15 @@
 #### Features
 
 ##### every:
-- Return true if every element in a specified col of a matrix matches the input criteria.
+- Return true if every element in a specified column of a matrix matches the input criteria.
 - Return true if either height or width is zero.
 ##### some:
-- Return true if at least one element in a specified col of a matrix matches the input criteria.
+- Return true if at least one element in a specified column of a matrix matches the input criteria.
 - Return false if either height or width is zero.
 
 #### Install
 ```console
-$ npm install @vect/col-indicator
+$ npm install @vect/column-indicator
 ```
 
 #### Usage

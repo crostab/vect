@@ -6,6 +6,8 @@
     "pkg-mapper/*",
     "pkg-margin/*",
     "pkg-quantifier/*",
+    "pkg-select/*",
+    "pkg-update/*",
     "pkg-util/*",
     "pkg-zipper/*"
   ],
