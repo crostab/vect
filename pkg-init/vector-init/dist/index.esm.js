@@ -53,7 +53,7 @@ const init = (size, fn) => {
     return arr;
   }
 
-  Array(size).fill(null).map((_, i) => fn(i));
+  return Array(size).fill(null).map((_, i) => fn(i));
 };
 /**
  *
