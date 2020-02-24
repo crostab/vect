@@ -3,6 +3,8 @@ import * as Margin from '@vect/vector-margin';
 import * as Zipper from '@vect/vector-zipper';
 import * as Indicator from '@vect/vector-indicator';
 import * as Init from '@vect/vector-init';
+export { select } from '@vect/vector-select';
+export { splices } from '@vect/vector-update';
 
 const {
   mapper,

@@ -15,7 +15,9 @@
     "@vect/vector-init": "^0.0.20",
     "@vect/vector-mapper": "^0.0.20",
     "@vect/vector-margin": "^0.0.20",
-    "@vect/vector-zipper": "^0.0.20"
+    "@vect/vector-zipper": "^0.0.20",
+    "@vect/vector-select": "^0.0.0",
+    "@vect/vector-update": "^0.0.0"
   },
   "scripts": {
     "pub": "npm publish",

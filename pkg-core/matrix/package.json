@@ -17,6 +17,8 @@
   "dependencies": {
     "@vect/column-getter": "^0.0.20",
     "@vect/columns-mapper": "^0.0.20",
+    "@vect/columns-select": "^0.0.0",
+    "@vect/columns-update": "^0.0.0",
     "@vect/matrix-indicator": "^0.0.20",
     "@vect/matrix-init": "^0.0.20",
     "@vect/matrix-mapper": "^0.0.20",

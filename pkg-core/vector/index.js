@@ -10,3 +10,6 @@ export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
 export const { maxBy, minBy, Max, Min } = Indicator
 export const { draft, iso, init, seq, range } = Init
 
+export { select } from '@vect/vector-select'
+export { splices } from '@vect/vector-update'
+

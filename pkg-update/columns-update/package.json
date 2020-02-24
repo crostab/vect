@@ -1,7 +1,7 @@
 {
-  "name": "@vect/column",
-  "version": "0.0.20",
-  "description": "Util for 2d-array",
+  "name": "@vect/columns-update",
+  "version": "0.0.0",
+  "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,27 +12,27 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/test.index.js"
+    "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.0.20",
-    "@vect/column-indicator": "^0.0.20",
-    "@vect/column-mapper": "^0.0.20",
-    "@vect/column-quantifier": "^0.0.20",
-    "@vect/column-zipper": "^0.0.20"
+    "@vect/vector-mapper": "^0.0.20",
+    "@vect/vector-zipper": "^0.0.20",
+    "@vect/vector-update": "^0.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "keywords": [
-    "matrix",
-    "2d-array"
+    "math",
+    "numeric",
+    "analysis"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hoyeungw/vect"
   },
-  "homepage": "https://github.com/hoyeungw/vect#readme"
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "90b2b4dc186328c9463159625b811ec8c2ef3a37"
 }

@@ -8,6 +8,8 @@ import * as Size from '@vect/matrix-size';
 import * as Transpose from '@vect/matrix-transpose';
 import * as ColumnsMapper from '@vect/columns-mapper';
 import * as ColumnGetter from '@vect/column-getter';
+export { select } from '@vect/columns-select';
+export { pop, push, shift, splices, unshift } from '@vect/columns-update';
 
 /**
  *

@@ -12,6 +12,8 @@ var Size = require('@vect/matrix-size');
 var Transpose = require('@vect/matrix-transpose');
 var ColumnsMapper = require('@vect/columns-mapper');
 var ColumnGetter = require('@vect/column-getter');
+var columnsSelect = require('@vect/columns-select');
+var columnsUpdate = require('@vect/columns-update');
 
 /**
  *
@@ -81,6 +83,42 @@ const {
   Columns
 } = ColumnGetter;
 
+Object.defineProperty(exports, 'select', {
+  enumerable: true,
+  get: function () {
+    return columnsSelect.select;
+  }
+});
+Object.defineProperty(exports, 'pop', {
+  enumerable: true,
+  get: function () {
+    return columnsUpdate.pop;
+  }
+});
+Object.defineProperty(exports, 'push', {
+  enumerable: true,
+  get: function () {
+    return columnsUpdate.push;
+  }
+});
+Object.defineProperty(exports, 'shift', {
+  enumerable: true,
+  get: function () {
+    return columnsUpdate.shift;
+  }
+});
+Object.defineProperty(exports, 'splices', {
+  enumerable: true,
+  get: function () {
+    return columnsUpdate.splices;
+  }
+});
+Object.defineProperty(exports, 'unshift', {
+  enumerable: true,
+  get: function () {
+    return columnsUpdate.unshift;
+  }
+});
 exports.COLUMNWISE = COLUMNWISE;
 exports.Columns = Columns;
 exports.Directs = Directs;

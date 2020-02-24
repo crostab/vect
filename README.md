@@ -59,6 +59,7 @@ $ npm install @vect/<tool-name>
 | [**columns-zipper**](pkg-zipper/columns-zipper)            | Zipper for matrix columns          | zipper     |
 | [**entries-zipper**](pkg-zipper/entries-zipper)            | Zipper for entries                 | zipper     |
 | [**object-zipper**](pkg-zipper/object-zipper)              | Zipper for object                  | zipper     |
+|                                                            |                                    |            |
 
 #### Indicators
 |                                                            |                                    |            |
@@ -68,6 +69,22 @@ $ npm install @vect/<tool-name>
 | [**column-indicator**](pkg-indicator/column-indicator)     | Max & min for matrix column        | indicator  |
 | [**columns-indicator**](pkg-indicator/columns-indicator)   | Max & min for matrix columns       | indicator  |
 | [**entries-indicator**](pkg-indicator/entries-indicator)   | Max & min for entries              | indicator  |
+|                                                            |                                    |            |
+
+#### Select
+|                                                            |                                    |            |
+| ---------------------------------------------------------- | ---------------------------------- | ---------- |
+| [**vector-select**](pkg-select/vector-select)              | Select vector by index list        | select     |
+| [**object-select**](pkg-select/object-select)              | Select object by key list          | select     |
+| [**columns-select**](pkg-select/columns-select)            | Select columns by column indexes   | select     |
+|                                                            |                                    |            |
+
+#### Update
+|                                                            |                                    |            |
+| ---------------------------------------------------------- | ---------------------------------- | ---------- |
+| [**vector-update**](pkg-update/vector-update)              | Splices vector by index list       | update     |
+| [**columns-update**](pkg-update/columns-update)            | Pop/push/(un)shift/splices columns | update     |
+|                                                            |                                    |            |
 
 #### Margins
 |                                                            |                                    |            |
@@ -75,12 +92,14 @@ $ npm install @vect/<tool-name>
 | [**vector-margin**](pkg-margin/vector-margin)              | Margin for vector                  | margin     |
 | [**matrix-margin**](pkg-margin/matrix-margin)              | Margin for matrix                  | margin     |
 | [**entries-margin**](pkg-margin/entries-margin)            | Margin for entries                 | margin     |
+|                                                            |                                    |            |
 
 #### Quantifiers
 |                                                            |                                    |            |
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |
 | [**matrix-quantifier**](pkg-quantifier/matrix-quantifier)  | Every & some for matrix elements   | quantifier |
 | [**column-quantifier**](pkg-quantifier/column-quantifier)  | Every & some for matrix column     | quantifier |
+|                                                            |                                    |            |
 
 #### Misc
 |                                                            |                                    |            |

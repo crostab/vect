@@ -7,6 +7,8 @@ var Margin = require('@vect/vector-margin');
 var Zipper = require('@vect/vector-zipper');
 var Indicator = require('@vect/vector-indicator');
 var Init = require('@vect/vector-init');
+var vectorSelect = require('@vect/vector-select');
+var vectorUpdate = require('@vect/vector-update');
 
 const {
   mapper,
@@ -38,6 +40,18 @@ const {
   range
 } = Init;
 
+Object.defineProperty(exports, 'select', {
+	enumerable: true,
+	get: function () {
+		return vectorSelect.select;
+	}
+});
+Object.defineProperty(exports, 'splices', {
+	enumerable: true,
+	get: function () {
+		return vectorUpdate.splices;
+	}
+});
 exports.Duozipper = Duozipper;
 exports.Max = Max;
 exports.Min = Min;
