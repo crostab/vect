@@ -23,7 +23,7 @@ export const init = (size, fn) => {
     for (let i = 0; i < size; i++) arr[i] = fn(i)
     return arr
   }
-  Array(size).fill(null).map((_, i) => fn(i))
+  return Array(size).fill(null).map((_, i) => fn(i))
 }
 
 /**
