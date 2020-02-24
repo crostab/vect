@@ -11,6 +11,7 @@ var vectorSelect = require('@vect/vector-select');
 var vectorUpdate = require('@vect/vector-update');
 
 const {
+  iterate,
   mapper,
   mutate
 } = Mapper;
@@ -60,6 +61,7 @@ exports.Trizipper = Trizipper;
 exports.draft = draft;
 exports.init = init;
 exports.iso = iso;
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.marginCopy = marginCopy;
 exports.marginMapper = marginMapper;

@@ -2,7 +2,7 @@ import { Chrono } from 'elprimero'
 import { mapper } from '../..'
 import { simpleVectors } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
-import { CrosTabX } from 'xbrief'
+import { decoCrostab, says } from '@spare/logger'
 
 const ShortVectors = simpleVectors({ h: 15 })
 const LongVectors = simpleVectors({ h: 256 })
@@ -14,16 +14,13 @@ export class VectorMapperStrategies {
       repeat: 1E+5,
       paramsList: CombinedVectors |> makeEmbedded,
       funcList: {
-        stable: x => x,
+        stable: ar => ar.length,
         native: ar => ar.map(x => x),
         mapper: ar => mapper(ar, x => x),
       }
     })
-    'lapse' |> console.log
-    lapse |> CrosTabX.brief |> console.log
-    '' |> console.log
-    'result' |> console.log
-    result |> CrosTabX.brief |> console.log
+    lapse |> decoCrostab |> says.lapse
+    result |> decoCrostab |> says.result
   }
 }
 

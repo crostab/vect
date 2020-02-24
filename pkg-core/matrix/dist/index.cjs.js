@@ -42,6 +42,7 @@ const {
   starter
 } = Init;
 const {
+  iterate,
   mutate,
   mapper
 } = Mapper;
@@ -140,6 +141,7 @@ exports.ini = ini;
 exports.init = init;
 exports.isMatrix = isMatrix;
 exports.iso = iso;
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.marginCopy = marginCopy;
 exports.marginMapper = marginMapper;

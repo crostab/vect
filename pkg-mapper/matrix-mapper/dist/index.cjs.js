@@ -5,6 +5,21 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var matrixSize = require('@vect/matrix-size');
 
 /**
+ *
+ * @param {*[][]} mx
+ * @param {function} fn
+ * @param {number} [h]
+ * @param {number} [w]
+ * @returns {undefined}
+ */
+
+const iterate = function (mx, fn, h, w) {
+  if (!h || !w) [h, w] = matrixSize.size(mx);
+
+  for (let i = 0, j, r; i < h; i++) for (r = mx[i], j = 0; j < w; j++) fn.call(this, r[j], i, j);
+};
+
+/**
  * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.
  * @param {*[][]} mx
  * @param {function} fn
@@ -28,5 +43,6 @@ const mutate = (mx, fn) => {
   return mx;
 };
 
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;

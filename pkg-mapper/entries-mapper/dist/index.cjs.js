@@ -5,6 +5,23 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /**
  *
  * @param {[*,*][]} ents
+ * @param {function} keyFn
+ * @param {function} [valFn]
+ * @param {number} [l]
+ * @returns {undefined}
+ */
+const iterate = function (ents, keyFn, valFn, l) {
+  l = l || ents && ents.length;
+  valFn = valFn || keyFn;
+
+  for (let r; --l >= 0 && (r = ents[l]);) {
+    keyFn.call(this, r[0], l), valFn.call(this, r[1], l);
+  }
+};
+
+/**
+ *
+ * @param {[*,*][]} ents
  * @param {function} keyMap
  * @param {function} [valMap]
  * @param {number} [l]
@@ -40,5 +57,6 @@ const mutate = (ents, keyMap, valMap, l) => {
   return ents;
 };
 
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;

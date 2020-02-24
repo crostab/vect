@@ -42,12 +42,12 @@ $ npm install @vect/<tool-name>
 #### Mappers
 |                                                            |                                    |            |
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |
-| [**vector-mapper**](pkg-mapper/vector-mapper)              | Mapper for vector                  | mapper     |
-| [**matrix-mapper**](pkg-mapper/matrix-mapper)              | Mapper for matrix elements         | mapper     |
-| [**column-mapper**](pkg-mapper/column-mapper)              | Mapper for matrix column           | mapper     |
-| [**columns-mapper**](pkg-mapper/columns-mapper)            | Mapper for matrix columns          | mapper     |
-| [**entries-mapper**](pkg-mapper/entries-mapper)            | Mapper for entries                 | mapper     |
-| [**object-mapper**](pkg-mapper/object-mapper)              | Mapper for object                  | mapper     |
+| [**vector-mapper**](pkg-mapper/vector-mapper)              | Mapper/iterate for vector          | mapper     |
+| [**matrix-mapper**](pkg-mapper/matrix-mapper)              | Mapper/iterate for matrix elements | mapper     |
+| [**column-mapper**](pkg-mapper/column-mapper)              | Mapper/iterate for matrix column   | mapper     |
+| [**columns-mapper**](pkg-mapper/columns-mapper)            | Mapper/iterate for matrix columns  | mapper     |
+| [**entries-mapper**](pkg-mapper/entries-mapper)            | Mapper/iterate for entries         | mapper     |
+| [**object-mapper**](pkg-mapper/object-mapper)              | Mapper/iterate for object          | mapper     |
 |                                                            |                                    |            |
 
 #### Zippers

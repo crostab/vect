@@ -1,3 +1,18 @@
+function iterate(o, fn) {
+  for (let k in o) if (Object.hasOwnProperty.call(o, k)) fn.call(this, o[k]);
+}
+
+const iterateKeys = function (o, fn) {
+  for (let k in o) if (Object.hasOwnProperty.call(o, k)) fn.call(this, k);
+};
+
+const iterateEntries = function (o, fn, l) {
+  const ents = Object.entries(o);
+  l = l || ents.length;
+
+  for (let i = 0; i < l; i++) fn.call(this, ents[i], i);
+};
+
 const mapper = (o, fn) => {
   const ob = {};
 
@@ -33,4 +48,4 @@ const mapEntries = (o, fn, l) => {
   return ob;
 };
 
-export { mapEntries, mapKeys, mapper, mutate };
+export { iterate, iterateEntries, iterateKeys, mapEntries, mapKeys, mapper, mutate };

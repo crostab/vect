@@ -2,22 +2,29 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const mapper = (ar, fn, l) => {
-  l = l || ar && ar.length;
-  const vec = Array(l);
+const iterate = function (vec, fn, l) {
+  l = l || vec && vec.length;
 
-  for (--l; l >= 0; l--) vec[l] = fn(ar[l], l);
-
-  return vec;
+  for (let i = 0; i < l; i++) fn.call(this, vec[i], l);
 };
 
-const mutate = (ar, fn, l) => {
-  l = l || ar && ar.length;
+const mapper = (vec, fn, l) => {
+  l = l || vec && vec.length;
+  const ar = Array(l);
 
-  for (--l; l >= 0; l--) ar[l] = fn(ar[l], l);
+  for (--l; l >= 0; l--) ar[l] = fn.call(undefined, vec[l], l);
 
   return ar;
 };
 
+const mutate = (vec, fn, l) => {
+  l = l || vec && vec.length;
+
+  for (--l; l >= 0; l--) vec[l] = fn(vec[l], l);
+
+  return vec;
+};
+
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;

@@ -5,8 +5,10 @@ import * as Indicator from '@vect/column-indicator';
 import * as ColumnGetter from '@vect/column-getter';
 
 const {
+  iterate,
   mapper,
   mutate,
+  ColumnIterate,
   ColumnMapper,
   ColumnMutate
 } = Mapper;
@@ -36,4 +38,4 @@ const {
   Columns
 } = ColumnGetter;
 
-export { ColumnEvery, ColumnMapper, ColumnMutate, ColumnMutazip, ColumnSome, ColumnZipper, Columns, Duozipper, Max, Min, Quazipper, Trizipper, column, every, mapper, maxBy, minBy, mutate, mutazip, some, zipper };
+export { ColumnEvery, ColumnIterate, ColumnMapper, ColumnMutate, ColumnMutazip, ColumnSome, ColumnZipper, Columns, Duozipper, Max, Min, Quazipper, Trizipper, column, every, iterate, mapper, maxBy, minBy, mutate, mutazip, some, zipper };

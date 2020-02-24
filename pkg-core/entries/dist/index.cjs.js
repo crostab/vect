@@ -15,6 +15,7 @@ const {
   iso
 } = Init;
 const {
+  iterate,
   mapper,
   mutate
 } = Mapper;
@@ -47,6 +48,7 @@ exports.Quazipper = Quazipper;
 exports.Trizipper = Trizipper;
 exports.draft = draft;
 exports.iso = iso;
+exports.iterate = iterate;
 exports.mapper = mapper;
 exports.marginCopy = marginCopy;
 exports.marginMapper = marginMapper;

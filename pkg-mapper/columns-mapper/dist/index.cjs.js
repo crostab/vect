@@ -2,24 +2,27 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var vectorMapper = require('@vect/vector-mapper');
+var columnGetter = require('@vect/column-getter');
 
 const size = mx => {
   let h, r;
   return mx && (h = mx.length) && (r = mx[0]) ? [h, r.length] : [h, r];
 };
 
-const column = function (c, h) {
-  return vectorMapper.mapper(this, r => r[c], h);
+const iterate = function (mx, fnOnColumns) {
+  const [h, w] = size(mx);
+
+  for (let y = 0, cols = columnGetter.Columns(mx); y < w; y++) fnOnColumns.call(this, cols(y, h), y);
 };
 
 const mapper = (mx, mapOnColumns) => {
   const [h, w] = size(mx),
-        columns = Array(w);
+        tcol = Array(w);
 
-  for (let c = 0, col = column.bind(mx); c < w; c++) columns[c] = mapOnColumns(col(c, h), c);
+  for (let y = 0, cols = columnGetter.Columns(mx); y < w; y++) tcol[y] = mapOnColumns(cols(y, h), y);
 
-  return columns;
+  return tcol;
 };
 
+exports.iterate = iterate;
 exports.mapper = mapper;

@@ -1,3 +1,6 @@
+export { iterate } from './src/iterate'
+export { iterateKeys } from './src/iterateKeys'
+export { iterateEntries } from './src/iterateEntries'
 export { mapper } from './src/mapper'
 export { mutate } from './src/mutate'
 export { mapKeys } from './src/mapKeys'

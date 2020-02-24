@@ -11,6 +11,7 @@ const {
   iso
 } = Init;
 const {
+  iterate,
   mapper,
   mutate
 } = Mapper;
@@ -36,4 +37,4 @@ const {
   unwind
 } = Unwind;
 
-export { Duozipper, Max, Min, Quazipper, Trizipper, draft, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, unwind, wind, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, draft, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, unwind, wind, zipper };

@@ -11,7 +11,7 @@ import * as ColumnGetter from '@vect/column-getter'
 import * as ColumnsMapper from '@vect/columns-mapper'
 
 export const { draft, fab, iso, init, ini, starter } = Init
-export const { mutate, mapper } = Mapper
+export const { iterate, mutate, mapper } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
 export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
 export const { maxBy, minBy, Max, Min } = Indicator

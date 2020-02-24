@@ -7,6 +7,7 @@ export { select } from '@vect/vector-select';
 export { splices } from '@vect/vector-update';
 
 const {
+  iterate,
   mapper,
   mutate
 } = Mapper;
@@ -36,4 +37,4 @@ const {
   range
 } = Init;
 
-export { Duozipper, Max, Min, Quazipper, Trizipper, draft, init, iso, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, range, seq, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, draft, init, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, range, seq, zipper };
