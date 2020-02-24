@@ -10,8 +10,8 @@ var Quantifier = require('@vect/matrix-quantifier');
 var Indicator = require('@vect/matrix-indicator');
 var Size = require('@vect/matrix-size');
 var Transpose = require('@vect/matrix-transpose');
-var ColumnsMapper = require('@vect/columns-mapper');
 var ColumnGetter = require('@vect/column-getter');
+var ColumnsMapper = require('@vect/columns-mapper');
 var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
 
@@ -76,12 +76,12 @@ const {
   transpose
 } = Transpose;
 const {
-  mapper: columnsMapper
-} = ColumnsMapper;
-const {
   column,
   Columns
 } = ColumnGetter;
+const {
+  mapper: columnsMapper
+} = ColumnsMapper;
 
 Object.defineProperty(exports, 'select', {
   enumerable: true,
