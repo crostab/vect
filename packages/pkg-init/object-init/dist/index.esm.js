@@ -29,5 +29,12 @@ const init = entries => {
 
   return o;
 };
+const initByValues = (entries, fn) => {
+  let o = {};
 
-export { init, iso, wind };
+  for (let [k, v] of entries) o[k] = fn(v);
+
+  return o;
+};
+
+export { init, initByValues, iso, wind };
