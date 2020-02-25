@@ -6,14 +6,14 @@ var comparer = require('@aryth/comparer');
 
 const max = function (vec) {
   const fn = this;
-  return vec.reduce((p, x, i) => comparer.max(p, fn(x, i)), fn(vec[0], 0));
+  return !fn ? vec.reduce((p, x) => comparer.max(x, p), vec[0]) : vec.reduce((p, x, i) => comparer.max(fn(x, i), p), fn(vec[0], 0));
 };
 const maxBy = (vec, indicator) => max.call(indicator, vec);
 const Max = indicator => max.bind(indicator);
 
 const min = function (vec) {
   const fn = this;
-  return vec.reduce((p, x, i) => comparer.min(p, fn(x, i)), fn(vec[0], 0));
+  return !fn ? vec.reduce((p, x) => comparer.min(x, p), vec[0]) : vec.reduce((p, x, i) => comparer.min(fn(x, i), p), fn(vec[0], 0));
 };
 const minBy = (vec, indicator) => min.call(indicator, vec);
 const Min = kpi => min.bind(kpi);

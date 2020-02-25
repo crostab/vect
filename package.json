@@ -28,6 +28,7 @@
     "@foba/foo": "^0.0.7",
     "@foba/util": "^0.0.7",
     "@foba/vector": "^0.0.7",
+    "@foba/vector-number": "^0.0.7",
     "@foba/object": "^0.0.7",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",

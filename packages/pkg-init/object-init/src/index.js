@@ -22,6 +22,12 @@ export const init = entries => {
   return o
 }
 
+export const initByValues = (entries, fn) => {
+  let o = {}
+  for (let [k, v] of entries) o[k] = fn(v)
+  return o
+}
+
 /**
  * Shallow.
  * @param {...[*,*]} entries - An array of key-value pair, [key, value]
