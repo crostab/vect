@@ -1,15 +1,6 @@
 {
   "packages": [
-    "pkg-core/*",
-    "pkg-indicator/*",
-    "pkg-init/*",
-    "pkg-mapper/*",
-    "pkg-margin/*",
-    "pkg-quantifier/*",
-    "pkg-select/*",
-    "pkg-update/*",
-    "pkg-util/*",
-    "pkg-zipper/*"
+    "packages/*/*"
   ],
   "version": "0.0.24",
   "npmClient": "yarn",
