@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-update",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.0.26",
-    "@vect/vector-update": "^0.0.26",
-    "@vect/vector-zipper": "^0.0.26"
+    "@vect/vector-mapper": "^0.0.27",
+    "@vect/vector-update": "^0.0.27",
+    "@vect/vector-zipper": "^0.0.27"
   },
   "repository": {
     "type": "git",

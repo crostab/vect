@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-zipper",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Zip function",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
