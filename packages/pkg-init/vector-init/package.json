@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/vector-init.test.js"
   },
   "dependencies": {
-    "@aryth/math": "^0.0.9"
+    "@aryth/math": "^0.0.10"
   },
   "repository": {
     "type": "git",
