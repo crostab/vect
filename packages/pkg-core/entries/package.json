@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "Util for array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,12 +11,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/entries-indicator": "^0.0.29",
-    "@vect/entries-init": "^0.0.29",
-    "@vect/entries-mapper": "^0.0.29",
-    "@vect/entries-margin": "^0.0.29",
-    "@vect/entries-unwind": "^0.0.29",
-    "@vect/entries-zipper": "^0.0.29"
+    "@vect/entries-indicator": "^0.0.30",
+    "@vect/entries-init": "^0.0.30",
+    "@vect/entries-mapper": "^0.0.30",
+    "@vect/entries-margin": "^0.0.30",
+    "@vect/entries-unwind": "^0.0.30",
+    "@vect/entries-zipper": "^0.0.30"
   },
   "scripts": {
     "pub": "npm publish",

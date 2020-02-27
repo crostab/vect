@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-unwind",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

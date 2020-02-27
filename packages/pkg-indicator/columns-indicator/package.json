@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-indicator",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "Indicators for columns",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,8 +19,8 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@vect/columns-mapper": "^0.0.29",
-    "@vect/vector-indicator": "^0.0.29"
+    "@vect/columns-mapper": "^0.0.30",
+    "@vect/vector-indicator": "^0.0.30"
   },
   "keywords": [
     "matrix",
