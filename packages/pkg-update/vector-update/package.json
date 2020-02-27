@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-update",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

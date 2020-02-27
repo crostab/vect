@@ -1,6 +1,6 @@
 {
   "name": "@vect/util-pivot",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/util-pivot.test.js"
   },
   "dependencies": {
-    "@vect/vector-init": "^0.0.28",
-    "@vect/vector-mapper": "^0.0.28",
-    "@vect/vector-zipper": "^0.0.28"
+    "@vect/vector-init": "^0.0.29",
+    "@vect/vector-mapper": "^0.0.29",
+    "@vect/vector-zipper": "^0.0.29"
   },
   "repository": {
     "type": "git",
