@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-init",
-  "version": "0.0.30",
+  "version": "0.1.0",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,8 +15,8 @@
     "test": "node -r @babel/register test/entries-init.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.0.30",
-    "@vect/vector-zipper": "^0.0.30"
+    "@vect/vector-mapper": "^0.1.0",
+    "@vect/vector-zipper": "^0.1.0"
   },
   "repository": {
     "type": "git",
