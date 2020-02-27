@@ -35,7 +35,7 @@ const unshift = (matrix, column) => vectorZipper.zipper(matrix, column, (row, el
 const splices = (mx, ys) => {
   const hi = ys.length;
   if (hi === 0) return mx;
-  if (hi === 1) return mapper(mx, r => (r.splice(ys[0], 1), r));
+  if (hi === 1) return vectorMapper.mapper(mx, r => (r.splice(ys[0], 1), r));
   return mx.map(row => vectorUpdate.splices(row, ys, hi));
 };
 

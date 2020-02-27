@@ -1,8 +1,8 @@
-import { mapper as mapper$1 } from '@vect/vector-mapper';
+import { mapper } from '@vect/vector-mapper';
 import { zipper } from '@vect/vector-zipper';
 import { splices as splices$1 } from '@vect/vector-update';
 
-const pop = matrix => mapper$1(matrix, row => row.pop());
+const pop = matrix => mapper(matrix, row => row.pop());
 
 /**
  * push each element of column to each row of matrix, return void 0
@@ -14,7 +14,7 @@ const pop = matrix => mapper$1(matrix, row => row.pop());
 const push = (matrix, column) => void zipper(matrix, column, (row, el) => row.push(el));
 
 const shift = matrix => {
-  return mapper$1(matrix, row => {
+  return mapper(matrix, row => {
     return row.shift();
   });
 };

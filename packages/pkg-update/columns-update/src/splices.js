@@ -1,4 +1,5 @@
 import { splices as splicesRow } from '@vect/vector-update'
+import { mapper } from '@vect/vector-mapper'
 
 export const splices = (mx, ys) => {
   const hi = ys.length
