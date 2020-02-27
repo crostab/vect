@@ -39,7 +39,8 @@ const {
   iso,
   init,
   ini,
-  starter
+  starter,
+  shallow
 } = Init;
 const {
   iterate,
@@ -150,6 +151,7 @@ exports.maxBy = maxBy;
 exports.minBy = minBy;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
+exports.shallow = shallow;
 exports.size = size;
 exports.some = some;
 exports.starter = starter;

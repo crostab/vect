@@ -12,7 +12,7 @@ const iso = (h, w, v) => {
 
   return mx;
 };
-const init = (h, w, fn) => {
+const index = (h, w, fn) => {
   const mx = Array(h);
 
   for (let i = 0, j, ro; i < h; i++) for (j = 0, mx[i] = ro = Array(w); j < w; j++) ro[j] = fn(i, j);
@@ -25,8 +25,15 @@ const starter = (h, w, {
 }) => {
   h = h || 1, w = w || 1;
   if (value !== null || value !== void 0) return iso(h, w, value);
-  if (fn) return init(h, w, fn);
+  if (fn) return index(h, w, fn);
   return draft(h, w);
 };
 
-export { draft, draft as fab, init as ini, init, iso, starter };
+/**
+ *
+ * @param {*[][]} mx
+ * @param {number} h
+ */
+const shallow = (mx, h) => mapper(mx, row => row.slice(), h);
+
+export { draft, draft as fab, index, index as ini, iso, shallow, starter };

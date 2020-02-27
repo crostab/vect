@@ -35,7 +35,8 @@ const {
   iso,
   init,
   ini,
-  starter
+  starter,
+  shallow
 } = Init;
 const {
   iterate,
@@ -80,4 +81,4 @@ const {
   mapper: columnsMapper
 } = ColumnsMapper;
 
-export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, draft, every, fab, height, ini, init, isMatrix, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, size, some, starter, transpose, width, zipper };
+export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, draft, every, fab, height, ini, init, isMatrix, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, shallow, size, some, starter, transpose, width, zipper };

@@ -10,7 +10,7 @@ import * as Transpose from '@vect/matrix-transpose'
 import * as ColumnGetter from '@vect/column-getter'
 import * as ColumnsMapper from '@vect/columns-mapper'
 
-export const { draft, fab, iso, init, ini, starter } = Init
+export const { draft, fab, iso, init, ini, starter, shallow } = Init
 export const { iterate, mutate, mapper } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
 export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper

@@ -12,7 +12,7 @@ export const iso = (h, w, v) => {
   return mx
 }
 
-export const init = (h, w, fn) => {
+export const index = (h, w, fn) => {
   const mx = Array(h)
   for (let i = 0, j, ro; i < h; i++)
     for (j = 0, mx[i] = ro = Array(w); j < w; j++)
@@ -23,6 +23,6 @@ export const init = (h, w, fn) => {
 export const starter = (h, w, { value, fn }) => {
   h = h || 1, w = w || 1
   if (value !== null || value !== void 0) return iso(h, w, value)
-  if (fn) return init(h, w, fn)
+  if (fn) return index(h, w, fn)
   return draft(h, w)
 }
