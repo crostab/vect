@@ -8,6 +8,7 @@ export { splices } from '@vect/vector-update';
 
 const {
   iterate,
+  reviter,
   mapper,
   mutate
 } = Mapper;
@@ -37,4 +38,4 @@ const {
   range
 } = Init;
 
-export { Duozipper, Max, Min, Quazipper, Trizipper, draft, init, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, range, seq, zipper };
+export { Duozipper, Max, Min, Quazipper, Trizipper, draft, init, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, range, reviter, seq, zipper };

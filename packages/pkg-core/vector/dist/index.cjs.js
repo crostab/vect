@@ -12,6 +12,7 @@ var vectorUpdate = require('@vect/vector-update');
 
 const {
   iterate,
+  reviter,
   mapper,
   mutate
 } = Mapper;
@@ -71,5 +72,6 @@ exports.minBy = minBy;
 exports.mutate = mutate;
 exports.mutazip = mutazip;
 exports.range = range;
+exports.reviter = reviter;
 exports.seq = seq;
 exports.zipper = zipper;

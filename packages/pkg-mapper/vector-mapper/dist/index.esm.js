@@ -1,7 +1,13 @@
 const iterate = function (vec, fn, l) {
   l = l || vec && vec.length;
 
-  for (let i = 0; i < l; i++) fn.call(this, vec[i], l);
+  for (let i = 0; i < l; i++) fn.call(this, vec[i], i);
+};
+
+const reviter = function (vec, fn, l) {
+  l = l || vec && vec.length;
+
+  for (--l; l >= 0; l--) fn.call(this, vec[l], l);
 };
 
 const mapper = function (vec, fn, l) {
@@ -21,4 +27,4 @@ const mutate = (vec, fn, l) => {
   return vec;
 };
 
-export { iterate, mapper, mutate };
+export { iterate, mapper, mutate, reviter };

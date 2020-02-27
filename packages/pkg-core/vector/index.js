@@ -4,7 +4,7 @@ import * as Zipper from '@vect/vector-zipper'
 import * as Indicator from '@vect/vector-indicator'
 import * as Init from '@vect/vector-init'
 
-export const { iterate, mapper, mutate } = Mapper
+export const { iterate, reviter, mapper, mutate } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
 export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
 export const { maxBy, minBy, Max, Min } = Indicator
