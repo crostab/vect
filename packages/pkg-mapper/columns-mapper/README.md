@@ -10,7 +10,7 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/cell/@vect/columns-mapper
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/columns-mapper
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/columns-mapper
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/columns-mapper
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/columns-mapper
