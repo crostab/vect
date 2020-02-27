@@ -17,7 +17,7 @@ function columnMutate(mx, fn, l) {
 
   for (let i = 0, r, {
     y
-  } = this; i < l && (r = mx[l]); i++) r[y] = fn(r[y], i);
+  } = this; i < l && (r = mx[i]); i++) r[y] = fn(r[y], i);
 
   return mx;
 }
