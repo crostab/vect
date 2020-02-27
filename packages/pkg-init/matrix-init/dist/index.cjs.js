@@ -36,9 +36,8 @@ const starter = (h, w, {
 /**
  *
  * @param {*[][]} mx
- * @param {number} h
  */
-const shallow = (mx, h) => mapper(mx, row => row.slice(), h);
+const shallow = mx => mx.map(r => r.slice());
 
 exports.draft = draft;
 exports.fab = draft;
