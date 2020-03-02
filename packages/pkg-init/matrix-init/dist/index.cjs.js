@@ -16,7 +16,7 @@ const iso = (h, w, v) => {
 
   return mx;
 };
-const index = (h, w, fn) => {
+const init = (h, w, fn) => {
   const mx = Array(h);
 
   for (let i = 0, j, ro; i < h; i++) for (j = 0, mx[i] = ro = Array(w); j < w; j++) ro[j] = fn(i, j);
@@ -41,8 +41,8 @@ const shallow = mx => mx.map(r => r.slice());
 
 exports.draft = draft;
 exports.fab = draft;
-exports.index = index;
-exports.ini = index;
+exports.ini = init;
+exports.init = init;
 exports.iso = iso;
 exports.shallow = shallow;
 exports.starter = starter;

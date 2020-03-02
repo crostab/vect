@@ -12,6 +12,11 @@ const wind = (keys, values) => {
 
   return o;
 };
+const pair = (key, value) => {
+  const o = {};
+  o[key] = value;
+  return o;
+};
 /**
  * Shallow.
  * @param {string[]} keys
@@ -40,8 +45,23 @@ const initByValues = (entries, fn) => {
 
   return o;
 };
+/**
+ * Shallow.
+ * @param {...[*,*]} entries - An array of key-value pair, [key, value]
+ * @returns {Object|Object<string,*>}
+ */
+
+const ob = (...entries) => {
+  let o = {};
+
+  for (let [k, v] of entries) o[k] = v;
+
+  return o;
+};
 
 exports.init = init;
 exports.initByValues = initByValues;
 exports.iso = iso;
+exports.ob = ob;
+exports.pair = pair;
 exports.wind = wind;

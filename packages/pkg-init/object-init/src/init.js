@@ -4,6 +4,12 @@ export const wind = (keys, values) => {
   return o
 }
 
+export const pair = (key, value) => {
+  const o = {}
+  o[key] = value
+  return o
+}
+
 /**
  * Shallow.
  * @param {string[]} keys

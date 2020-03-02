@@ -1,2 +1,2 @@
-export { draft, iso, index, starter, draft as fab, index as ini } from './src/init'
+export { draft, iso, init, starter, draft as fab, init as ini } from './src/init'
 export { shallow } from './src/copy'
