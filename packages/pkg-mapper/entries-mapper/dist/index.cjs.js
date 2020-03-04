@@ -13,8 +13,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const iterate = function (ents, keyFn, valFn, l) {
   l = l || ents && ents.length, valFn = valFn || keyFn;
 
-  for (let r; --l >= 0 && (r = ents[l]);) {
-    keyFn.call(this, r[0], l), valFn.call(this, r[1], l);
+  for (let i = 0, r; i < l; i++) {
+    r = ents[i], keyFn.call(this, r[0], i), valFn.call(this, r[1], i);
   }
 };
 
@@ -30,7 +30,7 @@ const mapper = (ents, keyMap, valMap, l) => {
   l = l || ents && ents.length, valMap = valMap || keyMap;
   const vec = Array(l);
 
-  for (let r; --l >= 0 && (r = ents[l]);) vec[l] = [keyMap(r[0], l), valMap(r[1], l)];
+  for (let i = 0, r; i < l; i++) r = ents[i], vec[i] = [keyMap(r[0], i), valMap(r[1], i)];
 
   return vec;
 };
@@ -46,8 +46,8 @@ const mapper = (ents, keyMap, valMap, l) => {
 const mutate = (ents, keyMap, valMap, l) => {
   l = l || ents && ents.length, valMap = valMap || keyMap;
 
-  for (let r; --l >= 0 && (r = ents[l]);) {
-    r[0] = keyMap(r[0], l), r[1] = valMap(r[1], l);
+  for (let i = 0, r; i < l; i++) {
+    r = ents[i], r[0] = keyMap(r[0], i), r[1] = valMap(r[1], i);
   }
 
   return ents;

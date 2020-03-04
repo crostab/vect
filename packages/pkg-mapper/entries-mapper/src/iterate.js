@@ -8,7 +8,7 @@
  */
 export const iterate = function (ents, keyFn, valFn, l) {
   l = l || ents && ents.length, valFn = valFn || keyFn
-  for (let r; --l >= 0 && (r = ents[l]);) {
-    keyFn.call(this, r[0], l) , valFn.call(this, r[1], l)
+  for (let i = 0, r; i < l; i++) {
+    r = ents[i], keyFn.call(this, r[0], i) , valFn.call(this, r[1], i)
   }
 }
