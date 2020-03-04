@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-mapper",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
