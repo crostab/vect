@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Select from object/array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
