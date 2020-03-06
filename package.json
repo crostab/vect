@@ -47,6 +47,5 @@
     "rollup-plugin-terser": "^5.2.0",
     "veho": "^0.2.23",
     "xbrief": "^1.0.4"
-  },
-  "version": "0.0.0"
+  }
 }
