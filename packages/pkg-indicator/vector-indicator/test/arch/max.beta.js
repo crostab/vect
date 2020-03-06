@@ -1,21 +1,21 @@
 import { iterate } from '@vect/vector-mapper'
 
-export const indicator = function (vec, l, data) {
-  const { bd, fn, fm } = this
-  data = data || (bd ? bd(vec) : null)
-  iterate.call(data, vec, fn, l)
-  return fm ? fm(data) : data
+export const indicator = function (vec, l, tenant) {
+  const { bd, fn, pk } = this
+  tenant = tenant || (bd ? bd(vec) : {})
+  iterate.call(tenant, vec, fn, l)
+  return pk ? pk(tenant) : tenant
 }
 
-export const indicatorBy = (vec, thisArg, dealer, formatter, l) => indicator.call({
+export const indicatorBy = (vec, thisArg, dealer, picker, l) => indicator.call({
     bd: null,
     fn: dealer,
-    fm: formatter
+    pk: picker
   },
   vec, l, thisArg)
 
-export const Indicator = ({ builder, dealer, formatter }) => indicator.bind({
+export const Indicator = ({ builder, dealer, picker }) => indicator.bind({
   bd: builder,
   fn: dealer,
-  fm: formatter
+  pk: picker
 })

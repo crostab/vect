@@ -1,4 +1,4 @@
-# @vect/entries-indicator
+# @vect/entries-maxIndicator
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/entries-indicator
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/entries-indicator
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/entries-indicator
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/entries-indicator
-[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/entries-indicator
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/entries-indicator
+[badge-npm-version]: https://flat.badgen.net/npm/v/@vect/entries-maxIndicator
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/entries-maxIndicator
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/entries-maxIndicator
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/entries-maxIndicator
+[badge-npm-license]: https://flat.badgen.net/npm/license/@vect/entries-maxIndicator
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/entries-maxIndicator
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@vect/entries-indicator
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/entries-indicator
+[url-npm]: https://npmjs.org/package/@vect/entries-maxIndicator
+[url-pp]: https://packagephobia.now.sh/result?p=@vect/entries-maxIndicator
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### 'Every' and 'some' for 2-d array 
@@ -37,7 +37,7 @@
 
 #### Install
 ```console
-$ npm install @vect/entries-indicator
+$ npm install @vect/entries-maxIndicator
 ```
 
 #### Usage

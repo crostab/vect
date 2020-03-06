@@ -90,19 +90,19 @@ $ npm install @vect/<tool-name>
 #### Indicators
 |                                                                     |                                  |            |                          |
 | ------------------------------------------------------------------- | -------------------------------- | ---------- |------------------------- |
-| [**vector-indicator**](packages/pkg-indicator/vector-indicator)     | Max & min for vector             | indicator  |![v][vector-indicator-dm] |
-| [**matrix-indicator**](packages/pkg-indicator/matrix-indicator)     | Max & min for matrix elements    | indicator  |![v][matrix-indicator-dm] |
-| [**column-indicator**](packages/pkg-indicator/column-indicator)     | Max & min for matrix column      | indicator  |![v][column-indicator-dm] |
-| [**columns-indicator**](packages/pkg-indicator/columns-indicator)   | Max & min for matrix columns     | indicator  |![v][columns-indicator-dm]|
-| [**entries-indicator**](packages/pkg-indicator/entries-indicator)   | Max & min for entries            | indicator  |![v][entries-indicator-dm]|
+| [**vector-maxIndicator**](packages/pkg-maxIndicator/vector-maxIndicator)     | Max & min for vector             | maxIndicator  |![v][vector-maxIndicator-dm] |
+| [**matrix-maxIndicator**](packages/pkg-maxIndicator/matrix-maxIndicator)     | Max & min for matrix elements    | maxIndicator  |![v][matrix-maxIndicator-dm] |
+| [**column-maxIndicator**](packages/pkg-maxIndicator/column-maxIndicator)     | Max & min for matrix column      | maxIndicator  |![v][column-maxIndicator-dm] |
+| [**columns-maxIndicator**](packages/pkg-maxIndicator/columns-maxIndicator)   | Max & min for matrix columns     | maxIndicator  |![v][columns-maxIndicator-dm]|
+| [**entries-maxIndicator**](packages/pkg-maxIndicator/entries-maxIndicator)   | Max & min for entries            | maxIndicator  |![v][entries-maxIndicator-dm]|
 |                                                                     |                                  |            |                          |
 
 [//]: <> (Local routes)
-[vector-indicator-dm]: https://flat.badgen.net/npm/dm/@vect/vector-indicator
-[matrix-indicator-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-indicator
-[column-indicator-dm]: https://flat.badgen.net/npm/dm/@vect/column-indicator
-[columns-indicator-dm]: https://flat.badgen.net/npm/dm/@vect/columns-indicator
-[entries-indicator-dm]: https://flat.badgen.net/npm/dm/@vect/entries-indicator
+[vector-maxIndicator-dm]: https://flat.badgen.net/npm/dm/@vect/vector-maxIndicator
+[matrix-maxIndicator-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-maxIndicator
+[column-maxIndicator-dm]: https://flat.badgen.net/npm/dm/@vect/column-maxIndicator
+[columns-maxIndicator-dm]: https://flat.badgen.net/npm/dm/@vect/columns-maxIndicator
+[entries-maxIndicator-dm]: https://flat.badgen.net/npm/dm/@vect/entries-maxIndicator
 
 #### Select
 |                                                            |                                    |            |                       |
