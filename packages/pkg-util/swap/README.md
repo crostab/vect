@@ -24,13 +24,10 @@
 [url-pp]: https://packagephobia.now.sh/result?p=@vect/swap
 [url-github]: https://github.com/hoyeungw/vect
 
-##### Rank each element in a 2-d array
+##### Swap 2 elements of array by input indexes
 
 #### Features
-- Rank each element of a 2-d array.
-- Return a new 2-d array of the same size as the input 2-d array.
-- Comparer configurable.
-- Filter optional. Those elements who do not meet filter gets rank value of -1.
+- Swap elements of array at a pair of given index
 
 #### Install
 ```console
