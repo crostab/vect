@@ -4,9 +4,8 @@
  * @param {*[]} keys
  */
 export function select (o, keys) {
-  const ob = {}
-  for (const k in o)
-    if (keys.includes(k))
-      ob[k] = o[k]
+  const ob = {}, l = keys.length
+  for (let i = 0, k; i < l; i++)
+    ob[k = keys[i]] = o[k]
   return ob
 }
