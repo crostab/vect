@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "Util for 2d-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
     "@vect/columns-mapper": "^0.1.2",
     "@vect/columns-select": "^0.1.2",
     "@vect/columns-update": "^0.1.2",
-    "@vect/matrix-indicator": "^0.1.2",
+    "@vect/matrix-indicator": "^0.1.6",
     "@vect/matrix-init": "^0.1.3",
     "@vect/matrix-mapper": "^0.1.2",
     "@vect/matrix-margin": "^0.1.2",
