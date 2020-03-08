@@ -1,3 +1,5 @@
+import { iterate } from '@vect/vector-mapper';
+
 /**
  *
  * @param {Object} o
@@ -30,6 +32,7 @@ const selectValues = function (o, keys) {
  * @param {(str|[str,str])[]} [fields] - array of str, [str,str] or combined.
  * @returns {[str,str][]} - entries of current keys to projected keys
  */
+
 const lookupKeys = function (fields) {
   const project = lookupKey.bind(this),
         currToProjPairs = [];

@@ -10,7 +10,7 @@ mx |> delogNeL
 
 xr().copy(marginCopy(mx, 3, 2, 2, 1)|> deco) |> logNeL
 
-xr().mapper(marginMapper(mx, x => `'${x}'`, 3, 2, 2, 1) |> deco) |> logNeL
+xr().mapper(marginMapper(mx, (x, i, j) => `[${i},${j}] '${x}'`, 3, 2, 2, 1) |> deco) |> logNeL
 
 xr().original(mx|> deco) |> logNeL
 

@@ -2,6 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var vectorMapper = require('@vect/vector-mapper');
+
 /**
  *
  * @param {Object} o
@@ -34,11 +36,12 @@ const selectValues = function (o, keys) {
  * @param {(str|[str,str])[]} [fields] - array of str, [str,str] or combined.
  * @returns {[str,str][]} - entries of current keys to projected keys
  */
+
 const lookupKeys = function (fields) {
   const project = lookupKey.bind(this),
         currToProjPairs = [];
   let currToProj;
-  iterate(fields, field => {
+  vectorMapper.iterate(fields, field => {
     if (currToProj = project(field)) currToProjPairs.push(currToProj);
   });
   return currToProjPairs;

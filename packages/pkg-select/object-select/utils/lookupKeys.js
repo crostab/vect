@@ -1,3 +1,5 @@
+import { iterate } from '@vect/vector-mapper'
+
 /**
  * @typedef {string|number} str
  */
