@@ -1,4 +1,4 @@
-export const rowMaMutate = (row, i, fn, l, r, w) => {
+export const rowMarginMutate = (row, i, fn, l, r, w) => {
   w = w || row && row.length
   const s = w - r
   for (--l; l >= 0; l--) row[l] = fn(row[l], i, l)
