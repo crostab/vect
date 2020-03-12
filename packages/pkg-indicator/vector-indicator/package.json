@@ -19,8 +19,8 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.0.10",
-    "@typen/enums": "^0.0.1",
+    "@aryth/comparer": "^0.0.11",
+    "@typen/enums": "^0.0.2",
     "@valjoux/strategies": "^0.0.5"
   },
   "keywords": [

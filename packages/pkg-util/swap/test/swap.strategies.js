@@ -14,13 +14,20 @@ const swap = (arr, i, j) => {
   return arr
 }
 const arrays = {
-  alphabetic: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
-  numeric: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  get alphabetic () {return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']},
+  get numeric () {return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]},
 }
 
 const positions = {
   l2r8: [2, 8],
   l0r9: [0, 9]
+}
+
+const swapBySplice = function (l, r) {
+  const arr = this
+  this.splice(l, 0, this[r])
+  this.splice(r + 1, 1)
+  return arr
 }
 const { lapse, result } = strategies({
   repeat: 5E+6,
@@ -29,7 +36,8 @@ const { lapse, result } = strategies({
     bench: x => x,
     dev: swapInternal.bind(arrays.alphabetic),
     edge: (l, r) => swap(arrays.alphabetic, l, r),
-    fut: swap.bind(null, arrays.alphabetic)
+    fut: swap.bind(null, arrays.alphabetic),
+    splice: swapBySplice.bind(arrays.alphabetic)
   }
 })
 lapse |> decoCrostab |> says['lapse']
