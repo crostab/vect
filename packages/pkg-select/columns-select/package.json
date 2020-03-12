@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@vect/column-getter": "^0.1.10",
-    "@vect/vector-select": "^0.1.10"
+    "@vect/vector-select": "^0.1.10",
+    "@vect/vector-mapper": "^0.1.10"
   },
   "repository": {
     "type": "git",

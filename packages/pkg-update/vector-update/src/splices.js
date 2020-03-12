@@ -1,12 +1,13 @@
+import { partition } from '../utils/partition'
+
 /**
  *
- * @param {*[]} arr
- * @param {number[]} indexes - number indexes of the positions to be spliced, should be in ascending order.
+ * @param {*[]} vec
+ * @param {number[]} indexes - integer array sorted ascending
  * @param {number} [hi] - length of indexes
- * @returns {*[]}
+ * @returns {*[]} - altered of original array
  */
-export function splices (arr, indexes, hi) {
-  hi = hi || indexes.length
-  for (--hi; hi >= 0b0; hi--) arr.splice(indexes[hi], 1)
-  return arr
-}
+export const splices = (vec, indexes, hi) =>
+  (hi = hi || indexes.length, partition(vec, indexes, hi).splice(indexes[0], hi), vec)
+
+
