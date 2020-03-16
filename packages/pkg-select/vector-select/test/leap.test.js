@@ -3,7 +3,7 @@ import { acquire } from '@vect/merge-acquire'
 import { rand } from '@aryth/rand'
 import { strategies } from '@valjoux/strategies'
 import { decoCrostab, says } from '@spare/logger'
-import { leapVector } from '../src/shuffle/utils/leapVector'
+import {leap } from '../src/leap'
 
 const range = [0, 1, 2, 3, 4]
 
@@ -38,7 +38,7 @@ const { lapse, result } = strategies({
     bench: x => x,
     leapClassic,
     leapDev,
-    leapVector,
+    leap,
     _: x => ''
   }
 })

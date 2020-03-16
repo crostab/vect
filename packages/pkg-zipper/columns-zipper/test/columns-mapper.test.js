@@ -1,6 +1,6 @@
 import { zipper } from '../src/zipper'
 import { logger } from '@spare/logger'
-import { deco, decoLog } from '@spare/deco'
+import { deco, delogger } from '@spare/deco'
 import { mutazip } from '../src/mutazip'
 import { makeEmbedded, SimpleMatrices } from '@foba/foo'
 import { Chrono } from 'elprimero'
@@ -27,14 +27,14 @@ class ColumnsMapperTest {
     result |> CrosTabX.brief |> console.log
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(zipper(v, x => x))
+      delogger(zipper(v, x => x))
     }
   }
 
   static testMutate () {
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(mutazip(v, 2, x => x * 2))
+      delogger(mutazip(v, 2, x => x * 2))
     }
   }
 }

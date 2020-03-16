@@ -1,6 +1,6 @@
 import { mapper } from '../src/mapper'
 import { logger } from '@spare/logger'
-import { deco, decoLog } from '@spare/deco'
+import { deco, delogger } from '@spare/deco'
 import { mutate } from '../src/mutate'
 import { makeEmbedded, SimpleMatrices } from '@foba/foo'
 import { Chrono } from 'elprimero'
@@ -27,14 +27,14 @@ class ColumnsMapperTest {
     result |> CrosTabX.brief |> console.log
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(mapper(v, x => x))
+      delogger(mapper(v, x => x))
     }
   }
 
   static testMutate () {
     for (let [k, v] of Object.entries(SimpleMatrices)) {
       k |> logger
-      decoLog(mutate(v, 2, x => x * 2))
+      delogger(mutate(v, 2, x => x * 2))
     }
   }
 }
