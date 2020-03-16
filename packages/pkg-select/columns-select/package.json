@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-select",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@vect/column-getter": "^0.1.12",
     "@vect/vector-mapper": "^0.1.12",
-    "@vect/vector-select": "^0.1.13"
+    "@vect/vector-select": "^0.1.14"
   },
   "repository": {
     "type": "git",
