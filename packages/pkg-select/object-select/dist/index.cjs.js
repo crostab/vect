@@ -7,10 +7,10 @@ var comparer = require('@aryth/comparer');
 var swap = require('@vect/swap');
 var vectorMapper = require('@vect/vector-mapper');
 
-const leap = (o, start, gap) => {
+const leap = function (o, start, gap) {
   var _ref;
 
-  const keys = (_ref = undefined === null || undefined === void 0 ? void 0 : undefined.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
+  const keys = (_ref = this === null || this === void 0 ? void 0 : this.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
   const wd = keys.length,
         df = comparer.max(gap, wd),
         rs = {};

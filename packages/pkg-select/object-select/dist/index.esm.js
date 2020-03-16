@@ -3,10 +3,10 @@ import { max, min } from '@aryth/comparer';
 import { swap } from '@vect/swap';
 import { iterate } from '@vect/vector-mapper';
 
-const leap = (o, start, gap) => {
+const leap = function (o, start, gap) {
   var _ref;
 
-  const keys = (_ref = undefined === null || undefined === void 0 ? void 0 : undefined.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
+  const keys = (_ref = this === null || this === void 0 ? void 0 : this.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
   const wd = keys.length,
         df = max(gap, wd),
         rs = {};

@@ -1,4 +1,4 @@
-import { leapObject } from '../src/shuffle/utils/leapObject'
+import { leap } from '../src/leap'
 import { delogger } from '@spare/deco'
 
 const o = {
@@ -9,4 +9,4 @@ const o = {
   'e': 5
 }
 
-leapObject(o,2,11) |> delogger
+leap(o,2,11) |> delogger
