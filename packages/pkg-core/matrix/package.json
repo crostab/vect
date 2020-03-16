@@ -26,7 +26,8 @@
     "@vect/matrix-quantifier": "^0.1.12",
     "@vect/matrix-size": "^0.1.12",
     "@vect/matrix-transpose": "^0.1.12",
-    "@vect/matrix-zipper": "^0.1.12"
+    "@vect/matrix-zipper": "^0.1.12",
+    "@vect/enum-matrix-directions": "^0.1.14"
   },
   "repository": {
     "type": "git",

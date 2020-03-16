@@ -26,4 +26,4 @@ export { pop, push, shift, unshift, splices } from '@vect/columns-update'
 
 export { coins } from './src/coins'
 export { isMatrix } from './src/isMatrix'
-export { POINTWISE, ROWWISE, COLUMNWISE, Directs } from './resources/Directs'
+export { POINTWISE, ROWWISE, COLUMNWISE } from '@vect/enum-matrix-directions'

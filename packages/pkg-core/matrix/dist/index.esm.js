@@ -10,6 +10,7 @@ import * as ColumnGetter from '@vect/column-getter';
 import * as ColumnsMapper from '@vect/columns-mapper';
 export { select } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
+export { COLUMNWISE, POINTWISE, ROWWISE } from '@vect/enum-matrix-directions';
 
 /**
  *
@@ -19,15 +20,6 @@ export { pop, push, shift, splices, unshift } from '@vect/columns-update';
 const coins = mx => !Array.isArray(mx) || !Array.isArray(mx[0]) ? [] : mx[0].map((_, i) => i);
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
-
-const POINTWISE = 0;
-const ROWWISE = 1;
-const COLUMNWISE = 2;
-const Directs = {
-  pointwise: POINTWISE,
-  rowwise: ROWWISE,
-  columnwise: COLUMNWISE
-};
 
 const {
   draft,
@@ -81,4 +73,4 @@ const {
   mapper: columnsMapper
 } = ColumnsMapper;
 
-export { COLUMNWISE, Columns, Directs, Duozipper, Max, Min, POINTWISE, Quazipper, ROWWISE, Trizipper, coins, column, columnsMapper, draft, every, fab, height, ini, init, isMatrix, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, shallow, size, some, starter, transpose, width, zipper };
+export { Columns, Duozipper, Max, Min, Quazipper, Trizipper, coins, column, columnsMapper, draft, every, fab, height, ini, init, isMatrix, iso, iterate, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, shallow, size, some, starter, transpose, width, zipper };

@@ -14,6 +14,7 @@ var ColumnGetter = require('@vect/column-getter');
 var ColumnsMapper = require('@vect/columns-mapper');
 var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
+var enumMatrixDirections = require('@vect/enum-matrix-directions');
 
 /**
  *
@@ -23,15 +24,6 @@ var columnsUpdate = require('@vect/columns-update');
 const coins = mx => !Array.isArray(mx) || !Array.isArray(mx[0]) ? [] : mx[0].map((_, i) => i);
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
-
-const POINTWISE = 0;
-const ROWWISE = 1;
-const COLUMNWISE = 2;
-const Directs = {
-  pointwise: POINTWISE,
-  rowwise: ROWWISE,
-  columnwise: COLUMNWISE
-};
 
 const {
   draft,
@@ -121,15 +113,29 @@ Object.defineProperty(exports, 'unshift', {
     return columnsUpdate.unshift;
   }
 });
-exports.COLUMNWISE = COLUMNWISE;
+Object.defineProperty(exports, 'COLUMNWISE', {
+  enumerable: true,
+  get: function () {
+    return enumMatrixDirections.COLUMNWISE;
+  }
+});
+Object.defineProperty(exports, 'POINTWISE', {
+  enumerable: true,
+  get: function () {
+    return enumMatrixDirections.POINTWISE;
+  }
+});
+Object.defineProperty(exports, 'ROWWISE', {
+  enumerable: true,
+  get: function () {
+    return enumMatrixDirections.ROWWISE;
+  }
+});
 exports.Columns = Columns;
-exports.Directs = Directs;
 exports.Duozipper = Duozipper;
 exports.Max = Max;
 exports.Min = Min;
-exports.POINTWISE = POINTWISE;
 exports.Quazipper = Quazipper;
-exports.ROWWISE = ROWWISE;
 exports.Trizipper = Trizipper;
 exports.coins = coins;
 exports.column = column;
