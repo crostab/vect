@@ -2,7 +2,29 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var rand = require('@aryth/rand');
+var comparer = require('@aryth/comparer');
 var vectorMapper = require('@vect/vector-mapper');
+
+const leap = (o, start, gap) => {
+  var _ref;
+
+  const keys = (_ref = undefined === null || undefined === void 0 ? void 0 : undefined.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
+  const wd = keys.length,
+        df = comparer.max(gap, wd),
+        rs = {};
+  let lo = start ? comparer.min(start, wd - 1) : rand.rand(wd),
+      hi = lo + df,
+      i = lo,
+      k;
+
+  while (lo++ < hi) {
+    rs[k = keys[i++]] = o[k];
+    if (i === wd) i = 0;
+  }
+
+  return rs;
+};
 
 /**
  *
@@ -58,6 +80,7 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
+exports.leap = leap;
 exports.lookupKeys = lookupKeys;
 exports.select = select;
 exports.selectValues = selectValues;

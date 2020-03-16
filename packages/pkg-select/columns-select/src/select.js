@@ -4,7 +4,7 @@ import { select as selectRow } from '@vect/vector-select'
 /**
  * @param {*[][]} mx
  * @param {number[]} ys
- * @returns {*}
+ * @returns {*[][]}
  */
 export const select = (mx, ys) => {
   const hi = ys.length

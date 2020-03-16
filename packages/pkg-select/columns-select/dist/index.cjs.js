@@ -9,7 +9,7 @@ var vectorMapper = require('@vect/vector-mapper');
 /**
  * @param {*[][]} mx
  * @param {number[]} ys
- * @returns {*}
+ * @returns {*[][]}
  */
 
 const select = (mx, ys) => {
@@ -26,7 +26,7 @@ const select = (mx, ys) => {
  * @param {*[]} mx
  * @param {number[]} indexes - integer array sorted ascending
  * @param {number} [hi] - length of indexes
- * @returns {{pick: *[], rest: *[]}} - rest points to altered original matrix, pick is an new matrix.
+ * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
 
 const divide = (mx, indexes, hi) => {

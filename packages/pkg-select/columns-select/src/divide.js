@@ -8,7 +8,7 @@ import { divide as divideRow } from '@vect/vector-select'
  * @param {*[]} mx
  * @param {number[]} indexes - integer array sorted ascending
  * @param {number} [hi] - length of indexes
- * @returns {{pick: *[], rest: *[]}} - rest points to altered original matrix, pick is an new matrix.
+ * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
 export const divide = (mx, indexes, hi) => {
   hi = hi || indexes.length

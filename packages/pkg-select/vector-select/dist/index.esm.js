@@ -1,4 +1,7 @@
 import { partition } from '@vect/vector-update';
+import { swap } from '@vect/swap';
+import { max, min } from '@aryth/comparer';
+import { rand } from '@aryth/rand';
 
 const select = (vec, indexes, hi) => {
   hi = hi || indexes.length;
@@ -25,4 +28,34 @@ const divide = (vec, indexes, hi) => (hi = hi || indexes.length, {
   rest: vec
 });
 
-export { divide, select };
+/**
+ * Fisher–Yates shuffle, a.k.a Knuth shuffle
+ * @param {Array} ve
+ * @param {number} [size] - if omitted, size will be keys.length
+ * @returns {Array} mutated array
+ */
+
+const shuffle = function (ve, size) {
+  let l = ve.length;
+  const lo = max(0, l - (size !== null && size !== void 0 ? size : l));
+
+  while (--l >= lo) swap.call(ve, l, rand(l));
+
+  return lo ? (ve.splice(0, lo), ve) : ve;
+};
+
+const leap = (ar, start, gap) => {
+  const wd = ar.length,
+        vec = Array(gap);
+  let lo = start ? min(start, wd - 1) : rand(wd),
+      j = 0;
+
+  while (j < gap) {
+    vec[j++] = ar[lo++];
+    if (lo === wd) lo = 0;
+  }
+
+  return vec;
+};
+
+export { divide, leap, select, shuffle };

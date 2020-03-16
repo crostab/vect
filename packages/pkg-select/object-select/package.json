@@ -15,7 +15,10 @@
     "test": "node -r @babel/register test/object-select.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.1.12"
+    "@vect/vector-mapper": "^0.1.12",
+    "@vect/swap": "^0.1.12",
+    "@aryth/comparer":"^0.0.13",
+    "@aryth/rand": "^0.0.13"
   },
   "repository": {
     "type": "git",

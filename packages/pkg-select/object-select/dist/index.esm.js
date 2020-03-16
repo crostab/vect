@@ -1,4 +1,26 @@
+import { rand } from '@aryth/rand';
+import { max, min } from '@aryth/comparer';
 import { iterate } from '@vect/vector-mapper';
+
+const leap = (o, start, gap) => {
+  var _ref;
+
+  const keys = (_ref = undefined === null || undefined === void 0 ? void 0 : undefined.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
+  const wd = keys.length,
+        df = max(gap, wd),
+        rs = {};
+  let lo = start ? min(start, wd - 1) : rand(wd),
+      hi = lo + df,
+      i = lo,
+      k;
+
+  while (lo++ < hi) {
+    rs[k = keys[i++]] = o[k];
+    if (i === wd) i = 0;
+  }
+
+  return rs;
+};
 
 /**
  *
@@ -54,4 +76,4 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
-export { lookupKeys, select, selectValues };
+export { leap, lookupKeys, select, selectValues };
