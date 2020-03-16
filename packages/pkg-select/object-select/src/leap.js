@@ -1,7 +1,7 @@
 import { rand } from '@aryth/rand'
 import { max as dmax, min as dmin } from '@aryth/comparer'
 
-export const leap = (o, start, gap) => {
+export const leap = function (o, start, gap) {
   const keys = this?.keys ?? Object.keys(o)
   const wd = keys.length, df = dmax(gap, wd), rs = {}
   let
