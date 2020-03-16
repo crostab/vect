@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Util for array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@vect/entries-indicator": "^0.1.15",
-    "@vect/entries-init": "^0.1.15",
+    "@vect/entries-init": "^0.1.16",
     "@vect/entries-mapper": "^0.1.15",
     "@vect/entries-margin": "^0.1.15",
     "@vect/entries-unwind": "^0.1.15",

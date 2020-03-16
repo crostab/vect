@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-zipper",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Zip function",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

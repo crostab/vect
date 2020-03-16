@@ -1,6 +1,6 @@
 {
   "name": "@vect/util-pivot",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@vect/vector-init": "^0.1.15",
-    "@vect/vector-mapper": "^0.1.15",
+    "@vect/vector-mapper": "^0.1.16",
     "@vect/vector-zipper": "^0.1.15"
   },
   "repository": {
