@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var rand = require('@aryth/rand');
 var comparer = require('@aryth/comparer');
+var swap = require('@vect/swap');
 var vectorMapper = require('@vect/vector-mapper');
 
 const leap = (o, start, gap) => {
@@ -22,6 +23,27 @@ const leap = (o, start, gap) => {
     rs[k = keys[i++]] = o[k];
     if (i === wd) i = 0;
   }
+
+  return rs;
+};
+
+/**
+ *
+ * Object keys can be set via 'this.keys'
+ * Default keys are Object.keys(o), the enumerable list of o's keys.
+ * @param {Object} o
+ * @param {number} [size] - if omitted, size will be keys.length
+ * @returns {Object} new object
+ */
+
+const shuffle = function (o, size) {
+  const keys = (this === null || this === void 0 ? void 0 : this.keys) || Object.keys(o);
+  let l = keys.length,
+      k;
+  const lo = comparer.max(0, l - (size !== null && size !== void 0 ? size : l)),
+        rs = {};
+
+  while (--l >= lo) rs[k = swap.swap.call(keys, rand.rand(l), l)] = o[k];
 
   return rs;
 };
@@ -84,3 +106,4 @@ exports.leap = leap;
 exports.lookupKeys = lookupKeys;
 exports.select = select;
 exports.selectValues = selectValues;
+exports.shuffle = shuffle;

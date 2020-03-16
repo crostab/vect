@@ -1,5 +1,6 @@
 import { rand } from '@aryth/rand';
 import { max, min } from '@aryth/comparer';
+import { swap } from '@vect/swap';
 import { iterate } from '@vect/vector-mapper';
 
 const leap = (o, start, gap) => {
@@ -18,6 +19,27 @@ const leap = (o, start, gap) => {
     rs[k = keys[i++]] = o[k];
     if (i === wd) i = 0;
   }
+
+  return rs;
+};
+
+/**
+ *
+ * Object keys can be set via 'this.keys'
+ * Default keys are Object.keys(o), the enumerable list of o's keys.
+ * @param {Object} o
+ * @param {number} [size] - if omitted, size will be keys.length
+ * @returns {Object} new object
+ */
+
+const shuffle = function (o, size) {
+  const keys = (this === null || this === void 0 ? void 0 : this.keys) || Object.keys(o);
+  let l = keys.length,
+      k;
+  const lo = max(0, l - (size !== null && size !== void 0 ? size : l)),
+        rs = {};
+
+  while (--l >= lo) rs[k = swap.call(keys, rand(l), l)] = o[k];
 
   return rs;
 };
@@ -76,4 +98,4 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
-export { leap, lookupKeys, select, selectValues };
+export { leap, lookupKeys, select, selectValues, shuffle };
