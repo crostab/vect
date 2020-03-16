@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-update",
-  "version": "0.1.12",
+  "version": "0.1.15",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/splices.test.js"
   },
   "dependencies": {
-    "@vect/swap": "^0.1.12"
+    "@vect/swap": "^0.1.15"
   },
   "repository": {
     "type": "git",
