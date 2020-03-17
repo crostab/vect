@@ -12,3 +12,5 @@ export const select = (mx, ys) => {
   if (hi === 1) return column(mx, ys[0])
   return mx.map(row => selectRow(row, ys, hi))
 }
+
+

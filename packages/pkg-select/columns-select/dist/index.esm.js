@@ -1,5 +1,5 @@
 import { column } from '@vect/column-getter';
-import { select as select$1, divide as divide$1 } from '@vect/vector-select';
+import { select as select$1, divide as divide$1, selectEntry } from '@vect/vector-select';
 import { mapper, iterate } from '@vect/vector-mapper';
 
 /**
@@ -51,4 +51,15 @@ const divide = (mx, indexes, hi) => {
   };
 };
 
-export { divide, select };
+const selectEntries = (mx, keyInd, valInd) => mapper(mx, row => selectEntry(row, keyInd, valInd));
+
+const selectObject = (mx, keyInd, valInd) => {
+  let o = {},
+      x;
+  iterate(mx, row => {
+    if (!((x = row[keyInd]) in o)) o[x] = row[valInd];
+  });
+  return o;
+};
+
+export { divide, select, selectEntries, selectObject };

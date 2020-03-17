@@ -16,6 +16,8 @@ const select = (vec, indexes, hi) => {
   return vc;
 };
 
+const selectEntry = (vec, keyInd, valInd) => [vec[keyInd], vec[valInd]];
+
 /**
  * Divide input array by an array of indexes,
  * The indexes should be integer array sorted by ascending.
@@ -65,4 +67,5 @@ const leap = (ar, start, gap) => {
 exports.divide = divide;
 exports.leap = leap;
 exports.select = select;
+exports.selectEntry = selectEntry;
 exports.shuffle = shuffle;

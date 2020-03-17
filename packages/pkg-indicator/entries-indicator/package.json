@@ -19,7 +19,7 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.0.11"
+    "@aryth/comparer": "^0.0.13"
   },
   "keywords": [
     "entries",

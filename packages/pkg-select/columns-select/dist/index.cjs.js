@@ -55,5 +55,18 @@ const divide = (mx, indexes, hi) => {
   };
 };
 
+const selectEntries = (mx, keyInd, valInd) => vectorMapper.mapper(mx, row => vectorSelect.selectEntry(row, keyInd, valInd));
+
+const selectObject = (mx, keyInd, valInd) => {
+  let o = {},
+      x;
+  vectorMapper.iterate(mx, row => {
+    if (!((x = row[keyInd]) in o)) o[x] = row[valInd];
+  });
+  return o;
+};
+
 exports.divide = divide;
 exports.select = select;
+exports.selectEntries = selectEntries;
+exports.selectObject = selectObject;
