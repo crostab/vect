@@ -1,6 +1,6 @@
 {
   "name": "@vect/column",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "Util for 2d-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@vect/column-getter": "^0.1.16",
-    "@vect/column-indicator": "^0.1.15",
+    "@vect/column-indicator": "^0.1.17",
     "@vect/column-mapper": "^0.1.15",
     "@vect/column-quantifier": "^0.1.15",
     "@vect/column-zipper": "^0.1.16"
