@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var columnGetter = require('@vect/column-getter');
+var columnMapper = require('@vect/column-mapper');
 var vectorSelect = require('@vect/vector-select');
 var vectorMapper = require('@vect/vector-mapper');
 
@@ -15,7 +15,7 @@ var vectorMapper = require('@vect/vector-mapper');
 const select = (mx, ys) => {
   const hi = ys.length;
   if (hi === 0) return mx;
-  if (hi === 1) return columnGetter.column(mx, ys[0]);
+  if (hi === 1) return columnMapper.mapper(mx, ys[0], x => [x]);
   return mx.map(row => vectorSelect.select(row, ys, hi));
 };
 

@@ -1,6 +1,6 @@
-import { column } from '@vect/column-getter';
+import { mapper } from '@vect/column-mapper';
 import { select as select$1, divide as divide$1, selectEntry } from '@vect/vector-select';
-import { mapper, iterate } from '@vect/vector-mapper';
+import { mapper as mapper$1, iterate } from '@vect/vector-mapper';
 
 /**
  * @param {*[][]} mx
@@ -11,7 +11,7 @@ import { mapper, iterate } from '@vect/vector-mapper';
 const select = (mx, ys) => {
   const hi = ys.length;
   if (hi === 0) return mx;
-  if (hi === 1) return column(mx, ys[0]);
+  if (hi === 1) return mapper(mx, ys[0], x => [x]);
   return mx.map(row => select$1(row, ys, hi));
 };
 
@@ -36,7 +36,7 @@ const divide = (mx, indexes, hi) => {
   const pick = Array(h);
   if (hi === 1) return [y] = indexes, {
     pick: pick,
-    rest: mapper(mx, (row, i) => (pick[i] = row.splice(y, 1), row), h)
+    rest: mapper$1(mx, (row, i) => (pick[i] = row.splice(y, 1), row), h)
   };
   const rest = mx;
   iterate(mx, (row, i) => {
@@ -51,7 +51,7 @@ const divide = (mx, indexes, hi) => {
   };
 };
 
-const selectEntries = (mx, keyInd, valInd) => mapper(mx, row => selectEntry(row, keyInd, valInd));
+const selectEntries = (mx, keyInd, valInd) => mapper$1(mx, row => selectEntry(row, keyInd, valInd));
 
 const selectObject = (mx, keyInd, valInd) => {
   let o = {},
