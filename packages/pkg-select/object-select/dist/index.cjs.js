@@ -8,9 +8,9 @@ var swap = require('@vect/swap');
 var vectorMapper = require('@vect/vector-mapper');
 
 const leap = function (o, start, gap) {
-  var _ref;
+  var _this$keys;
 
-  const keys = (_ref = this === null || this === void 0 ? void 0 : this.keys) !== null && _ref !== void 0 ? _ref : Object.keys(o);
+  const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
   const wd = keys.length,
         df = comparer.max(gap, wd),
         rs = {};

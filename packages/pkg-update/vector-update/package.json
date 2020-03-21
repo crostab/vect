@@ -15,7 +15,6 @@
     "test": "node -r @babel/register test/splices.test.js"
   },
   "dependencies": {
-    "@vect/swap": "^0.1.15"
   },
   "repository": {
     "type": "git",

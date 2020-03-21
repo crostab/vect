@@ -2,14 +2,27 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var swap = require('@vect/swap');
+/**
+ * Insert element at current(c) position to projected(previous(n)) position.
+ * s.t. p <= c
+ */
+
+
+const insertDown = function (c, p) {
+  const t = this[c];
+
+  while (c > p) this[c] = this[--c]; // moves backward
+
+
+  return this[p] = t;
+};
 
 const partition = (vec, indexes, hi) => {
   hi = hi || indexes.length;
   let i = 0,
       cu = indexes[0],
       nx;
-  const insertion = swap.insertDown.bind(vec);
+  const insertion = insertDown.bind(vec);
 
   while (++i < hi) if ((nx = indexes[i]) !== ++cu) insertion(nx, cu);
 

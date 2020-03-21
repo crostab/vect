@@ -1,6 +1,6 @@
 {
-  "name": "@vect/vector-init",
-  "version": "0.1.17",
+  "name": "@vect/rename",
+  "version": "0.1.15",
   "description": "A debugging tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,25 +12,21 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/vector-init.test.js"
-  },
-  "dependencies": {
-    "@aryth/math": "^0.1.0"
+    "test": "node -r @babel/register test/test.index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "keywords": [
-    "array",
-    "vector",
-    "matrix",
-    "object"
+    "rename",
+    "function"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hoyeungw/vect"
   },
-  "homepage": "https://github.com/hoyeungw/vect#readme"
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
 }
