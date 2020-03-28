@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@aryth/comparer": "^0.1.0",
-    "@typen/enums": "^0.0.3",
+    "@typen/enums": "^0.0.4",
     "@valjoux/strategies": "^0.0.5"
   },
   "keywords": [
