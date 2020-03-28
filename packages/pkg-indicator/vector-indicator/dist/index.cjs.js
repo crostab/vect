@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var comparer = require('@aryth/comparer');
-var enums = require('@typen/enums');
+var enumDataTypes = require('@typen/enum-data-types');
 
 const max = function (vec) {
   const fn = this;
@@ -59,7 +59,7 @@ const Indicator = ({
   init,
   pile,
   pick
-}) => typeof init === enums.FUN ? indicatorByInitFun.bind({
+}) => typeof init === enumDataTypes.FUN ? indicatorByInitFun.bind({
   init,
   pile,
   pick
@@ -106,7 +106,7 @@ const pileByInitFun = function (vec, l) {
  */
 
 const Piler = config => {
-  if (typeof config === enums.FUN) return pileByInitVal.bind({
+  if (typeof config === enumDataTypes.FUN) return pileByInitVal.bind({
     pile: config
   });
   const {
@@ -114,7 +114,7 @@ const Piler = config => {
     pile,
     pick
   } = config;
-  return typeof init === enums.FUN ? pileByInitFun.bind({
+  return typeof init === enumDataTypes.FUN ? pileByInitFun.bind({
     init,
     pile,
     pick

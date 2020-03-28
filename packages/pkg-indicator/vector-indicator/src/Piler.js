@@ -1,4 +1,4 @@
-import { FUN } from '@typen/enums'
+import { FUN } from '@typen/enum-data-types'
 
 export const pileByInitVal = function (vec, l) {
   l = l || vec.length
