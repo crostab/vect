@@ -19,9 +19,9 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.1.0",
-    "@typen/enum-data-types": "^0.0.4",
-    "@typen/enum-object-types": "^0.0.4"
+    "@aryth/comparer": "^0.1.2",
+    "@typen/enum-data-types": "^0.1.0",
+    "@typen/enum-object-types": "^0.1.0"
   },
   "keywords": [
     "array",
