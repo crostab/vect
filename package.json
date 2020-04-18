@@ -39,14 +39,11 @@
     "@spare/logger": "^0.4.15",
     "@spare/xr": "^0.4.15",
     "@typen/num-strict": "^0.1.0",
-    "crostab": "^0.3.9",
-    "elprimero": "^0.1.47",
+    "@valjoux/strategies": "^0.0.6",
     "lerna": "^3.20.2",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-filesize": "^7.0.0",
-    "rollup-plugin-terser": "^5.3.0",
-    "veho": "^0.2.23",
-    "xbrief": "^1.0.4"
+    "rollup-plugin-fileinfo": "^0.1.2",
+    "rollup-plugin-terser": "^5.3.0"
   }
 }

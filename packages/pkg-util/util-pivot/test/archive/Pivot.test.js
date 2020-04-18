@@ -1,5 +1,5 @@
 import { Pivot } from '../../function/Pivot'
-import { Chrono } from 'elprimero'
+import { strategies } from '@valjoux/strategies'
 import { PivotModes, SUM } from '../../resources/PivotModes'
 import { decoCrostab, logger, says, logNeL } from '@spare/logger'
 import { delogger } from '@spare/deco'
@@ -30,13 +30,13 @@ result|> delogger
 
 export class PivotTest {
   static testMulti () {
-    const paramsList = {
+    const candidates = {
       duties: [duties, ['day', 'name'], [['served', 'sum'], ['sold', 'sum']], { include: x => !isNaN(x) }]
     }
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 1E+4,
-      paramsList,
-      funcList: {
+      candidates,
+      methods: {
         stable: (rows, xy, cells, config) => new Pivot(rows).bandPivot(xy, cells, config)
       }
     })
@@ -44,7 +44,7 @@ export class PivotTest {
     result |> decoCrostab |> says.result
 
     'stable' |> logger
-    for (let key of Object.keys(paramsList)) {
+    for (let key of Object.keys(candidates)) {
       key |> logger
       result.queryCell(key, 'stable') |> delogger
       result.queryCell(key, 'stable') |> decoCrostab |> logger
@@ -54,13 +54,13 @@ export class PivotTest {
   }
 
   static test () {
-    const paramsList = {
+    const candidates = {
       duties: [duties, ['day', 'name', 'served'], { mode: SUM, include: x => !isNaN(x) }]
     }
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 1E+4,
-      paramsList,
-      funcList: {
+      candidates,
+      methods: {
         stable: (rows, fields, modes) => new Pivot(rows).pivot(fields, modes)
       }
     })
@@ -68,7 +68,7 @@ export class PivotTest {
     result |> decoCrostab |> says.result
 
     'stable' |> logger
-    for (let key of Object.keys(paramsList)) {
+    for (let key of Object.keys(candidates)) {
       key |> logger
       result.queryCell(key, 'stable') |> decoCrostab |> logger
       '' |> logger

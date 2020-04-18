@@ -1,4 +1,4 @@
-import { Chrono } from 'elprimero'
+import { strategies } from '@valjoux/strategies'
 import { mapper } from '../..'
 import { simpleVectors } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
@@ -10,10 +10,10 @@ const CombinedVectors = { ...ShortVectors, ...LongVectors }
 
 export class VectorMapperStrategies {
   static test () {
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 1E+5,
-      paramsList: CombinedVectors |> makeEmbedded,
-      funcList: {
+      candidates: CombinedVectors |> makeEmbedded,
+      methods: {
         stable: ar => ar.length,
         native: ar => ar.map(x => x),
         mapper: ar => mapper(ar, x => x),

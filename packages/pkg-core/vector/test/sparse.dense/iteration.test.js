@@ -1,12 +1,12 @@
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
 import { makeEmbedded, simpleVectors } from '@foba/foo'
+import { decoCrostab }                 from '@spare/logger'
+import { strategies }                  from '@valjoux/strategies'
 
 const SimpleVectors = simpleVectors({ h: 32 })
-const { lapse, result } = Chrono.strategies({
+const { lapse, result } = strategies({
   repeat: 1E+5,
-  paramsList: SimpleVectors |> makeEmbedded,
-  funcList: {
+  candidates: SimpleVectors |> makeEmbedded,
+  methods: {
     stable: x => x,
     dev: ar => ar.map(x => x),
     edge: ar => {
@@ -17,7 +17,7 @@ const { lapse, result } = Chrono.strategies({
   }
 })
 'lapse' |> console.log
-lapse |> CrosTabX.brief |> console.log
+lapse |> decoCrostab |> console.log
 '' |> console.log
 'result' |> console.log
-result |> CrosTabX.brief |> console.log
+result |> decoCrostab |> console.log

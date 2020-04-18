@@ -1,5 +1,5 @@
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
+import { strategies } from '@valjoux/strategies'
+import {decoCrostab} from '@spare/logger'
 import { mapper as mapperVector } from '@vect/vector-mapper'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
 import { zipper } from '../../src/zipper'
@@ -69,14 +69,14 @@ const aggregate = (a, b, c, d) => a + b + c + d
 
 export class SeriesZipperStrategies {
   static test () {
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 4E+5,
-      paramsList: {
+      candidates: {
         simple: [alpha, beta, gamma, delta],
         again: [alpha, beta, gamma, delta],
         third: [alpha, beta, gamma, delta],
       },
-      funcList: {
+      methods: {
         bench: (a, b, c, d) => [a[0], b[1], c[2], d[3]],
         reduce: (...matrices) => matrices.reduce((xa, xb) => zipper(xa, xb, (a, b) => a + b)),
         duozipper: Duozipper((a, b) => a + b),
@@ -88,10 +88,10 @@ export class SeriesZipperStrategies {
       }
     })
     'lapse' |> console.log
-    lapse |> CrosTabX.brief |> console.log
+    lapse |> decoCrostab |> console.log
     '' |> console.log
     'result' |> console.log
-    result |> CrosTabX.brief |> console.log
+    result |> decoCrostab |> console.log
   }
 }
 

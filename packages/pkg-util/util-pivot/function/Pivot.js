@@ -1,15 +1,13 @@
-import { ACCUM, COUNT, INCRE, SUM } from '../resources/PivotModes'
-import { Ar } from 'veho'
+import { FUN, OBJ }                       from '@typen/enum-data-types'
+import { init as initMatrix }             from '@vect/matrix-init'
+import { mapper as matrixMapper }         from '@vect/matrix-mapper'
+import { init as initVector }             from '@vect/vector-init'
 import { mapper, mutate as vectorMutate } from '@vect/vector-mapper'
-import { zipper, mutazip } from '@vect/vector-zipper'
-import { mapper as matrixMapper } from '@vect/matrix-mapper'
-import { init as initMatrix } from '@vect/matrix-init'
-import { Nullifier, pivotMode } from './PivotUtils'
-import { OBJ, FUN } from '@typen/enums'
-import { init as initVector } from '@vect/vector-init'
-import { logger } from '@spare/logger'
+import { select }                         from '@vect/vector-select'
+import { zipper }                         from '@vect/vector-zipper'
+import { ACCUM, COUNT, INCRE, SUM }       from '../resources/PivotModes'
+import { Nullifier, pivotMode }           from './PivotUtils'
 
-const { select } = Ar
 let s, b, m
 
 const ADD = 'add', PILE = 'pile', LOC = 'Loc', AMP = 'Amp', ISOMORPH = 'isomorph'
@@ -122,7 +120,8 @@ export class Pivot {
       fn = (mode === COUNT)
         ? ([x, y, v]) => {filter(v) ? accum(x, y, 1, nf) : this.amp(x, y, nf)}
         : ([x, y, v]) => {filter(v) ? accum(x, y, v, nf) : this.amp(x, y, nf)}
-    } else {
+    }
+    else {
       fn = (mode === COUNT)
         ? ([x, y,]) => accum(x, y, 1, nf)
         : ([x, y, v]) => accum(x, y, v, nf)
@@ -167,7 +166,8 @@ export class Pivot {
    */
   bandPivot ({ row, col, cell, boot = true, filter } = {}) {
     let x = row, y = col, cells = Object.entries(cell), hi = cells.length
-    if (boot) { this.reboot() } else {this.clearMatrix(mode)}
+    if (boot) { this.reboot() }
+    else {this.clearMatrix(mode)}
     const vs = Array(hi), modes = Array(hi), stats = []
     for (let i = 0, stat, mode; i < hi; i++) {
       ([vs[i], stat] = cells[i])

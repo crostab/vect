@@ -1,4 +1,4 @@
-import { Chrono } from 'elprimero'
+import { strategies } from '@valjoux/strategies'
 import { decoCrostab, says } from '@spare/logger'
 import { Foba } from '@foba/vector-number'
 import { Max } from '../src/Max'
@@ -9,16 +9,16 @@ import { Piler } from '../src/Piler'
 
 const maxWithThisArg = function (x) { this.max = duoMax(x, this.max) }
 
-const { lapse, result } = Chrono.strategies({
+const { lapse, result } = strategies({
   repeat: 5E+5,
-  paramsList: {
+  candidates: {
     nonSquares: [Foba.nonSquares(12), 12],
     fibonacci: [Foba.fibonacci(16), 16],
     range1: [Foba.range(128), 128],
     range2: [Foba.range(256), 256],
     // range3: [Foba.range(512), 512],
   },
-  funcList: {
+  methods: {
     bench: x => x,
     nativeMath: vec => Math.max.apply(null, vec),
     reduce: vec => vec.reduce((p, n) => p > n ? p : n, vec[0]),

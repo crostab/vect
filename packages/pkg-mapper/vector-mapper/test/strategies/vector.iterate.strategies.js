@@ -1,4 +1,4 @@
-import { Chrono } from 'elprimero'
+import { strategies } from '@valjoux/strategies'
 import { simpleVectors } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
 import { decoCrostab, says } from '@spare/logger'
@@ -11,10 +11,10 @@ const CombinedVectors = mapperObject({ ...ShortVectors, ...LongVectors }, vec =>
 
 export class VectorIterateStrategies {
   static test () {
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 1E+6,
-      paramsList: CombinedVectors,
-      funcList: {
+      candidates: CombinedVectors,
+      methods: {
         stable: ar => ar.length,
         native: ar => {
           let a

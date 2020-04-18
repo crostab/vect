@@ -1,5 +1,5 @@
 import { simpleMatrices } from '@foba/foo'
-import { Chrono } from 'elprimero'
+import { strategies } from '@valjoux/strategies'
 import { decoCrostab, says } from '@spare/logger'
 import { mapper } from '@vect/vector-mapper'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
@@ -13,10 +13,10 @@ const matrices = mapperObject(
 
 const f = x => x
 matrices |> delogger
-const { lapse, result } = Chrono.strategies({
+const { lapse, result } = strategies({
   repeat: 1E+6,
-  paramsList: matrices,
-  funcList: {
+  candidates: matrices,
+  methods: {
     bench: mx => mx,
     dev: mx => mx.map(r => r.slice()),
     edge: (mx, h) => mapper(mx, r => r.slice(), h),

@@ -1,19 +1,18 @@
-import { SimpleObjects } from '@foba/foo'
-import { logger } from '@spare/logger'
-import { deco } from '@spare/deco'
-import { Ob } from 'veho'
-import { Chrono } from 'elprimero'
-import { CrosTabX, logNeL } from 'xbrief'
+import { SimpleObjects }               from '@foba/foo'
+import { deco }                        from '@spare/deco'
+import { decoCrostab, logger, logNeL } from '@spare/logger'
+import { strategies }                  from '@valjoux/strategies'
+import { mapper }                      from '@vect/object-mapper'
 
 class ObjectMapperTest {
   static test () {
     const hasKey = Object.hasOwnProperty
     const fn = x => `'${x}'`
     SimpleObjects |> deco |> logger
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 4E+5,
-      paramsList: Ob.mapValues(SimpleObjects, x => [x, fn]),
-      funcList: {
+      candidates: mapper(SimpleObjects, x => [x, fn]),
+      methods: {
         stable: x => x,
         mapper (o, fn, len) {
           const ob = {}, ents = Object.entries(o)
@@ -44,9 +43,9 @@ class ObjectMapperTest {
       }
     })
     'lapse' |> console.log
-    lapse |> CrosTabX.brief |> logNeL
+    lapse |> decoCrostab |> logNeL
     'result' |> console.log
-    result |> CrosTabX.brief |> logNeL
+    result |> decoCrostab |> logNeL
     'result - specific' |> logNeL
     result.queryCell(result.side[3], 'mapper') |> deco |> logger
     result.queryCell(result.side[3], 'mapper2') |> deco |> logger

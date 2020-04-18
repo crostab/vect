@@ -5,7 +5,7 @@ import { shift } from '../src/shift'
 import { push } from '../src/push'
 import { deco } from '@spare/deco'
 
-const paramsList = {
+const candidates = {
   // row: [[5, 7, 9, 10, 6]],
   column: [[5], [7], [9]],
   // simple: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
@@ -16,7 +16,7 @@ const paramsList = {
 }
 
 const popAndUnshift = () => {
-  for (let [key, matrix] of Object.entries(paramsList)) {
+  for (let [key, matrix] of Object.entries(candidates)) {
     matrix |> decoX |> says[key]
     const lastColumn = pop(matrix)
     lastColumn |> deco |>  says.lastColumn
@@ -27,7 +27,7 @@ const popAndUnshift = () => {
 }
 
 const shiftAndPush = () => {
-  for (let [key, matrix] of Object.entries(paramsList)) {
+  for (let [key, matrix] of Object.entries(candidates)) {
     matrix |> decoX |> says[key]
     const firstColumn = shift(matrix)
     firstColumn |> deco |> says.firstColumn

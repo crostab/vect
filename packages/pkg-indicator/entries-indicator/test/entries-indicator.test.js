@@ -1,7 +1,7 @@
 import { delogger } from '@spare/deco'
 import { logger } from '@spare/logger'
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
+import { strategies } from '@valjoux/strategies'
+import {decoCrostab} from '@spare/logger'
 import { unwind } from '@vect/entries-unwind'
 import { Max } from '../index'
 
@@ -14,12 +14,12 @@ const entries = [
 ]
 
 let ko, vo
-const { lapse, result } = Chrono.strategies({
+const { lapse, result } = strategies({
   repeat: 2E+6,
-  paramsList: {
+  candidates: {
     simple: [entries],
   },
-  funcList: {
+  methods: {
     bench: entries => entries.reduce((acc, ent) => (acc[0] = ent[0], acc[1] = ent[1].length, acc), [0, '']),
     classic: entries => {
       const [k, v] = unwind(entries)
@@ -43,10 +43,10 @@ const { lapse, result } = Chrono.strategies({
   }
 })
 'lapse' |> console.log
-lapse |> CrosTabX.brief |> console.log
+lapse |> decoCrostab |> console.log
 '' |> console.log
 'result' |> console.log
-result |> CrosTabX.brief |> console.log
+result |> decoCrostab |> console.log
 
 'original' |> logger
 entries |> delogger

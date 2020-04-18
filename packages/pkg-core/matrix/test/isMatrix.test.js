@@ -1,14 +1,14 @@
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
-import { Chrono } from 'elprimero'
-import { isMatrix } from '../src/isMatrix'
-import { CrosTabX, deco } from 'xbrief'
-import { logger } from '@spare/logger'
+import { deco }                              from '@spare/deco'
+import { decoCrostab, logger }               from '@spare/logger'
+import { strategies }                        from '@valjoux/strategies'
+import { isMatrix }                          from '../src/isMatrix'
 
 export const isMatrixTest = () => {
-  const { lapse, result } = Chrono.strategies({
+  const { lapse, result } = strategies({
     repeat: 1E+6,
-    paramsList: CrosXMatricesRobust |> makeEmbedded,
-    funcList: {
+    candidates: CrosXMatricesRobust |> makeEmbedded,
+    methods: {
       bench: x => !!x,
       isMatrix,
       isMatrixSimple: mx => Array.isArray(mx && mx[0]),
@@ -17,10 +17,10 @@ export const isMatrixTest = () => {
   })
   CrosXMatricesRobust |> deco |> logger
   'lapse' |> console.log
-  lapse |> CrosTabX.brief |> console.log
+  lapse |> decoCrostab |> console.log
   '' |> console.log
   'result' |> console.log
-  result |> CrosTabX.brief |> console.log
+  result |> decoCrostab |> console.log
 }
 
 isMatrixTest()

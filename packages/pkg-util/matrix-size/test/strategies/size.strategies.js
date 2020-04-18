@@ -1,16 +1,16 @@
 import { MatricesOrNotEmb } from '@vect/foobar'
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
+import { strategies } from '@valjoux/strategies'
+import {decoCrostab} from '@spare/logger'
 import { size } from '../../src/size'
 import { width } from '../../src/width'
 import { height } from '../../src/height'
 
 export class SizeStrategies {
   static test () {
-    const { lapse, result } = Chrono.strategies({
+    const { lapse, result } = strategies({
       repeat: 4E+6,
-      paramsList: MatricesOrNotEmb,
-      funcList: {
+      candidates: MatricesOrNotEmb,
+      methods: {
         bench: x => [,],
         dev: (mx) => {
           let l
@@ -51,10 +51,10 @@ export class SizeStrategies {
       }
     })
     'lapse' |> console.log
-    lapse |> CrosTabX.brief |> console.log
+    lapse |> decoCrostab |> console.log
     '' |> console.log
     'result' |> console.log
-    result |> CrosTabX.brief |> console.log
+    result |> decoCrostab |> console.log
   }
 }
 

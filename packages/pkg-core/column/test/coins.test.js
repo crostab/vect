@@ -3,8 +3,8 @@ import { deco } from '@spare/deco'
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
 import { coins } from '../function/coins'
 import { xr } from '@spare/xr'
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
+import { strategies } from '@valjoux/strategies'
+import {decoCrostab} from '@spare/logger'
 import { isMatrix } from '../function/isMatrix'
 
 // CrosXMatricesRobust |> deco |> logger
@@ -13,10 +13,10 @@ import { isMatrix } from '../function/isMatrix'
 //   xr(k).coins(m |> coins) |> logger
 
 export function CoinsTest () {
-  const { lapse, result } = Chrono.strategies({
+  const { lapse, result } = strategies({
     repeat: 3E+6,
-    paramsList: CrosXMatricesRobust |> makeEmbedded,
-    funcList: {
+    candidates: CrosXMatricesRobust |> makeEmbedded,
+    methods: {
       stable: x => x && x.length,
       coins,
       dev: mx => Array.isArray(mx) && Array.isArray(mx[0]) ? mx[0].map((_, i) => i) : [],
@@ -24,10 +24,10 @@ export function CoinsTest () {
     }
   })
   'lapse' |> console.log
-  lapse |> CrosTabX.brief |> console.log
+  lapse |> decoCrostab |> console.log
   '' |> console.log
   'result' |> console.log
-  result |> CrosTabX.brief |> console.log
+  result |> decoCrostab |> console.log
 
 }
 
