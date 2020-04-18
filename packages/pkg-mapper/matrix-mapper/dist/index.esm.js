@@ -42,5 +42,13 @@ const mutate = (mx, fn, h, w) => {
 
   return mx;
 };
+const selectMutate = (mx, ys, fn, h) => {
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length);
+  const depth = ys.length;
 
-export { iterate, mapper, mutate };
+  for (let i = 0, y, r, j; i < h; i++) for (y = 0, r = mx[i]; y < depth; y++) r[j = ys[y]] = fn(r[j], i, j);
+
+  return mx;
+};
+
+export { iterate, mapper, mutate, selectMutate };
