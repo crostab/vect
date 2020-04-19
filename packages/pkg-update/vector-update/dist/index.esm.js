@@ -1,17 +1,4 @@
-/**
- * Insert element at current(c) position to projected(previous(n)) position.
- * s.t. p <= c
- */
-
-
-const insertDown = function (c, p) {
-  const t = this[c];
-
-  while (c > p) this[c] = this[--c]; // moves backward
-
-
-  return this[p] = t;
-};
+import { insertDown } from '@vect/swap';
 
 const partition = (vec, indexes, hi) => {
   hi = hi || indexes.length;
