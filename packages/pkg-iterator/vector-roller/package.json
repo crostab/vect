@@ -1,5 +1,5 @@
 {
-  "name": "@vect/object-init",
+  "name": "@vect/vector-roller",
   "version": "0.2.2",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
@@ -12,7 +12,10 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/object-init.test.js"
+    "test": "node -r @babel/register test/vector-roller.test.js"
+  },
+  "dependencies": {
+    "@vect/vector-merge": "^0.2.2"
   },
   "repository": {
     "type": "git",

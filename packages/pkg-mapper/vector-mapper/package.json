@@ -1,7 +1,7 @@
 {
   "name": "@vect/vector-mapper",
   "version": "0.2.2",
-  "description": "A debugging tool",
+  "description": "An array util tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [

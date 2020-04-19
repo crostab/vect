@@ -1,7 +1,7 @@
 {
-  "name": "@vect/object-init",
+  "name": "@vect/vector-merge",
   "version": "0.2.2",
-  "description": "An array util tool",
+  "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,17 +12,19 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/object-init.test.js"
+    "test": "node -r @babel/register test/splices.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "keywords": [
-    "array",
     "vector",
-    "matrix",
-    "object"
+    "array",
+    "concat",
+    "push",
+    "merge",
+    "acquire"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",
