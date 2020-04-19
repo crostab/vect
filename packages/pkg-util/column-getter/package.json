@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-getter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/column-getter.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.2.2"
+    "@vect/vector-mapper": "^0.2.3"
   },
   "repository": {
     "type": "git",
