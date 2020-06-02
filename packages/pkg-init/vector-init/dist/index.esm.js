@@ -1,4 +1,4 @@
-import '@typen/nullish';
+import { nullish } from '@typen/nullish';
 import { round } from '@aryth/math';
 
 function trimDigit(n) {
@@ -87,5 +87,12 @@ const range = (start, end) => {
 
   return v;
 };
+const tap = (...list) => {
+  const ve = [];
 
-export { draft, init, iso, range, seq };
+  for (let x of list) if (!nullish(x)) ve.push(x);
+
+  return ve;
+};
+
+export { draft, init, iso, range, seq, tap };

@@ -1,1 +1,1 @@
-export { draft, iso, init, seq, range } from './src'
+export { draft, iso, init, seq, range, tap } from './src'

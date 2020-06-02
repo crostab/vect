@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-require('@typen/nullish');
+var nullish = require('@typen/nullish');
 var math = require('@aryth/math');
 
 function trimDigit(n) {
@@ -91,9 +91,17 @@ const range = (start, end) => {
 
   return v;
 };
+const tap = (...list) => {
+  const ve = [];
+
+  for (let x of list) if (!nullish.nullish(x)) ve.push(x);
+
+  return ve;
+};
 
 exports.draft = draft;
 exports.init = init;
 exports.iso = iso;
 exports.range = range;
 exports.seq = seq;
+exports.tap = tap;
