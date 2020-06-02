@@ -1,3 +1,4 @@
+import { nullish }      from '@typen/nullish'
 import { seqTrimDigit } from './seqTrimDigit'
 
 export const draft = size => Array(size)
@@ -50,4 +51,12 @@ export const range = (start, end) => {
     for (--l; l >= 0; l--) v[l] = end++
   }
   return v
+}
+
+export const tap = (...list) => {
+  const ve = []
+  for (let x of list)
+    if (!nullish(x))
+      ve.push(x)
+  return ve
 }

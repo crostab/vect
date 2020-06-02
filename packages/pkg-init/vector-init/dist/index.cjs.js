@@ -2,6 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+require('@typen/nullish');
 var math = require('@aryth/math');
 
 function trimDigit(n) {
