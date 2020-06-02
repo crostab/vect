@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Select from object/array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -17,8 +17,8 @@
   "dependencies": {
     "@aryth/comparer": "^0.2.6",
     "@aryth/rand": "^0.2.6",
-    "@vect/swap": "^0.2.4",
-    "@vect/vector-mapper": "^0.2.4"
+    "@vect/swap": "^0.2.5",
+    "@vect/vector-mapper": "^0.2.5"
   },
   "repository": {
     "type": "git",
