@@ -35,7 +35,7 @@ export const init = (size, fn) => {
  * @returns {*[]}
  */
 export const seq = (size, fn, digit) => {
-  if (digit !== null && digit !== void 0) return seqTrimDigit(size, fn, digit)
+  if (!nullish(digit)) return seqTrimDigit(size, fn, digit)
   const ar = Array(size)
   for (let i = 0; i < size; i++) ar[i] = fn(i)
   return ar
