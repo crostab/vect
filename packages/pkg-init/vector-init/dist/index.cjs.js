@@ -45,8 +45,8 @@ const iso = (size, value) => {
 /**
  * Create an array.
  * @param {number} size Integer starts at zero.
- * @param {function(number):*|*} [fn] Defines the how index i decides value(i).
- * @returns {number[]} The
+ * @param {function(number):*|*} [fn] defines how index i corresponds to value(i).
+ * @returns {*[]}
  */
 
 const init = (size, fn) => {
@@ -69,7 +69,7 @@ const init = (size, fn) => {
  */
 
 const seq = (size, fn, digit) => {
-  if (digit !== null && digit !== void 0) return seqTrimDigit(size, fn, digit);
+  if (!nullish.nullish(digit)) return seqTrimDigit(size, fn, digit);
   const ar = Array(size);
 
   for (let i = 0; i < size; i++) ar[i] = fn(i);

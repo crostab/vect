@@ -14,6 +14,9 @@
     "pub": "npm publish",
     "test": "node -r @babel/register test/matrix-init.test.js"
   },
+  "dependencies": {
+    "@typen/nullish": "^0.1.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"

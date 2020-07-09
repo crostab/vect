@@ -17,7 +17,8 @@
     "@vect/vector-margin": "^0.2.5",
     "@vect/vector-select": "^0.2.5",
     "@vect/vector-update": "^0.2.5",
-    "@vect/vector-zipper": "^0.2.5"
+    "@vect/vector-zipper": "^0.2.5",
+    "@vect/vector-merge": "^0.2.5"
   },
   "scripts": {
     "pub": "npm publish",

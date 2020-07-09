@@ -1,3 +1,5 @@
+import { nullish } from '@typen/nullish'
+
 export const draft = (h, w) => {
   const mx = Array(h)
   for (--h; h >= 0; h--) mx[h] = Array(w)
@@ -22,7 +24,7 @@ export const init = (h, w, fn) => {
 
 export const starter = (h, w, { value, fn }) => {
   h = h || 1, w = w || 1
-  if (value !== null || value !== void 0) return iso(h, w, value)
-  if (fn) return index(h, w, fn)
+  if (!nullish(value)) return iso(h, w, value)
+  if (fn) return init(h, w, fn)
   return draft(h, w)
 }

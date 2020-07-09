@@ -1,7 +1,7 @@
 {
-  "name": "@vect/vector-indicator",
+  "name": "@vect/object",
   "version": "0.2.5",
-  "description": "Indicators for vector",
+  "description": "Util for object",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -10,26 +10,23 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@vect/object-init": "^0.2.5",
+    "@vect/object-mapper": "^0.2.5",
+    "@vect/object-select": "^0.2.5",
+    "@vect/object-zipper": "^0.2.5"
+  },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/vector-indicator.test.js"
+    "test": "node -r @babel/register test/test.index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
-  "dependencies": {
-    "@aryth/comparer": "^0.2.10",
-    "@typen/enum-data-types": "^0.1.5",
-    "@typen/enum-object-types": "^0.1.5"
-  },
   "keywords": [
     "array",
-    "vector",
-    "indicator",
-    "max",
-    "min",
-    "reduce"
+    "object"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

@@ -2,6 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var nullish = require('@typen/nullish');
+
 const draft = (h, w) => {
   const mx = Array(h);
 
@@ -28,8 +30,8 @@ const starter = (h, w, {
   fn
 }) => {
   h = h || 1, w = w || 1;
-  if (value !== null || value !== void 0) return iso(h, w, value);
-  if (fn) return index(h, w, fn);
+  if (!nullish.nullish(value)) return iso(h, w, value);
+  if (fn) return init(h, w, fn);
   return draft(h, w);
 };
 
