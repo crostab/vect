@@ -15,8 +15,8 @@ export const iso = (size, value) => {
 /**
  * Create an array.
  * @param {number} size Integer starts at zero.
- * @param {function(number):*|*} [fn] Defines the how index i decides value(i).
- * @returns {number[]} The
+ * @param {function(number):*|*} [fn] defines how index i corresponds to value(i).
+ * @returns {*[]}
  */
 export const init = (size, fn) => {
   if (size === (size & 0x7f)) {
