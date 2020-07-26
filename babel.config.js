@@ -1,6 +1,6 @@
 module.exports = function (api) {
   api.cache(true)
-  const presets = ['@babel/preset-env', { targets: { node: '10' } }]
+  const presets = [['@babel/preset-env', { targets: { node: '10' } }]]
   const plugins = [
     ['@babel/transform-runtime', { helpers: false }],
     ['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],

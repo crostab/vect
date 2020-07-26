@@ -15,8 +15,8 @@
     "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.2.10",
-    "@aryth/rand": "^0.2.10",
+    "@aryth/comparer": "^0.2.11",
+    "@aryth/rand": "^0.2.11",
     "@vect/swap": "^0.2.6",
     "@vect/vector-update": "^0.2.6"
   },
