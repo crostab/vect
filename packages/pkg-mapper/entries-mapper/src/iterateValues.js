@@ -1,13 +1,13 @@
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyFn
+ * @param {Function} valFn
  * @param {number} [l]
  * @returns {undefined}
  */
-export const iterateKeys = function (entries, keyFn, l) {
+export const iterateValues = function (entries, valFn, l) {
   l = l ?? entries?.length
   for (let i = 0, r; i < l; i++) {
-    r = entries[i], keyFn.call(this, r[0], i)
+    r = entries[i], valFn.call(this, r[1], i)
   }
 }

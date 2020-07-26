@@ -1,8 +1,8 @@
 /**
  *
  * @param {[*,*][]} entries
- * @param {function} keyFn
- * @param {function} [valFn]
+ * @param {Function} keyFn
+ * @param {Function} [valFn]
  * @param {number} [l]
  * @returns {undefined}
  */

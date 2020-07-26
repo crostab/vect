@@ -1,14 +1,14 @@
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyMap
+ * @param {Function} valMap
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mutateKeys = (entries, keyMap, l) => {
+export const mutateValues = (entries, valMap, l) => {
   l = l ?? entries?.length
   for (let i = 0, r; i < l; i++) {
-    r = entries[i], r[0] = keyMap(r[0], i)
+    r = entries[i], r[1] = valMap(r[1], i)
   }
   return entries
 }

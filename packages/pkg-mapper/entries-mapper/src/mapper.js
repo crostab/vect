@@ -1,8 +1,8 @@
 /**
  *
  * @param {[*,*][]} entries
- * @param {function} keyMap
- * @param {function} [valMap]
+ * @param {Function} keyMap
+ * @param {Function} [valMap]
  * @param {number} [l]
  * @returns {[*,*][]}
  */
