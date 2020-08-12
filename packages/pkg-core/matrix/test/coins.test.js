@@ -9,7 +9,7 @@ export function CoinsTest () {
     repeat: 3E+6,
     candidates: CrosXMatricesRobust |> makeEmbedded,
     methods: {
-      stable: x => x && x.length,
+      stable: x => x?.length,
       coins,
       dev: mx => Array.isArray(mx) && Array.isArray(mx[0]) ? mx[0].map((_, i) => i) : [],
       edge: mx => isMatrix(mx) ? Object.keys(mx[0]) : [],

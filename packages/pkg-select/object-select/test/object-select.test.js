@@ -1,12 +1,13 @@
-import { FobaStr } from '@foba/object'
-import { says } from '@spare/logger'
-import { select } from '../src/select'
-import { deco } from '@spare/deco'
+import { StringObjectCollection } from '@foba/object'
+import { deco }                   from '@spare/deco'
+import { says }                   from '@spare/logger'
+import { select }                 from '../src/select'
 
-FobaStr.Pastas |> deco |> says.original
+const pastas = 'Pastas'
+StringObjectCollection[pastas] |> deco |> says['original']
 
 const selection = ['lasagna', 'ravioli', 'biangbiang', 'spaghetti']
 
-selection |>  says.selected
-select(FobaStr.Pastas, selection)|> deco  |> says.selected
+selection |>  says['selected']
+select(StringObjectCollection[pastas], selection)|> deco  |> says['selected']
 

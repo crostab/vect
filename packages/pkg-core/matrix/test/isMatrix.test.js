@@ -12,7 +12,7 @@ export const isMatrixTest = () => {
       bench: x => !!x,
       isMatrix,
       isMatrixSimple: mx => Array.isArray(mx && mx[0]),
-      isMatrixLoose: mx => mx && mx.length && (mx = mx[0]) && mx.length,
+      isMatrixLoose: mx => mx?.length && (mx = mx[0]) && mx.length,
     }
   })
   CrosXMatricesRobust |> deco |> logger

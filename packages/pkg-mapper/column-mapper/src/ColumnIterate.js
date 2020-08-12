@@ -1,5 +1,5 @@
 export function columnIterate (mx, fn, l) {
-  l = l || mx && mx.length
+  l = l || mx?.length
   for (let i = 0, { y, data } = this; i < l; i++)
     fn.call(data, mx[i][y], i)
 }

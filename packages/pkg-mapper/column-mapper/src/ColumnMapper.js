@@ -1,5 +1,5 @@
 export function columnMapperDuplicate (mx, fn, l) {
-  l = l || mx && mx.length
+  l = l || mx?.length
   const mt = Array(l)
   for (let i = 0, r, { y } = this; i < l; i++) {
     mt[i] = r = mx[i].slice()
@@ -9,7 +9,7 @@ export function columnMapperDuplicate (mx, fn, l) {
 }
 
 export function columnMapper (mx, fn, l) {
-  l = l || mx && mx.length
+  l = l || mx?.length
   const vec = Array(l)
   for (let i = 0, { y } = this; i < l; i++)
     vec[i] = fn(mx[i][y], i)

@@ -1,6 +1,6 @@
 export function duozipper (ea, eb) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea && ea.length
+  value = value || key, lo = lo || 0, hi = hi || ea?.length
   const entries = Array(hi)
   for (let i = --hi, a, b; i >= lo; i--) {
     (a = ea[i], b = eb[i])
@@ -11,7 +11,7 @@ export function duozipper (ea, eb) {
 
 export function trizipper (ea, eb, ec) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea && ea.length
+  value = value || key, lo = lo || 0, hi = hi || ea?.length
   const entries = Array(hi)
   for (let i = --hi, a, b, c; i >= lo; i--) {
     (a = ea[i], b = eb[i], c = ec[i])
@@ -22,7 +22,7 @@ export function trizipper (ea, eb, ec) {
 
 export function quazipper (ea, eb, ec, ed) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea && ea.length
+  value = value || key, lo = lo || 0, hi = hi || ea?.length
   const entries = Array(hi)
   for (let i = --hi, a, b, c, d; i >= lo; i--) {
     (a = ea[i], b = eb[i], c = ec[i], d = ed[i])

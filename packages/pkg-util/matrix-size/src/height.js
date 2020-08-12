@@ -1,1 +1,1 @@
-export const height = mx => mx && mx.length
+export const height = mx => mx?.length

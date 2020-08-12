@@ -2,7 +2,7 @@ import { draft } from '@vect/matrix-init'
 
 export function duozipper (ma, mb) {
   let { y, fn, mx, t, b } = this
-  t = t || 0 , b = b || ma && ma.length, mx = mx || draft(b, y)
+  t = t || 0 , b = b || ma?.length, mx = mx || draft(b, y)
   for (let i = t; i < b; i++)
     mx[i][y] = fn(ma[i][y], mb[i][y], i)
   return mx
@@ -10,7 +10,7 @@ export function duozipper (ma, mb) {
 
 export function trizipper (ma, mb, mc) {
   let { y, fn, mx, t, b } = this
-  t = t || 0 , b = b || ma && ma.length, mx = mx || draft(b, y)
+  t = t || 0 , b = b || ma?.length, mx = mx || draft(b, y)
   for (let i = t; i < b; i++)
     mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], i)
   return mx
@@ -18,7 +18,7 @@ export function trizipper (ma, mb, mc) {
 
 export function quazipper (ma, mb, mc, md) {
   let { y, fn, mx, t, b } = this
-  t = t || 0 , b = b || ma && ma.length, mx = mx || draft(b, y)
+  t = t || 0 , b = b || ma?.length, mx = mx || draft(b, y)
   for (let i = t; i < b; i++)
     mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], md[i][y], i)
   return mx

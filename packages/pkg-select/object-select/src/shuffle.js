@@ -1,6 +1,6 @@
-import { swap } from '@vect/swap'
-import { max } from '@aryth/comparer'
+import { max }  from '@aryth/comparer'
 import { rand } from '@aryth/rand'
+import { swap } from '@vect/swap'
 
 /**
  *
@@ -11,7 +11,7 @@ import { rand } from '@aryth/rand'
  * @returns {Object} new object
  */
 export const shuffle = function (o, size) {
-  const keys = this?.keys || Object.keys(o)
+  const keys = this?.keys ?? Object.keys(o)
   let l = keys.length, k
   const lo = max(0, l - (size ?? l)), rs = {}
   while (--l >= lo)
