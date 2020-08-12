@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const height = mx => mx && mx.length;
+const height = mx => mx === null || mx === void 0 ? void 0 : mx.length;
 
 const width = mx => {
   let r;

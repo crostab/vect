@@ -1,60 +1,60 @@
 /**
  *
- * @param {*[]} ar
+ * @param {*[]} vec
  * @param {number} [h] - head margin length
  * @param {number} [t] - tail margin length
  * @param {number} [l] - array length
  * @returns {*[]}
  */
-const marginCopy = (ar, h, t, l) => {
-  const ve = Array(l = l || ar.length),
+const marginCopy = (vec, h, t, l) => {
+  const ve = Array(l = l || vec.length),
         s = l - t;
 
-  for (--h; h >= 0; h--) ve[h] = ar[h];
+  for (--h; h >= 0; h--) ve[h] = vec[h];
 
-  for (--l; l >= s; l--) ve[l] = ar[l];
+  for (--l; l >= s; l--) ve[l] = vec[l];
 
   return ve;
 };
 
 /**
  *
- * @param {*[]} ar
+ * @param {*[]} vec
  * @param {function(*)|function(*,number)} fn
  * @param {number} [h] - head margin length
  * @param {number} [t] - tail margin length
  * @param {number} [l] - array length
  * @returns {*[]}
  */
-const marginMapper = (ar, fn, h, t, l) => {
-  const ve = Array(l = l || ar.length),
+const marginMapper = (vec, fn, h, t, l) => {
+  const ve = Array(l = l || vec.length),
         s = l - t;
 
-  for (--h; h >= 0; h--) ve[h] = fn(ar[h], h);
+  for (--h; h >= 0; h--) ve[h] = fn(vec[h], h);
 
-  for (--l; l >= s; l--) ve[l] = fn(ar[l], l);
+  for (--l; l >= s; l--) ve[l] = fn(vec[l], l);
 
   return ve;
 };
 
 /**
  *
- * @param {*[]} ar
+ * @param {*[]} vec
  * @param {function(*)|function(*,number)} fn
  * @param {number} [h] - head margin length
  * @param {number} [t] - tail margin length
  * @param {number} [l] - array length
  * @returns {*[]}
  */
-const marginMutate = (ar, fn, h, t, l) => {
-  l = l || ar.length;
+const marginMutate = (vec, fn, h, t, l) => {
+  l = l || vec.length;
   const s = l - t;
 
-  for (--h; h >= 0; h--) ar[h] = fn(ar[h], h);
+  for (--h; h >= 0; h--) vec[h] = fn(vec[h], h);
 
-  for (--l; l >= s; l--) ar[l] = fn(ar[l], l);
+  for (--l; l >= s; l--) vec[l] = fn(vec[l], l);
 
-  return ar;
+  return vec;
 };
 
 export { marginCopy, marginMapper, marginMutate };

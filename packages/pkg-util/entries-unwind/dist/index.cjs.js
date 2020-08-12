@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const unwind = (entries, h) => {
-  h = h || entries && entries.length;
+  h = h || (entries === null || entries === void 0 ? void 0 : entries.length);
   let keys = Array(h),
       values = Array(h);
 

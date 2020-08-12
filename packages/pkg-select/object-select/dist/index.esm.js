@@ -1,5 +1,5 @@
-import { rand } from '@aryth/rand';
 import { max, min } from '@aryth/comparer';
+import { rand } from '@aryth/rand';
 import { swap } from '@vect/swap';
 import { iterate } from '@vect/vector-mapper';
 
@@ -33,7 +33,9 @@ const leap = function (o, start, gap) {
  */
 
 const shuffle = function (o, size) {
-  const keys = (this === null || this === void 0 ? void 0 : this.keys) || Object.keys(o);
+  var _this$keys;
+
+  const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
   let l = keys.length,
       k;
   const lo = max(0, l - (size !== null && size !== void 0 ? size : l)),

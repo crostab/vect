@@ -5,7 +5,7 @@ function duozipper(a, b) {
     hi
   } = this;
   lo = lo || 0;
-  const vec = Array(hi = hi || a && a.length);
+  const vec = Array(hi = hi || (a === null || a === void 0 ? void 0 : a.length));
 
   for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], hi);
 
@@ -18,7 +18,7 @@ function trizipper(a, b, c) {
     hi
   } = this;
   lo = lo || 0;
-  const vec = Array(hi = hi || a && a.length);
+  const vec = Array(hi = hi || (a === null || a === void 0 ? void 0 : a.length));
 
   for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], c[hi], hi);
 
@@ -31,7 +31,7 @@ function quazipper(a, b, c, d) {
     hi
   } = this;
   lo = lo || 0;
-  const vec = Array(hi = hi || a && a.length);
+  const vec = Array(hi = hi || (a === null || a === void 0 ? void 0 : a.length));
 
   for (--hi; hi >= lo; hi--) vec[hi] = fn(a[hi], b[hi], c[hi], d[hi], hi);
 
@@ -77,7 +77,7 @@ const zipper = (a, b, fn, l) => duozipper.call({
 }, a, b);
 
 const mutazip = (va, vb, fn, l) => {
-  l = l || va && va.length;
+  l = l || (va === null || va === void 0 ? void 0 : va.length);
 
   for (--l; l >= 0; l--) va[l] = fn(va[l], vb[l], l);
 

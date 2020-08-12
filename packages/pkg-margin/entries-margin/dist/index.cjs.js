@@ -55,7 +55,7 @@ const marginMapper = (entries, keyMapper, valueMapper, h, t, l) => {
  * @returns {*[]}
  */
 const marginMutate = (entries, keyMapper, valueMapper, h, t, l) => {
-  l = l || entries.length;
+  l = l || (entries === null || entries === void 0 ? void 0 : entries.length);
   let s = l - t,
       ent;
 

@@ -12,7 +12,7 @@ function duozipper(ma, mb) {
     t,
     b
   } = this;
-  t = t || 0, b = b || ma && ma.length, mx = mx || matrixInit.draft(b, y);
+  t = t || 0, b = b || (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx || matrixInit.draft(b, y);
 
   for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], i);
 
@@ -26,7 +26,7 @@ function trizipper(ma, mb, mc) {
     t,
     b
   } = this;
-  t = t || 0, b = b || ma && ma.length, mx = mx || matrixInit.draft(b, y);
+  t = t || 0, b = b || (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx || matrixInit.draft(b, y);
 
   for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], i);
 
@@ -40,7 +40,7 @@ function quazipper(ma, mb, mc, md) {
     t,
     b
   } = this;
-  t = t || 0, b = b || ma && ma.length, mx = mx || matrixInit.draft(b, y);
+  t = t || 0, b = b || (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx || matrixInit.draft(b, y);
 
   for (let i = t; i < b; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], md[i][y], i);
 
