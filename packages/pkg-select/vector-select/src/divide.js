@@ -11,7 +11,7 @@ import { partition } from '@vect/vector-update'
  * @returns {{pick: *[], rest: *[]}} - rest points to altered original array, pick is an new array.
  */
 export const divide = (vec, indexes, hi) =>
-  (hi = hi || indexes.length, {
+  (hi = hi ?? indexes?.length, {
     pick: partition(vec, indexes, hi).splice(indexes[0], hi),
     rest: vec
   })

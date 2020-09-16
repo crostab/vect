@@ -7,7 +7,7 @@ const leap = function (o, start, gap) {
   var _this$keys;
 
   const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
-  const wd = keys.length,
+  const wd = keys === null || keys === void 0 ? void 0 : keys.length,
         df = max(gap, wd),
         rs = {};
   let lo = start ? min(start, wd - 1) : rand(wd),
@@ -28,7 +28,7 @@ const leap = function (o, start, gap) {
  * Object keys can be set via 'this.keys'
  * Default keys are Object.keys(o), the enumerable list of o's keys.
  * @param {Object} o
- * @param {number} [size] - if omitted, size will be keys.length
+ * @param {number} [size] - if omitted, size will be keys?.length
  * @returns {Object} new object
  */
 
@@ -36,7 +36,7 @@ const shuffle = function (o, size) {
   var _this$keys;
 
   const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
-  let l = keys.length,
+  let l = keys === null || keys === void 0 ? void 0 : keys.length,
       k;
   const lo = max(0, l - (size !== null && size !== void 0 ? size : l)),
         rs = {};
@@ -53,7 +53,7 @@ const shuffle = function (o, size) {
  */
 function select(o, keys) {
   const ob = {},
-        l = keys.length;
+        l = keys === null || keys === void 0 ? void 0 : keys.length;
 
   for (let i = 0, k; i < l; i++) ob[k = keys[i]] = o[k];
 
@@ -61,7 +61,7 @@ function select(o, keys) {
 }
 
 const selectValues = function (o, keys) {
-  const l = keys.length,
+  const l = keys === null || keys === void 0 ? void 0 : keys.length,
         ve = Array(l);
 
   for (let i = 0; i < l; i++) ve[i] = o[keys[i]];

@@ -1,7 +1,7 @@
 import { FUN } from '@typen/enum-data-types'
 
 export const indicatorByInitVal = function (vec, l) {
-  l = l || vec.length
+  l = l ?? vec?.length
   const { init, pile, pick } = this
   let lo = 0, body = init ?? (lo++, vec[0])
   for (let i = lo, fn = pile.bind(body); i < l; i++)
@@ -10,7 +10,7 @@ export const indicatorByInitVal = function (vec, l) {
 }
 
 export const indicatorByInitFun = function (vec, l) {
-  l = l || vec.length
+  l = l ?? vec?.length
   const { init, pile, pick } = this
   let body = init(vec, l)
   for (let i = 0, fn = pile.bind(body); i < l; i++)

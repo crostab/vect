@@ -8,6 +8,33 @@ var Quantifier = require('@vect/column-quantifier');
 var Indicator = require('@vect/column-indicator');
 var ColumnGetter = require('@vect/column-getter');
 
+function _interopNamespace(e) {
+	if (e && e.__esModule) { return e; } else {
+		var n = Object.create(null);
+		if (e) {
+			Object.keys(e).forEach(function (k) {
+				if (k !== 'default') {
+					var d = Object.getOwnPropertyDescriptor(e, k);
+					Object.defineProperty(n, k, d.get ? d : {
+						enumerable: true,
+						get: function () {
+							return e[k];
+						}
+					});
+				}
+			});
+		}
+		n['default'] = e;
+		return Object.freeze(n);
+	}
+}
+
+var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+var Quantifier__namespace = /*#__PURE__*/_interopNamespace(Quantifier);
+var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
+var ColumnGetter__namespace = /*#__PURE__*/_interopNamespace(ColumnGetter);
+
 const {
   iterate,
   mapper,
@@ -15,7 +42,7 @@ const {
   ColumnIterate,
   ColumnMapper,
   ColumnMutate
-} = Mapper;
+} = Mapper__namespace;
 const {
   zipper,
   mutazip,
@@ -24,23 +51,23 @@ const {
   Duozipper,
   Trizipper,
   Quazipper
-} = Zipper;
+} = Zipper__namespace;
 const {
   every,
   some,
   ColumnEvery,
   ColumnSome
-} = Quantifier;
+} = Quantifier__namespace;
 const {
   maxBy,
   minBy,
   Max,
   Min
-} = Indicator;
+} = Indicator__namespace;
 const {
   column,
   Columns
-} = ColumnGetter;
+} = ColumnGetter__namespace;
 
 exports.ColumnEvery = ColumnEvery;
 exports.ColumnIterate = ColumnIterate;

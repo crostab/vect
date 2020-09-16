@@ -2,16 +2,22 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var vectorZipper = require('@vect/vector-zipper');
 var vectorMapper = require('@vect/vector-mapper');
+var vectorZipper = require('@vect/vector-zipper');
 
-const draft = size => Array(size).fill([,,]);
+const EntryFactory = {
+  voidEntry() {
+    return [undefined, undefined];
+  }
+
+};
+const draft = size => Array(size).fill(null).map(EntryFactory.voidEntry);
 const wind = (keys, values) => vectorZipper.zipper(keys, values, (k, v) => [k, v]);
 /**
  * Shallow.
  * @param {string[]} keys
  * @param {*} value
- * @return {Object<string,*>}
+ * @return {[string,*][]}
  */
 
 const iso = (keys, value) => vectorMapper.mapper(keys, key => [key, value]);

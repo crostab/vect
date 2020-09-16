@@ -9,37 +9,65 @@ var Zipper = require('@vect/entries-zipper');
 var Unwind = require('@vect/entries-unwind');
 var Indicator = require('@vect/entries-indicator');
 
+function _interopNamespace(e) {
+	if (e && e.__esModule) { return e; } else {
+		var n = Object.create(null);
+		if (e) {
+			Object.keys(e).forEach(function (k) {
+				if (k !== 'default') {
+					var d = Object.getOwnPropertyDescriptor(e, k);
+					Object.defineProperty(n, k, d.get ? d : {
+						enumerable: true,
+						get: function () {
+							return e[k];
+						}
+					});
+				}
+			});
+		}
+		n['default'] = e;
+		return Object.freeze(n);
+	}
+}
+
+var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
+var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
+var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+var Unwind__namespace = /*#__PURE__*/_interopNamespace(Unwind);
+var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
+
 const {
   draft,
   wind,
   iso
-} = Init;
+} = Init__namespace;
 const {
   iterate,
   mapper,
   mutate
-} = Mapper;
+} = Mapper__namespace;
 const {
   marginCopy,
   marginMapper,
   marginMutate
-} = Margin;
+} = Margin__namespace;
 const {
   zipper,
   mutazip,
   Duozipper,
   Trizipper,
   Quazipper
-} = Zipper;
+} = Zipper__namespace;
 const {
   maxBy,
   minBy,
   Max,
   Min
-} = Indicator;
+} = Indicator__namespace;
 const {
   unwind
-} = Unwind;
+} = Unwind__namespace;
 
 exports.Duozipper = Duozipper;
 exports.Max = Max;

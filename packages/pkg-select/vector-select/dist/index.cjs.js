@@ -8,12 +8,14 @@ var comparer = require('@aryth/comparer');
 var rand = require('@aryth/rand');
 
 const select = (vec, indexes, hi) => {
-  hi = hi || indexes.length;
-  const vc = Array(hi);
+  var _hi;
 
-  for (--hi; hi >= 0; hi--) vc[hi] = vec[indexes[hi]];
+  hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length;
+  const sample = Array(hi);
 
-  return vc;
+  for (--hi; hi >= 0; hi--) sample[hi] = vec[indexes[hi]];
+
+  return sample;
 };
 
 const selectEntry = (vec, keyInd, valInd) => [vec[keyInd], vec[valInd]];
@@ -29,20 +31,24 @@ const selectEntry = (vec, keyInd, valInd) => [vec[keyInd], vec[valInd]];
  * @returns {{pick: *[], rest: *[]}} - rest points to altered original array, pick is an new array.
  */
 
-const divide = (vec, indexes, hi) => (hi = hi || indexes.length, {
-  pick: vectorUpdate.partition(vec, indexes, hi).splice(indexes[0], hi),
-  rest: vec
-});
+const divide = (vec, indexes, hi) => {
+  var _hi;
+
+  return hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length, {
+    pick: vectorUpdate.partition(vec, indexes, hi).splice(indexes[0], hi),
+    rest: vec
+  };
+};
 
 /**
  * Fisher–Yates shuffle, a.k.a Knuth shuffle
  * @param {Array} ve
- * @param {number} [size] - if omitted, size will be keys.length
+ * @param {number} [size] - if omitted, size will be keys?.length
  * @returns {Array} mutated array
  */
 
 const shuffle = function (ve, size) {
-  let l = ve.length;
+  let l = ve === null || ve === void 0 ? void 0 : ve.length;
   const lo = comparer.max(0, l - (size !== null && size !== void 0 ? size : l));
 
   while (--l >= lo) swap.swap.call(ve, l, rand.rand(l));
@@ -50,14 +56,14 @@ const shuffle = function (ve, size) {
   return lo ? (ve.splice(0, lo), ve) : ve;
 };
 
-const leap = (ar, start, gap) => {
-  const wd = ar.length,
+const leap = (ve, start, gap) => {
+  const wd = ve === null || ve === void 0 ? void 0 : ve.length,
         vec = Array(gap);
   let lo = start ? comparer.min(start, wd - 1) : rand.rand(wd),
-      j = 0;
+      i = 0;
 
-  while (j < gap) {
-    vec[j++] = ar[lo++];
+  while (i < gap) {
+    vec[i++] = ve[lo++];
     if (lo === wd) lo = 0;
   }
 

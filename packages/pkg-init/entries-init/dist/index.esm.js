@@ -1,13 +1,19 @@
-import { zipper } from '@vect/vector-zipper';
 import { mapper } from '@vect/vector-mapper';
+import { zipper } from '@vect/vector-zipper';
 
-const draft = size => Array(size).fill([,,]);
+const EntryFactory = {
+  voidEntry() {
+    return [undefined, undefined];
+  }
+
+};
+const draft = size => Array(size).fill(null).map(EntryFactory.voidEntry);
 const wind = (keys, values) => zipper(keys, values, (k, v) => [k, v]);
 /**
  * Shallow.
  * @param {string[]} keys
  * @param {*} value
- * @return {Object<string,*>}
+ * @return {[string,*][]}
  */
 
 const iso = (keys, value) => mapper(keys, key => [key, value]);

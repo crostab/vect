@@ -8,7 +8,7 @@
  * @returns {*[]}
  */
 export const marginMutate = (vec, fn, h, t, l) => {
-  l = l || vec.length
+  l = l ?? vec?.length
   const s = l - t
   for (--h; h >= 0; h--) vec[h] = fn(vec[h], h)
   for (--l; l >= s; l--) vec[l] = fn(vec[l], l)

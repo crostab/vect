@@ -5,8 +5,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var comparer = require('@aryth/comparer');
 
 const max = function (matrix) {
-  let fn = this;
-  return matrix.reduce((prv, r, i) => comparer.max(prv, r.reduce((acc, x, j) => comparer.max(acc, fn(x, i, j)))), fn(matrix[0][0], 0, 0));
+  let indicator = this;
+  return matrix.reduce((prevVal, currRow, i) => comparer.max(prevVal, currRow.reduce((a, b, j) => comparer.max(a, indicator(b, i, j)))), indicator(matrix[0][0], 0, 0));
 };
 const maxBy = (matrix, indicator) => max.call(indicator, matrix);
 const Max = indicator => max.bind(indicator);

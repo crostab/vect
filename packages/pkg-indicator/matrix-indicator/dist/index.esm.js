@@ -1,8 +1,8 @@
 import { max as max$1, min as min$1 } from '@aryth/comparer';
 
 const max = function (matrix) {
-  let fn = this;
-  return matrix.reduce((prv, r, i) => max$1(prv, r.reduce((acc, x, j) => max$1(acc, fn(x, i, j)))), fn(matrix[0][0], 0, 0));
+  let indicator = this;
+  return matrix.reduce((prevVal, currRow, i) => max$1(prevVal, currRow.reduce((a, b, j) => max$1(a, indicator(b, i, j)))), indicator(matrix[0][0], 0, 0));
 };
 const maxBy = (matrix, indicator) => max.call(indicator, matrix);
 const Max = indicator => max.bind(indicator);

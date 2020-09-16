@@ -3,7 +3,7 @@
   "version": "0.2.9",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.esm",
   "files": [
     "dist"
   ],
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/matrix-init.test.js"
   },
   "dependencies": {
-    "@typen/nullish": "^0.1.5"
+    "@typen/nullish": "^0.1.9"
   },
   "repository": {
     "type": "git",

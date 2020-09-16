@@ -12,14 +12,15 @@ export { select } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
 export { COLUMNWISE, POINTWISE, ROWWISE } from '@vect/enum-matrix-directions';
 
+const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
+
 /**
  *
  * @param {*[][]} mx
  * @return {number[]}
  */
-const coins = mx => !Array.isArray(mx) || !Array.isArray(mx[0]) ? [] : mx[0].map((_, i) => i);
 
-const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
+const coins = mx => isMatrix(mx) ? mx[0].map((_, i) => i) : [];
 
 const {
   draft,

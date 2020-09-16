@@ -16,14 +16,47 @@ var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
 var enumMatrixDirections = require('@vect/enum-matrix-directions');
 
+function _interopNamespace(e) {
+  if (e && e.__esModule) { return e; } else {
+    var n = Object.create(null);
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        if (k !== 'default') {
+          var d = Object.getOwnPropertyDescriptor(e, k);
+          Object.defineProperty(n, k, d.get ? d : {
+            enumerable: true,
+            get: function () {
+              return e[k];
+            }
+          });
+        }
+      });
+    }
+    n['default'] = e;
+    return Object.freeze(n);
+  }
+}
+
+var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
+var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
+var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+var Quantifier__namespace = /*#__PURE__*/_interopNamespace(Quantifier);
+var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
+var Size__namespace = /*#__PURE__*/_interopNamespace(Size);
+var Transpose__namespace = /*#__PURE__*/_interopNamespace(Transpose);
+var ColumnGetter__namespace = /*#__PURE__*/_interopNamespace(ColumnGetter);
+var ColumnsMapper__namespace = /*#__PURE__*/_interopNamespace(ColumnsMapper);
+
+const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
+
 /**
  *
  * @param {*[][]} mx
  * @return {number[]}
  */
-const coins = mx => !Array.isArray(mx) || !Array.isArray(mx[0]) ? [] : mx[0].map((_, i) => i);
 
-const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
+const coins = mx => isMatrix(mx) ? mx[0].map((_, i) => i) : [];
 
 const {
   draft,
@@ -33,49 +66,49 @@ const {
   ini,
   starter,
   shallow
-} = Init;
+} = Init__namespace;
 const {
   iterate,
   mutate,
   mapper
-} = Mapper;
+} = Mapper__namespace;
 const {
   marginCopy,
   marginMapper,
   marginMutate
-} = Margin;
+} = Margin__namespace;
 const {
   zipper,
   mutazip,
   Duozipper,
   Trizipper,
   Quazipper
-} = Zipper;
+} = Zipper__namespace;
 const {
   maxBy,
   minBy,
   Max,
   Min
-} = Indicator;
+} = Indicator__namespace;
 const {
   every,
   some
-} = Quantifier;
+} = Quantifier__namespace;
 const {
   size,
   width,
   height
-} = Size;
+} = Size__namespace;
 const {
   transpose
-} = Transpose;
+} = Transpose__namespace;
 const {
   column,
   Columns
-} = ColumnGetter;
+} = ColumnGetter__namespace;
 const {
   mapper: columnsMapper
-} = ColumnsMapper;
+} = ColumnsMapper__namespace;
 
 Object.defineProperty(exports, 'select', {
   enumerable: true,

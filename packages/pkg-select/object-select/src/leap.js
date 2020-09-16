@@ -3,7 +3,7 @@ import { rand }     from '@aryth/rand'
 
 export const leap = function (o, start, gap) {
   const keys = this?.keys ?? Object.keys(o)
-  const wd = keys.length, df = max(gap, wd), rs = {}
+  const wd = keys?.length, df = max(gap, wd), rs = {}
   let
     lo = start ? min(start, wd - 1) : rand(wd),
     hi = lo + df,

@@ -7,6 +7,32 @@ var Mapper = require('@vect/object-mapper');
 var Select = require('@vect/object-select');
 var Zipper = require('@vect/object-zipper');
 
+function _interopNamespace(e) {
+	if (e && e.__esModule) { return e; } else {
+		var n = Object.create(null);
+		if (e) {
+			Object.keys(e).forEach(function (k) {
+				if (k !== 'default') {
+					var d = Object.getOwnPropertyDescriptor(e, k);
+					Object.defineProperty(n, k, d.get ? d : {
+						enumerable: true,
+						get: function () {
+							return e[k];
+						}
+					});
+				}
+			});
+		}
+		n['default'] = e;
+		return Object.freeze(n);
+	}
+}
+
+var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
+var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
+var Select__namespace = /*#__PURE__*/_interopNamespace(Select);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+
 const {
   iterate,
   iterateEntries,
@@ -15,11 +41,11 @@ const {
   mapKeys,
   mapper,
   mutate
-} = Mapper;
+} = Mapper__namespace;
 const {
   mutazip,
   zipper
-} = Zipper;
+} = Zipper__namespace;
 const {
   init,
   initByValues,
@@ -27,14 +53,14 @@ const {
   ob,
   pair,
   wind
-} = Init;
+} = Init__namespace;
 const {
   leap,
   lookupKeys,
   select,
   selectValues,
   shuffle
-} = Select;
+} = Select__namespace;
 
 exports.init = init;
 exports.initByValues = initByValues;

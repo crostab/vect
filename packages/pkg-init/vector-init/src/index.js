@@ -36,9 +36,9 @@ export const init = (size, fn) => {
  */
 export const seq = (size, fn, digit) => {
   if (!nullish(digit)) return seqTrimDigit(size, fn, digit)
-  const ar = Array(size)
-  for (let i = 0; i < size; i++) ar[i] = fn(i)
-  return ar
+  const ve = Array(size)
+  for (let i = 0; i < size; i++) ve[i] = fn(i)
+  return ve
 }
 
 export const range = (start, end) => {

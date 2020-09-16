@@ -1,7 +1,7 @@
 import { FUN } from '@typen/enum-data-types'
 
 export const pileByInitVal = function (vec, l) {
-  l = l || vec.length
+  l = l ?? vec?.length
   const { init, pile, pick } = this
   let lo = 0, p = init ?? (lo++, vec[0])
   for (let i = lo; i < l; i++)
@@ -10,7 +10,7 @@ export const pileByInitVal = function (vec, l) {
 }
 
 export const pileByInitFun = function (vec, l) {
-  l = l || vec.length
+  l = l ?? vec?.length
   const { init, pile, pick } = this
   let p = init(vec, l)
   for (let i = 0; i < l; i++)

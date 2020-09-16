@@ -7,7 +7,9 @@
  * @returns {*[]}
  */
 const marginCopy = (vec, h, t, l) => {
-  const ve = Array(l = l || vec.length),
+  var _l;
+
+  const ve = Array(l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length),
         s = l - t;
 
   for (--h; h >= 0; h--) ve[h] = vec[h];
@@ -27,7 +29,9 @@ const marginCopy = (vec, h, t, l) => {
  * @returns {*[]}
  */
 const marginMapper = (vec, fn, h, t, l) => {
-  const ve = Array(l = l || vec.length),
+  var _l;
+
+  const ve = Array(l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length),
         s = l - t;
 
   for (--h; h >= 0; h--) ve[h] = fn(vec[h], h);
@@ -47,7 +51,9 @@ const marginMapper = (vec, fn, h, t, l) => {
  * @returns {*[]}
  */
 const marginMutate = (vec, fn, h, t, l) => {
-  l = l || vec.length;
+  var _l;
+
+  l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length;
   const s = l - t;
 
   for (--h; h >= 0; h--) vec[h] = fn(vec[h], h);

@@ -1,2 +1,2 @@
-export const selectEntry = (vec, keyInd, valInd) =>
-  [vec[keyInd], vec[valInd]]
+export const selectEntry = (vec, keyIndex, valIndex) =>
+  [vec[keyIndex], vec[valIndex]]

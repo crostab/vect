@@ -11,6 +11,36 @@ var Select = require('@vect/vector-select');
 var Update = require('@vect/vector-update');
 var Zipper = require('@vect/vector-zipper');
 
+function _interopNamespace(e) {
+  if (e && e.__esModule) { return e; } else {
+    var n = Object.create(null);
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        if (k !== 'default') {
+          var d = Object.getOwnPropertyDescriptor(e, k);
+          Object.defineProperty(n, k, d.get ? d : {
+            enumerable: true,
+            get: function () {
+              return e[k];
+            }
+          });
+        }
+      });
+    }
+    n['default'] = e;
+    return Object.freeze(n);
+  }
+}
+
+var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
+var Indicate__namespace = /*#__PURE__*/_interopNamespace(Indicate);
+var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
+var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
+var Merge__namespace = /*#__PURE__*/_interopNamespace(Merge);
+var Select__namespace = /*#__PURE__*/_interopNamespace(Select);
+var Update__namespace = /*#__PURE__*/_interopNamespace(Update);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+
 const union = (a, b) => {
   const ve = a.slice();
   Mapper.iterate(b, x => {
@@ -47,19 +77,19 @@ const {
   reviter,
   mapper,
   mutate
-} = Mapper;
+} = Mapper__namespace;
 const {
   marginCopy,
   marginMapper,
   marginMutate
-} = Margin;
+} = Margin__namespace;
 const {
   zipper,
   mutazip,
   Duozipper,
   Trizipper,
   Quazipper
-} = Zipper;
+} = Zipper__namespace;
 const {
   maxBy,
   minBy,
@@ -67,30 +97,30 @@ const {
   Min,
   Piler,
   Indicator
-} = Indicate;
+} = Indicate__namespace;
 const {
   draft,
   iso,
   init,
   seq,
   range
-} = Init;
+} = Init__namespace;
 const {
   splices,
   partition
-} = Update;
+} = Update__namespace;
 const {
   divide,
   leap,
   select,
   selectEntry,
   shuffle
-} = Select;
+} = Select__namespace;
 const {
   acquire,
   merge,
   merges
-} = Merge;
+} = Merge__namespace;
 const {
   union: union$1,
   intersect: intersect$1,

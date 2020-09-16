@@ -8,7 +8,7 @@
  * @returns {*[]}
  */
 export const marginMapper = (vec, fn, h, t, l) => {
-  const ve = Array(l = l || vec.length), s = l - t
+  const ve = Array(l = l ?? vec?.length), s = l - t
   for (--h; h >= 0; h--) ve[h] = fn(vec[h], h)
   for (--l; l >= s; l--) ve[l] = fn(vec[l], l)
   return ve

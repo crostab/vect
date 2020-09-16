@@ -1,4 +1,4 @@
-import { mapper, iterate } from '@vect/vector-mapper'
+import { iterate, mapper }     from '@vect/vector-mapper'
 import { divide as divideRow } from '@vect/vector-select'
 
 /**
@@ -11,8 +11,8 @@ import { divide as divideRow } from '@vect/vector-select'
  * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
 export const divide = (mx, indexes, hi) => {
-  hi = hi || indexes.length
-  let h = mx.length, y
+  hi = hi ?? indexes?.length
+  let h = mx?.length, y
   if (hi === 0) return { pick: Array(h), rest: mx }
   const pick = Array(h)
   if (hi === 1) return [y] = indexes, {

@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@aryth/comparer": "^0.2.14",
-    "@typen/enum-data-types": "^0.1.5",
-    "@typen/enum-object-types": "^0.1.5"
+    "@typen/enum-data-types": "^0.1.9",
+    "@typen/enum-object-types": "^0.1.9"
   },
   "keywords": [
     "array",

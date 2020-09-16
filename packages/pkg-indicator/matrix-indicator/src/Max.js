@@ -1,12 +1,10 @@
-import { max as maxN } from '@aryth/comparer'
+import { max as maxFn } from '@aryth/comparer'
 
 export const max = function (matrix) {
-  let fn = this
+  let indicator = this
   return matrix.reduce(
-    (prv, r, i) => maxN(prv, r.reduce(
-      (acc, x, j) => maxN(acc, fn(x, i, j))
-    )),
-    fn(matrix[0][0], 0, 0)
+    (prevVal, currRow, i) => maxFn(prevVal, currRow.reduce((a, b, j) => maxFn(a, indicator(b, i, j)))),
+    indicator(matrix[0][0], 0, 0)
   )
 }
 
