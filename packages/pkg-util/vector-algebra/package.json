@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-algebra",
-  "version": "0.2.10-alpha.0",
+  "version": "0.2.10",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/matrix-size.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.2.10-alpha.0"
+    "@vect/vector-mapper": "^0.2.10"
   },
   "repository": {
     "type": "git",
