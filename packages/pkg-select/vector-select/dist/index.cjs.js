@@ -18,7 +18,7 @@ const select = (vec, indexes, hi) => {
   return sample;
 };
 
-const selectEntry = (vec, keyInd, valInd) => [vec[keyInd], vec[valInd]];
+const selectEntry = (vec, keyIndex, valIndex) => [vec[keyIndex], vec[valIndex]];
 
 /**
  * Divide input array by an array of indexes,

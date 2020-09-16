@@ -15,6 +15,7 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
+    "@vect/vector-index": "^0.2.10-alpha.0",
     "@vect/column-getter": "^0.2.10-alpha.0",
     "@vect/columns-mapper": "^0.2.10-alpha.0",
     "@vect/columns-select": "^0.2.10-alpha.0",

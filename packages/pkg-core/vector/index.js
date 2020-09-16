@@ -1,4 +1,5 @@
 import * as Algebra  from '@vect/vector-algebra'
+import * as Index    from '@vect/vector-index'
 import * as Indicate from '@vect/vector-indicator'
 import * as Init     from '@vect/vector-init'
 import * as Mapper   from '@vect/vector-mapper'
@@ -17,4 +18,5 @@ export const { splices, partition } = Update
 export const { divide, leap, select, selectEntry, shuffle } = Select
 export const { acquire, merge, merges } = Merge
 export const { union, intersect, difference } = Algebra
+export const { first, last } = Index
 

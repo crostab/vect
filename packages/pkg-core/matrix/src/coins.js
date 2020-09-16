@@ -1,3 +1,4 @@
+import { first }    from '@vect/vector-index'
 import { isMatrix } from './isMatrix'
 
 /**
@@ -6,5 +7,5 @@ import { isMatrix } from './isMatrix'
  * @return {number[]}
  */
 export const coins = mx => isMatrix(mx)
-  ? mx[0].map((_, i) => i)
+  ? first(mx).map((_, i) => i)
   : []

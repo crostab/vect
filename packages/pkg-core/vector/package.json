@@ -18,7 +18,9 @@
     "@vect/vector-merge": "^0.2.10-alpha.0",
     "@vect/vector-select": "^0.2.10-alpha.0",
     "@vect/vector-update": "^0.2.10-alpha.0",
-    "@vect/vector-zipper": "^0.2.10-alpha.0"
+    "@vect/vector-zipper": "^0.2.10-alpha.0",
+    "@vect/vector-algebra": "^0.2.10-alpha.0",
+    "@vect/vector-index": "^0.2.10-alpha.0"
   },
   "scripts": {
     "pub": "npm publish",

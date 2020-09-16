@@ -10,6 +10,7 @@ import * as ColumnGetter from '@vect/column-getter';
 import * as ColumnsMapper from '@vect/columns-mapper';
 export { select } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
+import { first } from '@vect/vector-index';
 export { COLUMNWISE, POINTWISE, ROWWISE } from '@vect/enum-matrix-directions';
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
@@ -20,7 +21,7 @@ const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
  * @return {number[]}
  */
 
-const coins = mx => isMatrix(mx) ? mx[0].map((_, i) => i) : [];
+const coins = mx => isMatrix(mx) ? first(mx).map((_, i) => i) : [];
 
 const {
   draft,

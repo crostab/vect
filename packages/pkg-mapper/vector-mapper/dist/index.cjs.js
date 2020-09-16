@@ -16,11 +16,11 @@ const reviter = function (vec, fn, l) {
 
 const mapper = function (vec, fn, l) {
   l = l || (vec === null || vec === void 0 ? void 0 : vec.length);
-  const ar = Array(l);
+  const ve = Array(l);
 
-  for (--l; l >= 0; l--) ar[l] = fn.call(this, vec[l], l);
+  for (--l; l >= 0; l--) ve[l] = fn.call(this, vec[l], l);
 
-  return ar;
+  return ve;
 };
 
 const mutate = (vec, fn, l) => {

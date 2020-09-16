@@ -14,6 +14,7 @@ var ColumnGetter = require('@vect/column-getter');
 var ColumnsMapper = require('@vect/columns-mapper');
 var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
+var vectorIndex = require('@vect/vector-index');
 var enumMatrixDirections = require('@vect/enum-matrix-directions');
 
 function _interopNamespace(e) {
@@ -56,7 +57,7 @@ const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
  * @return {number[]}
  */
 
-const coins = mx => isMatrix(mx) ? mx[0].map((_, i) => i) : [];
+const coins = mx => isMatrix(mx) ? vectorIndex.first(mx).map((_, i) => i) : [];
 
 const {
   draft,

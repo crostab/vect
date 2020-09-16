@@ -19,11 +19,11 @@ const TrimDigit = d => {
 };
 
 const seqTrimDigit = (size, fn, digit = 2) => {
-  const ar = Array(size);
+  const ve = Array(size);
 
-  for (let i = 0, td = TrimDigit(digit); i < size; i++) ar[i] = td(fn(i));
+  for (let i = 0, td = TrimDigit(digit); i < size; i++) ve[i] = td(fn(i));
 
-  return ar;
+  return ve;
 };
 
 const draft = size => Array(size);
@@ -66,11 +66,11 @@ const init = (size, fn) => {
 
 const seq = (size, fn, digit) => {
   if (!nullish(digit)) return seqTrimDigit(size, fn, digit);
-  const ar = Array(size);
+  const ve = Array(size);
 
-  for (let i = 0; i < size; i++) ar[i] = fn(i);
+  for (let i = 0; i < size; i++) ve[i] = fn(i);
 
-  return ar;
+  return ve;
 };
 const range = (start, end) => {
   let v, l;
