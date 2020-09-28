@@ -3,7 +3,7 @@
   "version": "0.2.11",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm",
+  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],
