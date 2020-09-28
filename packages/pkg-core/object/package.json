@@ -1,6 +1,6 @@
 {
   "name": "@vect/object",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "Util for object",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,10 +11,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/object-init": "^0.2.11",
-    "@vect/object-mapper": "^0.2.11",
-    "@vect/object-select": "^0.2.11",
-    "@vect/object-zipper": "^0.2.11"
+    "@vect/object-init": "^0.2.12",
+    "@vect/object-mapper": "^0.2.12",
+    "@vect/object-select": "^0.2.12",
+    "@vect/object-zipper": "^0.2.12"
   },
   "scripts": {
     "pub": "npm publish",
