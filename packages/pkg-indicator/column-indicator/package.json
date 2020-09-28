@@ -19,7 +19,7 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.2.14"
+    "@aryth/comparer": "^0.3.0"
   },
   "keywords": [
     "matrix",

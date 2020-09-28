@@ -24,7 +24,11 @@ const partition = (vec, indexes, hi) => {
  * @returns {*[]} - altered of original array
  */
 
-const splices = (vec, indexes, hi) => (hi = hi || indexes.length, partition(vec, indexes, hi).splice(indexes[0], hi), vec);
+const splices = (vec, indexes, hi) => {
+  var _hi;
+
+  return hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length, partition(vec, indexes, hi).splice(indexes[0], hi), vec;
+};
 
 exports.partition = partition;
 exports.splices = splices;

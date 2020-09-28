@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/matrix-init.test.js"
   },
   "dependencies": {
-    "@typen/nullish": "^0.1.9"
+    "@typen/nullish": "^0.1.10"
   },
   "repository": {
     "type": "git",

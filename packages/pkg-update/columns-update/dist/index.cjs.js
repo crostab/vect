@@ -17,11 +17,7 @@ const pop = matrix => vectorMapper.mapper(matrix, row => row.pop());
 
 const push = (matrix, column) => void vectorZipper.zipper(matrix, column, (row, el) => row.push(el));
 
-const shift = matrix => {
-  return vectorMapper.mapper(matrix, row => {
-    return row.shift();
-  });
-};
+const shift = matrix => vectorMapper.mapper(matrix, row => row.shift());
 
 /**
  * unshift each element of column to each row of matrix, return void 0

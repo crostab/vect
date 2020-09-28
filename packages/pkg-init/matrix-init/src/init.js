@@ -16,9 +16,9 @@ export const iso = (h, w, v) => {
 
 export const init = (h, w, fn) => {
   const mx = Array(h)
-  for (let i = 0, j, ro; i < h; i++)
-    for (j = 0, mx[i] = ro = Array(w); j < w; j++)
-      ro[j] = fn(i, j)
+  for (let i = 0, j, row; i < h; i++)
+    for (j = 0, mx[i] = row = Array(w); j < w; j++)
+      row[j] = fn(i, j)
   return mx
 }
 

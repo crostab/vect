@@ -8,6 +8,6 @@ import { partition } from '../utils/partition'
  * @returns {*[]} - altered of original array
  */
 export const splices = (vec, indexes, hi) =>
-  (hi = hi || indexes.length, partition(vec, indexes, hi).splice(indexes[0], hi), vec)
+  (hi = hi ?? indexes?.length, partition(vec, indexes, hi).splice(indexes[0], hi), vec)
 
 
