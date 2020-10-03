@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-update
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-update
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-update
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Math util library

@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-roller
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-roller
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-roller
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

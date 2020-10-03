@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/matrix-mapper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/matrix-mapper
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/matrix-mapper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

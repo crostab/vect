@@ -1,9 +1,9 @@
-import { FobaNum } from '@foba/vector'
-import { logger } from '@spare/logger'
-import { xr } from '@spare/xr'
-import { maxBy, minBy } from '../index'
+import { NumberVectorCollection } from '@foba/vector'
+import { logger }                 from '@spare/logger'
+import { xr }                     from '@spare/xr'
+import { maxBy, minBy }           from '../index'
 
-const vec = FobaNum.flop({ size: 12 })
+const vec = NumberVectorCollection.flopShuffle({ size: 12 })
 
 vec |> logger
 

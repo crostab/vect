@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-select
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-select
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-select
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Math util library

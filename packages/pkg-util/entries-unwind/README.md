@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/entries-unwind
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/entries-unwind
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/entries-unwind
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

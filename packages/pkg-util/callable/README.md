@@ -22,7 +22,7 @@ Make a class callable by inherit the class Callable.
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/callable
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/callable
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/callable
 [url-github]: https://github.com/hoyeungw/vect
 
 ## Features

@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-differentiator
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-differentiator
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-differentiator
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

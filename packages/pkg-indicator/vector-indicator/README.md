@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-maxIndicator
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-maxIndicator
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-maxIndicator
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### 'Every' and 'some' for 2-d array 

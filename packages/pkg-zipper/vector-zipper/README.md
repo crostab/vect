@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/vector-zipper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/vector-zipper
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-zipper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Map through each element of an array.

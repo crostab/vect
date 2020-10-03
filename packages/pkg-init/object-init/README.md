@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/object-init
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-init
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/object-init
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

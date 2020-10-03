@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/object-zipper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-zipper
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/object-zipper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

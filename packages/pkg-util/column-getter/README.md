@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/column-getter
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/column-getter
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/column-getter
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

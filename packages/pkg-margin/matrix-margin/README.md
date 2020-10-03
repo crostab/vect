@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/matrix-margin
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/matrix-margin
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/matrix-margin
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array

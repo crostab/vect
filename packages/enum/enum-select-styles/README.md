@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/enum-select-styles
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/enum-select-styles
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/enum-select-styles
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Math util library

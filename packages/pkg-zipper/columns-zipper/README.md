@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/columns-zipper
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/columns-zipper
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/columns-zipper
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Map through each columns of a 2-d array.

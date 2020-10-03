@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/columns-select
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/columns-select
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/columns-select
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Math util library

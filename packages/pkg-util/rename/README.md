@@ -22,7 +22,7 @@ Rename a function
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/rename
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/rename
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/rename
 [url-github]: https://github.com/hoyeungw/vect
 
 ## Features

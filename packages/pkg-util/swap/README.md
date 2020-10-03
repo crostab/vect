@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/swap
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/swap
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/swap
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Swap 2 elements of array by input indexes

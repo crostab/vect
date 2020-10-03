@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/object-select
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/object-select
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/object-select
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Rank each element in a 2-d array

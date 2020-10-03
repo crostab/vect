@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/enum-matrix-directions
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/enum-matrix-directions
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/enum-matrix-directions
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Math util library

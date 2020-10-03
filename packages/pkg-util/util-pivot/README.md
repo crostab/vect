@@ -21,7 +21,7 @@
 
 [//]: <> (Link)
 [url-npm]: https://npmjs.org/package/@vect/util-pivot
-[url-pp]: https://packagephobia.now.sh/result?p=@vect/util-pivot
+[url-pp]: https://packagephobia.now.sh/result?prev=@vect/util-pivot
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Util for array
