@@ -50,8 +50,10 @@ const shuffle = function (o, size) {
   return rs;
 };
 
-function selector(o) {
-  const keys = this;
+function select(o) {
+  const {
+    keys
+  } = this;
   const l = keys === null || keys === void 0 ? void 0 : keys.length,
         ob = {};
 
@@ -65,12 +67,17 @@ function selector(o) {
  * @param {*[]} keys
  */
 
+const selectObject = (o, keys) => select.call({
+  keys
+}, o);
+const SelectObject = keys => select.bind({
+  keys
+});
 
-const select = (o, keys) => selector.call(keys, o);
-const Select = keys => selector.bind(keys);
-
-const objectValues = function (o) {
-  const keys = this;
+const values = function (o) {
+  const {
+    keys
+  } = this;
   const l = keys === null || keys === void 0 ? void 0 : keys.length,
         ve = Array(l);
 
@@ -78,8 +85,12 @@ const objectValues = function (o) {
 
   return ve;
 };
-const selectValues = (o, keys) => objectValues.call(keys, o);
-const SelectValues = keys => objectValues.bind(keys);
+const selectValues = (o, keys) => values.call({
+  keys
+}, o);
+const SelectValues = keys => values.bind({
+  keys
+});
 
 /**
  * @typedef {string|number} str
@@ -112,10 +123,12 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
-exports.Select = Select;
+exports.SelectObject = SelectObject;
 exports.SelectValues = SelectValues;
 exports.leap = leap;
 exports.lookupKeys = lookupKeys;
 exports.select = select;
+exports.selectObject = selectObject;
 exports.selectValues = selectValues;
 exports.shuffle = shuffle;
+exports.values = values;
