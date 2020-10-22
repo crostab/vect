@@ -1,5 +1,5 @@
 function selector(o) {
-  const { keys } = this
+  const keys = this
   const l = keys?.length, ob = {}
   for (let i = 0, k; i < l; i++)
     ob[k = keys[i]] = o[k]
@@ -11,6 +11,6 @@ function selector(o) {
  * @param {Object} o
  * @param {*[]} keys
  */
-export const select = (o, { keys }) => selector.call(keys, o);
+export const select = (o, keys) => selector.call(keys, o)
 
-export const Select = keys => selector.bind(keys);
+export const Select = keys => selector.bind(keys)

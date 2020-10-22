@@ -47,9 +47,7 @@ const shuffle = function (o, size) {
 };
 
 function selector(o) {
-  const {
-    keys
-  } = this;
+  const keys = this;
   const l = keys === null || keys === void 0 ? void 0 : keys.length,
         ob = {};
 
@@ -64,9 +62,7 @@ function selector(o) {
  */
 
 
-const select = (o, {
-  keys
-}) => selector.call(keys, o);
+const select = (o, keys) => selector.call(keys, o);
 const Select = keys => selector.bind(keys);
 
 const objectValues = function (o) {
