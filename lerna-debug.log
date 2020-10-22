@@ -1,0 +1,12 @@
+17 error Error: Command failed: git remote update
+17 error fatal: unable to access 'https://github.com/hoyeungw/vect.git/': Could not resolve host: github.com
+17 error error: Could not fetch origin
+17 error
+17 error Fetching origin
+17 error
+17 error     at makeError (/home/hazen/banyan/vect/node_modules/execa/index.js:174:9)
+17 error     at Function.module.exports.sync (/home/hazen/banyan/vect/node_modules/execa/index.js:338:15)
+17 error     at Object.execSync (/home/hazen/banyan/vect/node_modules/@lerna/child-process/index.js:26:16)
+17 error     at updateRemote (/home/hazen/banyan/vect/node_modules/@lerna/version/lib/is-behind-upstream.js:26:16)
+17 error     at isBehindUpstream (/home/hazen/banyan/vect/node_modules/@lerna/version/lib/is-behind-upstream.js:11:3)
+17 error     at VersionCommand.initialize (/home/hazen/banyan/vect/node_modules/@lerna/version/index.js:154:9)

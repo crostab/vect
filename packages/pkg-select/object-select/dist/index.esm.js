@@ -67,6 +67,7 @@ function selector(o) {
 const select = (o, {
   keys
 }) => selector.call(keys, o);
+const Select = keys => selector.bind(keys);
 
 const objectValues = function (o) {
   const keys = this;
@@ -78,6 +79,7 @@ const objectValues = function (o) {
   return ve;
 };
 const selectValues = (o, keys) => objectValues.call(keys, o);
+const SelectValues = keys => objectValues.bind(keys);
 
 /**
  * @typedef {string|number} str
@@ -110,4 +112,4 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
-export { leap, lookupKeys, select, selectValues, shuffle };
+export { Select, SelectValues, leap, lookupKeys, select, selectValues, shuffle };
