@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-stat",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Indicators for columns",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.1.10",
-    "@vect/matrix-size": "^0.3.0",
-    "@vect/vector-init": "^0.3.0"
+    "@vect/matrix-size": "^0.3.1",
+    "@vect/vector-init": "^0.3.1"
   },
   "keywords": [
     "matrix",
