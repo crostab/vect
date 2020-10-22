@@ -1,10 +1,10 @@
 import { deca, DecoMatrix, decoMatrix, delogger, logger, logNeL, says } from '@spare/logger'
 import { mutazip } from '../src/mutazip'
-import { SimpleMatrices } from '@foba/foo'
+import { SimpleMatrixCollection } from '@foba/foo'
 import { ColumnZipper } from '../src/ColumnZipper'
 import { Duozipper } from '../src/seriesZipper'
 
-SimpleMatrices |> deca({ vo: 1 }) |> says['original']
+SimpleMatrixCollection |> deca({ vo: 1 }) |> says['original']
 const mb = [
   [0, 0, 0, 0],
   [0, 0, 0, 0],
@@ -13,7 +13,7 @@ const mb = [
 
 class ColumnZipperTest {
   static testMapper () {
-    for (let [k, ma] of Object.entries(SimpleMatrices)) {
+    for (let [k, ma] of Object.entries(SimpleMatrixCollection)) {
       k |> logger
       ColumnZipper(1)(ma, mb, (a, b) => a * 2) |> delogger
     }

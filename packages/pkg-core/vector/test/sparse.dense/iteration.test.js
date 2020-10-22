@@ -1,11 +1,11 @@
-import { makeEmbedded, simpleVectors } from '@foba/foo'
+import { makeEmbedded, SimpleVectorCollection } from '@foba/foo'
 import { decoCrostab }                 from '@spare/logger'
 import { strategies }                  from '@valjoux/strategies'
 
-const SimpleVectors = simpleVectors({ h: 32 })
+const SimpleVectorCollection = SimpleVectorCollection({ h: 32 })
 const { lapse, result } = strategies({
   repeat: 1E+5,
-  candidates: SimpleVectors |> makeEmbedded,
+  candidates: SimpleVectorCollection |> makeEmbedded,
   methods: {
     stable: x => x,
     dev: ar => ar.map(x => x),

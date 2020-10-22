@@ -1,4 +1,4 @@
-import { SimpleVectors } from '@foba/foo'
+import { SimpleVectorCollection } from '@foba/foo'
 import { decoCrostab, says } from '@spare/logger'
 import { strategies } from '@valjoux/strategies'
 import { mapper as mapperObject } from '@vect/object-mapper'
@@ -19,7 +19,7 @@ const ig = spliceIndexesGenerator()
 
 const { lapse, result } = strategies({
   repeat: 1E+6,
-  candidates: mapperObject(SimpleVectors, (vector) => [vector, ig.next().value]),
+  candidates: mapperObject(SimpleVectorCollection, (vector) => [vector, ig.next().value]),
   methods: {
     indexes: (ve, ins) => ins,
     nat: (ve, ins) => divideNat(ve.slice(), ins),

@@ -1,12 +1,12 @@
-import { makeEmbedded, simpleMatrices }                from '@foba/foo'
+import { makeEmbedded, SimpleMatrixCollection }                from '@foba/foo'
 import { deco }                            from '@spare/deco'
 import { decoCrostab, decoMatrix, logger } from '@spare/logger'
 import { size }                            from '@vect/matrix-size'
 import { mapKeys, mapper as mapValue }                 from '@vect/object-mapper'
 import { mapper as mapperIter, mapper as mapperEmbed } from './mapperIter'
 import {strategies} from '@valjoux/strategies'
-const SmallMatrices = mapKeys(simpleMatrices({ h: 6, w: 4 }), key => key + '_num')
-const LargeMatrices = simpleMatrices({ h: 64, w: 16 })
+const SmallMatrices = mapKeys(SimpleMatrixCollection({ h: 6, w: 4 }), key => key + '_num')
+const LargeMatrices = SimpleMatrixCollection({ h: 64, w: 16 })
 const CombinedMatrices = { ...SmallMatrices, ...LargeMatrices }
 
 export class FlatVsMapperStrategies {

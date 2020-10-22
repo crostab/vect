@@ -46,21 +46,30 @@ const shuffle = function (o, size) {
   return rs;
 };
 
-/**
- *
- * @param {Object} o
- * @param {*[]} keys
- */
-function select(o, keys) {
-  const ob = {},
-        l = keys === null || keys === void 0 ? void 0 : keys.length;
+function selector(o) {
+  const {
+    keys
+  } = this;
+  const l = keys === null || keys === void 0 ? void 0 : keys.length,
+        ob = {};
 
   for (let i = 0, k; i < l; i++) ob[k = keys[i]] = o[k];
 
   return ob;
 }
+/**
+ *
+ * @param {Object} o
+ * @param {*[]} keys
+ */
 
-const selectValues = function (o, keys) {
+
+const select = (o, {
+  keys
+}) => selector.call(keys, o);
+
+const objectValues = function (o) {
+  const keys = this;
   const l = keys === null || keys === void 0 ? void 0 : keys.length,
         ve = Array(l);
 
@@ -68,6 +77,7 @@ const selectValues = function (o, keys) {
 
   return ve;
 };
+const selectValues = (o, keys) => objectValues.call(keys, o);
 
 /**
  * @typedef {string|number} str

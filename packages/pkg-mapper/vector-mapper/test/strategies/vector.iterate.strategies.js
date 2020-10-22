@@ -1,12 +1,12 @@
 import { strategies } from '@valjoux/strategies'
-import { simpleVectors } from '@foba/foo'
+import { SimpleVectorCollection } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
 import { decoCrostab, says } from '@spare/logger'
 import { iterate } from '../../src/iterate'
 import { mapper as mapperObject } from '@vect/object-mapper'
 
-const ShortVectors = simpleVectors({ h: 15 })
-const LongVectors = simpleVectors({ h: 128 })
+const ShortVectors = SimpleVectorCollection({ h: 15 })
+const LongVectors = SimpleVectorCollection({ h: 128 })
 const CombinedVectors = mapperObject({ ...ShortVectors, ...LongVectors }, vec => [vec, vec.length])
 
 export class VectorIterateStrategies {

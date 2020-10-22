@@ -1,8 +1,8 @@
-import { simpleVectors } from '@foba/foo'
+import { SimpleVectorCollection } from '@foba/foo'
 import { shuffle } from '../src/shuffle'
 import { deco, delogger, says } from '@spare/logger'
 
-const candidates = simpleVectors({ h: 8 })
+const candidates = SimpleVectorCollection({ h: 8 })
 
 candidates |> delogger
 

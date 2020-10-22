@@ -1,4 +1,4 @@
-import { simpleMatrices } from '@foba/foo'
+import { SimpleMatrixCollection } from '@foba/foo'
 import { strategies } from '@valjoux/strategies'
 import { decoCrostab, says } from '@spare/logger'
 import { mapper } from '@vect/vector-mapper'
@@ -8,7 +8,7 @@ import { delogger } from '@spare/deco'
 import { height, width } from '@vect/matrix-size'
 
 const matrices = mapperObject(
-  simpleMatrices({ h: 256, w: 8 }),
+  SimpleMatrixCollection({ h: 256, w: 8 }),
   mx => [mx, height(mx), width(mx)])
 
 const f = x => x

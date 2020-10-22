@@ -1,8 +1,8 @@
-import { simpleObjects } from '@foba/foo'
+import { SimpleObjectCollection } from '@foba/foo'
 import { shuffle } from '../src/shuffle'
 import { deco, delogger, says } from '@spare/logger'
 
-const candidates = simpleObjects({ h: 8 })
+const candidates = SimpleObjectCollection({ h: 8 })
 candidates |> delogger
 for (const [key, o] of Object.entries(candidates)) {
   shuffle(o, 4) |> deco |> says[key]

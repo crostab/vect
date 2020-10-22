@@ -1,11 +1,11 @@
 import { strategies } from '@valjoux/strategies'
 import { mapper } from '../..'
-import { simpleVectors } from '@foba/foo'
+import { SimpleVectorCollection } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
 import { decoCrostab, says } from '@spare/logger'
 
-const ShortVectors = simpleVectors({ h: 15 })
-const LongVectors = simpleVectors({ h: 256 })
+const ShortVectors = SimpleVectorCollection({ h: 15 })
+const LongVectors = SimpleVectorCollection({ h: 256 })
 const CombinedVectors = { ...ShortVectors, ...LongVectors }
 
 export class VectorMapperStrategies {

@@ -1,11 +1,11 @@
-import { SimpleMatricesRobust } from '@foba/foo'
+import { SimpleMatrixCollectionRobust } from '@foba/foo'
 import { deco } from '@spare/deco'
 import { logger } from '@spare/logger'
 import { every } from '../src/every'
 
-SimpleMatricesRobust |> deco |> logger
+SimpleMatrixCollectionRobust |> deco |> logger
 
-for (const [key, mx] of Object.entries(SimpleMatricesRobust)) {
+for (const [key, mx] of Object.entries(SimpleMatrixCollectionRobust)) {
   `[${key}] (${every(mx, x => typeof x === 'number')})`
     |> logger
 }

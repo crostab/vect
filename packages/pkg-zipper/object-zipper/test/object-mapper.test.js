@@ -1,4 +1,4 @@
-import { SimpleObjects }               from '@foba/foo'
+import { SimpleObjectCollection }               from '@foba/foo'
 import { deco }                        from '@spare/deco'
 import { decoCrostab, logger, logNeL } from '@spare/logger'
 import { strategies }                  from '@valjoux/strategies'
@@ -8,10 +8,10 @@ class ObjectMapperTest {
   static test () {
     const hasKey = Object.hasOwnProperty
     const fn = x => `'${x}'`
-    SimpleObjects |> deco |> logger
+    SimpleObjectCollection |> deco |> logger
     const { lapse, result } = strategies({
       repeat: 4E+5,
-      candidates: mapper(SimpleObjects, x => [x, fn]),
+      candidates: mapper(SimpleObjectCollection, x => [x, fn]),
       methods: {
         stable: x => x,
         zipper (oa, ob, fn, len) {
