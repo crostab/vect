@@ -1,10 +1,6 @@
-import { decoCrostab, logger, says } from '@spare/logger'
-import { deco, delogger } from '@spare/deco'
-import { pivotSpread } from '../src/pivotSpread'
-import { numSkeleton } from '../utils/skeleton'
-import { pivotRecord } from '../src/pivotRecord'
-import { Pivot } from '../src/Pivot'
-import { INCRE } from '../resources/PivotModes'
+import { delogger } from '@spare/deco'
+import { INCRE }    from '../resources/PivotModes'
+import { Pivot }    from '../src/Pivot'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],

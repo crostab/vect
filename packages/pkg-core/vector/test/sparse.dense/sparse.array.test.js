@@ -1,6 +1,6 @@
 //稀疏数组
 import { logger } from '@spare/logger'
-import { xr } from '@spare/xr'
+import { xr }     from '@spare/xr'
 
 const array = new Array(3)
 array[2] = 'name'

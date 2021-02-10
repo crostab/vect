@@ -1,4 +1,4 @@
-import { FUN } from '@typen/enum-data-types';
+import { FUN } from '@typen/enum-data-types'
 
 const stat = function (entries, l) {
   var _l;

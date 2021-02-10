@@ -1,10 +1,10 @@
-import { Pivot } from '../function/Pivot'
-import { SUM } from '../resources/PivotModes'
+import { deco, delogger }            from '@spare/deco'
 import { decoCrostab, logger, says } from '@spare/logger'
-import { deco, delogger } from '@spare/deco'
-import { pivotSpread } from '../src/pivotSpread'
-import { numSkeleton } from '../utils/skeleton'
-import { pivotRecord } from '../src/pivotRecord'
+import { Pivot }                     from '../function/Pivot'
+import { SUM }                       from '../resources/PivotModes'
+import { pivotRecord }               from '../src/pivotRecord'
+import { pivotSpread }               from '../src/pivotSpread'
+import { numSkeleton }               from '../utils/skeleton'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],

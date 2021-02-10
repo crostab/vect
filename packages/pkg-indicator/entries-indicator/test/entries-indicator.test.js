@@ -1,9 +1,8 @@
-import { delogger } from '@spare/deco'
-import { logger } from '@spare/logger'
-import { strategies } from '@valjoux/strategies'
-import {decoCrostab} from '@spare/logger'
-import { unwind } from '@vect/entries-unwind'
-import { Max } from '../index'
+import { delogger }            from '@spare/deco'
+import { decoCrostab, logger } from '@spare/logger'
+import { strategies }          from '@valjoux/strategies'
+import { unwind }              from '@vect/entries-unwind'
+import { Max }                 from '../index'
 
 const entries = [
   [0, 'A'],

@@ -1,6 +1,6 @@
-import { init } from '@vect/vector-init';
-import { mapper } from '@vect/vector-mapper';
-import { mutazip } from '@vect/vector-zipper';
+import { init }    from '@vect/vector-init'
+import { mapper }  from '@vect/vector-mapper'
+import { mutazip } from '@vect/vector-zipper'
 
 const numSkeleton = (s = [], b = [], m = []) => ({
   s,

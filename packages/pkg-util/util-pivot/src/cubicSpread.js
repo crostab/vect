@@ -1,7 +1,7 @@
-import { mapper } from '@vect/vector-mapper'
-import { mutazip } from '@vect/vector-zipper'
+import { mapper }              from '@vect/vector-mapper'
+import { mutazip }             from '@vect/vector-zipper'
 import { ACCUM, COUNT, INCRE } from '../resources/PivotModes'
-import { acid, arid, expand } from '../utils/indexer'
+import { acid, arid, expand }  from '../utils/indexer'
 
 
 /**

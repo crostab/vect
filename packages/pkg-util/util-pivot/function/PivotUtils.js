@@ -1,5 +1,5 @@
+import { FUN, STR }                 from '@typen/enums'
 import { ACCUM, COUNT, PivotModes } from '../resources/PivotModes'
-import { STR, FUN } from '@typen/enums'
 
 export function Nullifier (mode) {
   return !mode ? () => [] : () => 0

@@ -1,5 +1,5 @@
-import { strategies } from '@valjoux/strategies'
-import {decoCrostab} from '@spare/logger'
+import { decoCrostab } from '@spare/logger'
+import { strategies }  from '@valjoux/strategies'
 
 const { lapse, result } = strategies({
   repeat: 1E+5,

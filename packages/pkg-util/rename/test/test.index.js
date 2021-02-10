@@ -1,5 +1,5 @@
 import { delogger } from '@spare/deco'
-import { rename } from '../src/rename'
+import { rename }   from '../src/rename'
 
 const func = x => x
 

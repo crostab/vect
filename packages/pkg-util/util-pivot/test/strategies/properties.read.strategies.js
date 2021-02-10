@@ -1,7 +1,7 @@
 import { decoCrostab, says } from '@spare/logger'
-import { strategies } from '@valjoux/strategies'
-import { mapper } from '@vect/vector-mapper'
-import { zipper } from '@vect/vector-zipper'
+import { strategies }        from '@valjoux/strategies'
+import { mapper }            from '@vect/vector-mapper'
+import { zipper }            from '@vect/vector-zipper'
 
 const configs = [
   { z: 1, mode: 2 },

@@ -1,5 +1,5 @@
-import { arid, acid, expand } from '../utils/indexer'
 import { ACCUM, COUNT, INCRE, SUM } from '../resources/PivotModes'
+import { acid, arid, expand }       from '../utils/indexer'
 
 export function pivotSpread (samples, { x, y, z, filter, mode = SUM }) {
   let notate = createNotate(x, y, z, mode, filter).bind(this)

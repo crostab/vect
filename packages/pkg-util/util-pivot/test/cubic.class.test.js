@@ -1,7 +1,6 @@
-import { decoCrostab, logger, says } from '@spare/logger'
-import { deco, delogger } from '@spare/deco'
+import { delogger }     from '@spare/deco'
 import { ACCUM, INCRE } from '../resources/PivotModes'
-import { Cubic } from '../src/Cubic'
+import { Cubic }        from '../src/Cubic'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],

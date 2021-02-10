@@ -1,5 +1,5 @@
 import { mapper as mapperColumns } from '@vect/columns-mapper'
-import { minBy as vecMinBy } from '@vect/vector-indicator'
+import { minBy as vecMinBy }       from '@vect/vector-indicator'
 
 export const min = function (matrix) {
   const indicator = this

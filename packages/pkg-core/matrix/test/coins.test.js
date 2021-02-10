@@ -1,8 +1,8 @@
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
-import { coins } from '../src/coins'
-import { strategies } from '@valjoux/strategies'
-import {decoCrostab} from '@spare/logger'
-import { isMatrix } from '../src/isMatrix'
+import { decoCrostab }                       from '@spare/logger'
+import { strategies }                        from '@valjoux/strategies'
+import { coins }                             from '../src/coins'
+import { isMatrix }                          from '../src/isMatrix'
 
 export function CoinsTest () {
   const { lapse, result } = strategies({

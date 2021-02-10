@@ -1,5 +1,4 @@
-import { FUN }       from '@typen/enum-data-types'
-import { indicator } from '../test/arch/max.beta'
+import { FUN } from '@typen/enum-data-types'
 
 export const pileByInitVal = function (vec, l) {
   l = l ?? vec?.length

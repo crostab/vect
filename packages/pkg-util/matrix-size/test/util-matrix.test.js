@@ -1,7 +1,7 @@
+import { logger }           from '@spare/logger'
+import { xr }               from '@spare/xr'
 import { MatricesOrNotEmb } from '@vect/foobar'
-import { logger, logNeL } from '@spare/logger'
-import { size } from '../src/size'
-import { xr } from '@spare/xr'
+import { size }             from '../src/size'
 
 export class SizeTest {
   static test () {

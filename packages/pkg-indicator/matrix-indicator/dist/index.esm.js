@@ -1,4 +1,4 @@
-import { max as max$1, min as min$1 } from '@aryth/comparer';
+import { max as max$1, min as min$1 } from '@aryth/comparer'
 
 const max = function (matrix) {
   let indicator = this;

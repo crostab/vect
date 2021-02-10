@@ -1,7 +1,7 @@
-import { randMatrix } from '@foba/foo'
-import { logger } from '@spare/logger'
-import { delogger } from '@spare/deco'
-import { xr } from '@spare/xr'
+import { randMatrix }   from '@foba/foo'
+import { delogger }     from '@spare/deco'
+import { logger }       from '@spare/logger'
+import { xr }           from '@spare/xr'
 import { maxBy, minBy } from '../index'
 
 const matrix = randMatrix({ h: 6, w: 6 })

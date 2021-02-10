@@ -1,7 +1,7 @@
-import * as Init from '@vect/object-init';
-import * as Mapper from '@vect/object-mapper';
-import * as Select from '@vect/object-select';
-import * as Zipper from '@vect/object-zipper';
+import * as Init   from '@vect/object-init'
+import * as Mapper from '@vect/object-mapper'
+import * as Select from '@vect/object-select'
+import * as Zipper from '@vect/object-zipper'
 
 const {
   iterate,

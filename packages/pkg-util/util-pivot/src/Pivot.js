@@ -1,6 +1,6 @@
 import { numSkeleton } from '../utils/skeleton'
-import { pivotSpread } from './pivotSpread'
 import { pivotRecord } from './pivotRecord'
+import { pivotSpread } from './pivotSpread'
 
 export class Pivot {
   constructor (x, y, z, mode, filter) {

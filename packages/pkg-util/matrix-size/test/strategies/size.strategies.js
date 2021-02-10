@@ -1,9 +1,9 @@
+import { decoCrostab }      from '@spare/logger'
+import { strategies }       from '@valjoux/strategies'
 import { MatricesOrNotEmb } from '@vect/foobar'
-import { strategies } from '@valjoux/strategies'
-import {decoCrostab} from '@spare/logger'
-import { size } from '../../src/size'
-import { width } from '../../src/width'
-import { height } from '../../src/height'
+import { height }           from '../../src/height'
+import { size }             from '../../src/size'
+import { width }            from '../../src/width'
 
 export class SizeStrategies {
   static test () {

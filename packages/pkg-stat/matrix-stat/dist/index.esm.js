@@ -1,5 +1,5 @@
-import { FUN } from '@typen/enum-data-types';
-import { size } from '@vect/matrix-size';
+import { FUN }  from '@typen/enum-data-types'
+import { size } from '@vect/matrix-size'
 
 const stat = function (mx) {
   const [h, w] = size(mx);

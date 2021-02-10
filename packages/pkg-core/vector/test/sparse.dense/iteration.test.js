@@ -1,6 +1,6 @@
 import { makeEmbedded, SimpleVectorCollection } from '@foba/foo'
-import { decoCrostab }                 from '@spare/logger'
-import { strategies }                  from '@valjoux/strategies'
+import { decoCrostab }                          from '@spare/logger'
+import { strategies }                           from '@valjoux/strategies'
 
 const SimpleVectorCollection = SimpleVectorCollection({ h: 32 })
 const { lapse, result } = strategies({

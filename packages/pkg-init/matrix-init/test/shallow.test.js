@@ -1,11 +1,11 @@
 import { SimpleMatrixCollection } from '@foba/foo'
-import { strategies } from '@valjoux/strategies'
-import { decoCrostab, says } from '@spare/logger'
-import { mapper } from '@vect/vector-mapper'
+import { delogger }               from '@spare/deco'
+import { decoCrostab, says }      from '@spare/logger'
+import { strategies }             from '@valjoux/strategies'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
+import { height, width }          from '@vect/matrix-size'
 import { mapper as mapperObject } from '@vect/object-mapper'
-import { delogger } from '@spare/deco'
-import { height, width } from '@vect/matrix-size'
+import { mapper }                 from '@vect/vector-mapper'
 
 const matrices = mapperObject(
   SimpleMatrixCollection({ h: 256, w: 8 }),

@@ -1,5 +1,5 @@
-import { mapper } from '@vect/columns-mapper';
-import { maxBy as maxBy$1, minBy as minBy$1 } from '@vect/vector-indicator';
+import { mapper }                             from '@vect/columns-mapper'
+import { maxBy as maxBy$1, minBy as minBy$1 } from '@vect/vector-indicator'
 
 const max = function (matrix) {
   const indicator = this;

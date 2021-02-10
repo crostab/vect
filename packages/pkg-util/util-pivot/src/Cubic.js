@@ -1,6 +1,6 @@
 import { numSkeleton } from '../utils/skeleton'
-import { cubicSpread } from './cubicSpread'
 import { cubicRecord } from './cubicRecord'
+import { cubicSpread } from './cubicSpread'
 
 export class Cubic {
   constructor (x, y, band, filter) {

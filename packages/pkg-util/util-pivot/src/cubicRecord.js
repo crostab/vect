@@ -1,4 +1,4 @@
-import { mutazip } from '@vect/vector-zipper'
+import { mutazip }             from '@vect/vector-zipper'
 import { ACCUM, COUNT, INCRE } from '../resources/PivotModes'
 
 /**

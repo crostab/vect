@@ -1,5 +1,5 @@
-import { nullish } from '@typen/nullish';
-import { round } from '@aryth/math';
+import { round }   from '@aryth/math'
+import { nullish } from '@typen/nullish'
 
 function trimDigit(n) {
   return round(n * this.m) / this.m;

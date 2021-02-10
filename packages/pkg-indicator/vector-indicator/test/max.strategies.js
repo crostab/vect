@@ -1,11 +1,11 @@
-import { strategies } from '@valjoux/strategies'
+import { max as duoMax }     from '@aryth/comparer'
+import { Foba }              from '@foba/vector-number'
 import { decoCrostab, says } from '@spare/logger'
-import { Foba } from '@foba/vector-number'
-import { Max } from '../src/Max'
-import { iterate } from '@vect/vector-mapper'
-import { max as duoMax } from '@aryth/comparer'
-import { Indicator } from '../src/Indicator'
-import { Piler } from '../src/Piler'
+import { strategies }        from '@valjoux/strategies'
+import { iterate }           from '@vect/vector-mapper'
+import { Indicator }         from '../src/Indicator'
+import { Max }               from '../src/Max'
+import { Piler }             from '../src/Piler'
 
 const maxWithThisArg = function (x) { this.max = duoMax(x, this.max) }
 

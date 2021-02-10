@@ -1,5 +1,5 @@
 import { init as iniV } from '@vect/vector-init'
-import { mapper } from '@vect/vector-mapper'
+import { mapper }       from '@vect/vector-mapper'
 
 export const arid = function (x) {
   let i = this.s.indexOf(x)

@@ -1,9 +1,9 @@
-import { ACCUM, INCRE, SUM } from '../resources/PivotModes'
-import { decoCrostab, logger, says } from '@spare/logger'
-import { deco, delogger } from '@spare/deco'
-import { numSkeleton } from '../utils/skeleton'
-import { cubicSpread } from '../src/cubicSpread'
-import { cubicRecord } from '../src/cubicRecord'
+import { deco }         from '@spare/deco'
+import { says }         from '@spare/logger'
+import { ACCUM, INCRE } from '../resources/PivotModes'
+import { cubicRecord }  from '../src/cubicRecord'
+import { cubicSpread }  from '../src/cubicSpread'
+import { numSkeleton }  from '../utils/skeleton'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],

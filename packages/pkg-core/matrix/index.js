@@ -1,14 +1,13 @@
-import * as Init from '@vect/matrix-init'
-import * as Mapper from '@vect/matrix-mapper'
-import * as Margin from '@vect/matrix-margin'
-import * as Zipper from '@vect/matrix-zipper'
-import * as Quantifier from '@vect/matrix-quantifier'
-import * as Indicator from '@vect/matrix-indicator'
-import * as Size from '@vect/matrix-size'
-import * as Transpose from '@vect/matrix-transpose'
-
-import * as ColumnGetter from '@vect/column-getter'
+import * as ColumnGetter  from '@vect/column-getter'
 import * as ColumnsMapper from '@vect/columns-mapper'
+import * as Indicator     from '@vect/matrix-indicator'
+import * as Init          from '@vect/matrix-init'
+import * as Mapper        from '@vect/matrix-mapper'
+import * as Margin        from '@vect/matrix-margin'
+import * as Quantifier    from '@vect/matrix-quantifier'
+import * as Size          from '@vect/matrix-size'
+import * as Transpose     from '@vect/matrix-transpose'
+import * as Zipper        from '@vect/matrix-zipper'
 
 export const { draft, fab, iso, init, ini, starter, shallow } = Init
 export const { iterate, mutate, mapper } = Mapper

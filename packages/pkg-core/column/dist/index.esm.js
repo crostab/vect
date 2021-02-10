@@ -1,8 +1,8 @@
-import * as Mapper from '@vect/column-mapper';
-import * as Zipper from '@vect/column-zipper';
-import * as Quantifier from '@vect/column-quantifier';
-import * as Indicator from '@vect/column-indicator';
-import * as ColumnGetter from '@vect/column-getter';
+import * as ColumnGetter from '@vect/column-getter'
+import * as Indicator    from '@vect/column-indicator'
+import * as Mapper       from '@vect/column-mapper'
+import * as Quantifier   from '@vect/column-quantifier'
+import * as Zipper       from '@vect/column-zipper'
 
 const {
   iterate,

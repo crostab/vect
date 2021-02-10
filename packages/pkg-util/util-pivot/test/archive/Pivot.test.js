@@ -1,8 +1,8 @@
-import { Pivot } from '../../function/Pivot'
-import { strategies } from '@valjoux/strategies'
-import { PivotModes, SUM } from '../../resources/PivotModes'
-import { decoCrostab, logger, says, logNeL } from '@spare/logger'
-import { delogger } from '@spare/deco'
+import { delogger }                  from '@spare/deco'
+import { decoCrostab, logger, says } from '@spare/logger'
+import { strategies }                from '@valjoux/strategies'
+import { Pivot }                     from '../../function/Pivot'
+import { SUM }                       from '../../resources/PivotModes'
 
 const duties = {
   head: ['day', 'name', 'served', 'sold', 'adt'],

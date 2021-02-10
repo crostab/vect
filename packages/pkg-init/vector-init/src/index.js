@@ -55,8 +55,6 @@ export const range = (start, end) => {
 
 export const tap = (...list) => {
   const ve = []
-  for (let x of list)
-    if (!nullish(x))
-      ve.push(x)
+  for (let x of list) if (!nullish(x)) ve.push(x)
   return ve
 }

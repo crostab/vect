@@ -1,5 +1,5 @@
-import { mapper } from '@vect/vector-mapper';
-import { zipper } from '@vect/vector-zipper';
+import { mapper } from '@vect/vector-mapper'
+import { zipper } from '@vect/vector-zipper'
 
 const EntryFactory = {
   voidEntry() {
