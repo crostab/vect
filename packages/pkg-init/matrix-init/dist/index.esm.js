@@ -1,4 +1,4 @@
-import { nullish } from '@typen/nullish'
+import { nullish } from '@typen/nullish';
 
 const draft = (h, w) => {
   const mx = Array(h);

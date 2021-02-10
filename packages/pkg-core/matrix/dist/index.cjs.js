@@ -2,16 +2,16 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var ColumnGetter = require('@vect/column-getter');
+var ColumnsMapper = require('@vect/columns-mapper');
+var Indicator = require('@vect/matrix-indicator');
 var Init = require('@vect/matrix-init');
 var Mapper = require('@vect/matrix-mapper');
 var Margin = require('@vect/matrix-margin');
-var Zipper = require('@vect/matrix-zipper');
 var Quantifier = require('@vect/matrix-quantifier');
-var Indicator = require('@vect/matrix-indicator');
 var Size = require('@vect/matrix-size');
 var Transpose = require('@vect/matrix-transpose');
-var ColumnGetter = require('@vect/column-getter');
-var ColumnsMapper = require('@vect/columns-mapper');
+var Zipper = require('@vect/matrix-zipper');
 var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
 var vectorIndex = require('@vect/vector-index');
@@ -37,16 +37,16 @@ function _interopNamespace(e) {
   return Object.freeze(n);
 }
 
+var ColumnGetter__namespace = /*#__PURE__*/_interopNamespace(ColumnGetter);
+var ColumnsMapper__namespace = /*#__PURE__*/_interopNamespace(ColumnsMapper);
+var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
 var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
 var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
 var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
-var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 var Quantifier__namespace = /*#__PURE__*/_interopNamespace(Quantifier);
-var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
 var Size__namespace = /*#__PURE__*/_interopNamespace(Size);
 var Transpose__namespace = /*#__PURE__*/_interopNamespace(Transpose);
-var ColumnGetter__namespace = /*#__PURE__*/_interopNamespace(ColumnGetter);
-var ColumnsMapper__namespace = /*#__PURE__*/_interopNamespace(ColumnsMapper);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
 

@@ -14,8 +14,7 @@ export const pileByInitFun = function (vec, l) {
   l = l ?? vec?.length
   const { init, pile, pick } = this
   let p = init(vec, l)
-  for (let i = 0; i < l; i++)
-    p = pile(p, vec[i], i)
+  for (let i = 0; i < l; i++) p = pile(p, vec[i], i)
   return pick ? pick(p, l) : p
 }
 

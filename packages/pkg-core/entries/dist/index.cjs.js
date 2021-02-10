@@ -2,12 +2,12 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var Indicator = require('@vect/entries-indicator');
 var Init = require('@vect/entries-init');
 var Mapper = require('@vect/entries-mapper');
 var Margin = require('@vect/entries-margin');
-var Zipper = require('@vect/entries-zipper');
 var Unwind = require('@vect/entries-unwind');
-var Indicator = require('@vect/entries-indicator');
+var Zipper = require('@vect/entries-zipper');
 
 function _interopNamespace(e) {
 	if (e && e.__esModule) return e;
@@ -29,12 +29,12 @@ function _interopNamespace(e) {
 	return Object.freeze(n);
 }
 
+var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
 var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
 var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
 var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
-var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 var Unwind__namespace = /*#__PURE__*/_interopNamespace(Unwind);
-var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
+var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 
 const {
   draft,

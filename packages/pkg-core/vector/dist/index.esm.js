@@ -1,13 +1,13 @@
-import * as Algebra  from '@vect/vector-algebra'
-import * as Index    from '@vect/vector-index'
-import * as Indicate from '@vect/vector-indicator'
-import * as Init     from '@vect/vector-init'
-import * as Mapper   from '@vect/vector-mapper'
-import * as Margin   from '@vect/vector-margin'
-import * as Merge    from '@vect/vector-merge'
-import * as Select   from '@vect/vector-select'
-import * as Update   from '@vect/vector-update'
-import * as Zipper   from '@vect/vector-zipper'
+import * as Algebra from '@vect/vector-algebra';
+import * as Index from '@vect/vector-index';
+import * as Indicate from '@vect/vector-indicator';
+import * as Init from '@vect/vector-init';
+import * as Mapper from '@vect/vector-mapper';
+import * as Margin from '@vect/vector-margin';
+import * as Merge from '@vect/vector-merge';
+import * as Select from '@vect/vector-select';
+import * as Update from '@vect/vector-update';
+import * as Zipper from '@vect/vector-zipper';
 
 const {
   iterate,

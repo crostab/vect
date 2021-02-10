@@ -1,5 +1,5 @@
-import { max as max$1, min as min$1 } from '@aryth/comparer'
-import { FUN }                        from '@typen/enum-data-types'
+import { max as max$1, min as min$1 } from '@aryth/comparer';
+import { FUN } from '@typen/enum-data-types';
 
 const max = function (vec) {
   const fn = this;

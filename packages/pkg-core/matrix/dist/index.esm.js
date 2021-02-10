@@ -1,18 +1,17 @@
-import * as ColumnGetter  from '@vect/column-getter'
-import * as ColumnsMapper from '@vect/columns-mapper'
-import * as Indicator     from '@vect/matrix-indicator'
-import * as Init          from '@vect/matrix-init'
-import * as Mapper        from '@vect/matrix-mapper'
-import * as Margin        from '@vect/matrix-margin'
-import * as Quantifier    from '@vect/matrix-quantifier'
-import * as Size          from '@vect/matrix-size'
-import * as Transpose     from '@vect/matrix-transpose'
-import * as Zipper        from '@vect/matrix-zipper'
-import { first }          from '@vect/vector-index'
-
-export { select }                             from '@vect/columns-select';
+import * as ColumnGetter from '@vect/column-getter';
+import * as ColumnsMapper from '@vect/columns-mapper';
+import * as Indicator from '@vect/matrix-indicator';
+import * as Init from '@vect/matrix-init';
+import * as Mapper from '@vect/matrix-mapper';
+import * as Margin from '@vect/matrix-margin';
+import * as Quantifier from '@vect/matrix-quantifier';
+import * as Size from '@vect/matrix-size';
+import * as Transpose from '@vect/matrix-transpose';
+import * as Zipper from '@vect/matrix-zipper';
+export { select } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
-export { COLUMNWISE, POINTWISE, ROWWISE }     from '@vect/enum-matrix-directions';
+import { first } from '@vect/vector-index';
+export { COLUMNWISE, POINTWISE, ROWWISE } from '@vect/enum-matrix-directions';
 
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
 

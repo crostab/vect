@@ -17,26 +17,12 @@ const numSkeleton = (s = [], b = [], m = []) => ({
 
 });
 
-const arid = function (x) {
-  let i = this.s.indexOf(x);
-  if (i >= 0) return i;
-  return i + (this.m.push(vectorInit.init(this.b.length, this.n)), this.s.push(x));
-};
-const acid = function (y) {
-  let j = this.b.indexOf(y);
-  if (j >= 0) return j;
-  return j + (vectorMapper.mapper(this.m, row => row.push(this.n()), this.s.length), this.b.push(y));
-};
-const expand = function (x, y) {
-  arid.call(this, x), acid.call(this, y);
-};
-
 const ACCUM = 0;
 const SUM = 1;
 const INCRE = 1;
 const COUNT = 2;
 
-function pivotSpread(samples, {
+function pivotRecord(samples, {
   x,
   y,
   z,
@@ -51,42 +37,6 @@ function pivotSpread(samples, {
 }
 
 const createNotate = (x, y, z, mode, filter) => {
-  const record = selectSpread(mode);
-  return !filter ? function (r) {
-    record.call(this, r[x], r[y], r[z]);
-  } : function (r) {
-    (filter(r[z]) ? record : expand).call(this, r[x], r[y], r[z]);
-  };
-};
-
-const selectSpread = mode => {
-  if (mode === INCRE) return function (x, y, z) {
-    this.m[arid.call(this, x)][acid.call(this, y)] += z;
-  };
-  if (mode === ACCUM) return function (x, y, z) {
-    this.m[arid.call(this, x)][acid.call(this, y)].push(z);
-  };
-  if (mode === COUNT) return function (x, y) {
-    this.m[arid.call(this, x)][acid.call(this, y)]++;
-  };
-  return expand;
-};
-
-function pivotRecord(samples, {
-  x,
-  y,
-  z,
-  filter,
-  mode = SUM
-}) {
-  let notate = createNotate$1(x, y, z, mode, filter).bind(this);
-
-  for (let sample of samples) notate(sample);
-
-  return this;
-}
-
-const createNotate$1 = (x, y, z, mode, filter) => {
   const recorder = selectRecord(mode);
   return !filter ? function (r) {
     recorder.call(this, r[x], r[y], r[z]);
@@ -124,6 +74,56 @@ const selectRecord = mode => {
     if (row) row[b.indexOf(y)]++;
   };
   return () => {};
+};
+
+const arid = function (x) {
+  let i = this.s.indexOf(x);
+  if (i >= 0) return i;
+  return i + (this.m.push(vectorInit.init(this.b.length, this.n)), this.s.push(x));
+};
+const acid = function (y) {
+  let j = this.b.indexOf(y);
+  if (j >= 0) return j;
+  return j + (vectorMapper.mapper(this.m, row => row.push(this.n()), this.s.length), this.b.push(y));
+};
+const expand = function (x, y) {
+  arid.call(this, x), acid.call(this, y);
+};
+
+function pivotSpread(samples, {
+  x,
+  y,
+  z,
+  filter,
+  mode = SUM
+}) {
+  let notate = createNotate$1(x, y, z, mode, filter).bind(this);
+
+  for (let sample of samples) notate(sample);
+
+  return this;
+}
+
+const createNotate$1 = (x, y, z, mode, filter) => {
+  const record = selectSpread(mode);
+  return !filter ? function (r) {
+    record.call(this, r[x], r[y], r[z]);
+  } : function (r) {
+    (filter(r[z]) ? record : expand).call(this, r[x], r[y], r[z]);
+  };
+};
+
+const selectSpread = mode => {
+  if (mode === INCRE) return function (x, y, z) {
+    this.m[arid.call(this, x)][acid.call(this, y)] += z;
+  };
+  if (mode === ACCUM) return function (x, y, z) {
+    this.m[arid.call(this, x)][acid.call(this, y)].push(z);
+  };
+  if (mode === COUNT) return function (x, y) {
+    this.m[arid.call(this, x)][acid.call(this, y)]++;
+  };
+  return expand;
 };
 
 class Pivot {
@@ -173,20 +173,17 @@ class Pivot {
  * @param {number} y
  * @param {{index,mode}[]} band
  * @param filter
- * @returns {cubicSpread}
+ * @returns {cubicRecord}
  */
 
-function cubicSpread(samples, {
+function cubicRecord(samples, {
   x,
   y,
   band,
   filter
 }) {
   const depth = band.length;
-  const nvs = vacancyCreators(band);
   const notate = createNotate$2(x, y, band, filter, depth).bind(this);
-
-  this.n = () => vectorMapper.mapper(nvs, nv => nv(), depth);
 
   for (let sample of samples) {
     notate(sample);
@@ -200,64 +197,11 @@ const createNotate$2 = (x, y, band, filter, depth) => {
   return !filter ? function (sample) {
     spread.call(this, sample[x], sample[y], sample, band, depth);
   } : function (sample) {
-    filter(sample) ? spread.call(this, sample[x], sample[y], sample, band, depth) : expand.call(this, sample[x], sample[y]);
+    if (filter(sample)) spread.call(this, sample[x], sample[y], sample, band, depth);
   };
 };
 
 const spread = function (x, y, sample, band, depth) {
-  vectorZipper.mutazip(this.m[arid.call(this, x)][acid.call(this, y)], band, (target, {
-    index,
-    update
-  }) => update(target, sample[index]), depth);
-};
-
-const selectUpdater = mode => {
-  if (mode === INCRE) return (target, value) => target + value;
-  if (mode === ACCUM) return (target, value) => (target.push(value), target);
-  if (mode === COUNT) return target => target++;
-  return expand;
-};
-
-const vacancyCreators = band => band.map(({
-  mode
-}) => mode === ACCUM ? () => [] : () => 0);
-
-/**
- *
- * @param {*[][]} samples
- * @param {number} x
- * @param {number} y
- * @param {{index,mode}[]} band
- * @param filter
- * @returns {cubicRecord}
- */
-
-function cubicRecord(samples, {
-  x,
-  y,
-  band,
-  filter
-}) {
-  const depth = band.length;
-  const notate = createNotate$3(x, y, band, filter, depth).bind(this);
-
-  for (let sample of samples) {
-    notate(sample);
-  }
-
-  return this;
-}
-
-const createNotate$3 = (x, y, band, filter, depth) => {
-  band.forEach(o => o.update = selectUpdater$1(o.mode));
-  return !filter ? function (sample) {
-    spread$1.call(this, sample[x], sample[y], sample, band, depth);
-  } : function (sample) {
-    if (filter(sample)) spread$1.call(this, sample[x], sample[y], sample, band, depth);
-  };
-};
-
-const spread$1 = function (x, y, sample, band, depth) {
   const {
     m,
     s,
@@ -272,12 +216,68 @@ const spread$1 = function (x, y, sample, band, depth) {
   }) => update(target, sample[index]), depth);
 };
 
-const selectUpdater$1 = mode => {
+const selectUpdater = mode => {
   if (mode === INCRE) return (target, value) => target + value;
   if (mode === ACCUM) return (target, value) => (target.push(value), target);
   if (mode === COUNT) return target => target++;
   return () => {};
 };
+
+/**
+ *
+ * @param {*[][]} samples
+ * @param {number} x
+ * @param {number} y
+ * @param {{index,mode}[]} band
+ * @param filter
+ * @returns {cubicSpread}
+ */
+
+function cubicSpread(samples, {
+  x,
+  y,
+  band,
+  filter
+}) {
+  const depth = band.length;
+  const nvs = vacancyCreators(band);
+  const notate = createNotate$3(x, y, band, filter, depth).bind(this);
+
+  this.n = () => vectorMapper.mapper(nvs, nv => nv(), depth);
+
+  for (let sample of samples) {
+    notate(sample);
+  }
+
+  return this;
+}
+
+const createNotate$3 = (x, y, band, filter, depth) => {
+  band.forEach(o => o.update = selectUpdater$1(o.mode));
+  return !filter ? function (sample) {
+    spread$1.call(this, sample[x], sample[y], sample, band, depth);
+  } : function (sample) {
+    filter(sample) ? spread$1.call(this, sample[x], sample[y], sample, band, depth) : expand.call(this, sample[x], sample[y]);
+  };
+};
+
+const spread$1 = function (x, y, sample, band, depth) {
+  vectorZipper.mutazip(this.m[arid.call(this, x)][acid.call(this, y)], band, (target, {
+    index,
+    update
+  }) => update(target, sample[index]), depth);
+};
+
+const selectUpdater$1 = mode => {
+  if (mode === INCRE) return (target, value) => target + value;
+  if (mode === ACCUM) return (target, value) => (target.push(value), target);
+  if (mode === COUNT) return target => target++;
+  return expand;
+};
+
+const vacancyCreators = band => band.map(({
+  mode
+}) => mode === ACCUM ? () => [] : () => 0);
 
 class Cubic {
   constructor(x, y, band, filter) {
