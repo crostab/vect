@@ -29,14 +29,14 @@ function pivotRecord(samples, {
   filter,
   mode = SUM
 }) {
-  let notate = createNotate(x, y, z, mode, filter).bind(this);
+  let notate = createNotate$3(x, y, z, mode, filter).bind(this);
 
   for (let sample of samples) notate(sample);
 
   return this;
 }
 
-const createNotate = (x, y, z, mode, filter) => {
+const createNotate$3 = (x, y, z, mode, filter) => {
   const recorder = selectRecord(mode);
   return !filter ? function (r) {
     recorder.call(this, r[x], r[y], r[z]);
@@ -97,14 +97,14 @@ function pivotSpread(samples, {
   filter,
   mode = SUM
 }) {
-  let notate = createNotate$1(x, y, z, mode, filter).bind(this);
+  let notate = createNotate$2(x, y, z, mode, filter).bind(this);
 
   for (let sample of samples) notate(sample);
 
   return this;
 }
 
-const createNotate$1 = (x, y, z, mode, filter) => {
+const createNotate$2 = (x, y, z, mode, filter) => {
   const record = selectSpread(mode);
   return !filter ? function (r) {
     record.call(this, r[x], r[y], r[z]);
@@ -183,7 +183,7 @@ function cubicRecord(samples, {
   filter
 }) {
   const depth = band.length;
-  const notate = createNotate$2(x, y, band, filter, depth).bind(this);
+  const notate = createNotate$1(x, y, band, filter, depth).bind(this);
 
   for (let sample of samples) {
     notate(sample);
@@ -192,16 +192,16 @@ function cubicRecord(samples, {
   return this;
 }
 
-const createNotate$2 = (x, y, band, filter, depth) => {
-  band.forEach(o => o.update = selectUpdater(o.mode));
+const createNotate$1 = (x, y, band, filter, depth) => {
+  band.forEach(o => o.update = selectUpdater$1(o.mode));
   return !filter ? function (sample) {
-    spread.call(this, sample[x], sample[y], sample, band, depth);
+    spread$1.call(this, sample[x], sample[y], sample, band, depth);
   } : function (sample) {
-    if (filter(sample)) spread.call(this, sample[x], sample[y], sample, band, depth);
+    if (filter(sample)) spread$1.call(this, sample[x], sample[y], sample, band, depth);
   };
 };
 
-const spread = function (x, y, sample, band, depth) {
+const spread$1 = function (x, y, sample, band, depth) {
   const {
     m,
     s,
@@ -216,7 +216,7 @@ const spread = function (x, y, sample, band, depth) {
   }) => update(target, sample[index]), depth);
 };
 
-const selectUpdater = mode => {
+const selectUpdater$1 = mode => {
   if (mode === INCRE) return (target, value) => target + value;
   if (mode === ACCUM) return (target, value) => (target.push(value), target);
   if (mode === COUNT) return target => target++;
@@ -241,7 +241,7 @@ function cubicSpread(samples, {
 }) {
   const depth = band.length;
   const nvs = vacancyCreators(band);
-  const notate = createNotate$3(x, y, band, filter, depth).bind(this);
+  const notate = createNotate(x, y, band, filter, depth).bind(this);
 
   this.n = () => vectorMapper.mapper(nvs, nv => nv(), depth);
 
@@ -252,23 +252,23 @@ function cubicSpread(samples, {
   return this;
 }
 
-const createNotate$3 = (x, y, band, filter, depth) => {
-  band.forEach(o => o.update = selectUpdater$1(o.mode));
+const createNotate = (x, y, band, filter, depth) => {
+  band.forEach(o => o.update = selectUpdater(o.mode));
   return !filter ? function (sample) {
-    spread$1.call(this, sample[x], sample[y], sample, band, depth);
+    spread.call(this, sample[x], sample[y], sample, band, depth);
   } : function (sample) {
-    filter(sample) ? spread$1.call(this, sample[x], sample[y], sample, band, depth) : expand.call(this, sample[x], sample[y]);
+    filter(sample) ? spread.call(this, sample[x], sample[y], sample, band, depth) : expand.call(this, sample[x], sample[y]);
   };
 };
 
-const spread$1 = function (x, y, sample, band, depth) {
+const spread = function (x, y, sample, band, depth) {
   vectorZipper.mutazip(this.m[arid.call(this, x)][acid.call(this, y)], band, (target, {
     index,
     update
   }) => update(target, sample[index]), depth);
 };
 
-const selectUpdater$1 = mode => {
+const selectUpdater = mode => {
   if (mode === INCRE) return (target, value) => target + value;
   if (mode === ACCUM) return (target, value) => (target.push(value), target);
   if (mode === COUNT) return target => target++;
