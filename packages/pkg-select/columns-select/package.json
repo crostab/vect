@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-select",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,10 +15,10 @@
     "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.3.5",
-    "@vect/column-mapper": "^0.3.5",
-    "@vect/vector-mapper": "^0.3.5",
-    "@vect/vector-select": "^0.3.5"
+    "@vect/column-getter": "^0.3.6",
+    "@vect/column-mapper": "^0.3.6",
+    "@vect/vector-mapper": "^0.3.6",
+    "@vect/vector-select": "^0.3.6"
   },
   "repository": {
     "type": "git",

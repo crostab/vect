@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-select",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,10 +15,10 @@
     "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.3.1",
-    "@aryth/rand": "^0.3.1",
-    "@vect/swap": "^0.3.5",
-    "@vect/vector-update": "^0.3.5"
+    "@aryth/comparer": "^0.3.3",
+    "@aryth/rand": "^0.3.3",
+    "@vect/swap": "^0.3.6",
+    "@vect/vector-update": "^0.3.6"
   },
   "repository": {
     "type": "git",
