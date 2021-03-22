@@ -1,6 +1,7 @@
 import * as Init from '@vect/object-init';
 import * as Mapper from '@vect/object-mapper';
 import * as Select from '@vect/object-select';
+import * as Update from '@vect/object-update';
 import * as Zipper from '@vect/object-zipper';
 
 const {
@@ -31,5 +32,8 @@ const {
   selectValues,
   shuffle
 } = Select;
+const {
+  replenish
+} = Update;
 
-export { init, initByValues, iso, iterate, iterateEntries, iterateKeys, leap, lookupKeys, mapEntries, mapKeys, mapper, mutate, mutazip, ob, pair, select, selectValues, shuffle, wind, zipper };
+export { init, initByValues, iso, iterate, iterateEntries, iterateKeys, leap, lookupKeys, mapEntries, mapKeys, mapper, mutate, mutazip, ob, pair, replenish, select, selectValues, shuffle, wind, zipper };

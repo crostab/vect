@@ -5,6 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var Init = require('@vect/object-init');
 var Mapper = require('@vect/object-mapper');
 var Select = require('@vect/object-select');
+var Update = require('@vect/object-update');
 var Zipper = require('@vect/object-zipper');
 
 function _interopNamespace(e) {
@@ -30,6 +31,7 @@ function _interopNamespace(e) {
 var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
 var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
 var Select__namespace = /*#__PURE__*/_interopNamespace(Select);
+var Update__namespace = /*#__PURE__*/_interopNamespace(Update);
 var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 
 const {
@@ -60,6 +62,9 @@ const {
   selectValues,
   shuffle
 } = Select__namespace;
+const {
+  replenish
+} = Update__namespace;
 
 exports.init = init;
 exports.initByValues = initByValues;
@@ -76,6 +81,7 @@ exports.mutate = mutate;
 exports.mutazip = mutazip;
 exports.ob = ob;
 exports.pair = pair;
+exports.replenish = replenish;
 exports.select = select;
 exports.selectValues = selectValues;
 exports.shuffle = shuffle;

@@ -14,7 +14,8 @@
     "@vect/object-init": "^0.3.6",
     "@vect/object-mapper": "^0.3.6",
     "@vect/object-select": "^0.3.6",
-    "@vect/object-zipper": "^0.3.6"
+    "@vect/object-zipper": "^0.3.6",
+    "@vect/object-update": "^0.3.6s"
   },
   "scripts": {
     "pub": "npm publish",
