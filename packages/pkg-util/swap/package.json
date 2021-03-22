@@ -1,6 +1,6 @@
 {
   "name": "@vect/swap",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Swap values at a pair of indexes",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
