@@ -14,7 +14,7 @@
     "@vect/object-init": "^0.3.7",
     "@vect/object-mapper": "^0.3.7",
     "@vect/object-select": "^0.3.7",
-    "@vect/object-update": "^0.3.6s",
+    "@vect/object-update": "^0.3.6",
     "@vect/object-zipper": "^0.3.7"
   },
   "scripts": {
