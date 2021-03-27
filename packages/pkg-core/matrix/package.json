@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Util for 2d-array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,20 +15,20 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.3.7",
-    "@vect/columns-mapper": "^0.3.7",
-    "@vect/columns-select": "^0.3.7",
-    "@vect/columns-update": "^0.3.7",
-    "@vect/enum-matrix-directions": "^0.3.7",
-    "@vect/matrix-indicator": "^0.3.7",
-    "@vect/matrix-init": "^0.3.7",
-    "@vect/matrix-mapper": "^0.3.7",
-    "@vect/matrix-margin": "^0.3.7",
-    "@vect/matrix-quantifier": "^0.3.7",
-    "@vect/matrix-size": "^0.3.7",
-    "@vect/matrix-transpose": "^0.3.7",
-    "@vect/matrix-zipper": "^0.3.7",
-    "@vect/vector-index": "^0.3.7"
+    "@vect/column-getter": "^0.3.8",
+    "@vect/columns-mapper": "^0.3.8",
+    "@vect/columns-select": "^0.3.8",
+    "@vect/columns-update": "^0.3.8",
+    "@vect/enum-matrix-directions": "^0.3.8",
+    "@vect/matrix-indicator": "^0.3.8",
+    "@vect/matrix-init": "^0.3.8",
+    "@vect/matrix-mapper": "^0.3.8",
+    "@vect/matrix-margin": "^0.3.8",
+    "@vect/matrix-quantifier": "^0.3.8",
+    "@vect/matrix-size": "^0.3.8",
+    "@vect/matrix-transpose": "^0.3.8",
+    "@vect/matrix-zipper": "^0.3.8",
+    "@vect/vector-index": "^0.3.8"
   },
   "repository": {
     "type": "git",
