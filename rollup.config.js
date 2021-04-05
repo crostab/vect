@@ -2,13 +2,13 @@ import babel                           from '@rollup/plugin-babel'
 import commonjs                        from '@rollup/plugin-commonjs'
 import json                            from '@rollup/plugin-json'
 import nodeResolve                     from '@rollup/plugin-node-resolve'
-// import { decoObject, decoString, ros } from '@spare/logger'
-// import fileInfo                        from 'rollup-plugin-fileinfo'
+import { decoObject, decoString, ros } from '@spare/logger'
+import fileInfo                        from 'rollup-plugin-fileinfo'
 
 const { name, dependencies, main, module } = require(process.cwd() + '/package.json')
 
-// console.log(ros('Executing'), name, decoString(process.cwd()))
-// console.log(ros('Dependencies'), decoObject(dependencies || {}))
+console.log(ros('Executing'), name, decoString(process.cwd()))
+console.log(ros('Dependencies'), decoObject(dependencies || {}))
 
 const babelPluginOptions = {
   babelrc: false,
@@ -39,7 +39,7 @@ export default [
       commonjs({ include: /node_modules/ }),
       babel(babelPluginOptions),
       json(),
-      // fileInfo()
+      fileInfo()
     ]
   }
 ]
