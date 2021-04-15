@@ -15,6 +15,7 @@
     "test": "node -r @babel/register test/util-pivot.test.js"
   },
   "dependencies": {
+    "@typen/enums": "^0.1.16",
     "@vect/vector-init": "^0.3.8",
     "@vect/vector-mapper": "^0.3.8",
     "@vect/vector-zipper": "^0.3.8"
