@@ -11,10 +11,8 @@ const iterateKeys = function (o, fn) {
 };
 
 const iterateEntries = function (o, fn, l) {
-  var _l;
-
   const ents = Object.entries(o);
-  l = (_l = l) !== null && _l !== void 0 ? _l : ents.length;
+  l = l ?? ents.length;
 
   for (let i = 0; i < l; i++) fn.call(this, ents[i], i);
 };
@@ -42,11 +40,9 @@ const mapKeys = (o, fn) => {
 };
 
 const mapEntries = (o, fn, l) => {
-  var _l;
-
   const ob = {},
         ents = Object.entries(o);
-  l = (_l = l) !== null && _l !== void 0 ? _l : ents.length;
+  l = l ?? ents.length;
 
   for (let i = 0, k, v; i < l; i++) {
     [k, v] = fn(ents[i], i);

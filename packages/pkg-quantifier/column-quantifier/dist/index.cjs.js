@@ -45,20 +45,6 @@ const every = (mx, y, crit, h, w) => columnEvery.call({
 }, mx, crit, h, w);
 
 /**
- * Return true if at least one element in a specified column of a matrix matches the input criteria.
- * Return false if either height or width is zero, or specified column index >= width.
- * @param {*[][]} mx
- * @param {number} y
- * @param {function(*,number?,number?):*} crit
- * @param {number} [h]
- * @param {number} [w]
- * @returns {boolean}
- */
-const some = (mx, y, crit, h, w) => columnSome.call({
-  y
-}, mx, crit, h, w);
-
-/**
  * Return true if some element in a specified column of a matrix matches the input criteria.
  * Return false if either height or width is zero, or specified column index >= width.
  * @param {*[][]} mx
@@ -68,7 +54,7 @@ const some = (mx, y, crit, h, w) => columnSome.call({
  * @returns {boolean}
  */
 
-function columnSome$1(mx, crit, h, w) {
+function columnSome(mx, crit, h, w) {
   var _mx$;
 
   const {
@@ -81,9 +67,24 @@ function columnSome$1(mx, crit, h, w) {
 
   return false;
 }
-const ColumnSome = y => columnSome$1.bind({
+const ColumnSome = y => columnSome.bind({
   y
 });
+
+/**
+ * Return true if at least one element in a specified column of a matrix matches the input criteria.
+ * Return false if either height or width is zero, or specified column index >= width.
+ * @param {*[][]} mx
+ * @param {number} y
+ * @param {function(*,number?,number?):*} crit
+ * @param {number} [h]
+ * @param {number} [w]
+ * @returns {boolean}
+ */
+
+const some = (mx, y, crit, h, w) => columnSome.call({
+  y
+}, mx, crit, h, w);
 
 exports.ColumnEvery = ColumnEvery;
 exports.ColumnSome = ColumnSome;

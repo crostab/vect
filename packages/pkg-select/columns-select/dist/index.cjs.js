@@ -13,9 +13,7 @@ var vectorMapper = require('@vect/vector-mapper');
  */
 
 const select = (mx, ys) => {
-  var _ys$length;
-
-  const hi = (_ys$length = ys === null || ys === void 0 ? void 0 : ys.length) !== null && _ys$length !== void 0 ? _ys$length : 0;
+  const hi = (ys === null || ys === void 0 ? void 0 : ys.length) ?? 0;
   if (hi === 0) return mx;
   if (hi === 1) return columnMapper.mapper(mx, ys[0], x => [x]);
   return mx.map(row => vectorSelect.select(row, ys, hi));
@@ -32,9 +30,7 @@ const select = (mx, ys) => {
  */
 
 const divide = (mx, indexes, hi) => {
-  var _hi;
-
-  hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length;
+  hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);
   let h = mx === null || mx === void 0 ? void 0 : mx.length,
       y;
   if (hi === 0) return {

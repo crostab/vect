@@ -16,25 +16,21 @@ const minBy = (vec, indicator) => min.call(indicator, vec);
 const Min = kpi => min.bind(kpi);
 
 const indicatorByInitVal = function (vec, l) {
-  var _l;
-
-  l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length;
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
     pick
   } = this;
   let lo = 0,
-      body = init !== null && init !== void 0 ? init : (lo++, vec[0]);
+      body = init ?? (lo++, vec[0]);
 
   for (let i = lo, fn = pile.bind(body); i < l; i++) fn(vec[i], i);
 
   return pick ? pick(body, l) : body;
 };
 const indicatorByInitFun = function (vec, l) {
-  var _l2;
-
-  l = (_l2 = l) !== null && _l2 !== void 0 ? _l2 : vec === null || vec === void 0 ? void 0 : vec.length;
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
@@ -70,25 +66,21 @@ const Indicator = ({
 });
 
 const pileByInitVal = function (vec, l) {
-  var _l;
-
-  l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length;
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
     pick
   } = this;
   let lo = 0,
-      p = init !== null && init !== void 0 ? init : (lo++, vec[0]);
+      p = init ?? (lo++, vec[0]);
 
   for (let i = lo; i < l; i++) p = pile(p, vec[i], i);
 
   return pick ? pick(p, l) : p;
 };
 const pileByInitFun = function (vec, l) {
-  var _l2;
-
-  l = (_l2 = l) !== null && _l2 !== void 0 ? _l2 : vec === null || vec === void 0 ? void 0 : vec.length;
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
@@ -129,4 +121,4 @@ const Piler = config => {
   });
 };
 
-export { Indicator, Max, Min, Piler, maxBy, minBy };
+export { Indicator, Max, Min, Piler, max, maxBy, min, minBy };

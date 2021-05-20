@@ -1,9 +1,7 @@
 import { FUN } from '@typen/enum-data-types';
 
 const stat = function (vec, l) {
-  var _l;
-
-  l = (_l = l) !== null && _l !== void 0 ? _l : vec === null || vec === void 0 ? void 0 : vec.length;
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     acc,

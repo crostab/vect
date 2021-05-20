@@ -7,6 +7,6 @@ const vec = NumberVectorCollection.flopShuffle({ size: 12 })
 
 vec |> logger
 
-xr().max(maxBy(vec, x => x)).min(minBy(vec, x => x)) |> logger
+xr().max(maxBy(vec)).min(minBy(vec, x => x)) |> logger
 
 

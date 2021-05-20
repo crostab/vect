@@ -4,9 +4,7 @@ import { max, min } from '@aryth/comparer';
 import { rand } from '@aryth/rand';
 
 const select = (vec, indexes, hi) => {
-  var _hi;
-
-  hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length;
+  hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);
   const sample = Array(hi);
 
   for (--hi; hi >= 0; hi--) sample[hi] = vec[indexes[hi]];
@@ -27,14 +25,10 @@ const selectEntry = (vec, keyIndex, valIndex) => [vec[keyIndex], vec[valIndex]];
  * @returns {{pick: *[], rest: *[]}} - rest points to altered original array, pick is an new array.
  */
 
-const divide = (vec, indexes, hi) => {
-  var _hi;
-
-  return hi = (_hi = hi) !== null && _hi !== void 0 ? _hi : indexes === null || indexes === void 0 ? void 0 : indexes.length, {
-    pick: partition(vec, indexes, hi).splice(indexes[0], hi),
-    rest: vec
-  };
-};
+const divide = (vec, indexes, hi) => (hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length), {
+  pick: partition(vec, indexes, hi).splice(indexes[0], hi),
+  rest: vec
+});
 
 /**
  * Fisher–Yates shuffle, a.k.a Knuth shuffle
@@ -45,7 +39,7 @@ const divide = (vec, indexes, hi) => {
 
 const shuffle = function (ve, size) {
   let l = ve === null || ve === void 0 ? void 0 : ve.length;
-  const lo = max(0, l - (size !== null && size !== void 0 ? size : l));
+  const lo = max(0, l - (size ?? l));
 
   while (--l >= lo) swap.call(ve, l, rand(l));
 

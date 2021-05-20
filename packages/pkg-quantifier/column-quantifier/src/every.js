@@ -1,4 +1,3 @@
-import { size } from '@vect/matrix-size'
 import { columnEvery } from './ColumnEvery'
 
 /**

@@ -5,9 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var enumDataTypes = require('@typen/enum-data-types');
 
 const stat = function (entries, l) {
-  var _l;
-
-  l = (_l = l) !== null && _l !== void 0 ? _l : entries === null || entries === void 0 ? void 0 : entries.length;
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const {
     key,
     value

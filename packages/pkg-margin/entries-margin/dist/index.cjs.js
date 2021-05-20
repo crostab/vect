@@ -11,9 +11,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @returns {*[]}
  */
 const marginCopy = (entries, h, t, l) => {
-  var _l;
-
-  const kvs = Array(l = (_l = l) !== null && _l !== void 0 ? _l : entries === null || entries === void 0 ? void 0 : entries.length),
+  const kvs = Array(l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length)),
         s = l - t;
   let ent;
 
@@ -35,9 +33,7 @@ const marginCopy = (entries, h, t, l) => {
  * @returns {*[]}
  */
 const marginMapper = (entries, keyMapper, valueMapper, h, t, l) => {
-  var _l;
-
-  const ve = Array(l = (_l = l) !== null && _l !== void 0 ? _l : entries === null || entries === void 0 ? void 0 : entries.length),
+  const ve = Array(l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length)),
         s = l - t;
   let ent;
 

@@ -8,9 +8,7 @@ var swap = require('@vect/swap');
 var vectorMapper = require('@vect/vector-mapper');
 
 const leap = function (o, start, gap) {
-  var _this$keys;
-
-  const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
+  const keys = (this === null || this === void 0 ? void 0 : this.keys) ?? Object.keys(o);
   const wd = keys === null || keys === void 0 ? void 0 : keys.length,
         df = comparer.max(gap, wd),
         rs = {};
@@ -37,12 +35,10 @@ const leap = function (o, start, gap) {
  */
 
 const shuffle = function (o, size) {
-  var _this$keys;
-
-  const keys = (_this$keys = this === null || this === void 0 ? void 0 : this.keys) !== null && _this$keys !== void 0 ? _this$keys : Object.keys(o);
+  const keys = (this === null || this === void 0 ? void 0 : this.keys) ?? Object.keys(o);
   let l = keys === null || keys === void 0 ? void 0 : keys.length,
       k;
-  const lo = comparer.max(0, l - (size !== null && size !== void 0 ? size : l)),
+  const lo = comparer.max(0, l - (size ?? l)),
         rs = {};
 
   while (--l >= lo) rs[k = swap.swap.call(keys, rand.rand(l), l)] = o[k];
