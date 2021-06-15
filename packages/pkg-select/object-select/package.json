@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Select from object/array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -17,8 +17,8 @@
   "dependencies": {
     "@aryth/comparer": "^0.3.19",
     "@aryth/rand": "^0.3.19",
-    "@vect/swap": "^0.4.0",
-    "@vect/vector-mapper": "^0.4.0"
+    "@vect/swap": "^0.4.1",
+    "@vect/vector-mapper": "^0.4.1"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "90b2b4dc186328c9463159625b811ec8c2ef3a37"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

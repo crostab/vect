@@ -1,6 +1,6 @@
 {
   "name": "@vect/object",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Util for object",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,11 +11,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/object-init": "^0.4.0",
-    "@vect/object-mapper": "^0.4.0",
-    "@vect/object-select": "^0.4.0",
-    "@vect/object-update": "^0.4.0",
-    "@vect/object-zipper": "^0.4.0"
+    "@vect/object-init": "^0.4.1",
+    "@vect/object-mapper": "^0.4.1",
+    "@vect/object-select": "^0.4.1",
+    "@vect/object-update": "^0.4.1",
+    "@vect/object-zipper": "^0.4.1"
   },
   "scripts": {
     "pub": "npm publish",
@@ -35,5 +35,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

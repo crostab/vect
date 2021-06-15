@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-stat",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Indicators for columns",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.1.16",
-    "@vect/matrix-size": "^0.4.0",
-    "@vect/vector-init": "^0.4.0"
+    "@vect/matrix-size": "^0.4.1",
+    "@vect/vector-init": "^0.4.1"
   },
   "keywords": [
     "matrix",
@@ -38,5 +38,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

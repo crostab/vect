@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-update",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Update object",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/splices.test.js"
   },
   "dependencies": {
-    "@vect/swap": "^0.4.0"
+    "@vect/swap": "^0.4.1"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "90b2b4dc186328c9463159625b811ec8c2ef3a37"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

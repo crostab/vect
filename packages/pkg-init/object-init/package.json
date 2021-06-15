@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-init",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/hoyeungw/vect"
   },
-  "homepage": "https://github.com/hoyeungw/vect#readme"
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

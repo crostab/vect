@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Util for array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,16 +11,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/vector-algebra": "^0.4.0",
-    "@vect/vector-index": "^0.4.0",
-    "@vect/vector-indicator": "^0.4.0",
-    "@vect/vector-init": "^0.4.0",
-    "@vect/vector-mapper": "^0.4.0",
-    "@vect/vector-margin": "^0.4.0",
-    "@vect/vector-merge": "^0.4.0",
-    "@vect/vector-select": "^0.4.0",
-    "@vect/vector-update": "^0.4.0",
-    "@vect/vector-zipper": "^0.4.0"
+    "@vect/vector-algebra": "^0.4.1",
+    "@vect/vector-index": "^0.4.1",
+    "@vect/vector-indicator": "^0.4.1",
+    "@vect/vector-init": "^0.4.1",
+    "@vect/vector-mapper": "^0.4.1",
+    "@vect/vector-margin": "^0.4.1",
+    "@vect/vector-merge": "^0.4.1",
+    "@vect/vector-select": "^0.4.1",
+    "@vect/vector-update": "^0.4.1",
+    "@vect/vector-zipper": "^0.4.1"
   },
   "scripts": {
     "pub": "npm publish",
@@ -40,5 +40,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

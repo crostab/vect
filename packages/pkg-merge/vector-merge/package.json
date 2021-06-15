@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-merge",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/hoyeungw/vect"
   },
-  "homepage": "https://github.com/hoyeungw/vect#readme"
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

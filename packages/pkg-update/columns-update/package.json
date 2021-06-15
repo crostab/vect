@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-update",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/rank.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.4.0",
-    "@vect/vector-update": "^0.4.0",
-    "@vect/vector-zipper": "^0.4.0"
+    "@vect/vector-mapper": "^0.4.1",
+    "@vect/vector-update": "^0.4.1",
+    "@vect/vector-zipper": "^0.4.1"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "90b2b4dc186328c9463159625b811ec8c2ef3a37"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-stat",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Indicators for vector",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -35,5 +35,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "72da22d4114e88ad3b3b5a8eb282871ad4bcc8ae"
+  "gitHead": "0df009c248625ffea1915bdf71435257046927a5"
 }
