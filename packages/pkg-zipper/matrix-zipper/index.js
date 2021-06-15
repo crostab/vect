@@ -1,4 +1,5 @@
-export { zipper } from './src/zipper'
-export { mutazip } from './src/mutazip'
-export { Duozipper, Trizipper, Quazipper } from './src/seriesZipper'
+export { zipper }                          from './src/zipper'
+export { mutazip }                         from './src/mutazip'
+export { duozipper, trizipper, quazipper, Duozipper, Trizipper, Quazipper } from './src/seriesZipper'
+export { iterzip }                         from './src/iterzip'
 

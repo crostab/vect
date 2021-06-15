@@ -1,24 +1,23 @@
-import { zipper } from '../src/zipper'
-import { mutazip } from '../src/mutazip'
-import { decoMatrix, logger, says } from '@spare/logger'
-import { Duozipper } from '../src/seriesZipper'
+import { decoMatrix, says } from '@spare/logger'
+import { mutazip }          from '../src/mutazip'
+import { Duozipper }        from '../src/seriesZipper'
 
 class MapVectorTest {
-  static test () {
+  static test() {
     const ma = [
-      [0, 0, 0],
-      [0, 0, 0],
-      [0, 0, 0]
+      [ 0, 0, 0 ],
+      [ 0, 0, 0 ],
+      [ 0, 0, 0 ]
     ]
     const mb = [
-      [1, 2, 3],
-      [0, 0, 0],
-      [0, 0, 0]
+      [ 1, 2, 3 ],
+      [ 0, 0, 0 ],
+      [ 0, 0, 0 ]
     ]
     const mc = [
-      [0, 0, 0],
-      [0, 0, 0],
-      [7, 8, 9]
+      [ 0, 0, 0 ],
+      [ 0, 0, 0 ],
+      [ 7, 8, 9 ]
     ]
     Duozipper((a, b) => a + b)(ma, mb) |> decoMatrix |> says['after zipper returns']
     ma |> decoMatrix |> says['ma becomes']
