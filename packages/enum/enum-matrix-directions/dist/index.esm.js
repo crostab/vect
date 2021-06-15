@@ -1,5 +1,0 @@
-const POINTWISE = 0;
-const ROWWISE = 1;
-const COLUMNWISE = 2;
-
-export { COLUMNWISE, POINTWISE, ROWWISE };
