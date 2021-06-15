@@ -5,10 +5,10 @@ import { duozipper } from './seriesZipper'
  * @param {Array} a
  * @param {Array} b
  * @param {function(*,*,number?):*} fn
- * @param {number} [l]
+ * @param {number} [hi]
  * @returns {*[]}
  */
-export const zipper = (a, b, fn, l) =>
-  duozipper.call({ fn, hi: l }, a, b)
+export const zipper = (a, b, fn, hi) =>
+  duozipper.call({ fn, hi }, a, b)
 
 

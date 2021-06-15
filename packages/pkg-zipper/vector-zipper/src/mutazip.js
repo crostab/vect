@@ -1,5 +1,5 @@
-export const mutazip = (va, vb, fn, l) => {
-  l = l || va?.length
-  for (--l; l >= 0; l--) va[l] = fn(va[l], vb[l], l)
+export const mutazip = (va, vb, fn, hi) => {
+  hi = hi ?? va?.length
+  for (let i = 0; i < hi; i++) va[i] = fn(va[i], vb[i], i)
   return va
 }
