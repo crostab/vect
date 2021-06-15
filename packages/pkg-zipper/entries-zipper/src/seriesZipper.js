@@ -1,34 +1,34 @@
-export function duozipper (ea, eb) {
+export function duozipper(ea, eb) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea?.length
-  const entries = Array(hi)
-  for (let i = --hi, a, b; i >= lo; i--) {
-    (a = ea[i], b = eb[i])
-    entries[i] = [key(a[0], b[0], i), value(a[1], b[1], i)]
+  value = value ?? key, hi = hi ?? ea?.length
+  const zip = Array(hi)
+  for (let i = lo ?? 0, a, b; i < hi; i++) {
+    ( a = ea[i], b = eb[i] )
+    zip[i] = [ key(a[0], b[0], i), value(a[1], b[1], i) ]
   }
-  return entries
+  return zip
 }
 
-export function trizipper (ea, eb, ec) {
+export function trizipper(ea, eb, ec) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea?.length
-  const entries = Array(hi)
-  for (let i = --hi, a, b, c; i >= lo; i--) {
-    (a = ea[i], b = eb[i], c = ec[i])
-    entries[i] = [key(a[0], b[0], c[0], i), value(a[1], b[1], c[1], i)]
+  value = value ?? key, hi = hi ?? ea?.length
+  const zip = Array(hi)
+  for (let i = lo ?? 0, a, b, c; i < hi; i++) {
+    ( a = ea[i], b = eb[i], c = ec[i] )
+    zip[i] = [ key(a[0], b[0], c[0], i), value(a[1], b[1], c[1], i) ]
   }
-  return entries
+  return zip
 }
 
-export function quazipper (ea, eb, ec, ed) {
+export function quazipper(ea, eb, ec, ed) {
   let { key, value, lo, hi } = this
-  value = value || key, lo = lo || 0, hi = hi || ea?.length
-  const entries = Array(hi)
-  for (let i = --hi, a, b, c, d; i >= lo; i--) {
-    (a = ea[i], b = eb[i], c = ec[i], d = ed[i])
-    entries[i] = [key(a[0], b[0], c[0], d[0], i), value(a[1], b[1], c[1], d[1], i)]
+  value = value ?? key, hi = hi ?? ea?.length
+  const zip = Array(hi)
+  for (let i = lo ?? 0, a, b, c, d; i < hi; i++) {
+    ( a = ea[i], b = eb[i], c = ec[i], d = ed[i] )
+    zip[i] = [ key(a[0], b[0], c[0], d[0], i), value(a[1], b[1], c[1], d[1], i) ]
   }
-  return entries
+  return zip
 }
 
 /**

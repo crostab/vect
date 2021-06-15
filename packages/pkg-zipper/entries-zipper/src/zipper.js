@@ -2,12 +2,12 @@ import { duozipper } from './seriesZipper'
 
 /**
  *
- * @param {[*,*][]} ea
- * @param {[*,*][]} eb
+ * @param {[*,*][]} entA
+ * @param {[*,*][]} entB
  * @param {function} keyMap
  * @param {function} [valMap]
- * @param {number} [l]
+ * @param {number} [hi]
  * @returns {[*,*][]}
  */
-export const zipper = (ea, eb, keyMap, valMap, l) =>
-  duozipper.call({ key: keyMap, value: valMap, hi: l }, ea, eb)
+export const zipper = (entA, entB, keyMap, valMap, hi) =>
+  duozipper.call({ key: keyMap, value: valMap, hi }, entA, entB)
