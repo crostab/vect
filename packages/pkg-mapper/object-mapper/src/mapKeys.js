@@ -1,6 +1,5 @@
-export const mapKeys = (o, fn) => {
+export function mapKeys(o, fn) {
   const ob = {}
-  for (let k in o)
-    if (Object.hasOwnProperty.call(o, k)) ob[fn(k)] = o[k]
+  for (let k in o) ob[fn.call(this, k)] = o[k]
   return ob
 }

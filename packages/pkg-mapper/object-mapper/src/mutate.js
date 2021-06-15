@@ -1,5 +1,4 @@
-export const mutate = (o, fn) => {
-  for (let k in o)
-    if (Object.hasOwnProperty.call(o, k)) o[k] = fn(o[k])
+export function mutate(o, fn) {
+  for (let k in o) o[k] = fn.call(this, o[k])
   return o
 }

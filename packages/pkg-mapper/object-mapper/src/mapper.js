@@ -1,7 +1,6 @@
-export const mapper = (o, fn) => {
+export function mapper(o, fn) {
   const ob = {}
-  for (let k in o)
-    if (Object.hasOwnProperty.call(o, k)) ob[k] = fn(o[k])
+  for (let k in o) ob[k] = fn.call(this, o[k])
   return ob
 }
 
