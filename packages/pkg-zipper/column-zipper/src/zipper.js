@@ -1,6 +1,5 @@
 import { duozipper } from './seriesZipper'
 
-export const zipper = (ma, mb, y, fn, l) =>
-  duozipper.call({ y, fn, b: l }, ma, mb)
+export const zipper = (ma, mb, y, fn, hi) => duozipper.call({ y, fn, hi }, ma, mb)
 
 
