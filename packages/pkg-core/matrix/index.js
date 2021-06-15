@@ -12,7 +12,7 @@ import * as Zipper        from '@vect/matrix-zipper'
 export const { draft, fab, iso, init, ini, starter, shallow } = Init
 export const { iterate, mutate, mapper } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
-export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
+export const { zipper, mutazip, iterzip, duozipper, trizipper, quazipper, Duozipper, Trizipper, Quazipper } = Zipper
 export const { maxBy, minBy, Max, Min } = Indicator
 export const { every, some } = Quantifier
 export const { size, width, height } = Size
@@ -20,9 +20,9 @@ export const { transpose } = Transpose
 export const { column, Columns } = ColumnGetter
 export const { mapper: columnsMapper } = ColumnsMapper
 
-export { select } from '@vect/columns-select'
+export { select }                             from '@vect/columns-select'
 export { pop, push, shift, unshift, splices } from '@vect/columns-update'
 
-export { coins } from './src/coins'
-export { isMatrix } from './src/isMatrix'
+export { coins }                          from './src/coins'
+export { isMatrix }                       from './src/isMatrix'
 export { POINTWISE, ROWWISE, COLUMNWISE } from '@vect/enum-matrix-directions'

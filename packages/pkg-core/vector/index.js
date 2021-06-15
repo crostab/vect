@@ -11,7 +11,7 @@ import * as Zipper   from '@vect/vector-zipper'
 
 export const { iterate, reviter, mapper, mutate } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
-export const { zipper, mutazip, Duozipper, Trizipper, Quazipper } = Zipper
+export const { zipper, mutazip, iterzip, duozipper, trizipper, quazipper, Duozipper, Trizipper, Quazipper } = Zipper
 export const { maxBy, minBy, Max, Min, Piler, Indicator } = Indicate
 export const { draft, iso, init, seq, range } = Init
 export const { splices, partition } = Update
