@@ -1,4 +1,5 @@
 .idea
+dist
 temp
 node_modules
 yarn.lock
