@@ -1,5 +1,5 @@
 export function select(o) {
-  const { keys } = this
+  const keys = Array.isArray(this) ? this : this?.keys
   const l = keys?.length, ob = {}
   for (let i = 0, k; i < l; i++)
     ob[k = keys[i]] = o[k]
@@ -11,6 +11,6 @@ export function select(o) {
  * @param {Object} o
  * @param {*[]} keys
  */
-export const selectObject = (o, keys) => select.call({ keys }, o)
+export const selectObject = (o, keys) => select.call(keys, o)
 
-export const SelectObject = keys => select.bind({ keys })
+export const SelectObject = keys => select.bind(keys)
