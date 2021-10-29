@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-indicator",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Indicators for matrix",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.3.19"
+    "@aryth/comparer": "^0.3.26"
   },
   "keywords": [
     "matrix",

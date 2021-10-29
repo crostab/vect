@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-indicator",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Indicators for vector",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,9 +19,9 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.3.19",
-    "@typen/enum-data-types": "^0.1.16",
-    "@typen/enum-object-types": "^0.1.16"
+    "@aryth/comparer": "^0.3.26",
+    "@typen/enum-data-types": "^0.1.17",
+    "@typen/enum-object-types": "^0.1.17"
   },
   "keywords": [
     "array",

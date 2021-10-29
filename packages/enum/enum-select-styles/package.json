@@ -1,6 +1,6 @@
 {
   "name": "@vect/enum-select-styles",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A math util library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

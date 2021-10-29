@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-stat",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Indicators for matrix",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,8 +19,8 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.16",
-    "@vect/matrix-size": "^0.4.4"
+    "@typen/enum-data-types": "^0.1.17",
+    "@vect/matrix-size": "^0.4.5"
   },
   "keywords": [
     "matrix",
