@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-unwind",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "An array util tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
