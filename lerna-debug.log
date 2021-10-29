@@ -1,0 +1,5 @@
+268 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin master
+268 error remote: Invalid username or password.
+268 error fatal: Authentication failed for 'https://github.com/hoyeungw/vect.git/'
+268 error     at makeError (/home/alkindus/banyan/vect/node_modules/execa/lib/error.js:60:11)
+268 error     at handlePromise (/home/alkindus/banyan/vect/node_modules/execa/index.js:118:26)

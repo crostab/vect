@@ -13,8 +13,8 @@ const { lapse, result } = strategies({
   repeat: 5E+5,
   candidates: {
     identityMatrix: [NumberMatrixCollection.identityMatrix(12)],
-    upperPascal: [NumberMatrixCollection.upperPascalMatrix(7)],
-    lowerPascal: [NumberMatrixCollection.lowerPascalMatrix(8)],
+    upperPascal: [NumberMatrixCollection.upperPascal(7)],
+    lowerPascal: [NumberMatrixCollection.lowerPascal(8)],
     zigZagMatrix: [NumberMatrixCollection.zigZagMatrix(4)],
     // range3: [VectorCollection.range(512), 512],
   },
