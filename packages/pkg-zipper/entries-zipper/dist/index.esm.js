@@ -5,7 +5,7 @@ function duozipper(ea, eb) {
     lo,
     hi
   } = this;
-  value = value ?? key, hi = hi ?? (ea == null ? void 0 : ea.length);
+  value = value ?? key, hi = hi ?? (ea === null || ea === void 0 ? void 0 : ea.length);
   const zip = Array(hi);
 
   for (let i = lo ?? 0, a, b; i < hi; i++) {
@@ -22,7 +22,7 @@ function trizipper(ea, eb, ec) {
     lo,
     hi
   } = this;
-  value = value ?? key, hi = hi ?? (ea == null ? void 0 : ea.length);
+  value = value ?? key, hi = hi ?? (ea === null || ea === void 0 ? void 0 : ea.length);
   const zip = Array(hi);
 
   for (let i = lo ?? 0, a, b, c; i < hi; i++) {
@@ -39,7 +39,7 @@ function quazipper(ea, eb, ec, ed) {
     lo,
     hi
   } = this;
-  value = value ?? key, hi = hi ?? (ea == null ? void 0 : ea.length);
+  value = value ?? key, hi = hi ?? (ea === null || ea === void 0 ? void 0 : ea.length);
   const zip = Array(hi);
 
   for (let i = lo ?? 0, a, b, c, d; i < hi; i++) {
@@ -130,7 +130,7 @@ const zipper = (entA, entB, keyMap, valMap, hi) => duozipper.call({
  * @returns {[*,*][]}
  */
 const mutazip = (entA, entB, keyMap, valMap, hi) => {
-  hi = hi ?? (entA == null ? void 0 : entA.length), valMap = valMap ?? keyMap;
+  hi = hi ?? (entA === null || entA === void 0 ? void 0 : entA.length), valMap = valMap ?? keyMap;
 
   for (let i = 0, a, b; i < hi && (a = entA[i]) && (b = entB[i]); i++) {
     a[0] = keyMap(a[0], b[0], i);
@@ -150,7 +150,7 @@ const mutazip = (entA, entB, keyMap, valMap, hi) => {
  * @returns {[*,*][]}
  */
 const iterzip = (entA, entB, keyAction, valueAction, hi) => {
-  hi = hi ?? (entA == null ? void 0 : entA.length), valueAction = valueAction ?? keyAction;
+  hi = hi ?? (entA === null || entA === void 0 ? void 0 : entA.length), valueAction = valueAction ?? keyAction;
 
   for (let i = 0, a, b; i < hi && (a = entA[i]) && (b = entB[i]); i++) {
     keyAction(a[0], b[0], i);

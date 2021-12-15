@@ -29,7 +29,7 @@ export default [
         exclude: 'node_modules/**',
         babelHelpers: 'bundled',
         presets: [
-          [ '@babel/preset-env', { targets: { node: '14' }, loose: true } ]
+          [ '@babel/preset-env', { targets: { node: '16' } } ]
         ],
         plugins: [
           // ['@babel/plugin-proposal-decorators', { legacy: true }],

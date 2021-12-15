@@ -16,7 +16,7 @@ const minBy = (vec, indicator) => min.call(indicator, vec);
 const Min = kpi => min.bind(kpi);
 
 const indicatorByInitVal = function (vec, l) {
-  l = l ?? (vec == null ? void 0 : vec.length);
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
@@ -30,7 +30,7 @@ const indicatorByInitVal = function (vec, l) {
   return pick ? pick(body, l) : body;
 };
 const indicatorByInitFun = function (vec, l) {
-  l = l ?? (vec == null ? void 0 : vec.length);
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
@@ -66,7 +66,7 @@ const Indicator = ({
 });
 
 const pileByInitVal = function (vec, l) {
-  l = l ?? (vec == null ? void 0 : vec.length);
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,
@@ -80,7 +80,7 @@ const pileByInitVal = function (vec, l) {
   return pick ? pick(p, l) : p;
 };
 const pileByInitFun = function (vec, l) {
-  l = l ?? (vec == null ? void 0 : vec.length);
+  l = l ?? (vec === null || vec === void 0 ? void 0 : vec.length);
   const {
     init,
     pile,

@@ -4,7 +4,7 @@ import { max, min } from '@aryth/comparer';
 import { rand } from '@aryth/rand';
 
 const select = (vec, indexes, hi) => {
-  hi = hi ?? (indexes == null ? void 0 : indexes.length);
+  hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);
   const sample = Array(hi);
 
   for (--hi; hi >= 0; hi--) sample[hi] = vec[indexes[hi]];
@@ -25,7 +25,7 @@ const selectEntry = (vec, keyIndex, valIndex) => [vec[keyIndex], vec[valIndex]];
  * @returns {{pick: *[], rest: *[]}} - rest points to altered original array, pick is an new array.
  */
 
-const divide = (vec, indexes, hi) => (hi = hi ?? (indexes == null ? void 0 : indexes.length), {
+const divide = (vec, indexes, hi) => (hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length), {
   pick: partition(vec, indexes, hi).splice(indexes[0], hi),
   rest: vec
 });
@@ -38,7 +38,7 @@ const divide = (vec, indexes, hi) => (hi = hi ?? (indexes == null ? void 0 : ind
  */
 
 const shuffle = function (ve, size) {
-  let l = ve == null ? void 0 : ve.length;
+  let l = ve === null || ve === void 0 ? void 0 : ve.length;
   const lo = max(0, l - (size ?? l));
 
   while (--l >= lo) swap.call(ve, l, rand(l));
@@ -47,7 +47,7 @@ const shuffle = function (ve, size) {
 };
 
 const leap = (ve, start, gap) => {
-  const wd = ve == null ? void 0 : ve.length,
+  const wd = ve === null || ve === void 0 ? void 0 : ve.length,
         vec = Array(gap);
   let lo = start ? min(start, wd - 1) : rand(wd),
       i = 0;

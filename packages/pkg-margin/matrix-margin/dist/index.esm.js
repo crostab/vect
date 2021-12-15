@@ -1,7 +1,7 @@
 import { marginCopy as marginCopy$1 } from '@vect/vector-margin';
 
 const marginCopy = (mx, t, b, l, r, h, w) => {
-  const x = Array(h || (h = mx == null ? void 0 : mx.length)),
+  const x = Array(h || (h = mx === null || mx === void 0 ? void 0 : mx.length)),
         bs = h - b;
 
   for (let i = 0; i < t; i++) x[i] = marginCopy$1(mx[i], l, r, w);
@@ -12,7 +12,7 @@ const marginCopy = (mx, t, b, l, r, h, w) => {
 };
 
 const rowMarginMapper = (row, i, fn, l, r, w) => {
-  const ve = Array(w || (w = row == null ? void 0 : row.length)),
+  const ve = Array(w || (w = row === null || row === void 0 ? void 0 : row.length)),
         s = w - r;
 
   for (--l; l >= 0; l--) ve[l] = fn(row[l], i, l);
@@ -23,7 +23,7 @@ const rowMarginMapper = (row, i, fn, l, r, w) => {
 };
 
 const marginMapper = (mx, fn, t, b, l, r, h, w) => {
-  const x = Array(h || (h = mx == null ? void 0 : mx.length)),
+  const x = Array(h || (h = mx === null || mx === void 0 ? void 0 : mx.length)),
         bs = h - b;
 
   for (let i = 0; i < t; i++) x[i] = rowMarginMapper(mx[i], i, fn, l, r, w);
@@ -34,7 +34,7 @@ const marginMapper = (mx, fn, t, b, l, r, h, w) => {
 };
 
 const rowMarginMutate = (row, i, fn, l, r, w) => {
-  w = w || (row == null ? void 0 : row.length);
+  w = w || (row === null || row === void 0 ? void 0 : row.length);
   const s = w - r;
 
   for (--l; l >= 0; l--) row[l] = fn(row[l], i, l);
@@ -45,7 +45,7 @@ const rowMarginMutate = (row, i, fn, l, r, w) => {
 };
 
 const marginMutate = (mx, fn, t, b, l, r, h, w) => {
-  h = h || (mx == null ? void 0 : mx.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length);
   const s = h - b;
 
   for (let i = 0; i < t; i++) rowMarginMutate(mx[i], i, fn, l, r, w);

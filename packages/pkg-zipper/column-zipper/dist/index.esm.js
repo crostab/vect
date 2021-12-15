@@ -8,7 +8,7 @@ function duozipper(ma, mb) {
     lo,
     hi
   } = this;
-  hi = hi ?? (ma == null ? void 0 : ma.length), mx = mx ?? draft(hi, y);
+  hi = hi ?? (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx ?? draft(hi, y);
 
   for (let i = lo ?? 0; i < hi; i++) mx[i][y] = fn(ma[i][y], mb[i][y], i);
 
@@ -22,7 +22,7 @@ function trizipper(ma, mb, mc) {
     lo,
     hi
   } = this;
-  hi = hi ?? (ma == null ? void 0 : ma.length), mx = mx ?? draft(hi, y);
+  hi = hi ?? (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx ?? draft(hi, y);
 
   for (let i = lo ?? 0; i < hi; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], i);
 
@@ -36,7 +36,7 @@ function quazipper(ma, mb, mc, md) {
     lo,
     hi
   } = this;
-  hi = hi ?? (ma == null ? void 0 : ma.length), mx = mx ?? draft(hi, y);
+  hi = hi ?? (ma === null || ma === void 0 ? void 0 : ma.length), mx = mx ?? draft(hi, y);
 
   for (let i = lo ?? 0; i < hi; i++) mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], md[i][y], i);
 
@@ -105,7 +105,7 @@ const ColumnMutazip = y => (mx, mb, fn, hi) => duozipper.call({
 }, mx, mb);
 
 function iterzip(ma, mb, y, action, hi) {
-  hi = hi ?? (ma == null ? void 0 : ma.length);
+  hi = hi ?? (ma === null || ma === void 0 ? void 0 : ma.length);
 
   for (let i = 0; i < hi; i++) action(ma[i][y], mb[i][y], i);
 

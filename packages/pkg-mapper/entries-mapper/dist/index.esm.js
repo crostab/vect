@@ -7,7 +7,7 @@
  * @returns {undefined}
  */
 const iterate = function (entries, keyFn, valFn, l) {
-  l = l ?? (entries == null ? void 0 : entries.length), valFn = valFn || keyFn;
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valFn = valFn || keyFn;
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], keyFn.call(this, r[0], i), valFn.call(this, r[1], i);
@@ -23,7 +23,7 @@ const iterate = function (entries, keyFn, valFn, l) {
  * @returns {[*,*][]}
  */
 const mapper = (entries, keyMap, valMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length), valMap = valMap || keyMap;
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valMap = valMap || keyMap;
   const vec = Array(l);
 
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyMap(r[0], i), valMap(r[1], i)];
@@ -40,7 +40,7 @@ const mapper = (entries, keyMap, valMap, l) => {
  * @returns {[*,*][]}
  */
 const mutate = (entries, keyMap, valMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length), valMap = valMap || keyMap;
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valMap = valMap || keyMap;
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyMap(r[0], i), r[1] = valMap(r[1], i);
@@ -57,7 +57,7 @@ const mutate = (entries, keyMap, valMap, l) => {
  * @returns {undefined}
  */
 const iterateKeys = function (entries, keyFn, l) {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], keyFn.call(this, r[0], i);
@@ -72,7 +72,7 @@ const iterateKeys = function (entries, keyFn, l) {
  * @returns {[*,*][]}
  */
 const mutateKeys = (entries, keyMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyMap(r[0], i);
@@ -89,7 +89,7 @@ const mutateKeys = (entries, keyMap, l) => {
  * @returns {[*,*][]}
  */
 const mapKeys = (entries, keyMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
 
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyMap(r[0], i), r[1]];
@@ -105,7 +105,7 @@ const mapKeys = (entries, keyMap, l) => {
  * @returns {undefined}
  */
 const iterateValues = function (entries, valFn, l) {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], valFn.call(this, r[1], i);
@@ -120,7 +120,7 @@ const iterateValues = function (entries, valFn, l) {
  * @returns {[*,*][]}
  */
 const mutateValues = (entries, valMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[1] = valMap(r[1], i);
@@ -137,7 +137,7 @@ const mutateValues = (entries, valMap, l) => {
  * @returns {[*,*][]}
  */
 const mapValues = (entries, valMap, l) => {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
 
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [r[0], valMap(r[1], i)];

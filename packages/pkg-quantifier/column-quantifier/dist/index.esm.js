@@ -14,7 +14,7 @@ function columnEvery(mx, crit, h, w) {
   const {
     y
   } = this;
-  h = h || (mx == null ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) == null ? void 0 : _mx$.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
   if (!w || y >= w) return true;
 
   for (let i = 0; i < h; i++) if (!crit(mx[i][y], i)) return false;
@@ -56,7 +56,7 @@ function columnSome(mx, crit, h, w) {
   const {
     y
   } = this;
-  h = h || (mx == null ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) == null ? void 0 : _mx$.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
   if (!w || y >= w) return false;
 
   for (let i = 0; i < h; i++) if (crit(mx[i][y], i)) return true;

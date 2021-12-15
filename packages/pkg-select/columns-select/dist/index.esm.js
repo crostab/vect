@@ -9,7 +9,7 @@ import { mapper as mapper$1, iterate } from '@vect/vector-mapper';
  */
 
 const select = (mx, ys) => {
-  const hi = (ys == null ? void 0 : ys.length) ?? 0;
+  const hi = (ys === null || ys === void 0 ? void 0 : ys.length) ?? 0;
   if (hi === 0) return mx;
   if (hi === 1) return mapper(mx, ys[0], x => [x]);
   return mx.map(row => select$1(row, ys, hi));
@@ -26,8 +26,8 @@ const select = (mx, ys) => {
  */
 
 const divide = (mx, indexes, hi) => {
-  hi = hi ?? (indexes == null ? void 0 : indexes.length);
-  let h = mx == null ? void 0 : mx.length,
+  hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);
+  let h = mx === null || mx === void 0 ? void 0 : mx.length,
       y;
   if (hi === 0) return {
     pick: Array(h),

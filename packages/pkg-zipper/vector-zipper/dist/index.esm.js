@@ -4,7 +4,7 @@ function duozipper(a, b) {
     hi,
     lo
   } = this;
-  const zip = Array(hi = hi ?? (a == null ? void 0 : a.length));
+  const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
 
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], i);
 
@@ -16,7 +16,7 @@ function trizipper(a, b, c) {
     hi,
     lo
   } = this;
-  const zip = Array(hi = hi ?? (a == null ? void 0 : a.length));
+  const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
 
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], i);
 
@@ -28,7 +28,7 @@ function quazipper(a, b, c, d) {
     hi,
     lo
   } = this;
-  const zip = Array(hi = hi ?? (a == null ? void 0 : a.length));
+  const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
 
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], d[i], i);
 
@@ -65,7 +65,7 @@ const zipper = (a, b, fn, hi) => duozipper.call({
 }, a, b);
 
 const mutazip = (va, vb, fn, hi) => {
-  hi = hi ?? (va == null ? void 0 : va.length);
+  hi = hi ?? (va === null || va === void 0 ? void 0 : va.length);
 
   for (let i = 0; i < hi; i++) va[i] = fn(va[i], vb[i], i);
 
@@ -73,7 +73,7 @@ const mutazip = (va, vb, fn, hi) => {
 };
 
 const iterzip = (va, vb, action, hi) => {
-  hi = hi ?? (va == null ? void 0 : va.length);
+  hi = hi ?? (va === null || va === void 0 ? void 0 : va.length);
 
   for (let i = 0; i < hi; i++) action(va[i], vb[i], i);
 

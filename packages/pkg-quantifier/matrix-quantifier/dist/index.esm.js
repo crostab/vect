@@ -10,7 +10,7 @@
 const every = (mx, crit, h, w) => {
   var _mx$;
 
-  h = h || (mx == null ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) == null ? void 0 : _mx$.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
   if (!w) return true;
 
   for (let i = 0, j, r; i < h; i++) for (j = 0, r = mx[i]; j < w; j++) if (!crit(r[j], i, j)) return false;
@@ -30,7 +30,7 @@ const every = (mx, crit, h, w) => {
 const some = (mx, crit, h, w) => {
   var _mx$;
 
-  h = h || (mx == null ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) == null ? void 0 : _mx$.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
   if (!w) return false;
 
   for (let i = 0, j, r; i < h; i++) for (j = 0, r = mx[i]; j < w; j++) if (crit(r[j], i, j)) return true;

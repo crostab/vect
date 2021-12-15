@@ -1,7 +1,7 @@
 import { FUN } from '@typen/enum-data-types';
 
 const stat = function (entries, l) {
-  l = l ?? (entries == null ? void 0 : entries.length);
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const {
     key,
     value

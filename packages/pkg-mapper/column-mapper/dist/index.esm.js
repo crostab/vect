@@ -1,11 +1,11 @@
 const iterate = function (mx, y, fn, l) {
-  l = l || (mx == null ? void 0 : mx.length);
+  l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
   for (let i = 0; i < l; i++) fn.call(this, mx[i][y], i);
 };
 
 function columnMapperDuplicate(mx, fn, l) {
-  l = l || (mx == null ? void 0 : mx.length);
+  l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
   const mt = Array(l);
 
   for (let i = 0, r, {
@@ -18,7 +18,7 @@ function columnMapperDuplicate(mx, fn, l) {
   return mt;
 }
 function columnMapper(mx, fn, l) {
-  l = l || (mx == null ? void 0 : mx.length);
+  l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
   const vec = Array(l);
 
   for (let i = 0, {
@@ -46,7 +46,7 @@ const mapper = (mx, y, fn, l) => columnMapper.call({
 }, mx, fn, l);
 
 function columnMutate(mx, fn, l) {
-  l = l || (mx == null ? void 0 : mx.length);
+  l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
   for (let i = 0, r, {
     y
@@ -70,7 +70,7 @@ const mutate = (mx, y, fn, l) => columnMutate.call({
 }, mx, fn, l);
 
 function columnIterate(mx, fn, l) {
-  l = l || (mx == null ? void 0 : mx.length);
+  l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
   for (let i = 0, {
     y,

@@ -20,6 +20,6 @@ const partition = (vec, indexes, hi) => {
  * @returns {*[]} - altered of original array
  */
 
-const splices = (vec, indexes, hi) => (hi = hi ?? (indexes == null ? void 0 : indexes.length), partition(vec, indexes, hi).splice(indexes[0], hi), vec);
+const splices = (vec, indexes, hi) => (hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length), partition(vec, indexes, hi).splice(indexes[0], hi), vec);
 
 export { partition, splices };
