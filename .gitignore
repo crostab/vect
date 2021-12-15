@@ -1,5 +1,5 @@
 .idea
-packages/*/*/dist
+*.cjs.js
 temp
 node_modules
 yarn.lock
