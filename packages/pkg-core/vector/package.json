@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "description": "Util for array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,16 +11,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/vector-algebra": "^0.4.9",
-    "@vect/vector-index": "^0.4.9",
-    "@vect/vector-indicator": "^0.4.9",
-    "@vect/vector-init": "^0.4.9",
-    "@vect/vector-mapper": "^0.4.9",
-    "@vect/vector-margin": "^0.4.9",
-    "@vect/vector-merge": "^0.4.9",
-    "@vect/vector-select": "^0.4.9",
-    "@vect/vector-update": "^0.4.9",
-    "@vect/vector-zipper": "^0.4.9"
+    "@vect/vector-algebra": "^0.4.10",
+    "@vect/vector-index": "^0.4.10",
+    "@vect/vector-indicator": "^0.4.10",
+    "@vect/vector-init": "^0.4.10",
+    "@vect/vector-mapper": "^0.4.10",
+    "@vect/vector-margin": "^0.4.10",
+    "@vect/vector-merge": "^0.4.10",
+    "@vect/vector-select": "^0.4.10",
+    "@vect/vector-update": "^0.4.10",
+    "@vect/vector-zipper": "^0.4.10"
   },
   "scripts": {
     "pub": "npm publish",
