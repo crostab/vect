@@ -1,9 +1,12 @@
 {
   "name": "@vect/enum-matrix-directions",
-  "version": "0.4.10",
+  "version": "0.5.0",
   "description": "A math util library",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "files": [
     "dist"
   ],
