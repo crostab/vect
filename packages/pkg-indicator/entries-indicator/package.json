@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-indicator",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Indicators for entries",
   "main": "dist/index.cjs",
   "exports": {

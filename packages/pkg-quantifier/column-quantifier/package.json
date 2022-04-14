@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-quantifier",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Every and some for 2-array",
   "main": "dist/index.cjs",
   "exports": {
