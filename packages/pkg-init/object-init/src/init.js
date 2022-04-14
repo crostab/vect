@@ -24,13 +24,20 @@ export const iso = (keys, value) => {
 
 export const init = entries => {
   let o = {}
-  for (let [k, v] of entries) o[k] = v
+  for (let [ k, v ] of entries) o[k] = v
   return o
 }
 
+export const initFromKeys = keys => {
+  let o = {}
+  for (let k of keys) o[k] = fn(k)
+  return o
+}
+
+
 export const initByValues = (entries, fn) => {
   let o = {}
-  for (let [k, v] of entries) o[k] = fn(v)
+  for (let [ k, v ] of entries) o[k] = fn(v)
   return o
 }
 
@@ -41,6 +48,6 @@ export const initByValues = (entries, fn) => {
  */
 export const ob = (...entries) => {
   let o = {}
-  for (let [k, v] of entries) o[k] = v
+  for (let [ k, v ] of entries) o[k] = v
   return o
 }

@@ -1,1 +1,3 @@
-export { wind, pair, iso, init, initByValues, ob } from './src/init'
+export {
+  wind, pair, iso, init, initByValues, ob, initFromKeys
+} from './src/init'
