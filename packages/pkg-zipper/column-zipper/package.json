@@ -2,7 +2,7 @@
   "name": "@vect/column-zipper",
   "version": "0.5.1",
   "description": "Zip function",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

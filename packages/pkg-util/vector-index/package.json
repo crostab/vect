@@ -2,7 +2,7 @@
   "name": "@vect/vector-index",
   "version": "0.5.1",
   "description": "Get value at specific positions of a vector",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

@@ -2,7 +2,7 @@
   "name": "@vect/column-quantifier",
   "version": "0.5.1",
   "description": "Every and some for 2-array",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

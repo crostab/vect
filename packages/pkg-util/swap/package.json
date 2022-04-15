@@ -2,7 +2,7 @@
   "name": "@vect/swap",
   "version": "0.5.1",
   "description": "Swap values at a pair of indexes",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

@@ -2,7 +2,7 @@
   "name": "@vect/matrix-indicator",
   "version": "0.5.1",
   "description": "Indicators for matrix",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

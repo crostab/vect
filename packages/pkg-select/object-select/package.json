@@ -2,7 +2,7 @@
   "name": "@vect/object-select",
   "version": "0.5.1",
   "description": "Select from object/array",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

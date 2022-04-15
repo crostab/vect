@@ -2,7 +2,7 @@
   "name": "@vect/entries-stat",
   "version": "0.5.1",
   "description": "Indicators for entries",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"

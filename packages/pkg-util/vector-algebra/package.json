@@ -2,7 +2,7 @@
   "name": "@vect/vector-algebra",
   "version": "0.5.1",
   "description": "An array util tool",
-  "main": "dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
