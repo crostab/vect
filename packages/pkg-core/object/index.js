@@ -19,6 +19,7 @@ export {
   select, selectObject, SelectObject,
   values, selectValues, SelectValues,
   lookupKeys,
+  firstKey, firstValue, firstEntry, lastKey, lastValue, lastEntry,
 }                                                                                    from '@vect/object-select'
 export { replenish }                                                                 from '@vect/object-update'
 
