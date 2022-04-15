@@ -22,15 +22,20 @@ export const iso = (keys, value) => {
   return o
 }
 
+/**
+ * @deprecated
+ * @param entries
+ * @returns {{}}
+ */
 export const init = entries => {
   let o = {}
   for (let [ k, v ] of entries) o[k] = v
   return o
 }
 
-export const initFromKeys = keys => {
+export const mapToObject = (vec, fn) => {
   let o = {}
-  for (let k of keys) o[k] = fn(k)
+  for (let k of vec) o[k] = fn(k)
   return o
 }
 
