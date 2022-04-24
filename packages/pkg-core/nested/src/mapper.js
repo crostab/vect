@@ -1,42 +1,42 @@
-export const iteratenested2 = (nested, fn) => {
-  iteratenested(nested, ([ x, yToV ]) => {
-    iteratenested(yToV, ([ y, v ]) => {
-      fn(x, y, v)
-    })
-  })
-}
-
-export const iteratenested = (nested, fn) => {
+export const iterate = (nested, fn) => {
+  let row
+  if (!nested) return
   for (let x in nested) {
-    const temp = nested[x]
-    for (let y in temp) {
-      action(temp[y])
+    if (!(row = nested[x])) continue
+    for (let y in row) {
+      fn(row[y], x, y)
     }
   }
 }
 
-export const iterate = (nested, onVXY) => {
+export const iterateXY = (nested, onXY) => {
+  let row
+  if (!nested) return
   for (let x in nested) {
-    const temp = nested[x]
-    for (let y in temp) {
-      onVXY(temp[y], x, y)
-    }
-  }
-}
-
-export const iterateKeys = (nested, onXY) => {
-  for (let x in nested) {
-    for (let y in nested[x]) {
+    if (!(row = nested[x])) continue
+    for (let y in row) {
       onXY(x, y)
     }
   }
 }
 
-export const iterateValues = (nested, onV) => {
+export const iterateY = (nested, onY) => {
+  let row
+  if (!nested) return
   for (let x in nested) {
-    const temp = nested[x]
-    for (let y in temp) {
-      onV(temp[y])
+    if (!(row = nested[x])) continue
+    for (let y in row) {
+      onY(y)
     }
   }
+}
+
+export const side = (nested) => {
+  return Object.keys(nested)
+}
+
+export const head = (nested) => {
+  const vec = []
+  iterateY(nested, y => { if (vec.indexOf(y) < 0) vec.push(y) })
+  return vec
 }

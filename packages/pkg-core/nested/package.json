@@ -13,8 +13,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-  },
   "scripts": {
     "pub": "npm publish",
     "test": "node -r @babel/register test/test.index.js"
