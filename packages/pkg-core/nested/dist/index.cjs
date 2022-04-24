@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const iterate = (nested, fn) => {
+const iterate = (nested, onVXY) => {
   let row;
   if (!nested) return;
 
@@ -10,7 +10,7 @@ const iterate = (nested, fn) => {
     if (!(row = nested[x])) continue;
 
     for (let y in row) {
-      fn(row[y], x, y);
+      onVXY(row[y], x, y);
     }
   }
 };
@@ -38,6 +38,43 @@ const iterateY = (nested, onY) => {
     }
   }
 };
+const indexedIterate = (nested, onXYV) => {
+  let row;
+  if (!nested) return;
+
+  for (let x in nested) {
+    if (!(row = nested[x])) continue;
+
+    for (let y in row) {
+      onXYV(x, y, row[y]);
+    }
+  }
+};
+const indexedMutate = (nested, fnXYV) => {
+  let row;
+  if (!nested) return;
+
+  for (let x in nested) {
+    if (!(row = nested[x])) continue;
+
+    for (let y in row) {
+      row[y] = fnXYV(x, y, row[y]);
+    }
+  }
+};
+function* indexedGenerator(nested, fnXYV) {
+  let row;
+  if (!nested) return;
+
+  for (let x in nested) {
+    if (!(row = nested[x])) continue;
+
+    for (let y in row) {
+      yield fnXYV(x, y, row[y]);
+    }
+  }
+}
+
 const side = nested => {
   return Object.keys(nested);
 };
@@ -67,6 +104,9 @@ const transpose = nested => {
 };
 
 exports.head = head;
+exports.indexedGenerator = indexedGenerator;
+exports.indexedIterate = indexedIterate;
+exports.indexedMutate = indexedMutate;
 exports.iterate = iterate;
 exports.iterateXY = iterateXY;
 exports.iterateY = iterateY;
