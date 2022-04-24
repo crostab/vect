@@ -1,6 +1,6 @@
 {
   "name": "@vect/enum-matrix-directions",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A math util library",
   "main": "./dist/index.cjs",
   "exports": {

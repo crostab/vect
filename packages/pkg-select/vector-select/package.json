@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-select",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A math util library",
   "main": "./dist/index.cjs",
   "exports": {
@@ -20,8 +20,8 @@
   "dependencies": {
     "@aryth/comparer": "^0.4.10",
     "@aryth/rand": "^0.4.10",
-    "@vect/swap": "^0.5.4",
-    "@vect/vector-update": "^0.5.4"
+    "@vect/swap": "^0.5.5",
+    "@vect/vector-update": "^0.5.5"
   },
   "repository": {
     "type": "git",
