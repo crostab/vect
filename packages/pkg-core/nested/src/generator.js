@@ -26,11 +26,12 @@ export function* indexed(nested, conf) {
   }
   if (typeof conf === OBJ) {
     const { by, to } = conf
-    let inner
+    let inner, v
     if (!nested) return
     for (let x in nested) {
       if ((inner = nested[x])) for (let y in inner) {
-        if (by(x, y, inner[y])) yield to(1, 'a', true)
+        v = inner[y]
+        if (by(x, y, v)) yield to(x, y, v)
       }
     }
   }
