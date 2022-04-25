@@ -1,9 +1,9 @@
 import { iterate } from './mapper'
 
 export const nestedToRows = (nested) => {
-  const rows = []
+  const inners = []
   iterate(nested, (v, x, y) => {
-    rows.push([ x, y, v ])
+    inners.push([x, y, v])
   })
-  return rows
+  return inners
 }
