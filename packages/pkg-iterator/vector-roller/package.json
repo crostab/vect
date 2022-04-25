@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-roller",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/vector-roller.test.js"
   },
   "dependencies": {
-    "@vect/vector-merge": "^0.5.5"
+    "@vect/vector-merge": "^0.5.6"
   },
   "repository": {
     "type": "git",
