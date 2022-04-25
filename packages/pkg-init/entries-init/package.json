@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-init",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,8 +18,8 @@
     "test": "node -r @babel/register test/entries-init.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.5.7",
-    "@vect/vector-zipper": "^0.5.7"
+    "@vect/vector-mapper": "^0.5.8",
+    "@vect/vector-zipper": "^0.5.8"
   },
   "repository": {
     "type": "git",
@@ -37,5 +37,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "356f8eed15e86268746cf0f0384b7b025d578637"
+  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
 }

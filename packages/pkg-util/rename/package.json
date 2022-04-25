@@ -1,6 +1,6 @@
 {
   "name": "@vect/rename",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -31,5 +31,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "356f8eed15e86268746cf0f0384b7b025d578637"
+  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
 }
