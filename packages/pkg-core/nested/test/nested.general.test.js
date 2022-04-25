@@ -1,7 +1,7 @@
 import { deco }                         from '@spare/deco'
 import { decoMatrix, logger, says, xr } from '@spare/logger'
 import { nestedToRows }                 from '../src/convert'
-import { head, side }                   from '../src/mapper'
+import { head, side }                   from '../src/indexes'
 import { transpose }                    from '../src/transpose'
 
 const glyphToLayerToMetrics = {
@@ -20,6 +20,6 @@ xr().side(layerToGlyphToMetrics|> side).head(layerToGlyphToMetrics|> head) |> sa
 
 layerToGlyphToMetrics |> deco |> says['nested'].br('transposed')
 
-glyphToLayerToMetrics |> nestedToRows |> decoMatrix |> says['rows']
+glyphToLayerToMetrics |> nestedToRows |> decoMatrix |> says['inners']
 
 

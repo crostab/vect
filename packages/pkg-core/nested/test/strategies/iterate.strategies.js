@@ -30,8 +30,8 @@ export const iterateValues = (nested, onV) => {
 }
 
 export const iterateXYV = (nested, onXYV) => {
-  iterateEntries(nested, ([ x, yToV ]) => {
-    iterateEntries(yToV, ([ y, v ]) => {
+  iterateEntries(nested, ([x, yToV]) => {
+    iterateEntries(yToV, ([y, v]) => {
       onXYV(x, y, v)
     })
   })

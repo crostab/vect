@@ -1,6 +1,6 @@
-import { deco }             from '@spare/deco'
-import { logger }           from '@spare/logger'
-import { indexedGenerator } from '../src/mapper'
+import { deco }    from '@spare/deco'
+import { logger }  from '@spare/logger'
+import { indexed } from '../src/generator'
 
 const glyphToLayerToMetrics = {
   A: { Lt: { l: 10, r: 10 }, Rg: { l: 8, r: 8 }, Bd: { l: 6, r: 6 } },
@@ -12,8 +12,10 @@ const glyphToLayerToMetrics = {
 }
 
 const test = () => {
-  const generator = indexedGenerator(glyphToLayerToMetrics, (x, y, v) => ({ x, y, v: v.l }));
-  [ ...generator ]  |> deco |> logger
+  const generator = indexed(glyphToLayerToMetrics,
+    (x, y, v) => ({ x, y, v: v.l }),
+  );
+  [...generator]  |> deco |> logger
 }
 
 test()
