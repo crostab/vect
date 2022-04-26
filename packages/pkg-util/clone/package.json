@@ -1,5 +1,5 @@
 {
-  "name": "@vect/matrix-size",
+  "name": "@vect/clone",
   "version": "0.5.12",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
@@ -10,22 +10,25 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@typen/enum-data-types": "^0.1.19",
+    "@typen/enum-object-types": "^0.1.19",
+    "@typen/typ": "^0.1.19"
+  },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/matrix-size.test.js"
+    "test": "node -r @babel/register test/test.index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "keywords": [
-    "array",
-    "vector",
-    "matrix",
-    "object"
+    "clone",
+    "function"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

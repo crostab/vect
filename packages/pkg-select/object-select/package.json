@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.5.8",
+  "version": "0.5.12",
   "description": "Select from object/array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,10 +18,10 @@
     "test": "node -r @babel/register test/object-select.test.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.4.10",
-    "@aryth/rand": "^0.4.10",
-    "@vect/swap": "^0.5.8",
-    "@vect/vector-mapper": "^0.5.8"
+    "@aryth/comparer": "^0.5.1",
+    "@aryth/rand": "^0.5.1",
+    "@vect/swap": "^0.5.12",
+    "@vect/vector-mapper": "^0.5.12"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
+  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
 }

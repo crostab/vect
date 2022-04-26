@@ -1,6 +1,6 @@
 {
   "name": "@vect/nested",
-  "version": "0.5.8",
+  "version": "0.5.12",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -11,7 +11,7 @@
     "dist"
   ],
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.17"
+    "@typen/enum-data-types": "^0.1.19"
   },
   "publishConfig": {
     "access": "public"
@@ -34,5 +34,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
+  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
 }

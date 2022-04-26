@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-index",
-  "version": "0.5.8",
+  "version": "0.5.12",
   "description": "Get value at specific positions of a vector",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/matrix-size.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.5.8"
+    "@vect/vector-mapper": "^0.5.12"
   },
   "repository": {
     "type": "git",
@@ -36,5 +36,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
+  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
 }

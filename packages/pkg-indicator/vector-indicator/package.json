@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-indicator",
-  "version": "0.5.8",
+  "version": "0.5.12",
   "description": "Indicators for vector",
   "main": "./dist/index.cjs",
   "exports": {
@@ -22,9 +22,9 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.4.10",
-    "@typen/enum-data-types": "^0.1.17",
-    "@typen/enum-object-types": "^0.1.17"
+    "@aryth/comparer": "^0.5.1",
+    "@typen/enum-data-types": "^0.1.19",
+    "@typen/enum-object-types": "^0.1.19"
   },
   "keywords": [
     "array",
@@ -40,5 +40,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "14f9ccebf7e2d232a494fe807620b259f7986bf8"
+  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
 }
