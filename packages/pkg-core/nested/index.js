@@ -2,4 +2,4 @@ export { iterate, iterateXY, iterateY, indexedIterate, indexedMutate, } from './
 export { side, head }                                                   from './src/indexes'
 export { nestedToRows }                                                 from './src/convert'
 export { transpose }                                                    from './src/transpose'
-export { indexed, simpleIndexed }                                       from './src/generator'
+export { indexed, simpleIndexed, filterIndexed, mappedIndexed }         from './src/generator'

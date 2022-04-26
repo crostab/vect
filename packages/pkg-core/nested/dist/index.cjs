@@ -94,13 +94,37 @@ const transpose = nested => {
   return o;
 };
 
-function* simpleIndexed(nested, to) {
+function* simpleIndexed(nested) {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
+  if (nested) for (let x in nested) {
     if (inner = nested[x]) for (let y in inner) {
-      yield to(x, y, inner[y]);
+      yield [x, y, inner[y]];
+    }
+  }
+}
+function* filterIndexed(nested, filter) {
+  let inner;
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
+      const v = inner[y];
+      if (filter(x, y, v)) yield [x, y, v];
+    }
+  }
+}
+function* mappedIndexed(nested, mapper) {
+  let inner;
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
+      yield mapper(x, y, inner[y]);
+    }
+  }
+}
+function* filterMappedIndexed(nested, filter, mapper) {
+  let inner;
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
+      const v = inner[y];
+      if (filter(x, y, v)) yield mapper(x, y, v);
     }
   }
 }
@@ -115,28 +139,25 @@ function* simpleIndexed(nested, to) {
  */
 
 function* indexed(nested, conf) {
-  if (typeof conf === enumDataTypes.FUN) {
-    yield* simpleIndexed(nested, conf);
-    return;
-  }
+  const by = conf === null || conf === void 0 ? void 0 : conf.by,
+        to = (conf === null || conf === void 0 ? void 0 : conf.to) ?? conf;
 
-  if (typeof conf === enumDataTypes.OBJ) {
-    const {
-      by,
-      to
-    } = conf;
-    let inner, v;
-    if (!nested) return;
-
-    for (let x in nested) {
-      if (inner = nested[x]) for (let y in inner) {
-        v = inner[y];
-        if (by(x, y, v)) yield to(x, y, v);
-      }
+  if (typeof by === enumDataTypes.FUN) {
+    if (typeof to === enumDataTypes.FUN) {
+      yield* filterMappedIndexed(nested, by, to);
+    } else {
+      yield* filterIndexed(nested, by);
+    }
+  } else {
+    if (typeof to === enumDataTypes.FUN) {
+      yield* mappedIndexed(nested, to);
+    } else {
+      yield* simpleIndexed(nested);
     }
   }
 }
 
+exports.filterIndexed = filterIndexed;
 exports.head = head;
 exports.indexed = indexed;
 exports.indexedIterate = indexedIterate;
@@ -144,6 +165,7 @@ exports.indexedMutate = indexedMutate;
 exports.iterate = iterate;
 exports.iterateXY = iterateXY;
 exports.iterateY = iterateY;
+exports.mappedIndexed = mappedIndexed;
 exports.nestedToRows = nestedToRows;
 exports.side = side;
 exports.simpleIndexed = simpleIndexed;

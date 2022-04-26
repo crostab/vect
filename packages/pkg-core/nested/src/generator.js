@@ -1,11 +1,39 @@
 import { FUN, OBJ } from '@typen/enum-data-types'
 
-export function* simpleIndexed(nested, to) {
+export function* simpleIndexed(nested) {
   let inner
-  if (!nested) return
-  for (let x in nested) {
+  if (nested) for (let x in nested) {
     if ((inner = nested[x])) for (let y in inner) {
-      yield to(x, y, inner[y])
+      yield [ x, y, inner[y] ]
+    }
+  }
+}
+
+export function* filterIndexed(nested, filter) {
+  let inner
+  if (nested) for (let x in nested) {
+    if ((inner = nested[x])) for (let y in inner) {
+      const v = inner[y]
+      if (filter(x, y, v)) yield [ x, y, v ]
+    }
+  }
+}
+
+export function* mappedIndexed(nested, mapper) {
+  let inner
+  if (nested) for (let x in nested) {
+    if ((inner = nested[x])) for (let y in inner) {
+      yield mapper(x, y, inner[y])
+    }
+  }
+}
+
+export function* filterMappedIndexed(nested, filter, mapper) {
+  let inner
+  if (nested) for (let x in nested) {
+    if ((inner = nested[x])) for (let y in inner) {
+      const v = inner[y]
+      if (filter(x, y, v)) yield mapper(x, y, v)
     }
   }
 }
@@ -20,20 +48,21 @@ export function* simpleIndexed(nested, to) {
  * @returns {Generator<*, void, *>}
  */
 export function* indexed(nested, conf) {
-  if (typeof conf === FUN) {
-    yield* simpleIndexed(nested, conf)
-    return
-  }
-  if (typeof conf === OBJ) {
-    const { by, to } = conf
-    let inner, v
-    if (!nested) return
-    for (let x in nested) {
-      if ((inner = nested[x])) for (let y in inner) {
-        v = inner[y]
-        if (by(x, y, v)) yield to(x, y, v)
-      }
+  const by = conf?.by, to = conf?.to ?? conf
+  if (typeof by === FUN) {
+    if (typeof to === FUN) {
+      yield* filterMappedIndexed(nested, by, to)
+    }
+    else {
+      yield* filterIndexed(nested, by)
     }
   }
-
+  else {
+    if (typeof to === FUN) {
+      yield* mappedIndexed(nested, to)
+    }
+    else {
+      yield* simpleIndexed(nested)
+    }
+  }
 }

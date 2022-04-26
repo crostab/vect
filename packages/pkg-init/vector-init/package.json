@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/vector-init.test.js"
   },
   "dependencies": {
-    "@aryth/math": "^0.5.0",
+    "@aryth/math": "^0.5.1",
     "@typen/nullish": "^0.1.19"
   },
   "repository": {
