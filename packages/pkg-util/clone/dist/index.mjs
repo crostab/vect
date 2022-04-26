@@ -1,5 +1,5 @@
-import { STR, NUM, BIG, FUN, OBJ, BOO, UND, SYM } from '@typen/enum-data-types';
-import { ARRAY, OBJECT, DATE, MAP, SET } from '@typen/enum-object-types';
+import { STR, NUM, BIG, FUN, BOO, UND, SYM, OBJ } from '@typen/enum-data-types';
+import { ARRAY, OBJECT, DATE, SET, MAP } from '@typen/enum-object-types';
 import { typ } from '@typen/typ';
 
 function clone(node) {
@@ -7,19 +7,19 @@ function clone(node) {
   if (t === STR) return node;
   if (t === NUM || t === BIG) return node;
   if (t === FUN) return node;
+  if (t === BOO) return node;
+  if (t === UND || t === SYM) return node;
 
   if (t === OBJ) {
     const pt = typ(node);
     if (pt === ARRAY) return cloneArray(node);
     if (pt === OBJECT) return cloneObject(node);
     if (pt === DATE) return new Date(+node);
-    if (pt === MAP) return cloneMap(node);
     if (pt === SET) return cloneSet(node);
+    if (pt === MAP) return cloneMap(node);
     return node;
   }
 
-  if (t === BOO) return node;
-  if (t === UND || t === SYM) return node;
   return node;
 }
 /**

@@ -1,4 +1,4 @@
-import { FUN, OBJ } from '@typen/enum-data-types'
+import { FUN } from '@typen/enum-data-types'
 
 export function* simpleIndexed(nested) {
   let inner

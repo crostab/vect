@@ -75,5 +75,3 @@ export {
   vectorToObject as mapToObject,
   vectorToObject as initFromKeys
 }
-
-
