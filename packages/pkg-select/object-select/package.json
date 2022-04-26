@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "description": "Select from object/array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -20,8 +20,8 @@
   "dependencies": {
     "@aryth/comparer": "^0.5.1",
     "@aryth/rand": "^0.5.1",
-    "@vect/swap": "^0.5.9",
-    "@vect/vector-mapper": "^0.5.9"
+    "@vect/swap": "^0.5.10",
+    "@vect/vector-mapper": "^0.5.10"
   },
   "repository": {
     "type": "git",
