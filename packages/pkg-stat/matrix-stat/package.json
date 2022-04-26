@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-stat",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Indicators for matrix",
   "main": "./dist/index.cjs",
   "exports": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.1.19",
-    "@vect/matrix-size": "^0.5.8"
+    "@vect/matrix-size": "^0.5.9"
   },
   "keywords": [
     "matrix",
