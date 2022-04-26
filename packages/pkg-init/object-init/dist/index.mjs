@@ -1,16 +1,16 @@
-const wind = (keys, values) => {
-  const o = {},
-        {
-    length
-  } = keys;
+import { FUN } from '@typen/enum-data-types';
 
-  for (let i = 0; i < length; i++) o[keys[i]] = values[i];
+/**
+ * Shallow.
+ * @param {...[*,*]} entries - An array of key-value pair, [key, value]
+ * @returns {Object|Object<string,*>}
+ */
 
-  return o;
-};
-const pair = (key, value) => {
-  const o = {};
-  o[key] = value;
+const ob = (...entries) => {
+  let o = {};
+
+  for (let [k, v] of entries) o[k] = v;
+
   return o;
 };
 /**
@@ -27,20 +27,45 @@ const iso = (keys, value) => {
 
   return o;
 };
+const wind = (keys, values) => {
+  const o = {},
+        {
+    length
+  } = keys;
+
+  for (let i = 0; i < length; i++) o[keys[i]] = values[i];
+
+  return o;
+};
+const pair = (key, value) => {
+  const o = {};
+  o[key] = value;
+  return o;
+};
 /**
- * @deprecated
- * @param entries
+ * @param {Array} vec
+ * @param {function} [fn]
+ * @returns {Object}
+ */
+
+const init = (vec, fn) => {
+  return typeof fn === FUN ? vectorToObject(vec, fn) : entriesToObject(vec);
+};
+/**
+ *
+ * @param {[*,*][]} entries
+ * @param {function} [valToVal]
  * @returns {{}}
  */
 
-const init = entries => {
+const entriesToObject = (entries, valToVal) => {
   let o = {};
 
   for (let [k, v] of entries) o[k] = v;
 
   return o;
 };
-const mapToObject = (vec, fn) => {
+const vectorToObject = (vec, fn) => {
   let o = {};
 
   for (let k of vec) o[k] = fn(k);
@@ -54,18 +79,5 @@ const initByValues = (entries, fn) => {
 
   return o;
 };
-/**
- * Shallow.
- * @param {...[*,*]} entries - An array of key-value pair, [key, value]
- * @returns {Object|Object<string,*>}
- */
 
-const ob = (...entries) => {
-  let o = {};
-
-  for (let [k, v] of entries) o[k] = v;
-
-  return o;
-};
-
-export { init, initByValues, mapToObject as initFromKeys, iso, mapToObject, ob, pair, wind };
+export { entriesToObject, init, initByValues, vectorToObject as initFromKeys, iso, vectorToObject as mapToObject, ob, pair, vectorToObject, wind };

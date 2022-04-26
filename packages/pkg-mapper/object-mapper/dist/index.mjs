@@ -13,13 +13,45 @@ const iterateEntries = function (o, fn, l) {
   for (let i = 0; i < l; i++) fn.call(this, ents[i], i);
 };
 
-function mapper(o, fn) {
-  const ob = {};
+function mapValues(o, valToVal) {
+  const t = {};
 
-  for (let k in o) ob[k] = fn.call(this, o[k]);
+  for (let k in o) {
+    t[k] = valToVal.call(this, o[k]);
+  }
 
-  return ob;
+  return t;
 }
+function mapKeys(o, keyToKey) {
+  const t = {};
+
+  for (let k in o) {
+    const k2 = keyToKey.call(this, k);
+    t[k2] = o[k];
+  }
+
+  return t;
+}
+function mapEntries(o, entToEnt) {
+  const t = {};
+  let i = 0;
+
+  for (let k in o) {
+    const [k2, v2] = entToEnt.call(this, [k, o[k]], i++);
+    t[k2] = v2;
+  }
+
+  return t;
+} // export function mapEntries(o, fn, l) {
+//   const t = {}, ents = Object.entries(o)
+//   l = l ?? ents.length
+//   let i = 0
+//   for (let i = 0, k, v; i < l; i++) {
+//     [k, v] = fn.call(this, ents[i], i)
+//     t[k] = v
+//   }
+//   return t
+// }
 
 function mutate(o, fn) {
   for (let k in o) o[k] = fn.call(this, o[k]);
@@ -27,25 +59,4 @@ function mutate(o, fn) {
   return o;
 }
 
-function mapKeys(o, fn) {
-  const ob = {};
-
-  for (let k in o) ob[fn.call(this, k)] = o[k];
-
-  return ob;
-}
-
-function mapEntries(o, fn, l) {
-  const ob = {},
-        ents = Object.entries(o);
-  l = l ?? ents.length;
-
-  for (let i = 0, k, v; i < l; i++) {
-    [k, v] = fn.call(this, ents[i], i);
-    ob[k] = v;
-  }
-
-  return ob;
-}
-
-export { iterate, iterateEntries, iterateKeys, mapEntries, mapKeys, mapper, mutate };
+export { iterate, iterateEntries, iterateKeys, mapEntries, mapKeys, mapValues, mapValues as mapper, mutate };
