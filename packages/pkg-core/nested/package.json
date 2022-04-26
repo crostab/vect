@@ -11,7 +11,7 @@
     "dist"
   ],
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.17"
+    "@typen/enum-data-types": "^0.1.19"
   },
   "publishConfig": {
     "access": "public"
