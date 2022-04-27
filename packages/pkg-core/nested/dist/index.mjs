@@ -153,4 +153,8 @@ function* indexed(nested, conf) {
   }
 }
 
-export { filterIndexed, head, indexed, indexedIterate, indexedMutate, iterate, iterateXY, iterateY, mappedIndexed, nestedToRows, side, simpleIndexed, transpose };
+function update(x, y, v) {
+  (this[x] ?? (this[x] = {}))[y] = v;
+}
+
+export { filterIndexed, head, indexed, indexedIterate, indexedMutate, iterate, iterateXY, iterateY, mappedIndexed, nestedToRows, side, simpleIndexed, transpose, update };

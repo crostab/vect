@@ -1,6 +1,6 @@
 import { SimpleVectorCollection } from '@foba/foo'
-import { says, xr } from '@spare/logger'
-import { splices } from '../src/splices'
+import { says, xr }               from '@spare/logger'
+import { splices }                from '../src/splices'
 
 const Vecs = SimpleVectorCollection
 for (const [key, vector] of Object.entries(Vecs)) {

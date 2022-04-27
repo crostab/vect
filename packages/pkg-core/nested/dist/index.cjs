@@ -157,6 +157,10 @@ function* indexed(nested, conf) {
   }
 }
 
+function update(x, y, v) {
+  (this[x] ?? (this[x] = {}))[y] = v;
+}
+
 exports.filterIndexed = filterIndexed;
 exports.head = head;
 exports.indexed = indexed;
@@ -170,3 +174,4 @@ exports.nestedToRows = nestedToRows;
 exports.side = side;
 exports.simpleIndexed = simpleIndexed;
 exports.transpose = transpose;
+exports.update = update;
