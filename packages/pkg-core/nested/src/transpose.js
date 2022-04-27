@@ -1,10 +1,8 @@
-import { iterate } from './mapper'
+import { indexedIterate } from './mapper'
+import { update }         from './update'
 
 export const transpose = (nested) => {
   const o = {}
-  iterate(nested, (v, x, y) => {
-    const xToV = o[y] ?? (o[y] = {})
-    xToV[x] = v
-  })
+  indexedIterate(nested, (x, y, v) => update.call(o, y, x, v))
   return o
 }
