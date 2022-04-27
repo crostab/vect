@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-merge",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "A math util library",
   "main": "./dist/index.cjs",
   "exports": {

@@ -1,6 +1,6 @@
 {
   "name": "@vect/merge-acquire",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "Swap values at a pair of indexes",
   "main": "./dist/index.cjs",
   "exports": {
