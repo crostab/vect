@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-transpose",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/transpose.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.5.14"
+    "@vect/vector-mapper": "^0.5.15"
   },
   "repository": {
     "type": "git",
@@ -36,5 +36,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
+  "gitHead": "04e988317ee33eac9fe6e873a04447f151cab6f7"
 }

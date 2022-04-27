@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -14,16 +14,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/vector-algebra": "^0.5.14",
-    "@vect/vector-index": "^0.5.14",
-    "@vect/vector-indicator": "^0.5.14",
-    "@vect/vector-init": "^0.5.14",
-    "@vect/vector-mapper": "^0.5.14",
-    "@vect/vector-margin": "^0.5.14",
-    "@vect/vector-merge": "^0.5.14",
-    "@vect/vector-select": "^0.5.14",
-    "@vect/vector-update": "^0.5.14",
-    "@vect/vector-zipper": "^0.5.14"
+    "@vect/vector-algebra": "^0.5.15",
+    "@vect/vector-index": "^0.5.15",
+    "@vect/vector-indicator": "^0.5.15",
+    "@vect/vector-init": "^0.5.15",
+    "@vect/vector-mapper": "^0.5.15",
+    "@vect/vector-margin": "^0.5.15",
+    "@vect/vector-merge": "^0.5.15",
+    "@vect/vector-select": "^0.5.15",
+    "@vect/vector-update": "^0.5.15",
+    "@vect/vector-zipper": "^0.5.15"
   },
   "scripts": {
     "pub": "npm publish",
@@ -43,5 +43,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "242af91d68aaf8814a929e44adc82c590fcc8021"
+  "gitHead": "04e988317ee33eac9fe6e873a04447f151cab6f7"
 }
