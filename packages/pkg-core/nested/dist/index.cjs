@@ -6,60 +6,40 @@ var enumDataTypes = require('@typen/enum-data-types');
 
 const iterate = (nested, onVXY) => {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
-    if (!(inner = nested[x])) continue;
-
-    for (let y in inner) {
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
       onVXY(inner[y], x, y);
     }
   }
 };
 const iterateXY = (nested, onXY) => {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
-    if (!(inner = nested[x])) continue;
-
-    for (let y in inner) {
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
       onXY(x, y);
     }
   }
 };
 const iterateY = (nested, onY) => {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
-    if (!(inner = nested[x])) continue;
-
-    for (let y in inner) {
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
       onY(y);
     }
   }
 };
 const indexedIterate = (nested, onXYV) => {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
-    if (!(inner = nested[x])) continue;
-
-    for (let y in inner) {
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
       onXYV(x, y, inner[y]);
     }
   }
 };
 const indexedMutate = (nested, fnXYV) => {
   let inner;
-  if (!nested) return;
-
-  for (let x in nested) {
-    if (!(inner = nested[x])) continue;
-
-    for (let y in inner) {
+  if (nested) for (let x in nested) {
+    if (inner = nested[x]) for (let y in inner) {
       inner[y] = fnXYV(x, y, inner[y]);
     }
   }
@@ -85,12 +65,13 @@ const nestedToRows = nested => {
   return inners;
 };
 
+function update(x, y, v) {
+  (this[x] ?? (this[x] = {}))[y] = v;
+}
+
 const transpose = nested => {
   const o = {};
-  iterate(nested, (v, x, y) => {
-    const xToV = o[y] ?? (o[y] = {});
-    xToV[x] = v;
-  });
+  indexedIterate(nested, (x, y, v) => update.call(o, y, x, v));
   return o;
 };
 
@@ -134,7 +115,7 @@ function* filterMappedIndexed(nested, filter, mapper) {
  * @param {function|{
  * [by]:function,
  * to:function
- * }} conf
+ * }} [conf]
  * @returns {Generator<*, void, *>}
  */
 
@@ -155,10 +136,6 @@ function* indexed(nested, conf) {
       yield* simpleIndexed(nested);
     }
   }
-}
-
-function update(x, y, v) {
-  (this[x] ?? (this[x] = {}))[y] = v;
 }
 
 exports.filterIndexed = filterIndexed;
