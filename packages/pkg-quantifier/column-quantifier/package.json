@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-quantifier",
-  "version": "0.5.15",
+  "version": "0.5.16",
   "description": "Every and some for 2-array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -35,5 +35,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "04e988317ee33eac9fe6e873a04447f151cab6f7"
+  "gitHead": "c8fd94c6a02b9134e0994bc86891553068379885"
 }
