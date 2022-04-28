@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-quantifier",
-  "version": "0.5.17",
+  "version": "0.5.18",
   "description": "Every and some for 2-array",
   "main": "./dist/index.cjs",
   "exports": {

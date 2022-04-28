@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-update",
-  "version": "0.5.17",
+  "version": "0.5.18",
   "description": "Update object",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/splices.test.js"
   },
   "dependencies": {
-    "@vect/swap": "^0.5.17"
+    "@vect/swap": "^0.5.18"
   },
   "repository": {
     "type": "git",
