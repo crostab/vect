@@ -65,13 +65,23 @@ const nestedToRows = nested => {
   return inners;
 };
 
-function update(x, y, v) {
+function updateCell(x, y, v) {
   (this[x] ?? (this[x] = {}))[y] = v;
+}
+function appendCell(x, y, v) {
+  const temp = this[x] ?? (this[x] = {});
+  const list = temp[y] ?? (temp[y] = []);
+  list.push(v);
+}
+function assignCell(x, y, k, v) {
+  const temp = this[x] ?? (this[x] = {});
+  const obj = temp[y] ?? (temp[y] = {});
+  obj[k] = v;
 }
 
 const transpose = nested => {
   const o = {};
-  indexedIterate(nested, (x, y, v) => update.call(o, y, x, v));
+  indexedIterate(nested, (x, y, v) => updateCell.call(o, y, x, v));
   return o;
 };
 
@@ -138,6 +148,8 @@ function* indexed(nested, conf) {
   }
 }
 
+exports.appendCell = appendCell;
+exports.assignCell = assignCell;
 exports.filterIndexed = filterIndexed;
 exports.head = head;
 exports.indexed = indexed;
@@ -151,4 +163,5 @@ exports.nestedToRows = nestedToRows;
 exports.side = side;
 exports.simpleIndexed = simpleIndexed;
 exports.transpose = transpose;
-exports.update = update;
+exports.update = updateCell;
+exports.updateCell = updateCell;

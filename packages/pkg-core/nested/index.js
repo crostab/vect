@@ -3,4 +3,4 @@ export { side, head }                                                   from './
 export { nestedToRows }                                                 from './src/convert'
 export { transpose }                                                    from './src/transpose'
 export { indexed, simpleIndexed, filterIndexed, mappedIndexed }         from './src/generator'
-export { update }                                                       from './src/update'
+export { updateCell, appendCell, assignCell, updateCell as update }     from './src/update'
