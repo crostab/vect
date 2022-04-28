@@ -41,10 +41,7 @@ export function* filterMappedIndexed(nested, filter, mapper) {
 /**
  *
  * @param {Object<string,Object<string,any>>} nested
- * @param {function|{
- * [by]:function,
- * to:function
- * }} [conf]
+ * @param {function|{ [by]:function, to:function }} [conf]
  * @returns {Generator<*, void, *>}
  */
 export function* indexed(nested, conf) {

@@ -118,10 +118,7 @@ function* filterMappedIndexed(nested, filter, mapper) {
 /**
  *
  * @param {Object<string,Object<string,any>>} nested
- * @param {function|{
- * [by]:function,
- * to:function
- * }} [conf]
+ * @param {function|{ [by]:function, to:function }} [conf]
  * @returns {Generator<*, void, *>}
  */
 
@@ -144,4 +141,4 @@ function* indexed(nested, conf) {
   }
 }
 
-export { appendCell, assignCell, filterIndexed, head, indexed, indexedIterate, indexedMutate, iterate, iterateXY, iterateY, mappedIndexed, nestedToRows, side, simpleIndexed, transpose, updateCell as update, updateCell };
+export { appendCell, assignCell, filterIndexed, filterMappedIndexed, head, indexed, indexedIterate, indexedMutate, iterate, iterateXY, iterateY, mappedIndexed, nestedToRows, side, simpleIndexed, transpose, updateCell as update, updateCell };

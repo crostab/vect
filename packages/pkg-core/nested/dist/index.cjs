@@ -122,10 +122,7 @@ function* filterMappedIndexed(nested, filter, mapper) {
 /**
  *
  * @param {Object<string,Object<string,any>>} nested
- * @param {function|{
- * [by]:function,
- * to:function
- * }} [conf]
+ * @param {function|{ [by]:function, to:function }} [conf]
  * @returns {Generator<*, void, *>}
  */
 
@@ -151,6 +148,7 @@ function* indexed(nested, conf) {
 exports.appendCell = appendCell;
 exports.assignCell = assignCell;
 exports.filterIndexed = filterIndexed;
+exports.filterMappedIndexed = filterMappedIndexed;
 exports.head = head;
 exports.indexed = indexed;
 exports.indexedIterate = indexedIterate;
