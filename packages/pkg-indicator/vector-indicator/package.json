@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-indicator",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "description": "Indicators for vector",
   "main": "./dist/index.cjs",
   "exports": {

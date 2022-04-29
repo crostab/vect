@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-margin",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "description": "Util for 2d-array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@vect/vector-margin": "^0.5.19"
+    "@vect/vector-margin": "^0.5.20"
   },
   "repository": {
     "type": "git",
