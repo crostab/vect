@@ -132,4 +132,25 @@ const lastEntry = o => {
   return [k, o[k]];
 };
 
-export { SelectObject, SelectValues, firstEntry, firstKey, firstValue, lastEntry, lastKey, lastValue, leap, lookupKeys, select, selectObject, selectValues, shuffle, values };
+const filter = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(k, v)) t[k] = v;
+  }
+
+  return t;
+};
+const filterByValue = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(v)) t[k] = v;
+  }
+
+  return t;
+};
+
+export { SelectObject, SelectValues, filter, filterByValue, firstEntry, firstKey, firstValue, lastEntry, lastKey, lastValue, leap, lookupKeys, select, selectObject, selectValues, shuffle, values };

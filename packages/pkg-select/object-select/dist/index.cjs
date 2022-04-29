@@ -136,8 +136,31 @@ const lastEntry = o => {
   return [k, o[k]];
 };
 
+const filter = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(k, v)) t[k] = v;
+  }
+
+  return t;
+};
+const filterByValue = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(v)) t[k] = v;
+  }
+
+  return t;
+};
+
 exports.SelectObject = SelectObject;
 exports.SelectValues = SelectValues;
+exports.filter = filter;
+exports.filterByValue = filterByValue;
 exports.firstEntry = firstEntry;
 exports.firstKey = firstKey;
 exports.firstValue = firstValue;
