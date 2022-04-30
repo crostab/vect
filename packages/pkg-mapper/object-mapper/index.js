@@ -8,7 +8,8 @@ export {
   mapKeys,
   mapValues,
   mapEntries,
-  mapValues as mapper
+  mapValues as mapper,
+  mapKeyToValue
 }                 from './src/mapper'
 export { mutate } from './src/mutate'
 export {
