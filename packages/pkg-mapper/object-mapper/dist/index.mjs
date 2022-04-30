@@ -41,11 +41,11 @@ function mapEntries(o, entToEnt) {
 
   return t;
 }
-function mapKeyToValue(o, keyToVal) {
+function mapKeyValue(o, keyToVal) {
   const t = {};
 
   for (let k in o) {
-    t[k] = keyToVal.call(this, k);
+    t[k] = keyToVal.call(this, k, o[k]);
   }
 
   return t;
@@ -108,4 +108,4 @@ function* indexed(o, conf) {
   }
 }
 
-export { filterIndexed, filterMappedIndexed, indexed, iterateValues as iterate, iterateEntries, iterateKeys, iterateValues, mapEntries, mapKeyToValue, mapKeys, mapValues, mappedIndexed, mapValues as mapper, mutate, simpleIndexed };
+export { filterIndexed, filterMappedIndexed, indexed, iterateValues as iterate, iterateEntries, iterateKeys, iterateValues, mapEntries, mapKeyValue, mapKeys, mapValues, mappedIndexed, mapValues as mapper, mutate, simpleIndexed };

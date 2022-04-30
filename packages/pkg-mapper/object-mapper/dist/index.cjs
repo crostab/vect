@@ -45,11 +45,11 @@ function mapEntries(o, entToEnt) {
 
   return t;
 }
-function mapKeyToValue(o, keyToVal) {
+function mapKeyValue(o, keyToVal) {
   const t = {};
 
   for (let k in o) {
-    t[k] = keyToVal.call(this, k);
+    t[k] = keyToVal.call(this, k, o[k]);
   }
 
   return t;
@@ -120,7 +120,7 @@ exports.iterateEntries = iterateEntries;
 exports.iterateKeys = iterateKeys;
 exports.iterateValues = iterateValues;
 exports.mapEntries = mapEntries;
-exports.mapKeyToValue = mapKeyToValue;
+exports.mapKeyValue = mapKeyValue;
 exports.mapKeys = mapKeys;
 exports.mapValues = mapValues;
 exports.mappedIndexed = mappedIndexed;

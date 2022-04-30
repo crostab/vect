@@ -1,5 +1,5 @@
 15 error Error: Command failed with exit code 1: git remote update
-15 error fatal: unable to access 'https://github.com/crostab/vect.git/': Failed to connect to github.com port 443: Timed out
+15 error fatal: unable to access 'https://github.com/crostab/vect.git/': OpenSSL SSL_read: Connection was reset, errno 10054
 15 error error: Could not fetch origin
 15 error Fetching origin
 15 error     at makeError (C:\Users\hoyeu\banyan\vect\node_modules\execa\lib\error.js:60:11)

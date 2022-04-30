@@ -9,7 +9,7 @@ export {
   mapValues,
   mapEntries,
   mapValues as mapper,
-  mapKeyToValue
+  mapKeyValue
 }                 from './src/mapper'
 export { mutate } from './src/mutate'
 export {

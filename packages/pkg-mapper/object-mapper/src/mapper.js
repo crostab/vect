@@ -25,10 +25,10 @@ export function mapEntries(o, entToEnt) {
   return t
 }
 
-export function mapKeyToValue(o, keyToVal) {
+export function mapKeyValue(o, keyToVal) {
   const t = {}
   for (let k in o) {
-    t[k] = keyToVal.call(this, k)
+    t[k] = keyToVal.call(this, k, o[k])
   }
   return t
 }
