@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-mapper",
-  "version": "0.5.21",
+  "version": "0.5.22",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
