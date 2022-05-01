@@ -41,6 +41,7 @@ export const indexedMutate = (nested, fnXYV) => {
       inner[y] = fnXYV(x, y, inner[y])
     }
   }
+  return nested
 }
 
 
