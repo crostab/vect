@@ -10,4 +10,13 @@ const replenish = (object, another) => {
   return object;
 };
 
+function appendValue(k, v) {
+  (this[k] ?? (this[k] = [])).push(v);
+}
+function assignValue(k, i, v) {
+  (this[y] ?? (this[y] = {}))[i] = v;
+}
+
+exports.appendValue = appendValue;
+exports.assignValue = assignValue;
 exports.replenish = replenish;

@@ -6,4 +6,11 @@ const replenish = (object, another) => {
   return object;
 };
 
-export { replenish };
+function appendValue(k, v) {
+  (this[k] ?? (this[k] = [])).push(v);
+}
+function assignValue(k, i, v) {
+  (this[y] ?? (this[y] = {}))[i] = v;
+}
+
+export { appendValue, assignValue, replenish };
