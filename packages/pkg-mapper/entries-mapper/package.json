@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-mapper",
-  "version": "0.5.22",
+  "version": "0.5.23",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {

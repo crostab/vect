@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-zipper",
-  "version": "0.5.22",
+  "version": "0.5.23",
   "description": "Zip function",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/columns-zipper.test.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.5.22"
+    "@vect/column-getter": "^0.5.23"
   },
   "repository": {
     "type": "git",
