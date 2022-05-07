@@ -1,0 +1,40 @@
+{
+  "name": "@vect/object-index",
+  "version": "0.5.23",
+  "description": "Get value at specific positions of a object",
+  "main": "dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/matrix-index.test.js"
+  },
+  "dependencies": {
+    "@vect/vector-mapper": "^0.5.23"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "array",
+    "vector",
+    "matrix",
+    "object"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "bb5a5b3cba833df9034d2e2dcb6dd7a7e9bf05be"
+}
