@@ -1,4 +1,13 @@
-export function mapValues(o, valToVal) {
+export function mapKey(o, keyToKey) {
+  const t = {}
+  for (let k in o) {
+    const k2 = keyToKey.call(this, k)
+    t[k2] = o[k]
+  }
+  return t
+}
+
+export function mapVal(o, valToVal) {
   const t = {}
   for (let k in o) {
     t[k] = valToVal.call(this, o[k])
@@ -6,11 +15,11 @@ export function mapValues(o, valToVal) {
   return t
 }
 
-export function mapKeys(o, keyToKey) {
+export function mapEntry(o, kvToEnt) {
   const t = {}
   for (let k in o) {
-    const k2 = keyToKey.call(this, k)
-    t[k2] = o[k]
+    const [ k2, v2 ] = kvToEnt.call(this, k, o[k])
+    t[k2] = v2
   }
   return t
 }
@@ -25,7 +34,7 @@ export function mapEntries(o, entToEnt) {
   return t
 }
 
-export function mapKeyValue(o, keyToVal) {
+export function mapKeyVal(o, keyToVal) {
   const t = {}
   for (let k in o) {
     t[k] = keyToVal.call(this, k, o[k])
