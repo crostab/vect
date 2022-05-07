@@ -17,6 +17,16 @@ export const lastEntry = o => {
   const k = last(o)
   return [ k, o[k] ]
 }
+
+export function getOr(x, fn = Object) {
+  return (this[x] ?? (this[x] = fn()))
+}
+
+export function getOrVec(x) {
+  return (this[x] ?? (this[x] = []))
+}
+
+
 export const len = (o) => {
   let hi = 0
   for (let k in o) hi++
