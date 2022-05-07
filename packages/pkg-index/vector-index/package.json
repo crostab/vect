@@ -2,7 +2,7 @@
   "name": "@vect/vector-index",
   "version": "0.5.23",
   "description": "Get value at specific positions of a vector",
-  "main": "./dist/index.cjs",
+  "main": "dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/matrix-size.test.js"
+    "test": "node -r @babel/register test/matrix-index.test.js"
   },
   "dependencies": {
     "@vect/vector-mapper": "^0.5.23"
