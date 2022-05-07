@@ -1,8 +1,8 @@
 {
-  "name": "@vect/matrix-size",
+  "name": "@vect/matrix-index",
   "version": "0.5.23",
-  "description": "An array util tool",
-  "main": "./dist/index.cjs",
+  "description": "An matrix index tool",
+  "main": "dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/matrix-size.test.js"
+    "test": "node -r @babel/register test/matrix-index.test.js"
   },
   "repository": {
     "type": "git",
