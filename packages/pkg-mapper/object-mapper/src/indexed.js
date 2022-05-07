@@ -1,50 +1,41 @@
 import { FUN } from '@typen/enum-data-types'
 
-export function* simpleIndexed(o) {
+export function* indexedOf(o) {
   if (o) for (let k in o) {
-    yield [k, o[k]]
+    yield [ k, o[k] ]
   }
 }
 
-export function* filterIndexed(o, filter) {
+export function* indexedBy(o, by) {
   if (o) for (let k in o) {
     const v = o[k]
-    if (filter(k, v)) yield [k, v]
+    if (by(k, v)) yield [ k, v ]
   }
 }
 
-export function* mappedIndexed(o, mapper) {
+export function* indexedTo(o, to) {
   if (o) for (let k in o) {
-    yield mapper(k, o[k])
+    yield to(k, o[k])
   }
 }
 
-export function* filterMappedIndexed(o, filter, mapper) {
+export function* indexed(o, by, to) {
+  if (!by && !to) return yield* indexedOf(o)
+  if (!to) return yield* indexedBy(o, by)
   if (o) for (let k in o) {
     const v = o[k]
-    if (filter(k, v)) yield mapper(k, v)
+    if (by(k, v)) yield to(k, v)
   }
 }
 
 /**
- *
- * @param {Object<string,Object<string,any>>} o
+ * @param {Object<string,any>} o
  * @param {function|{ [by]:function, to:function }} [conf]
  * @returns {Generator<*, void, *>}
  */
-export function* indexed(o, conf) {
+export function* indexedVia(o, conf) {
   const by = conf?.by, to = conf?.to ?? conf
-  if (typeof by === FUN) {
-    if (typeof to === FUN) {
-      yield* filterMappedIndexed(o, by, to)
-    } else {
-      yield* filterIndexed(o, by)
-    }
-  } else {
-    if (typeof to === FUN) {
-      yield* mappedIndexed(o, to)
-    } else {
-      yield* simpleIndexed(o)
-    }
-  }
+  yield* typeof by === FUN
+    ? typeof to === FUN ? indexed(o, by, to) : indexedBy(o, by)
+    : typeof to === FUN ? indexedTo(o, to) : indexedOf(o)
 }
