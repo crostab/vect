@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-index",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Get value at specific positions of a object",
   "main": "dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/matrix-index.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "^0.6.0"
+    "@vect/vector-mapper": "^0.6.1"
   },
   "repository": {
     "type": "git",
