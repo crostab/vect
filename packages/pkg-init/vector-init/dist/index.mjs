@@ -56,6 +56,13 @@ const init = (size, fn) => {
 
   return Array(size).fill(null).map((_, i) => fn(i));
 };
+function collect(key, size) {
+  const vec = Array(size);
+
+  for (let i = 0; i < size; i++) vec[i] = this[key];
+
+  return vec;
+}
 /**
  *
  * @param {number} size length
@@ -95,4 +102,4 @@ const tap = (...list) => {
   return ve;
 };
 
-export { draft, init, iso, range, seq, tap };
+export { collect, draft, init, iso, range, seq, tap };
