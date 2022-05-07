@@ -27,6 +27,13 @@ export const init = (size, fn) => {
   return Array(size).fill(null).map((_, i) => fn(i))
 }
 
+export function collect(key, hi) {
+  const vec = Array(hi)
+  for (let i = 0; i < hi; i++) vec[i] = this[key]
+  return vec
+}
+
+
 /**
  *
  * @param {number} size length
@@ -46,7 +53,8 @@ export const range = (start, end) => {
   if (start <= end) {
     l = end - start, v = new Array(++l)
     for (let i = 0; i < l; i++) v[i] = start++
-  } else {
+  }
+  else {
     l = start - end, v = new Array(++l)
     for (--l; l >= 0; l--) v[l] = end++
   }
