@@ -1,3 +1,5 @@
+import { getOrVec, getOr } from '@vect/object-index';
+
 const nullish = x => x === null || x === void 0;
 
 const replenish = (object, another) => {
@@ -7,10 +9,10 @@ const replenish = (object, another) => {
 };
 
 function appendValue(k, v) {
-  (this[k] ?? (this[k] = [])).push(v);
+  return getOrVec.call(this, k).push(v);
 }
 function assignValue(k, i, v) {
-  (this[y] ?? (this[y] = {}))[i] = v;
+  getOr.call(this, k)[i] = v;
 }
 
 export { appendValue, assignValue, replenish };

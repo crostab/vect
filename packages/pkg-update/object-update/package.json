@@ -10,15 +10,16 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@vect/object-index": "^0.6.0",
+    "@vect/swap": "^0.6.0"
+  },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "pub": "npm publish",
     "test": "node -r @babel/register test/splices.test.js"
-  },
-  "dependencies": {
-    "@vect/swap": "^0.6.0"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var objectIndex = require('@vect/object-index');
+
 const nullish = x => x === null || x === void 0;
 
 const replenish = (object, another) => {
@@ -11,10 +13,10 @@ const replenish = (object, another) => {
 };
 
 function appendValue(k, v) {
-  (this[k] ?? (this[k] = [])).push(v);
+  return objectIndex.getOrVec.call(this, k).push(v);
 }
 function assignValue(k, i, v) {
-  (this[y] ?? (this[y] = {}))[i] = v;
+  objectIndex.getOr.call(this, k)[i] = v;
 }
 
 exports.appendValue = appendValue;
