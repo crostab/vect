@@ -18,7 +18,6 @@ const ob = (...entries) => {
   return o;
 };
 /**
- * Shallow.
  * @param {string[]} keys
  * @param {*} value
  * @return {Object<string,*>}
@@ -58,11 +57,10 @@ const init = (vec, fn) => {
 /**
  *
  * @param {[*,*][]} entries
- * @param {function} [valToVal]
  * @returns {{}}
  */
 
-const entriesToObject = (entries, valToVal) => {
+const entriesToObject = entries => {
   let o = {};
 
   for (let [k, v] of entries) o[k] = v;

@@ -3,7 +3,7 @@ import { delogger }               from '@spare/deco'
 import { decoCrostab, says }      from '@spare/logger'
 import { strategies }             from '@valjoux/strategies'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
-import { height, width }          from '@vect/matrix-size'
+import { height, width }          from '@vect/matrix-index'
 import { mapper as mapperObject } from '@vect/object-mapper'
 import { mapper }                 from '@vect/vector-mapper'
 

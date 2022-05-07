@@ -8,12 +8,11 @@ import { FUN } from '@typen/enum-data-types'
  */
 export const ob = (...entries) => {
   let o = {}
-  for (let [k, v] of entries) o[k] = v
+  for (let [ k, v ] of entries) o[k] = v
   return o
 }
 
 /**
- * Shallow.
  * @param {string[]} keys
  * @param {*} value
  * @return {Object<string,*>}
@@ -50,12 +49,11 @@ export const init = (vec, fn) => {
 /**
  *
  * @param {[*,*][]} entries
- * @param {function} [valToVal]
  * @returns {{}}
  */
-export const entriesToObject = (entries, valToVal) => {
+export const entriesToObject = (entries) => {
   let o = {}
-  for (let [k, v] of entries) o[k] = v
+  for (let [ k, v ] of entries) o[k] = v
   return o
 }
 
@@ -67,7 +65,7 @@ export const vectorToObject = (vec, fn) => {
 
 export const initByValues = (entries, fn) => {
   let o = {}
-  for (let [k, v] of entries) o[k] = fn(v)
+  for (let [ k, v ] of entries) o[k] = fn(v)
   return o
 }
 

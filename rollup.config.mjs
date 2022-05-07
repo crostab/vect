@@ -1,15 +1,15 @@
 import { babel }                  from '@rollup/plugin-babel'
 import json                       from '@rollup/plugin-json'
 import { nodeResolve }            from '@rollup/plugin-node-resolve'
-import { decoObject, decoString } from '@spare/logger'
 import { readFileSync }           from 'fs'
-import { fileInfo }               from 'rollup-plugin-fileinfo'
+// import { decoObject, decoString } from '@spare/logger'
+// import { fileInfo }               from 'rollup-plugin-fileinfo'
 
 const packageJson = readFileSync(process.cwd() + '/package.json', { encoding: 'utf-8' })
 const { name, dependencies, exports } = JSON.parse(packageJson)
 
-console.log('Executing', name, decoString(process.cwd()))
-console.log('Dependencies', decoObject(dependencies || {}))
+// console.log('Executing', name, decoString(process.cwd()))
+// console.log('Dependencies', decoObject(dependencies || {}))
 
 export default {
   input: 'index.js',
@@ -34,7 +34,7 @@ export default {
       ]
     }),
     json(),
-    fileInfo(),
+    // fileInfo(),
   ]
 }
 

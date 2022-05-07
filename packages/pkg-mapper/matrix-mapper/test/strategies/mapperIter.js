@@ -1,4 +1,4 @@
-import { size } from '@vect/matrix-size'
+import { size } from '@vect/matrix-index'
 
 /**
  * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.

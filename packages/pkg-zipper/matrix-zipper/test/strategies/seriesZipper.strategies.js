@@ -1,7 +1,7 @@
 import { decoCrostab }            from '@spare/logger'
 import { strategies }             from '@valjoux/strategies'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
-import { size }                   from '@vect/matrix-size'
+import { size }                   from '@vect/matrix-index'
 import { mapper as mapperVector } from '@vect/vector-mapper'
 import { Duozipper, Quazipper }   from '../../src/seriesZipper'
 import { zipper }                 from '../../src/zipper'

@@ -23,12 +23,12 @@
     "@vect/columns-select": "^0.5.23",
     "@vect/columns-update": "^0.5.23",
     "@vect/enum-matrix-directions": "^0.5.23",
+    "@vect/matrix-index": "^0.5.23",
     "@vect/matrix-indicator": "^0.5.23",
     "@vect/matrix-init": "^0.5.23",
     "@vect/matrix-mapper": "^0.5.23",
     "@vect/matrix-margin": "^0.5.23",
     "@vect/matrix-quantifier": "^0.5.23",
-    "@vect/matrix-size": "^0.5.23",
     "@vect/matrix-transpose": "^0.5.23",
     "@vect/matrix-zipper": "^0.5.23",
     "@vect/vector-index": "^0.5.23"

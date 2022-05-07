@@ -2,7 +2,7 @@ import { strategies } from '@valjoux/strategies'
 import {decoCrostab} from '@spare/logger'
 import { mapper } from '@vect/vector-mapper'
 import { zipper } from '@vect/matrix-zipper'
-import { size } from '@vect/matrix-size'
+import { size }   from '@vect/matrix-index'
 
 const alpha = [
   [1, 0, 0],

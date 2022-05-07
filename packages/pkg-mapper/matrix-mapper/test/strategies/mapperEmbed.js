@@ -1,4 +1,4 @@
-import { size } from '@vect/matrix-size'
+import { size }             from '@vect/matrix-index'
 import { mapper as mapVec } from '@vect/vector-mapper'
 
 /**

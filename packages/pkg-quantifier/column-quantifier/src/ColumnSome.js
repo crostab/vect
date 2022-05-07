@@ -1,4 +1,4 @@
-import { size } from '@vect/matrix-size'
+import { size } from '@vect/matrix-index'
 
 /**
  * Return true if some element in a specified column of a matrix matches the input criteria.

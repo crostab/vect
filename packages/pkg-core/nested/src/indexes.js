@@ -10,3 +10,4 @@ export const head = (nested) => {
   iterateY(nested, y => { if (vec.indexOf(y) < 0) vec.push(y) })
   return vec
 }
+

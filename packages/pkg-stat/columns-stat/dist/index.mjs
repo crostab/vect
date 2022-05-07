@@ -1,5 +1,5 @@
 import { FUN } from '@typen/enum-data-types';
-import { size } from '@vect/matrix-size';
+import { size } from '@vect/matrix-index';
 import { init } from '@vect/vector-init';
 
 const stat = function (mx) {

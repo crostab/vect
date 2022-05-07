@@ -1,7 +1,7 @@
 import { partition } from '@vect/vector-update';
-import { swap } from '@vect/swap';
 import { max, min } from '@aryth/comparer';
 import { rand } from '@aryth/rand';
+import { swap } from '@vect/swap';
 
 const select = (vec, indexes, hi) => {
   hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);

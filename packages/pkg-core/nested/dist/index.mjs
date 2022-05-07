@@ -66,14 +66,23 @@ function updateCell(x, y, v) {
   (this[x] ?? (this[x] = {}))[y] = v;
 }
 function appendCell(x, y, v) {
-  const temp = this[x] ?? (this[x] = {});
-  const list = temp[y] ?? (temp[y] = []);
-  list.push(v);
+  const vec = getOrVec.call(this, x, y);
+  vec.push(v);
 }
 function assignCell(x, y, k, v) {
-  const temp = this[x] ?? (this[x] = {});
-  const obj = temp[y] ?? (temp[y] = {});
-  obj[k] = v;
+  const o = getOr.call(this, x, v);
+  o[k] = v;
+}
+function getRow(x) {
+  return this[x] ?? (this[x] = {});
+}
+function getOr(x, y, fn = Object) {
+  const row = this[x] ?? (this[x] = {});
+  return row[y] ?? (row[y] = fn());
+}
+function getOrVec(x, y) {
+  const row = this[x] ?? (this[x] = {});
+  return row[y] ?? (row[y] = []);
 }
 
 const transpose = nested => {
@@ -82,7 +91,7 @@ const transpose = nested => {
   return o;
 };
 
-function* simpleIndexed(nested) {
+function* indexedOf(nested) {
   let inner;
   if (nested) for (let x in nested) {
     if (inner = nested[x]) for (let y in inner) {
@@ -90,29 +99,34 @@ function* simpleIndexed(nested) {
     }
   }
 }
-function* filterIndexed(nested, filter) {
+
+function* indexedBy(nested, by) {
   let inner;
   if (nested) for (let x in nested) {
     if (inner = nested[x]) for (let y in inner) {
       const v = inner[y];
-      if (filter(x, y, v)) yield [x, y, v];
+      if (by(x, y, v)) yield [x, y, v];
     }
   }
 }
-function* mappedIndexed(nested, mapper) {
+
+function* indexedTo(nested, to) {
   let inner;
   if (nested) for (let x in nested) {
     if (inner = nested[x]) for (let y in inner) {
-      yield mapper(x, y, inner[y]);
+      yield to(x, y, inner[y]);
     }
   }
 }
-function* filterMappedIndexed(nested, filter, mapper) {
+
+function* indexed(nested, by, to) {
+  if (!by && !to) return yield* indexedOf(nested);
+  if (!to) return yield* indexedBy(nested, by);
   let inner;
   if (nested) for (let x in nested) {
     if (inner = nested[x]) for (let y in inner) {
       const v = inner[y];
-      if (filter(x, y, v)) yield mapper(x, y, v);
+      if (by(x, y, v)) yield to(x, y, v);
     }
   }
 }
@@ -123,23 +137,11 @@ function* filterMappedIndexed(nested, filter, mapper) {
  * @returns {Generator<*, void, *>}
  */
 
-function* indexed(nested, conf) {
+
+function* indexedVia(nested, conf) {
   const by = conf === null || conf === void 0 ? void 0 : conf.by,
         to = (conf === null || conf === void 0 ? void 0 : conf.to) ?? conf;
-
-  if (typeof by === FUN) {
-    if (typeof to === FUN) {
-      yield* filterMappedIndexed(nested, by, to);
-    } else {
-      yield* filterIndexed(nested, by);
-    }
-  } else {
-    if (typeof to === FUN) {
-      yield* mappedIndexed(nested, to);
-    } else {
-      yield* simpleIndexed(nested);
-    }
-  }
+  yield* typeof by === FUN ? typeof to === FUN ? indexed(nested, by, to) : indexedBy(nested, by) : typeof to === FUN ? indexedTo(nested, to) : indexedOf(nested);
 }
 
-export { appendCell, assignCell, filterIndexed, filterMappedIndexed, head, indexed, indexedIterate, indexedMutate, iterate, iterateXY, iterateY, mappedIndexed, nestedToRows, side, simpleIndexed, transpose, updateCell as update, updateCell };
+export { appendCell, assignCell, indexedBy as filterIndexed, indexedVia as filterMappedIndexed, getOr, getOrVec, getRow, head, indexed, indexedBy, indexedIterate, indexedMutate, indexedOf, indexedTo, indexedVia, iterate, iterateXY, iterateY, indexedTo as mappedIndexed, nestedToRows, side, indexedOf as simpleIndexed, transpose, updateCell as update, updateCell };

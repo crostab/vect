@@ -3,11 +3,11 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var enumDataTypes = require('@typen/enum-data-types');
-var matrixSize = require('@vect/matrix-size');
+var matrixIndex = require('@vect/matrix-index');
 var vectorInit = require('@vect/vector-init');
 
 const stat = function (mx) {
-  const [h, w] = matrixSize.size(mx);
+  const [h, w] = matrixIndex.size(mx);
   const {
     init,
     acc,

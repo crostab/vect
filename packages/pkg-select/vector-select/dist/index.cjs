@@ -3,9 +3,9 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var vectorUpdate = require('@vect/vector-update');
-var swap = require('@vect/swap');
 var comparer = require('@aryth/comparer');
 var rand = require('@aryth/rand');
+var swap = require('@vect/swap');
 
 const select = (vec, indexes, hi) => {
   hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);

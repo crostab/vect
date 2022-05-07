@@ -12,7 +12,7 @@
 
 export { iterate, iterateEntries, iterateKeys, mapEntries, mapKeys, mapper, mutate } from '@vect/object-mapper'
 export { mutazip, zipper, iterzip }                                                  from '@vect/object-zipper'
-export { init, initByValues, iso, ob, pair, wind, mapToObject }                     from '@vect/object-init'
+export { init, initByValues, iso, ob, pair, wind, mapToObject }                      from '@vect/object-init'
 export {
   leap,
   shuffle,

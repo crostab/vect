@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.1.19",
-    "@vect/matrix-size": "^0.5.23"
+    "@vect/matrix-index": "^0.5.23"
   },
   "keywords": [
     "matrix",
