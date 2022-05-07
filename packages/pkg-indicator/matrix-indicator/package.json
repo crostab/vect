@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-indicator",
-  "version": "0.5.23",
+  "version": "0.6.0",
   "description": "Indicators for matrix",
   "main": "./dist/index.cjs",
   "exports": {
