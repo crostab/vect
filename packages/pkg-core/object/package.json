@@ -1,6 +1,6 @@
 {
   "name": "@vect/object",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Util for object",
   "main": "./dist/index.cjs",
   "exports": {
@@ -14,11 +14,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/object-init": "^0.6.4",
-    "@vect/object-mapper": "^0.6.4",
-    "@vect/object-select": "^0.6.4",
-    "@vect/object-update": "^0.6.4",
-    "@vect/object-zipper": "^0.6.4"
+    "@vect/object-init": "^0.6.5",
+    "@vect/object-mapper": "^0.6.5",
+    "@vect/object-select": "^0.6.5",
+    "@vect/object-update": "^0.6.5",
+    "@vect/object-zipper": "^0.6.5"
   },
   "scripts": {
     "pub": "npm publish",
@@ -38,5 +38,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "eadb143089e7607e05c195c65220091d9b97974f"
+  "gitHead": "4ffb08edf4eb450c221ce8bf92d9de86869a1891"
 }
