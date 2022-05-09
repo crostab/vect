@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-indicator",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Indicators for entries",
   "main": "./dist/index.cjs",
   "exports": {
@@ -38,5 +38,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "bb5a5b3cba833df9034d2e2dcb6dd7a7e9bf05be"
+  "gitHead": "eadb143089e7607e05c195c65220091d9b97974f"
 }
