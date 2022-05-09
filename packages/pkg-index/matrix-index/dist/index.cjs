@@ -8,10 +8,21 @@ const size = mx => {
 };
 const height = mx => mx === null || mx === void 0 ? void 0 : mx.length;
 const width = mx => {
-  let r;
-  return height(mx) && (r = mx[0]) ? r.length : r;
+  var _mx$;
+
+  return mx !== null && mx !== void 0 && mx.length ? (_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length : null;
 };
 
+function column(y, h) {
+  const mx = this,
+        col = Array(h ?? (h = this === null || this === void 0 ? void 0 : this.length));
+
+  for (--h; h >= 0; h--) col[h] = mx[h][y];
+
+  return col;
+}
+
+exports.column = column;
 exports.height = height;
 exports.size = size;
 exports.width = width;

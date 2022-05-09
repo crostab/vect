@@ -29,8 +29,7 @@ function* indexedTo(nested, to) {
 }
 
 function* indexed(nested, by, to) {
-  if (!by && !to) return yield* indexedOf(nested)
-  if (!to) return yield* indexedBy(nested, by)
+  if (!to) { return yield* (!by ? indexedOf(nested) : indexedBy(nested, by)) }
   let inner
   if (nested) for (let x in nested) {
     if ((inner = nested[x])) for (let y in inner) {

@@ -1,0 +1,156 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var nullish = require('@typen/nullish');
+var math = require('@aryth/math');
+
+function trimDigit(n) {
+  return math.round(n * this.m) / this.m;
+}
+/**
+ *
+ * @param {number} d - digits
+ * @returns {function(number):number}
+ * @constructor
+ */
+
+
+const TrimDigit = d => {
+  return (d = ~~d) ? trimDigit.bind({
+    m: 10 ** ~~d
+  }) : math.round;
+};
+
+const seqTrimDigit = (size, fn, digit = 2) => {
+  const ve = Array(size);
+
+  for (let i = 0, td = TrimDigit(digit); i < size; i++) ve[i] = td(fn(i));
+
+  return ve;
+};
+
+function draft(size) {
+  return Array(size);
+}
+function iso(size, value) {
+  if (size === (size & 0x7f)) {
+    const arr = Array(size);
+
+    for (let i = 0; i < size; i++) arr[i] = value;
+
+    return arr;
+  }
+
+  return Array(size).fill(value);
+}
+function init(size, to) {
+  if (size === (size & 0x7f)) {
+    let arr = Array(size);
+
+    for (let i = 0; i < size; i++) arr[i] = to(i);
+
+    return arr;
+  }
+
+  return Array(size).fill(null).map((_, i) => to(i));
+}
+function collect(key, size) {
+  const vec = Array(size);
+
+  for (let i = 0; i < size; i++) vec[i] = this[key];
+
+  return vec;
+}
+function gather(iter) {
+  const vec = [];
+
+  for (let el of iter) vec.push(el);
+
+  return vec;
+}
+function tap(...list) {
+  const ve = Array(list.length);
+
+  for (let x of list) if (!nullish.nullish(x)) ve.push(x);
+
+  return ve;
+}
+function seq(size, fn, digit) {
+  if (!nullish.nullish(digit)) return seqTrimDigit(size, fn, digit);
+  const ve = Array(size);
+
+  for (let i = 0; i < size; i++) ve[i] = fn(i);
+
+  return ve;
+}
+/**
+ *
+ * @param {number} n
+ * @param {number} [m]
+ * @returns {number[]}
+ */
+
+function indexes(n, m) {
+  function upward(lo, hi) {
+    const n = hi - lo,
+          vec = Array(n);
+
+    for (let i = 0; i < n; i++) vec[i] = lo++;
+
+    return vec;
+  }
+
+  function downward(hi, lo) {
+    const n = hi - lo,
+          vec = Array(n);
+
+    for (let i = n - 1; i >= 0; i--) vec[i] = lo++;
+
+    return vec;
+  }
+
+  return nullish.nullish(m) ? n >= 0 ? upward(0, n) : downward(0, n) : m >= n ? upward(n, m) : downward(n, m);
+}
+class Range {
+  lo = 0;
+  hi = 0;
+
+  constructor(lo, hi) {
+    this.lo = lo;
+    this.hi = hi;
+  }
+
+  static build(lo, hi) {
+    return new Range(lo, hi);
+  }
+
+  [Symbol.iterator]() {
+    return this;
+  }
+
+  next() {
+    return this.lo < this.hi ? {
+      done: false,
+      value: this.lo++
+    } : {
+      done: true,
+      value: void 0
+    };
+  }
+
+}
+function range(lo, hi) {
+  return new Range(lo, hi);
+}
+
+exports.Range = Range;
+exports.collect = collect;
+exports.draft = draft;
+exports.gather = gather;
+exports.indexes = indexes;
+exports.init = init;
+exports.iso = iso;
+exports.range = range;
+exports.seq = seq;
+exports.tap = tap;

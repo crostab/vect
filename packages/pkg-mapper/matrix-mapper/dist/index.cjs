@@ -55,6 +55,49 @@ const selectMutate = (mx, ys, fn, h) => {
   return mx;
 };
 
+function* indexedOf(mx) {
+  if (mx) for (let i = 0, h = mx.length; i < h; i++) {
+    const row = mx[i];
+    if (row) for (let j = 0, w = row.length; j < w; j++) {
+      yield [row[j], i, j];
+    }
+  }
+}
+function* indexedBy(mx, by) {
+  if (mx) for (let i = 0, h = mx.length; i < h; i++) {
+    const row = mx[i];
+    if (row) for (let j = 0, w = row.length; j < w; j++) {
+      const val = row[j];
+      if (by(val, i, j)) yield [val, i, j];
+    }
+  }
+}
+function* indexedTo(mx, to) {
+  if (mx) for (let i = 0, h = mx.length; i < h; i++) {
+    const row = mx[i];
+    if (row) for (let j = 0, w = row.length; j < w; j++) {
+      yield to(row[j], i, j);
+    }
+  }
+}
+function* indexed(mx, by, to) {
+  if (!to) {
+    return yield* !by ? indexedOf(mx) : indexedBy(mx, by);
+  }
+
+  if (mx) for (let i = 0, h = mx.length; i < h; i++) {
+    const row = mx[i];
+    if (row) for (let j = 0, w = row.length; j < w; j++) {
+      const val = row[j];
+      if (by(val, i, j)) yield to(val, i, j);
+    }
+  }
+}
+
+exports.indexed = indexed;
+exports.indexedBy = indexedBy;
+exports.indexedOf = indexedOf;
+exports.indexedTo = indexedTo;
 exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;

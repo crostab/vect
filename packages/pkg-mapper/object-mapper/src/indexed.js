@@ -20,8 +20,7 @@ export function* indexedTo(o, to) {
 }
 
 export function* indexed(o, by, to) {
-  if (!by && !to) return yield* indexedOf(o)
-  if (!to) return yield* indexedBy(o, by)
+  if (!to) { return yield* (!by ? indexedOf(o) : indexedBy(o, by)) }
   if (o) for (let k in o) {
     const v = o[k]
     if (by(k, v)) yield to(k, v)

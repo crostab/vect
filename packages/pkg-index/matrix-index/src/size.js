@@ -7,10 +7,7 @@ export const size = mx => {
 
 export const height = mx => mx?.length
 
-export const width = mx => {
-  let r
-  return height(mx) && (r = mx[0]) ? r.length : r
-}
+export const width = mx => mx?.length ? mx[0]?.length : null
 
 export const certSize = (mx, h, w) => {
   if (!h) h = mx?.length

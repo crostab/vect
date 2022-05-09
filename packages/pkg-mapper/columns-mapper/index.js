@@ -1,2 +1,1 @@
-export { iterate } from './src/iterate'
-export { mapper } from './src/mapper'
+export { mapper, iterate } from './src/mapper'

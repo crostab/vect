@@ -1,4 +1,4 @@
-import { partition } from '../utils/partition'
+import { partition } from './partition'
 
 /**
  *

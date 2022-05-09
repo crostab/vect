@@ -17,16 +17,16 @@ const iterate = function (entries, keyFn, valFn, l) {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyMap
- * @param {Function} [valMap]
+ * @param {Function} keyTo
+ * @param {Function} [valTo]
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mapper = (entries, keyMap, valMap, l) => {
-  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valMap = valMap || keyMap;
+const mapper = (entries, keyTo, valTo, l) => {
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valTo = valTo || keyTo;
   const vec = Array(l);
 
-  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyMap(r[0], i), valMap(r[1], i)];
+  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyTo(r[0], i), valTo(r[1], i)];
 
   return vec;
 };
@@ -34,16 +34,16 @@ const mapper = (entries, keyMap, valMap, l) => {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyMap
- * @param {Function} [valMap]
+ * @param {Function} keyTo
+ * @param {Function} [valTo]
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mutate = (entries, keyMap, valMap, l) => {
-  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valMap = valMap || keyMap;
+const mutate = (entries, keyTo, valTo, l) => {
+  l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valTo = valTo || keyTo;
 
   for (let i = 0, r; i < l; i++) {
-    r = entries[i], r[0] = keyMap(r[0], i), r[1] = valMap(r[1], i);
+    r = entries[i], r[0] = keyTo(r[0], i), r[1] = valTo(r[1], i);
   }
 
   return entries;
@@ -67,15 +67,15 @@ const iterateKeys = function (entries, keyFn, l) {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyMap
+ * @param {Function} keyTo
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mutateKeys = (entries, keyMap, l) => {
+const mutateKeys = (entries, keyTo, l) => {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
-    r = entries[i], r[0] = keyMap(r[0], i);
+    r = entries[i], r[0] = keyTo(r[0], i);
   }
 
   return entries;
@@ -84,15 +84,15 @@ const mutateKeys = (entries, keyMap, l) => {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} keyMap
+ * @param {Function} keyTo
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mapKeys = (entries, keyMap, l) => {
+const mapKeys = (entries, keyTo, l) => {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
 
-  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyMap(r[0], i), r[1]];
+  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyTo(r[0], i), r[1]];
 
   return vec;
 };
@@ -115,15 +115,15 @@ const iterateValues = function (entries, valFn, l) {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} valMap
+ * @param {Function} valTo
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mutateValues = (entries, valMap, l) => {
+const mutateValues = (entries, valTo, l) => {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
 
   for (let i = 0, r; i < l; i++) {
-    r = entries[i], r[1] = valMap(r[1], i);
+    r = entries[i], r[1] = valTo(r[1], i);
   }
 
   return entries;
@@ -132,15 +132,15 @@ const mutateValues = (entries, valMap, l) => {
 /**
  *
  * @param {[*,*][]} entries
- * @param {Function} valMap
+ * @param {Function} valTo
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-const mapValues = (entries, valMap, l) => {
+const mapValues = (entries, valTo, l) => {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
 
-  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [r[0], valMap(r[1], i)];
+  for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [r[0], valTo(r[1], i)];
 
   return vec;
 };
