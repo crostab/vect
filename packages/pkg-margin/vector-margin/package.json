@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-margin",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
