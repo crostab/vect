@@ -1,6 +1,6 @@
 {
   "name": "@vect/swap",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Swap values at a pair of indexes",
   "main": "dist/index.cjs",
   "exports": {
@@ -32,5 +32,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "4ffb08edf4eb450c221ce8bf92d9de86869a1891"
+  "gitHead": "39774470f78a228fe0fb1fd90f0b40a6d18c2d05"
 }

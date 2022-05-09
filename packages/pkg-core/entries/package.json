@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -14,12 +14,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/entries-indicator": "^0.6.5",
-    "@vect/entries-init": "^0.6.5",
-    "@vect/entries-mapper": "^0.6.5",
-    "@vect/entries-margin": "^0.6.5",
-    "@vect/entries-unwind": "^0.6.5",
-    "@vect/entries-zipper": "^0.6.5"
+    "@vect/entries-indicator": "^0.6.6",
+    "@vect/entries-init": "^0.6.6",
+    "@vect/entries-mapper": "^0.6.6",
+    "@vect/entries-margin": "^0.6.6",
+    "@vect/entries-unwind": "^0.6.6",
+    "@vect/entries-zipper": "^0.6.6"
   },
   "scripts": {
     "pub": "npm publish",
@@ -39,5 +39,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "4ffb08edf4eb450c221ce8bf92d9de86869a1891"
+  "gitHead": "39774470f78a228fe0fb1fd90f0b40a6d18c2d05"
 }
