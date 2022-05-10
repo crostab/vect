@@ -28,8 +28,8 @@ export function mapEntries(o, entToEnt) {
   const t = {}
   let i = 0
   for (let k in o) {
-    const [ k2, v2 ] = entToEnt.call(this, [ k, o[k] ], i++)
-    t[k2] = v2
+    const [ tk, tv ] = entToEnt.call(this, [ k, o[k] ], i++)
+    t[tk] = tv
   }
   return t
 }

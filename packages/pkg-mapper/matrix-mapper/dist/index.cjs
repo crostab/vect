@@ -3,22 +3,6 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /**
- *
- * @param {*[][]} mx
- * @param {function} fn
- * @param {number} [h]
- * @param {number} [w]
- * @returns {undefined}
- */
-const iterate = function (mx, fn, h, w) {
-  var _mx$;
-
-  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
-
-  for (let i = 0, j, r; i < h; i++) for (r = mx[i], j = 0; j < w; j++) fn.call(this, r[j], i, j);
-};
-
-/**
  * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.
  * @param {*[][]} mx
  * @param {function} fn
@@ -36,11 +20,26 @@ const mapper = (mx, fn, h, w) => {
 
   return tx;
 };
+/**
+ *
+ * @param {*[][]} mx
+ * @param {function} fn
+ * @param {number} [h]
+ * @param {number} [w]
+ * @returns {undefined}
+ */
 
+const iterate = function (mx, fn, h, w) {
+  var _mx$2;
+
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$2 = mx[0]) === null || _mx$2 === void 0 ? void 0 : _mx$2.length);
+
+  for (let i = 0, j, r; i < h; i++) for (r = mx[i], j = 0; j < w; j++) fn.call(this, r[j], i, j);
+};
 const mutate = (mx, fn, h, w) => {
-  var _mx$;
+  var _mx$3;
 
-  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
+  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$3 = mx[0]) === null || _mx$3 === void 0 ? void 0 : _mx$3.length);
 
   for (let i = 0, j, r; i < h; i++) for (j = 0, r = mx[i]; j < w; j++) r[j] = fn(r[j], i, j);
 

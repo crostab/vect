@@ -1,9 +1,4 @@
-export { iterate }       from './src/iterate'
-export { mapper }        from './src/mapper'
-export { mutate }        from './src/mutate'
-export { iterateKeys }   from './src/iterateKeys'
-export { mutateKeys }    from './src/mutateKeys'
-export { mapKeys }       from './src/mapKeys'
-export { iterateValues } from './src/iterateValues'
-export { mutateValues }  from './src/mutateValues'
-export { mapValues }     from './src/mapValues'
+export { iterate, iterateKeys, iterateValues, } from './src/iterate'
+export { mapper, mapKeys, mapValues, } from './src/mapper'
+export { mutate, mutateKeys, mutateValues, } from './src/mutate'
+

@@ -15,7 +15,7 @@
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../../rollup.config.mjs -w"
   },
   "devDependencies": {
-    "@analys/crostab": "^0.6.6",
+    "@analys/crostab": "^0.6.8",
     "@aryth/rand": "^0.5.9",
     "@babel/core": "^7.17.10",
     "@babel/plugin-external-helpers": "^7.16.7",

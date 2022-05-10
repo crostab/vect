@@ -2,29 +2,24 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var columnGetter = require('@vect/column-getter');
+var matrixIndex = require('@vect/matrix-index');
 
-const iterate = function (mx, fnOnColumns, h, w) {
-  var _mx$;
+const mapper = (mx, colTo) => {
+  const h = mx === null || mx === void 0 ? void 0 : mx.length,
+        w = matrixIndex.width(mx),
+        vec = Array(w),
+        col = matrixIndex.column.bind(mx);
 
-  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length);
+  for (let j = 0; j < w; j++) vec[j] = colTo(col(j, h), j);
 
-  for (let j = 0, cols = columnGetter.Columns(mx); j < w; j++) fnOnColumns.call(this, cols(j, h), j);
+  return vec;
 };
+const iterate = function (mx, onCol) {
+  const h = mx === null || mx === void 0 ? void 0 : mx.length,
+        w = matrixIndex.width(mx),
+        col = matrixIndex.column.bind(mx);
 
-const mapper = (mx, mapOnColumns, h, w) => {
-  var _mx$;
-
-  h = h || (mx === null || mx === void 0 ? void 0 : mx.length), w = w || h && ((_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length); // 'mapperColumns' |> logger
-
-  const tcol = Array(w);
-
-  for (let j = 0, cols = columnGetter.Columns(mx); j < w; j++) {
-    tcol[j] = mapOnColumns(cols(j, h), j); // Xr().index(j).col(cols(j, h)).result(tcol[j]) |> logger
-  } // tcol |> logger
-
-
-  return tcol;
+  for (let j = 0; j < w; j++) onCol.call(this, col(j, h), j);
 };
 
 exports.iterate = iterate;

@@ -49,8 +49,8 @@ function mapEntries(o, entToEnt) {
   let i = 0;
 
   for (let k in o) {
-    const [k2, v2] = entToEnt.call(this, [k, o[k]], i++);
-    t[k2] = v2;
+    const [tk, tv] = entToEnt.call(this, [k, o[k]], i++);
+    t[tk] = tv;
   }
 
   return t;
@@ -91,8 +91,10 @@ function* indexedTo(o, to) {
   }
 }
 function* indexed(o, by, to) {
-  if (!by && !to) return yield* indexedOf(o);
-  if (!to) return yield* indexedBy(o, by);
+  if (!to) {
+    return yield* !by ? indexedOf(o) : indexedBy(o, by);
+  }
+
   if (o) for (let k in o) {
     const v = o[k];
     if (by(k, v)) yield to(k, v);

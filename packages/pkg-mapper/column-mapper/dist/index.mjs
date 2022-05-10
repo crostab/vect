@@ -17,18 +17,18 @@ function columnMutate(mx, fn, l) {
 const ColumnMutate = y => columnMutate.bind({
   y
 });
-const iterate = function (mx, y, fn, l) {
+const iterate = function (mx, y, to, l) {
   l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
-  for (let i = 0; i < l; i++) fn.call(this, mx[i][y], i);
+  for (let i = 0; i < l; i++) to.call(this, mx[i][y], i);
 };
-function columnIterate(mx, fn, l) {
+function columnIterate(mx, to, l) {
   l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
   for (let i = 0, {
     y,
     data
-  } = this; i < l; i++) fn.call(data, mx[i][y], i);
+  } = this; i < l; i++) to.call(data, mx[i][y], i);
 }
 /**
  * Return a mapper function that iterate through each element in column indexed by 'y'.

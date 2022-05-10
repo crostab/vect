@@ -46,6 +46,12 @@ export const init = (vec, fn) => {
     : entriesToObject(vec)
 }
 
+export const gather = (iter) => {
+  let o = {}
+  for (let [ k, v ] of iter) o[k] = v
+  return o
+}
+
 /**
  *
  * @param {[*,*][]} entries

@@ -26,6 +26,7 @@ const seqTrimDigit = (size, fn, digit = 2) => {
   return ve;
 };
 
+// noinspection DuplicatedCode
 function draft(size) {
   return Array(size);
 }
@@ -42,11 +43,11 @@ function iso(size, value) {
 }
 function init(size, to) {
   if (size === (size & 0x7f)) {
-    let arr = Array(size);
+    let vec = Array(size);
 
-    for (let i = 0; i < size; i++) arr[i] = to(i);
+    for (let i = 0; i < size; i++) vec[i] = to(i);
 
-    return arr;
+    return vec;
   }
 
   return Array(size).fill(null).map((_, i) => to(i));
@@ -59,26 +60,26 @@ function collect(key, size) {
   return vec;
 }
 function gather(iter) {
-  const vec = [];
+  const vec = Array();
 
-  for (let el of iter) vec.push(el);
+  for (let x of iter) vec.push(x);
 
   return vec;
 }
 function tap(...list) {
-  const ve = Array(list.length);
+  const vec = Array(list.length);
 
-  for (let x of list) if (!nullish(x)) ve.push(x);
+  for (let x of list) if (!nullish(x)) vec.push(x);
 
-  return ve;
+  return vec;
 }
 function seq(size, fn, digit) {
   if (!nullish(digit)) return seqTrimDigit(size, fn, digit);
-  const ve = Array(size);
+  const vec = Array(size);
 
-  for (let i = 0; i < size; i++) ve[i] = fn(i);
+  for (let i = 0; i < size; i++) vec[i] = fn(i);
 
-  return ve;
+  return vec;
 }
 /**
  *

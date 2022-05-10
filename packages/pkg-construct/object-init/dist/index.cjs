@@ -54,6 +54,13 @@ const pair = (key, value) => {
 const init = (vec, fn) => {
   return typeof fn === enumDataTypes.FUN ? vectorToObject(vec, fn) : entriesToObject(vec);
 };
+const gather = iter => {
+  let o = {};
+
+  for (let [k, v] of iter) o[k] = v;
+
+  return o;
+};
 /**
  *
  * @param {[*,*][]} entries
@@ -83,6 +90,7 @@ const initByValues = (entries, fn) => {
 };
 
 exports.entriesToObject = entriesToObject;
+exports.gather = gather;
 exports.init = init;
 exports.initByValues = initByValues;
 exports.initFromKeys = vectorToObject;
