@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-update",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "A math util library",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,7 +18,7 @@
     "test": "node -r @babel/register test/splices.test.js"
   },
   "dependencies": {
-    "@vect/swap": "^0.6.7"
+    "@vect/swap": "^0.6.8"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "39774470f78a228fe0fb1fd90f0b40a6d18c2d05"
+  "gitHead": "dec0fc30406e9ef81bc62e95645e2883058eb170"
 }
