@@ -9,7 +9,7 @@ export function* indexedOf(mx) {
 export function* indexedBy(mx, by) {
   for (let j = 0, w = width(mx); j < w; j++) {
     const col = column.call(mx, j)
-    if (by(col, j)) yield c
+    if (by(col, j)) yield col
   }
 }
 

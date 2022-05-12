@@ -93,6 +93,88 @@ function* indexed(mx, by, to) {
   }
 }
 
+function* entryIndexedOf(rows, [k, v]) {
+  for (let row of rows) {
+    yield [row[k], row[v]];
+  }
+}
+function* entryIndexedBy(rows, [k, v], by) {
+  for (let row of rows) {
+    const x = row[k],
+          y = row[v];
+    if (by(x, y)) yield [x, y];
+  }
+}
+function* entryIndexedTo(rows, [k, v], to) {
+  for (let row of rows) {
+    yield to(row[k], row[v]);
+  }
+}
+/**
+ *
+ * @param {*[][]|*[][]} rows
+ * @param {[*,*]} kv
+ * @param {function(*,*):boolean} [by]
+ * @param {function(*,*):*} [to]
+ * @returns {Generator<*, void, *>}
+ */
+
+function* entryIndexed(rows, kv, by, to) {
+  if (!to) {
+    return yield* !by ? entryIndexedOf(rows, kv) : entryIndexedBy(rows, kv, by);
+  }
+
+  const [k, v] = kv;
+
+  for (let row of rows) {
+    const x = row[k],
+          y = row[v];
+    if (by(x, y)) yield to(x, y);
+  }
+}
+
+function* tripletIndexedOf(rows, [xi, yi, zi]) {
+  for (let row of rows) yield [row[xi], row[yi], row[zi]];
+}
+function* tripletIndexedBy(rows, [xi, yi, zi], by) {
+  for (let row of rows) {
+    const x = row[xi],
+          y = row[yi],
+          z = row[zi];
+    if (by(x, y, z)) yield to(x, y, z);
+  }
+}
+function* tripletIndexedTo(rows, [xi, yi, zi], to) {
+  for (let row of rows) yield to(row[xi], row[yi], row[zi]);
+}
+/**
+ *
+ * @param {*[][]} rows
+ * @param {[*,*,*]} xyz
+ * @param {function(*,*,*):boolean} [by]
+ * @param {function(*,*,*):*} [to]
+ * @returns {Generator<*, void, *>}
+ */
+
+function* tripletIndexed(rows, xyz, by, to) {
+  if (!to) {
+    return yield* !by ? tripletIndexedOf(rows, xyz) : tripletIndexedBy(rows, xyz, by);
+  }
+
+  const [xi, yi, zi] = xyz;
+
+  for (let row of rows) {
+    const x = row[xi],
+          y = row[yi],
+          z = row[zi];
+    if (by(x, y, z)) yield to(x, y, z);
+  }
+}
+
+exports.entryIndexed = entryIndexed;
+exports.entryIndexedBy = entryIndexedBy;
+exports.entryIndexedOf = entryIndexedOf;
+exports.entryIndexedTo = entryIndexedTo;
 exports.indexed = indexed;
 exports.indexedBy = indexedBy;
 exports.indexedOf = indexedOf;
@@ -101,3 +183,7 @@ exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;
 exports.selectMutate = selectMutate;
+exports.tripletIndexed = tripletIndexed;
+exports.tripletIndexedBy = tripletIndexedBy;
+exports.tripletIndexedOf = tripletIndexedOf;
+exports.tripletIndexedTo = tripletIndexedTo;

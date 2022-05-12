@@ -27,4 +27,21 @@ function mutate(vec, fn, l) {
   return vec;
 }
 
-export { iterate, mapper, mutate, reviter };
+function* indexedOf(vec) {
+  for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length; i < h; i++) yield vec[i];
+}
+function* indexedBy(vec, by) {
+  for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length, el; i < h; i++) if (by(el = vec[i], i)) yield el;
+}
+function* indexedTo(vec, to) {
+  for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length; i < h; i++) yield to(vec[i], i);
+}
+function* indexed(vec, by, to) {
+  if (!to) {
+    return yield* !by ? indexedOf(vec) : indexedBy(vec, by);
+  }
+
+  for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length, el; i < h; i++) if (by(el = vec[i], i)) yield to(el, i);
+}
+
+export { indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, reviter };

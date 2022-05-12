@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@analys/crostab": "^0.6.8",
-    "@aryth/rand": "^0.5.9",
+    "@aryth/rand": "^0.5.10",
     "@babel/core": "^7.17.10",
     "@babel/plugin-external-helpers": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -32,6 +32,7 @@
     "@foba/matrix": "^0.5.1",
     "@foba/object": "^0.5.1",
     "@foba/util": "^0.5.1",
+    "@foba/matrix-number": "^0.5.1",
     "@foba/vector": "^0.5.1",
     "@foba/vector-number": "^0.5.1",
     "@rollup/plugin-babel": "^5.3.1",
