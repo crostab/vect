@@ -1,8 +1,8 @@
-import { draft, size } from '@vect/matrix'
+import { draft } from '@vect/matrix-init'
+import { size }  from '@vect/matrix-index'
 
 export const multiply = (a, b) => {
-  const [ha, wa] = size(a)
-  const [hb, wb] = size(b)
+  const [ ha, wa ] = size(a), [ hb, wb ] = size(b)
   if (wa !== hb) { throw new Error('incompatible sizes') }
   const mx = draft(ha, wb)
   for (let i = 0; i < ha; i++) {

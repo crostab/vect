@@ -18,7 +18,8 @@
     "test": "node -r @babel/register test/matrix-algebra.test.js"
   },
   "dependencies": {
-    "@vect/matrix": "^0.7.0"
+    "@vect/matrix-init": "^0.7.0",
+    "@vect/matrix-index": "^0.7.0"
   },
   "repository": {
     "type": "git",
