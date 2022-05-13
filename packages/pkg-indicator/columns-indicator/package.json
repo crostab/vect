@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-indicator",
-  "version": "0.6.12",
+  "version": "0.6.13",
   "description": "Indicators for columns",
   "main": "./dist/index.cjs",
   "exports": {
@@ -22,8 +22,8 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@vect/columns-mapper": "^0.6.12",
-    "@vect/vector-indicator": "^0.6.12"
+    "@vect/columns-mapper": "^0.6.13",
+    "@vect/vector-indicator": "^0.6.13"
   },
   "keywords": [
     "matrix",
@@ -40,5 +40,5 @@
     "url": "https://github.com/hoyeungw/vect"
   },
   "homepage": "https://github.com/hoyeungw/vect#readme",
-  "gitHead": "dec0fc30406e9ef81bc62e95645e2883058eb170"
+  "gitHead": "f6317f6ee6d1f9bc50f412bdf5692fb390a2b6d0"
 }
