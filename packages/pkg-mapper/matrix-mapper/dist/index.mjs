@@ -1,3 +1,6 @@
+export { indexed as rows, indexedBy as rowsBy, indexedOf as rowsOf, indexedTo as rowsTo } from '@vect/vector-mapper';
+export { columns, columnsBy, columnsOf, columnsTo } from '@vect/columns-mapper';
+
 /**
  * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.
  * @param {*[][]} mx

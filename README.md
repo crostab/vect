@@ -90,11 +90,11 @@ $ npm install @vect/<tool-name>
 #### Indicators
 |                                                                     |                                  |            |                          |
 | ------------------------------------------------------------------- | -------------------------------- | ---------- |------------------------- |
-| [**vector-indicator**](packages/pkg-indicator/vector-indicator)     | Indicator for vector             | indicator  |![v][vector-indicator-dm] |
-| [**matrix-indicator**](packages/pkg-indicator/matrix-indicator)     | Indicator for matrix elements    | indicator  |![v][matrix-indicator-dm] |
-| [**column-indicator**](packages/pkg-indicator/column-indicator)     | Indicator for matrix column      | indicator  |![v][column-indicator-dm] |
-| [**columns-indicator**](packages/pkg-indicator/columns-indicator)   | Indicator for matrix columns     | indicator  |![v][columns-indicator-dm]|
-| [**entries-indicator**](packages/pkg-indicator/entries-indicator)   | Indicator for entries            | indicator  |![v][entries-indicator-dm]|
+| [**vector-indicator**](archive/pkg-indicator/vector-indicator)     | Indicator for vector             | indicator  |![v][vector-indicator-dm] |
+| [**matrix-indicator**](archive/pkg-indicator/matrix-indicator)     | Indicator for matrix elements    | indicator  |![v][matrix-indicator-dm] |
+| [**column-indicator**](archive/pkg-indicator/column-indicator)     | Indicator for matrix column      | indicator  |![v][column-indicator-dm] |
+| [**columns-indicator**](archive/pkg-indicator/columns-indicator)   | Indicator for matrix columns     | indicator  |![v][columns-indicator-dm]|
+| [**entries-indicator**](archive/pkg-indicator/entries-indicator)   | Indicator for entries            | indicator  |![v][entries-indicator-dm]|
 |                                                                     |                                  |            |                          |
 
 [//]: <> (Local routes)
@@ -131,9 +131,9 @@ $ npm install @vect/<tool-name>
 #### Margins
 |                                                            |                                    |            |                       |
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |---------------------- |
-| [**vector-margin**](packages/pkg-margin/vector-margin)     | Margin for vector                  | margin     |![v][vector-margin-dm] |
-| [**matrix-margin**](packages/pkg-margin/matrix-margin)     | Margin for matrix                  | margin     |![v][matrix-margin-dm] |
-| [**entries-margin**](packages/pkg-margin/entries-margin)   | Margin for entries                 | margin     |![v][entries-margin-dm]|
+| [**vector-margin**](archive/pkg-margin/vector-margin)     | Margin for vector                  | margin     |![v][vector-margin-dm] |
+| [**matrix-margin**](archive/pkg-margin/matrix-margin)     | Margin for matrix                  | margin     |![v][matrix-margin-dm] |
+| [**entries-margin**](archive/pkg-margin/entries-margin)   | Margin for entries                 | margin     |![v][entries-margin-dm]|
 |                                                            |                                    |            |                       |
 
 [//]: <> (Local routes)
@@ -144,8 +144,8 @@ $ npm install @vect/<tool-name>
 #### Quantifiers
 |                                                                     |                                  |            |                           |
 | ------------------------------------------------------------------- | -------------------------------- | ---------- |-------------------------- |
-| [**matrix-quantifier**](packages/pkg-quantifier/matrix-quantifier)  | Every & some for matrix elements | quantifier |![v][matrix-quantifier-dm] |
-| [**column-quantifier**](packages/pkg-quantifier/column-quantifier)  | Every & some for matrix column   | quantifier |![v][column-quantifier-dm] |
+| [**matrix-quantifier**](archive/pkg-quantifier/matrix-quantifier)  | Every & some for matrix elements | quantifier |![v][matrix-quantifier-dm] |
+| [**column-quantifier**](archive/pkg-quantifier/column-quantifier)  | Every & some for matrix column   | quantifier |![v][column-quantifier-dm] |
 |                                                                     |                                  |            |                           |
 
 [//]: <> (Local routes)
@@ -155,7 +155,7 @@ $ npm install @vect/<tool-name>
 #### Misc
 |                                                            |                                    |            |                       |
 | ---------------------------------------------------------- | ---------------------------------- | ---------- |---------------------- |
-| [**callable**](packages/pkg-util/callable)                 | Create a callable class            | misc       |![v][callable-dm] |
+| [**callable**](archive/callable)                 | Create a callable class            | misc       |![v][callable-dm] |
 |                                                            |                                    |            |                       |
 
 [//]: <> (Local routes)

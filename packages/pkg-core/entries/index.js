@@ -1,9 +1,9 @@
 import * as Indicator from '@vect/entries-indicator'
 import * as Init      from '@vect/entries-init'
 import * as Mapper    from '@vect/entries-mapper'
-import * as Margin    from '@vect/entries-margin'
-import * as Unwind    from '@vect/entries-unwind'
-import * as Zipper    from '@vect/entries-zipper'
+import * as Margin from '@vect/entries-margin'
+import * as Unwind from '@vect/entries-unwind'
+import * as Zipper from '@vect/entries-zipper'
 
 export const { draft, wind, iso, } = Init
 export const { iterate, mapper, mutate } = Mapper

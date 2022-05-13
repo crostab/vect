@@ -18,7 +18,8 @@
     "@vect/object-mapper": "^0.6.13",
     "@vect/object-select": "^0.6.13",
     "@vect/object-update": "^0.6.13",
-    "@vect/object-zipper": "^0.6.13"
+    "@vect/object-zipper": "^0.6.13",
+    "@vect/object-index": "^0.6.13"
   },
   "scripts": {
     "pub": "npm publish",

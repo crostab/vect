@@ -1,10 +1,1201 @@
-15 error Error: Command failed with exit code 1: git remote update
-15 error fatal: unable to access 'https://github.com/crostab/vect.git/': Could not resolve host: github.com
-15 error error: Could not fetch origin
-15 error Fetching origin
-15 error     at makeError (/home/hazen/banyan/vect/node_modules/execa/lib/error.js:59:11)
-15 error     at Function.module.exports.sync (/home/hazen/banyan/vect/node_modules/execa/index.js:186:17)
-15 error     at Object.execSync (/home/hazen/banyan/vect/node_modules/@lerna/child-process/index.js:39:16)
-15 error     at updateRemote (/home/hazen/banyan/vect/node_modules/@lerna/version/lib/is-behind-upstream.js:34:16)
-15 error     at isBehindUpstream (/home/hazen/banyan/vect/node_modules/@lerna/version/lib/is-behind-upstream.js:16:3)
-15 error     at VersionCommand.initialize (/home/hazen/banyan/vect/node_modules/@lerna/version/index.js:153:9)
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   'force-publish': true,
+0 silly argv   forcePublish: true,
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'node_modules/lerna/cli.js'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /home/hazen/banyan/vect
+3 verbose session 9a7a89cb7cd9755a
+4 verbose user-agent lerna/4.0.0/node@v16.15.0+x64 (linux)
+5 silly argv {
+5 silly argv   _: [ 'publish' ],
+5 silly argv   'force-publish': true,
+5 silly argv   forcePublish: true,
+5 silly argv   composed: 'publish',
+5 silly argv   lernaVersion: '4.0.0'
+5 silly argv }
+6 verbose rootPath /home/hazen/banyan/vect
+7 info current version 0.6.11
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch master
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 1
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "v0.6.11-1-g6231ba0-dirty" => {"lastTagName":"v0.6.11","lastVersion":"v0.6.11","refCount":"1","sha":"6231ba0","isDirty":true}
+18 warn force-publish all packages
+19 info Assuming all packages changed
+20 verbose updated @vect/enum-matrix-directions
+21 verbose updated @vect/enum-select-styles
+22 verbose updated @vect/matrix-algebra
+23 verbose updated @vect/matrix-transpose
+24 verbose updated @vect/merge-acquire
+25 verbose updated @vect/vector-algebra
+26 verbose updated @vect/vector-merge
+27 verbose updated @vect/entries-init
+28 verbose updated @vect/matrix-init
+29 verbose updated @vect/object-init
+30 verbose updated @vect/vector-init
+31 verbose updated @vect/column
+32 verbose updated @vect/entries
+33 verbose updated @vect/matrix
+34 verbose updated @vect/nested
+35 verbose updated @vect/object
+36 verbose updated @vect/vector
+37 verbose updated @vect/column-getter
+38 verbose updated @vect/matrix-index
+39 verbose updated @vect/object-index
+40 verbose updated @vect/swap
+41 verbose updated @vect/vector-index
+42 verbose updated @vect/column-indicator
+43 verbose updated @vect/columns-indicator
+44 verbose updated @vect/entries-indicator
+45 verbose updated @vect/matrix-indicator
+46 verbose updated @vect/vector-indicator
+47 verbose updated @vect/vector-differentiator
+48 verbose updated @vect/vector-roller
+49 verbose updated @vect/column-mapper
+50 verbose updated @vect/columns-mapper
+51 verbose updated @vect/entries-mapper
+52 verbose updated @vect/matrix-mapper
+53 verbose updated @vect/object-mapper
+54 verbose updated @vect/vector-mapper
+55 verbose updated @vect/entries-margin
+56 verbose updated @vect/matrix-margin
+57 verbose updated @vect/vector-margin
+58 verbose updated @vect/column-quantifier
+59 verbose updated @vect/matrix-quantifier
+60 verbose updated @vect/columns-select
+61 verbose updated @vect/object-select
+62 verbose updated @vect/vector-select
+63 verbose updated @vect/column-stat
+64 verbose updated @vect/columns-stat
+65 verbose updated @vect/entries-stat
+66 verbose updated @vect/matrix-stat
+67 verbose updated @vect/vector-stat
+68 verbose updated @vect/columns-update
+69 verbose updated @vect/object-update
+70 verbose updated @vect/vector-update
+71 verbose updated @vect/callable
+72 verbose updated @vect/clone
+73 verbose updated @vect/entries-unwind
+74 verbose updated @vect/rename
+75 verbose updated @vect/util-pivot
+76 verbose updated @vect/column-zipper
+77 verbose updated @vect/columns-zipper
+78 verbose updated @vect/entries-zipper
+79 verbose updated @vect/matrix-zipper
+80 verbose updated @vect/object-zipper
+81 verbose updated @vect/vector-zipper
+82 info execute Skipping releases
+83 silly lifecycle No script for "preversion" in "root", continuing
+84 silly lifecycle No script for "preversion" in "@vect/enum-matrix-directions", continuing
+85 silly lifecycle No script for "preversion" in "@vect/enum-select-styles", continuing
+86 silly lifecycle No script for "preversion" in "@vect/merge-acquire", continuing
+87 silly lifecycle No script for "preversion" in "@vect/vector-merge", continuing
+88 silly lifecycle No script for "preversion" in "@vect/matrix-init", continuing
+89 silly lifecycle No script for "preversion" in "@vect/object-init", continuing
+90 silly lifecycle No script for "preversion" in "@vect/vector-init", continuing
+91 silly lifecycle No script for "preversion" in "@vect/nested", continuing
+92 silly lifecycle No script for "preversion" in "@vect/matrix-index", continuing
+93 silly lifecycle No script for "preversion" in "@vect/swap", continuing
+94 silly lifecycle No script for "preversion" in "@vect/column-indicator", continuing
+95 silly lifecycle No script for "preversion" in "@vect/entries-indicator", continuing
+96 silly lifecycle No script for "preversion" in "@vect/matrix-indicator", continuing
+97 silly lifecycle No script for "preversion" in "@vect/vector-indicator", continuing
+98 silly lifecycle No script for "preversion" in "@vect/vector-differentiator", continuing
+99 silly lifecycle No script for "preversion" in "@vect/column-mapper", continuing
+100 silly lifecycle No script for "version" in "@vect/matrix-init", continuing
+101 silly lifecycle No script for "preversion" in "@vect/entries-mapper", continuing
+102 silly lifecycle No script for "version" in "@vect/object-init", continuing
+103 silly lifecycle No script for "preversion" in "@vect/object-mapper", continuing
+104 silly lifecycle No script for "version" in "@vect/enum-select-styles", continuing
+105 silly lifecycle No script for "preversion" in "@vect/vector-mapper", continuing
+106 silly lifecycle No script for "version" in "@vect/merge-acquire", continuing
+107 silly lifecycle No script for "preversion" in "@vect/entries-margin", continuing
+108 silly lifecycle No script for "version" in "@vect/nested", continuing
+109 silly lifecycle No script for "preversion" in "@vect/vector-margin", continuing
+110 silly lifecycle No script for "version" in "@vect/vector-indicator", continuing
+111 silly lifecycle No script for "preversion" in "@vect/column-quantifier", continuing
+112 silly lifecycle No script for "version" in "@vect/enum-matrix-directions", continuing
+113 silly lifecycle No script for "preversion" in "@vect/matrix-quantifier", continuing
+114 silly lifecycle No script for "version" in "@vect/vector-merge", continuing
+115 silly lifecycle No script for "preversion" in "@vect/column-stat", continuing
+116 silly lifecycle No script for "version" in "@vect/matrix-index", continuing
+117 silly lifecycle No script for "preversion" in "@vect/entries-stat", continuing
+118 silly lifecycle No script for "version" in "@vect/entries-indicator", continuing
+119 silly lifecycle No script for "preversion" in "@vect/vector-stat", continuing
+120 silly lifecycle No script for "version" in "@vect/matrix-indicator", continuing
+121 silly lifecycle No script for "preversion" in "@vect/callable", continuing
+122 silly lifecycle No script for "version" in "@vect/vector-differentiator", continuing
+123 silly lifecycle No script for "preversion" in "@vect/clone", continuing
+124 silly lifecycle No script for "version" in "@vect/column-mapper", continuing
+125 silly lifecycle No script for "preversion" in "@vect/entries-unwind", continuing
+126 silly lifecycle No script for "version" in "@vect/swap", continuing
+127 silly lifecycle No script for "preversion" in "@vect/rename", continuing
+128 silly lifecycle No script for "version" in "@vect/column-indicator", continuing
+129 silly lifecycle No script for "preversion" in "@vect/entries-zipper", continuing
+130 silly lifecycle No script for "version" in "@vect/vector-init", continuing
+131 silly lifecycle No script for "preversion" in "@vect/matrix-zipper", continuing
+132 silly lifecycle No script for "version" in "@vect/entries-margin", continuing
+133 silly lifecycle No script for "preversion" in "@vect/object-zipper", continuing
+134 silly lifecycle No script for "version" in "@vect/matrix-quantifier", continuing
+135 silly lifecycle No script for "preversion" in "@vect/vector-zipper", continuing
+136 silly lifecycle No script for "version" in "@vect/object-mapper", continuing
+137 silly lifecycle No script for "preversion" in "@vect/column-zipper", continuing
+138 silly lifecycle No script for "version" in "@vect/vector-mapper", continuing
+139 silly lifecycle No script for "preversion" in "@vect/vector-roller", continuing
+140 silly lifecycle No script for "version" in "@vect/entries-stat", continuing
+141 silly lifecycle No script for "preversion" in "@vect/matrix-stat", continuing
+142 silly lifecycle No script for "version" in "@vect/column-quantifier", continuing
+143 silly lifecycle No script for "preversion" in "@vect/vector-update", continuing
+144 silly lifecycle No script for "version" in "@vect/entries-mapper", continuing
+145 silly lifecycle No script for "preversion" in "@vect/columns-stat", continuing
+146 silly lifecycle No script for "version" in "@vect/vector-margin", continuing
+147 silly lifecycle No script for "preversion" in "@vect/matrix-transpose", continuing
+148 silly lifecycle No script for "version" in "@vect/callable", continuing
+149 silly lifecycle No script for "preversion" in "@vect/vector-algebra", continuing
+150 silly lifecycle No script for "version" in "@vect/entries-unwind", continuing
+151 silly lifecycle No script for "preversion" in "@vect/column-getter", continuing
+152 silly lifecycle No script for "version" in "@vect/clone", continuing
+153 silly lifecycle No script for "preversion" in "@vect/object-index", continuing
+154 silly lifecycle No script for "version" in "@vect/vector-stat", continuing
+155 silly lifecycle No script for "preversion" in "@vect/vector-index", continuing
+156 silly lifecycle No script for "version" in "@vect/rename", continuing
+157 silly lifecycle No script for "preversion" in "@vect/matrix-mapper", continuing
+158 silly lifecycle No script for "version" in "@vect/entries-zipper", continuing
+159 silly lifecycle No script for "preversion" in "@vect/object-select", continuing
+160 silly lifecycle No script for "version" in "@vect/column-stat", continuing
+161 silly lifecycle No script for "preversion" in "@vect/matrix-margin", continuing
+162 silly lifecycle No script for "version" in "@vect/matrix-zipper", continuing
+163 silly lifecycle No script for "version" in "@vect/vector-zipper", continuing
+164 silly lifecycle No script for "preversion" in "@vect/entries-init", continuing
+165 silly lifecycle No script for "preversion" in "@vect/util-pivot", continuing
+166 silly lifecycle No script for "version" in "@vect/object-zipper", continuing
+167 silly lifecycle No script for "version" in "@vect/column-zipper", continuing
+168 silly lifecycle No script for "version" in "@vect/vector-update", continuing
+169 silly lifecycle No script for "preversion" in "@vect/vector-select", continuing
+170 silly lifecycle No script for "preversion" in "@vect/columns-update", continuing
+171 silly lifecycle No script for "version" in "@vect/matrix-stat", continuing
+172 silly lifecycle No script for "version" in "@vect/matrix-transpose", continuing
+173 silly lifecycle No script for "version" in "@vect/vector-roller", continuing
+174 silly lifecycle No script for "version" in "@vect/columns-stat", continuing
+175 silly lifecycle No script for "version" in "@vect/vector-algebra", continuing
+176 silly lifecycle No script for "version" in "@vect/column-getter", continuing
+177 silly lifecycle No script for "preversion" in "@vect/column", continuing
+178 silly lifecycle No script for "preversion" in "@vect/columns-mapper", continuing
+179 silly lifecycle No script for "preversion" in "@vect/columns-zipper", continuing
+180 silly lifecycle No script for "version" in "@vect/object-index", continuing
+181 silly lifecycle No script for "preversion" in "@vect/object-update", continuing
+182 silly lifecycle No script for "version" in "@vect/vector-index", continuing
+183 silly lifecycle No script for "version" in "@vect/matrix-mapper", continuing
+184 silly lifecycle No script for "version" in "@vect/object-select", continuing
+185 silly lifecycle No script for "version" in "@vect/matrix-margin", continuing
+186 silly lifecycle No script for "version" in "@vect/vector-select", continuing
+187 silly lifecycle No script for "preversion" in "@vect/vector", continuing
+188 silly lifecycle No script for "preversion" in "@vect/columns-select", continuing
+189 silly lifecycle No script for "version" in "@vect/util-pivot", continuing
+190 silly lifecycle No script for "version" in "@vect/entries-init", continuing
+191 silly lifecycle No script for "preversion" in "@vect/entries", continuing
+192 silly lifecycle No script for "version" in "@vect/columns-zipper", continuing
+193 silly lifecycle No script for "version" in "@vect/columns-mapper", continuing
+194 silly lifecycle No script for "preversion" in "@vect/columns-indicator", continuing
+195 silly lifecycle No script for "version" in "@vect/columns-update", continuing
+196 silly lifecycle No script for "version" in "@vect/column", continuing
+197 silly lifecycle No script for "version" in "@vect/object-update", continuing
+198 silly lifecycle No script for "preversion" in "@vect/object", continuing
+199 silly lifecycle No script for "version" in "@vect/vector", continuing
+200 silly lifecycle No script for "version" in "@vect/entries", continuing
+201 silly lifecycle No script for "version" in "@vect/columns-select", continuing
+202 silly lifecycle No script for "preversion" in "@vect/matrix", continuing
+203 silly lifecycle No script for "version" in "@vect/columns-indicator", continuing
+204 silly lifecycle No script for "version" in "@vect/object", continuing
+205 silly lifecycle No script for "version" in "@vect/matrix", continuing
+206 silly lifecycle No script for "preversion" in "@vect/matrix-algebra", continuing
+207 silly lifecycle No script for "version" in "@vect/matrix-algebra", continuing
+208 silly lifecycle No script for "version" in "root", continuing
+209 silly gitAdd [
+209 silly gitAdd   'packages/pkg-construct/matrix-init/package.json',
+209 silly gitAdd   'packages/pkg-construct/object-init/package.json',
+209 silly gitAdd   'packages/enum/enum-select-styles/package.json',
+209 silly gitAdd   'packages/pkg-algebra/merge-acquire/package.json',
+209 silly gitAdd   'packages/pkg-core/nested/package.json',
+209 silly gitAdd   'packages/pkg-indicator/vector-indicator/package.json',
+209 silly gitAdd   'packages/enum/enum-matrix-directions/package.json',
+209 silly gitAdd   'packages/pkg-algebra/vector-merge/package.json',
+209 silly gitAdd   'packages/pkg-index/matrix-index/package.json',
+209 silly gitAdd   'packages/pkg-indicator/entries-indicator/package.json',
+209 silly gitAdd   'packages/pkg-indicator/matrix-indicator/package.json',
+209 silly gitAdd   'packages/pkg-iterator/vector-differentiator/package.json',
+209 silly gitAdd   'packages/pkg-mapper/column-mapper/package.json',
+209 silly gitAdd   'packages/pkg-index/swap/package.json',
+209 silly gitAdd   'packages/pkg-indicator/column-indicator/package.json',
+209 silly gitAdd   'packages/pkg-construct/vector-init/package.json',
+209 silly gitAdd   'packages/pkg-margin/entries-margin/package.json',
+209 silly gitAdd   'packages/pkg-quantifier/matrix-quantifier/package.json',
+209 silly gitAdd   'packages/pkg-mapper/object-mapper/package.json',
+209 silly gitAdd   'packages/pkg-mapper/vector-mapper/package.json',
+209 silly gitAdd   'packages/pkg-stat/entries-stat/package.json',
+209 silly gitAdd   'packages/pkg-quantifier/column-quantifier/package.json',
+209 silly gitAdd   'packages/pkg-mapper/entries-mapper/package.json',
+209 silly gitAdd   'packages/pkg-margin/vector-margin/package.json',
+209 silly gitAdd   'packages/pkg-util/callable/package.json',
+209 silly gitAdd   'packages/pkg-util/entries-unwind/package.json',
+209 silly gitAdd   'packages/pkg-util/clone/package.json',
+209 silly gitAdd   'packages/pkg-stat/vector-stat/package.json',
+209 silly gitAdd   'packages/pkg-util/rename/package.json',
+209 silly gitAdd   'packages/pkg-zipper/entries-zipper/package.json',
+209 silly gitAdd   'packages/pkg-stat/column-stat/package.json',
+209 silly gitAdd   'packages/pkg-zipper/matrix-zipper/package.json',
+209 silly gitAdd   'packages/pkg-zipper/vector-zipper/package.json',
+209 silly gitAdd   'packages/pkg-zipper/object-zipper/package.json',
+209 silly gitAdd   'packages/pkg-zipper/column-zipper/package.json',
+209 silly gitAdd   'packages/pkg-update/vector-update/package.json',
+209 silly gitAdd   'packages/pkg-stat/matrix-stat/package.json',
+209 silly gitAdd   'packages/pkg-algebra/matrix-transpose/package.json',
+209 silly gitAdd   'packages/pkg-iterator/vector-roller/package.json',
+209 silly gitAdd   'packages/pkg-stat/columns-stat/package.json',
+209 silly gitAdd   'packages/pkg-algebra/vector-algebra/package.json',
+209 silly gitAdd   'packages/pkg-index/column-getter/package.json',
+209 silly gitAdd   'packages/pkg-index/object-index/package.json',
+209 silly gitAdd   'packages/pkg-index/vector-index/package.json',
+209 silly gitAdd   'packages/pkg-mapper/matrix-mapper/package.json',
+209 silly gitAdd   'packages/pkg-select/object-select/package.json',
+209 silly gitAdd   'packages/pkg-margin/matrix-margin/package.json',
+209 silly gitAdd   'packages/pkg-select/vector-select/package.json',
+209 silly gitAdd   'packages/pkg-util/util-pivot/package.json',
+209 silly gitAdd   'packages/pkg-construct/entries-init/package.json',
+209 silly gitAdd   'packages/pkg-zipper/columns-zipper/package.json',
+209 silly gitAdd   'packages/pkg-mapper/columns-mapper/package.json',
+209 silly gitAdd   'packages/pkg-update/columns-update/package.json',
+209 silly gitAdd   'packages/pkg-core/column/package.json',
+209 silly gitAdd   'packages/pkg-update/object-update/package.json',
+209 silly gitAdd   'packages/pkg-core/vector/package.json',
+209 silly gitAdd   'packages/pkg-core/entries/package.json',
+209 silly gitAdd   'packages/pkg-select/columns-select/package.json',
+209 silly gitAdd   'packages/pkg-indicator/columns-indicator/package.json',
+209 silly gitAdd   'packages/pkg-core/object/package.json',
+209 silly gitAdd   'packages/pkg-core/matrix/package.json',
+209 silly gitAdd   'packages/pkg-algebra/matrix-algebra/package.json',
+209 silly gitAdd   'lerna.json'
+209 silly gitAdd ]
+210 silly gitCommit v0.6.12
+211 verbose git [ 'commit', '-m', 'v0.6.12' ]
+212 silly gitTag v0.6.12
+213 verbose git [ 'tag', 'v0.6.12', '-m', 'v0.6.12' ]
+214 silly lifecycle No script for "postversion" in "@vect/enum-matrix-directions", continuing
+215 silly lifecycle No script for "postversion" in "@vect/enum-select-styles", continuing
+216 silly lifecycle No script for "postversion" in "@vect/matrix-algebra", continuing
+217 silly lifecycle No script for "postversion" in "@vect/matrix-transpose", continuing
+218 silly lifecycle No script for "postversion" in "@vect/merge-acquire", continuing
+219 silly lifecycle No script for "postversion" in "@vect/vector-algebra", continuing
+220 silly lifecycle No script for "postversion" in "@vect/vector-merge", continuing
+221 silly lifecycle No script for "postversion" in "@vect/entries-init", continuing
+222 silly lifecycle No script for "postversion" in "@vect/matrix-init", continuing
+223 silly lifecycle No script for "postversion" in "@vect/object-init", continuing
+224 silly lifecycle No script for "postversion" in "@vect/vector-init", continuing
+225 silly lifecycle No script for "postversion" in "@vect/column", continuing
+226 silly lifecycle No script for "postversion" in "@vect/entries", continuing
+227 silly lifecycle No script for "postversion" in "@vect/matrix", continuing
+228 silly lifecycle No script for "postversion" in "@vect/nested", continuing
+229 silly lifecycle No script for "postversion" in "@vect/object", continuing
+230 silly lifecycle No script for "postversion" in "@vect/vector", continuing
+231 silly lifecycle No script for "postversion" in "@vect/column-getter", continuing
+232 silly lifecycle No script for "postversion" in "@vect/matrix-index", continuing
+233 silly lifecycle No script for "postversion" in "@vect/object-index", continuing
+234 silly lifecycle No script for "postversion" in "@vect/swap", continuing
+235 silly lifecycle No script for "postversion" in "@vect/vector-index", continuing
+236 silly lifecycle No script for "postversion" in "@vect/column-indicator", continuing
+237 silly lifecycle No script for "postversion" in "@vect/columns-indicator", continuing
+238 silly lifecycle No script for "postversion" in "@vect/entries-indicator", continuing
+239 silly lifecycle No script for "postversion" in "@vect/matrix-indicator", continuing
+240 silly lifecycle No script for "postversion" in "@vect/vector-indicator", continuing
+241 silly lifecycle No script for "postversion" in "@vect/vector-differentiator", continuing
+242 silly lifecycle No script for "postversion" in "@vect/vector-roller", continuing
+243 silly lifecycle No script for "postversion" in "@vect/column-mapper", continuing
+244 silly lifecycle No script for "postversion" in "@vect/columns-mapper", continuing
+245 silly lifecycle No script for "postversion" in "@vect/entries-mapper", continuing
+246 silly lifecycle No script for "postversion" in "@vect/matrix-mapper", continuing
+247 silly lifecycle No script for "postversion" in "@vect/object-mapper", continuing
+248 silly lifecycle No script for "postversion" in "@vect/vector-mapper", continuing
+249 silly lifecycle No script for "postversion" in "@vect/entries-margin", continuing
+250 silly lifecycle No script for "postversion" in "@vect/matrix-margin", continuing
+251 silly lifecycle No script for "postversion" in "@vect/vector-margin", continuing
+252 silly lifecycle No script for "postversion" in "@vect/column-quantifier", continuing
+253 silly lifecycle No script for "postversion" in "@vect/matrix-quantifier", continuing
+254 silly lifecycle No script for "postversion" in "@vect/columns-select", continuing
+255 silly lifecycle No script for "postversion" in "@vect/object-select", continuing
+256 silly lifecycle No script for "postversion" in "@vect/vector-select", continuing
+257 silly lifecycle No script for "postversion" in "@vect/column-stat", continuing
+258 silly lifecycle No script for "postversion" in "@vect/columns-stat", continuing
+259 silly lifecycle No script for "postversion" in "@vect/entries-stat", continuing
+260 silly lifecycle No script for "postversion" in "@vect/matrix-stat", continuing
+261 silly lifecycle No script for "postversion" in "@vect/vector-stat", continuing
+262 silly lifecycle No script for "postversion" in "@vect/columns-update", continuing
+263 silly lifecycle No script for "postversion" in "@vect/object-update", continuing
+264 silly lifecycle No script for "postversion" in "@vect/vector-update", continuing
+265 silly lifecycle No script for "postversion" in "@vect/callable", continuing
+266 silly lifecycle No script for "postversion" in "@vect/clone", continuing
+267 silly lifecycle No script for "postversion" in "@vect/entries-unwind", continuing
+268 silly lifecycle No script for "postversion" in "@vect/rename", continuing
+269 silly lifecycle No script for "postversion" in "@vect/util-pivot", continuing
+270 silly lifecycle No script for "postversion" in "@vect/column-zipper", continuing
+271 silly lifecycle No script for "postversion" in "@vect/columns-zipper", continuing
+272 silly lifecycle No script for "postversion" in "@vect/entries-zipper", continuing
+273 silly lifecycle No script for "postversion" in "@vect/matrix-zipper", continuing
+274 silly lifecycle No script for "postversion" in "@vect/object-zipper", continuing
+275 silly lifecycle No script for "postversion" in "@vect/vector-zipper", continuing
+276 silly lifecycle No script for "postversion" in "root", continuing
+277 info git Pushing tags...
+278 silly gitPush origin master
+279 info publish Publishing packages to npm...
+280 info Verifying npm credentials
+281 verbose Retrieving npm user profile
+282 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 1172ms
+283 silly npm profile get received {"tfa":false,"name":"hoyeung","email":"hoyeungw@outlook.com","email_verified":true,"created":"2019-02-14T08:31:40.801Z","updated":"2020-10-20T10:49:31.417Z","cidr_whitelist":null,"fullname":"Hoyeung Wong","twitter":"wonghoyeung","github":"hoyeungw"}
+284 silly get npm username received {"username":"hoyeung","tfa":false,"name":"hoyeung","email":"hoyeungw@outlook.com","email_verified":true,"created":"2019-02-14T08:31:40.801Z","updated":"2020-10-20T10:49:31.417Z","cidr_whitelist":null,"fullname":"Hoyeung Wong","twitter":"wonghoyeung","github":"hoyeungw"}
+285 silly verifyNpmPackageAccess
+286 http fetch GET 200 https://registry.npmjs.org/-/org/hoyeung/package?format=cli 404ms
+287 info Checking two-factor auth mode
+288 verbose Retrieving npm user profile
+289 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 305ms
+290 silly npm profile get received {"tfa":false,"name":"hoyeung","email":"hoyeungw@outlook.com","email_verified":true,"created":"2019-02-14T08:31:40.801Z","updated":"2020-10-20T10:49:31.417Z","cidr_whitelist":null,"fullname":"Hoyeung Wong","twitter":"wonghoyeung","github":"hoyeungw"}
+291 silly 2FA false
+292 silly getCurrentSHA
+293 verbose getCurrentSHA f6317f6ee6d1f9bc50f412bdf5692fb390a2b6d0
+294 silly lifecycle No script for "prepublish" in "root", continuing
+295 silly lifecycle No script for "prepare" in "root", continuing
+296 silly lifecycle No script for "prepublishOnly" in "root", continuing
+297 silly lifecycle No script for "prepack" in "root", continuing
+298 verbose pack-directory packages/enum/enum-matrix-directions
+299 verbose pack-directory packages/enum/enum-select-styles
+300 verbose pack-directory packages/pkg-algebra/merge-acquire
+301 verbose pack-directory packages/pkg-algebra/vector-merge
+302 verbose pack-directory packages/pkg-construct/matrix-init
+303 verbose pack-directory packages/pkg-construct/object-init
+304 verbose pack-directory packages/pkg-construct/vector-init
+305 verbose pack-directory packages/pkg-core/nested
+306 verbose pack-directory packages/pkg-index/matrix-index
+307 verbose pack-directory packages/pkg-index/swap
+308 verbose pack-directory packages/pkg-indicator/column-indicator
+309 verbose pack-directory packages/pkg-indicator/entries-indicator
+310 verbose pack-directory packages/pkg-indicator/matrix-indicator
+311 verbose pack-directory packages/pkg-indicator/vector-indicator
+312 verbose pack-directory packages/pkg-iterator/vector-differentiator
+313 verbose pack-directory packages/pkg-mapper/column-mapper
+314 silly lifecycle No script for "prepublish" in "@vect/enum-matrix-directions", continuing
+315 silly lifecycle No script for "prepublish" in "@vect/enum-select-styles", continuing
+316 silly lifecycle No script for "prepublish" in "@vect/merge-acquire", continuing
+317 silly lifecycle No script for "prepublish" in "@vect/vector-merge", continuing
+318 silly lifecycle No script for "prepublish" in "@vect/matrix-init", continuing
+319 silly lifecycle No script for "prepublish" in "@vect/object-init", continuing
+320 silly lifecycle No script for "prepublish" in "@vect/vector-init", continuing
+321 silly lifecycle No script for "prepublish" in "@vect/nested", continuing
+322 silly lifecycle No script for "prepublish" in "@vect/matrix-index", continuing
+323 silly lifecycle No script for "prepublish" in "@vect/swap", continuing
+324 silly lifecycle No script for "prepublish" in "@vect/column-indicator", continuing
+325 silly lifecycle No script for "prepublish" in "@vect/entries-indicator", continuing
+326 silly lifecycle No script for "prepublish" in "@vect/matrix-indicator", continuing
+327 silly lifecycle No script for "prepublish" in "@vect/vector-indicator", continuing
+328 silly lifecycle No script for "prepublish" in "@vect/vector-differentiator", continuing
+329 silly lifecycle No script for "prepublish" in "@vect/column-mapper", continuing
+330 silly lifecycle No script for "prepare" in "@vect/enum-matrix-directions", continuing
+331 silly lifecycle No script for "prepare" in "@vect/enum-select-styles", continuing
+332 silly lifecycle No script for "prepare" in "@vect/merge-acquire", continuing
+333 silly lifecycle No script for "prepare" in "@vect/vector-merge", continuing
+334 silly lifecycle No script for "prepare" in "@vect/matrix-init", continuing
+335 silly lifecycle No script for "prepare" in "@vect/object-init", continuing
+336 silly lifecycle No script for "prepare" in "@vect/vector-init", continuing
+337 silly lifecycle No script for "prepare" in "@vect/nested", continuing
+338 silly lifecycle No script for "prepare" in "@vect/matrix-index", continuing
+339 silly lifecycle No script for "prepare" in "@vect/swap", continuing
+340 silly lifecycle No script for "prepare" in "@vect/column-indicator", continuing
+341 silly lifecycle No script for "prepare" in "@vect/entries-indicator", continuing
+342 silly lifecycle No script for "prepare" in "@vect/matrix-indicator", continuing
+343 silly lifecycle No script for "prepare" in "@vect/vector-indicator", continuing
+344 silly lifecycle No script for "prepare" in "@vect/vector-differentiator", continuing
+345 silly lifecycle No script for "prepare" in "@vect/column-mapper", continuing
+346 silly lifecycle No script for "prepublishOnly" in "@vect/enum-matrix-directions", continuing
+347 silly lifecycle No script for "prepublishOnly" in "@vect/vector-merge", continuing
+348 silly lifecycle No script for "prepublishOnly" in "@vect/merge-acquire", continuing
+349 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-init", continuing
+350 silly lifecycle No script for "prepublishOnly" in "@vect/object-init", continuing
+351 silly lifecycle No script for "prepublishOnly" in "@vect/enum-select-styles", continuing
+352 silly lifecycle No script for "prepublishOnly" in "@vect/vector-init", continuing
+353 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-index", continuing
+354 silly lifecycle No script for "prepublishOnly" in "@vect/nested", continuing
+355 silly lifecycle No script for "prepublishOnly" in "@vect/entries-indicator", continuing
+356 silly lifecycle No script for "prepublishOnly" in "@vect/swap", continuing
+357 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-indicator", continuing
+358 silly lifecycle No script for "prepublishOnly" in "@vect/column-indicator", continuing
+359 silly lifecycle No script for "prepublishOnly" in "@vect/vector-indicator", continuing
+360 silly lifecycle No script for "prepublishOnly" in "@vect/vector-differentiator", continuing
+361 silly lifecycle No script for "prepublishOnly" in "@vect/column-mapper", continuing
+362 silly lifecycle No script for "prepack" in "@vect/vector-merge", continuing
+363 silly lifecycle No script for "prepack" in "@vect/merge-acquire", continuing
+364 silly lifecycle No script for "prepack" in "@vect/enum-matrix-directions", continuing
+365 silly lifecycle No script for "prepack" in "@vect/object-init", continuing
+366 silly lifecycle No script for "prepack" in "@vect/enum-select-styles", continuing
+367 silly lifecycle No script for "prepack" in "@vect/vector-init", continuing
+368 silly lifecycle No script for "prepack" in "@vect/matrix-init", continuing
+369 silly lifecycle No script for "prepack" in "@vect/matrix-index", continuing
+370 silly lifecycle No script for "prepack" in "@vect/nested", continuing
+371 silly lifecycle No script for "prepack" in "@vect/column-indicator", continuing
+372 silly lifecycle No script for "prepack" in "@vect/swap", continuing
+373 silly lifecycle No script for "prepack" in "@vect/entries-indicator", continuing
+374 silly lifecycle No script for "prepack" in "@vect/matrix-indicator", continuing
+375 silly lifecycle No script for "prepack" in "@vect/vector-indicator", continuing
+376 silly lifecycle No script for "prepack" in "@vect/vector-differentiator", continuing
+377 silly lifecycle No script for "prepack" in "@vect/column-mapper", continuing
+378 silly lifecycle No script for "postpack" in "@vect/vector-init", continuing
+379 verbose packed packages/pkg-construct/vector-init
+380 silly lifecycle No script for "postpack" in "@vect/vector-merge", continuing
+381 verbose packed packages/pkg-algebra/vector-merge
+382 silly lifecycle No script for "postpack" in "@vect/matrix-init", continuing
+383 verbose packed packages/pkg-construct/matrix-init
+384 silly lifecycle No script for "postpack" in "@vect/enum-matrix-directions", continuing
+385 verbose packed packages/enum/enum-matrix-directions
+386 silly lifecycle No script for "postpack" in "@vect/nested", continuing
+387 verbose packed packages/pkg-core/nested
+388 silly lifecycle No script for "postpack" in "@vect/merge-acquire", continuing
+389 verbose packed packages/pkg-algebra/merge-acquire
+390 silly lifecycle No script for "postpack" in "@vect/object-init", continuing
+391 verbose packed packages/pkg-construct/object-init
+392 silly lifecycle No script for "postpack" in "@vect/column-indicator", continuing
+393 verbose packed packages/pkg-indicator/column-indicator
+394 silly lifecycle No script for "postpack" in "@vect/matrix-indicator", continuing
+395 verbose packed packages/pkg-indicator/matrix-indicator
+396 silly lifecycle No script for "postpack" in "@vect/enum-select-styles", continuing
+397 verbose packed packages/enum/enum-select-styles
+398 silly lifecycle No script for "postpack" in "@vect/entries-indicator", continuing
+399 verbose packed packages/pkg-indicator/entries-indicator
+400 silly lifecycle No script for "postpack" in "@vect/column-mapper", continuing
+401 verbose packed packages/pkg-mapper/column-mapper
+402 silly lifecycle No script for "postpack" in "@vect/vector-indicator", continuing
+403 verbose packed packages/pkg-indicator/vector-indicator
+404 silly lifecycle No script for "postpack" in "@vect/vector-differentiator", continuing
+405 verbose packed packages/pkg-iterator/vector-differentiator
+406 silly lifecycle No script for "postpack" in "@vect/matrix-index", continuing
+407 verbose packed packages/pkg-index/matrix-index
+408 silly lifecycle No script for "postpack" in "@vect/swap", continuing
+409 verbose packed packages/pkg-index/swap
+410 verbose pack-directory packages/pkg-mapper/entries-mapper
+411 silly lifecycle No script for "prepublish" in "@vect/entries-mapper", continuing
+412 silly lifecycle No script for "prepare" in "@vect/entries-mapper", continuing
+413 verbose pack-directory packages/pkg-mapper/object-mapper
+414 silly lifecycle No script for "prepublish" in "@vect/object-mapper", continuing
+415 silly lifecycle No script for "prepare" in "@vect/object-mapper", continuing
+416 verbose pack-directory packages/pkg-mapper/vector-mapper
+417 silly lifecycle No script for "prepublish" in "@vect/vector-mapper", continuing
+418 silly lifecycle No script for "prepare" in "@vect/vector-mapper", continuing
+419 verbose pack-directory packages/pkg-margin/entries-margin
+420 silly lifecycle No script for "prepublish" in "@vect/entries-margin", continuing
+421 silly lifecycle No script for "prepare" in "@vect/entries-margin", continuing
+422 verbose pack-directory packages/pkg-margin/vector-margin
+423 silly lifecycle No script for "prepublish" in "@vect/vector-margin", continuing
+424 silly lifecycle No script for "prepare" in "@vect/vector-margin", continuing
+425 verbose pack-directory packages/pkg-quantifier/column-quantifier
+426 silly lifecycle No script for "prepublish" in "@vect/column-quantifier", continuing
+427 silly lifecycle No script for "prepare" in "@vect/column-quantifier", continuing
+428 verbose pack-directory packages/pkg-quantifier/matrix-quantifier
+429 silly lifecycle No script for "prepublish" in "@vect/matrix-quantifier", continuing
+430 silly lifecycle No script for "prepare" in "@vect/matrix-quantifier", continuing
+431 verbose pack-directory packages/pkg-stat/column-stat
+432 silly lifecycle No script for "prepublish" in "@vect/column-stat", continuing
+433 silly lifecycle No script for "prepare" in "@vect/column-stat", continuing
+434 verbose pack-directory packages/pkg-stat/entries-stat
+435 silly lifecycle No script for "prepublish" in "@vect/entries-stat", continuing
+436 silly lifecycle No script for "prepare" in "@vect/entries-stat", continuing
+437 verbose pack-directory packages/pkg-stat/vector-stat
+438 silly lifecycle No script for "prepublish" in "@vect/vector-stat", continuing
+439 silly lifecycle No script for "prepare" in "@vect/vector-stat", continuing
+440 verbose pack-directory packages/pkg-util/callable
+441 silly lifecycle No script for "prepublish" in "@vect/callable", continuing
+442 silly lifecycle No script for "prepare" in "@vect/callable", continuing
+443 verbose pack-directory packages/pkg-util/clone
+444 silly lifecycle No script for "prepublish" in "@vect/clone", continuing
+445 silly lifecycle No script for "prepare" in "@vect/clone", continuing
+446 verbose pack-directory packages/pkg-util/entries-unwind
+447 silly lifecycle No script for "prepublish" in "@vect/entries-unwind", continuing
+448 silly lifecycle No script for "prepare" in "@vect/entries-unwind", continuing
+449 verbose pack-directory packages/pkg-util/rename
+450 silly lifecycle No script for "prepublish" in "@vect/rename", continuing
+451 silly lifecycle No script for "prepare" in "@vect/rename", continuing
+452 verbose pack-directory packages/pkg-zipper/entries-zipper
+453 silly lifecycle No script for "prepublish" in "@vect/entries-zipper", continuing
+454 silly lifecycle No script for "prepare" in "@vect/entries-zipper", continuing
+455 verbose pack-directory packages/pkg-zipper/matrix-zipper
+456 silly lifecycle No script for "prepublish" in "@vect/matrix-zipper", continuing
+457 silly lifecycle No script for "prepare" in "@vect/matrix-zipper", continuing
+458 silly lifecycle No script for "prepublishOnly" in "@vect/object-mapper", continuing
+459 silly lifecycle No script for "prepublishOnly" in "@vect/entries-margin", continuing
+460 silly lifecycle No script for "prepublishOnly" in "@vect/vector-mapper", continuing
+461 silly lifecycle No script for "prepublishOnly" in "@vect/vector-margin", continuing
+462 silly lifecycle No script for "prepublishOnly" in "@vect/column-quantifier", continuing
+463 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-quantifier", continuing
+464 silly lifecycle No script for "prepublishOnly" in "@vect/column-stat", continuing
+465 silly lifecycle No script for "prepublishOnly" in "@vect/entries-stat", continuing
+466 silly lifecycle No script for "prepublishOnly" in "@vect/vector-stat", continuing
+467 silly lifecycle No script for "prepublishOnly" in "@vect/clone", continuing
+468 silly lifecycle No script for "prepublishOnly" in "@vect/entries-mapper", continuing
+469 silly lifecycle No script for "prepublishOnly" in "@vect/callable", continuing
+470 silly lifecycle No script for "prepublishOnly" in "@vect/entries-unwind", continuing
+471 silly lifecycle No script for "prepublishOnly" in "@vect/rename", continuing
+472 silly lifecycle No script for "prepublishOnly" in "@vect/entries-zipper", continuing
+473 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-zipper", continuing
+474 silly lifecycle No script for "prepack" in "@vect/object-mapper", continuing
+475 silly lifecycle No script for "prepack" in "@vect/entries-margin", continuing
+476 silly lifecycle No script for "prepack" in "@vect/vector-mapper", continuing
+477 silly lifecycle No script for "prepack" in "@vect/vector-margin", continuing
+478 silly lifecycle No script for "prepack" in "@vect/column-quantifier", continuing
+479 silly lifecycle No script for "prepack" in "@vect/column-stat", continuing
+480 silly lifecycle No script for "prepack" in "@vect/matrix-quantifier", continuing
+481 silly lifecycle No script for "prepack" in "@vect/entries-stat", continuing
+482 silly lifecycle No script for "prepack" in "@vect/clone", continuing
+483 silly lifecycle No script for "prepack" in "@vect/vector-stat", continuing
+484 silly lifecycle No script for "prepack" in "@vect/entries-mapper", continuing
+485 silly lifecycle No script for "prepack" in "@vect/rename", continuing
+486 silly lifecycle No script for "prepack" in "@vect/callable", continuing
+487 silly lifecycle No script for "prepack" in "@vect/entries-unwind", continuing
+488 silly lifecycle No script for "prepack" in "@vect/entries-zipper", continuing
+489 silly lifecycle No script for "prepack" in "@vect/matrix-zipper", continuing
+490 silly lifecycle No script for "postpack" in "@vect/vector-mapper", continuing
+491 verbose packed packages/pkg-mapper/vector-mapper
+492 silly lifecycle No script for "postpack" in "@vect/object-mapper", continuing
+493 verbose packed packages/pkg-mapper/object-mapper
+494 silly lifecycle No script for "postpack" in "@vect/entries-margin", continuing
+495 verbose packed packages/pkg-margin/entries-margin
+496 silly lifecycle No script for "postpack" in "@vect/column-quantifier", continuing
+497 verbose packed packages/pkg-quantifier/column-quantifier
+498 silly lifecycle No script for "postpack" in "@vect/vector-margin", continuing
+499 verbose packed packages/pkg-margin/vector-margin
+500 silly lifecycle No script for "postpack" in "@vect/clone", continuing
+501 verbose packed packages/pkg-util/clone
+502 silly lifecycle No script for "postpack" in "@vect/column-stat", continuing
+503 verbose packed packages/pkg-stat/column-stat
+504 silly lifecycle No script for "postpack" in "@vect/vector-stat", continuing
+505 verbose packed packages/pkg-stat/vector-stat
+506 silly lifecycle No script for "postpack" in "@vect/entries-stat", continuing
+507 verbose packed packages/pkg-stat/entries-stat
+508 silly lifecycle No script for "postpack" in "@vect/entries-mapper", continuing
+509 verbose packed packages/pkg-mapper/entries-mapper
+510 silly lifecycle No script for "postpack" in "@vect/matrix-quantifier", continuing
+511 verbose packed packages/pkg-quantifier/matrix-quantifier
+512 silly lifecycle No script for "postpack" in "@vect/entries-unwind", continuing
+513 verbose packed packages/pkg-util/entries-unwind
+514 silly lifecycle No script for "postpack" in "@vect/callable", continuing
+515 verbose packed packages/pkg-util/callable
+516 silly lifecycle No script for "postpack" in "@vect/rename", continuing
+517 verbose packed packages/pkg-util/rename
+518 silly lifecycle No script for "postpack" in "@vect/matrix-zipper", continuing
+519 verbose packed packages/pkg-zipper/matrix-zipper
+520 silly lifecycle No script for "postpack" in "@vect/entries-zipper", continuing
+521 verbose packed packages/pkg-zipper/entries-zipper
+522 verbose pack-directory packages/pkg-zipper/object-zipper
+523 silly lifecycle No script for "prepublish" in "@vect/object-zipper", continuing
+524 silly lifecycle No script for "prepare" in "@vect/object-zipper", continuing
+525 verbose pack-directory packages/pkg-zipper/vector-zipper
+526 silly lifecycle No script for "prepublish" in "@vect/vector-zipper", continuing
+527 silly lifecycle No script for "prepare" in "@vect/vector-zipper", continuing
+528 verbose pack-directory packages/pkg-iterator/vector-roller
+529 silly lifecycle No script for "prepublish" in "@vect/vector-roller", continuing
+530 silly lifecycle No script for "prepare" in "@vect/vector-roller", continuing
+531 verbose pack-directory packages/pkg-zipper/column-zipper
+532 silly lifecycle No script for "prepublish" in "@vect/column-zipper", continuing
+533 silly lifecycle No script for "prepare" in "@vect/column-zipper", continuing
+534 verbose pack-directory packages/pkg-stat/columns-stat
+535 silly lifecycle No script for "prepublish" in "@vect/columns-stat", continuing
+536 silly lifecycle No script for "prepare" in "@vect/columns-stat", continuing
+537 verbose pack-directory packages/pkg-stat/matrix-stat
+538 silly lifecycle No script for "prepublish" in "@vect/matrix-stat", continuing
+539 silly lifecycle No script for "prepare" in "@vect/matrix-stat", continuing
+540 verbose pack-directory packages/pkg-update/vector-update
+541 silly lifecycle No script for "prepublish" in "@vect/vector-update", continuing
+542 silly lifecycle No script for "prepare" in "@vect/vector-update", continuing
+543 verbose pack-directory packages/pkg-algebra/matrix-transpose
+544 silly lifecycle No script for "prepublish" in "@vect/matrix-transpose", continuing
+545 silly lifecycle No script for "prepare" in "@vect/matrix-transpose", continuing
+546 verbose pack-directory packages/pkg-algebra/vector-algebra
+547 silly lifecycle No script for "prepublish" in "@vect/vector-algebra", continuing
+548 silly lifecycle No script for "prepare" in "@vect/vector-algebra", continuing
+549 verbose pack-directory packages/pkg-index/column-getter
+550 silly lifecycle No script for "prepublish" in "@vect/column-getter", continuing
+551 silly lifecycle No script for "prepare" in "@vect/column-getter", continuing
+552 verbose pack-directory packages/pkg-index/object-index
+553 silly lifecycle No script for "prepublish" in "@vect/object-index", continuing
+554 silly lifecycle No script for "prepare" in "@vect/object-index", continuing
+555 verbose pack-directory packages/pkg-index/vector-index
+556 silly lifecycle No script for "prepublish" in "@vect/vector-index", continuing
+557 silly lifecycle No script for "prepare" in "@vect/vector-index", continuing
+558 verbose pack-directory packages/pkg-mapper/matrix-mapper
+559 silly lifecycle No script for "prepublish" in "@vect/matrix-mapper", continuing
+560 silly lifecycle No script for "prepare" in "@vect/matrix-mapper", continuing
+561 verbose pack-directory packages/pkg-select/object-select
+562 silly lifecycle No script for "prepublish" in "@vect/object-select", continuing
+563 silly lifecycle No script for "prepare" in "@vect/object-select", continuing
+564 verbose pack-directory packages/pkg-margin/matrix-margin
+565 silly lifecycle No script for "prepublish" in "@vect/matrix-margin", continuing
+566 silly lifecycle No script for "prepare" in "@vect/matrix-margin", continuing
+567 silly lifecycle No script for "prepublishOnly" in "@vect/vector-zipper", continuing
+568 silly lifecycle No script for "prepublishOnly" in "@vect/vector-roller", continuing
+569 silly lifecycle No script for "prepublishOnly" in "@vect/object-zipper", continuing
+570 silly lifecycle No script for "prepublishOnly" in "@vect/column-zipper", continuing
+571 silly lifecycle No script for "prepublishOnly" in "@vect/vector-update", continuing
+572 silly lifecycle No script for "prepublishOnly" in "@vect/columns-stat", continuing
+573 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-stat", continuing
+574 silly lifecycle No script for "prepublishOnly" in "@vect/column-getter", continuing
+575 silly lifecycle No script for "prepublishOnly" in "@vect/vector-algebra", continuing
+576 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-transpose", continuing
+577 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-mapper", continuing
+578 silly lifecycle No script for "prepublishOnly" in "@vect/object-index", continuing
+579 silly lifecycle No script for "prepublishOnly" in "@vect/vector-index", continuing
+580 silly lifecycle No script for "prepublishOnly" in "@vect/object-select", continuing
+581 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-margin", continuing
+582 silly lifecycle No script for "prepack" in "@vect/vector-roller", continuing
+583 silly lifecycle No script for "prepack" in "@vect/vector-update", continuing
+584 silly lifecycle No script for "prepack" in "@vect/vector-zipper", continuing
+585 silly lifecycle No script for "prepack" in "@vect/object-zipper", continuing
+586 silly lifecycle No script for "prepack" in "@vect/columns-stat", continuing
+587 silly lifecycle No script for "prepack" in "@vect/column-zipper", continuing
+588 silly lifecycle No script for "prepack" in "@vect/matrix-stat", continuing
+589 silly lifecycle No script for "prepack" in "@vect/column-getter", continuing
+590 silly lifecycle No script for "prepack" in "@vect/matrix-transpose", continuing
+591 silly lifecycle No script for "prepack" in "@vect/vector-algebra", continuing
+592 silly lifecycle No script for "prepack" in "@vect/matrix-mapper", continuing
+593 silly lifecycle No script for "prepack" in "@vect/vector-index", continuing
+594 silly lifecycle No script for "prepack" in "@vect/object-select", continuing
+595 silly lifecycle No script for "prepack" in "@vect/object-index", continuing
+596 silly lifecycle No script for "prepack" in "@vect/matrix-margin", continuing
+597 silly lifecycle No script for "postpack" in "@vect/vector-update", continuing
+598 verbose packed packages/pkg-update/vector-update
+599 silly lifecycle No script for "postpack" in "@vect/object-zipper", continuing
+600 verbose packed packages/pkg-zipper/object-zipper
+601 silly lifecycle No script for "postpack" in "@vect/vector-roller", continuing
+602 verbose packed packages/pkg-iterator/vector-roller
+603 silly lifecycle No script for "postpack" in "@vect/vector-zipper", continuing
+604 verbose packed packages/pkg-zipper/vector-zipper
+605 silly lifecycle No script for "postpack" in "@vect/column-zipper", continuing
+606 verbose packed packages/pkg-zipper/column-zipper
+607 silly lifecycle No script for "postpack" in "@vect/matrix-stat", continuing
+608 verbose packed packages/pkg-stat/matrix-stat
+609 silly lifecycle No script for "postpack" in "@vect/column-getter", continuing
+610 verbose packed packages/pkg-index/column-getter
+611 silly lifecycle No script for "postpack" in "@vect/matrix-transpose", continuing
+612 verbose packed packages/pkg-algebra/matrix-transpose
+613 silly lifecycle No script for "postpack" in "@vect/object-select", continuing
+614 verbose packed packages/pkg-select/object-select
+615 silly lifecycle No script for "postpack" in "@vect/columns-stat", continuing
+616 verbose packed packages/pkg-stat/columns-stat
+617 silly lifecycle No script for "postpack" in "@vect/vector-algebra", continuing
+618 verbose packed packages/pkg-algebra/vector-algebra
+619 silly lifecycle No script for "postpack" in "@vect/matrix-mapper", continuing
+620 verbose packed packages/pkg-mapper/matrix-mapper
+621 silly lifecycle No script for "postpack" in "@vect/matrix-margin", continuing
+622 verbose packed packages/pkg-margin/matrix-margin
+623 silly lifecycle No script for "postpack" in "@vect/vector-index", continuing
+624 verbose packed packages/pkg-index/vector-index
+625 silly lifecycle No script for "postpack" in "@vect/object-index", continuing
+626 verbose packed packages/pkg-index/object-index
+627 verbose pack-directory packages/pkg-select/vector-select
+628 silly lifecycle No script for "prepublish" in "@vect/vector-select", continuing
+629 silly lifecycle No script for "prepare" in "@vect/vector-select", continuing
+630 verbose pack-directory packages/pkg-core/column
+631 verbose pack-directory packages/pkg-mapper/columns-mapper
+632 verbose pack-directory packages/pkg-zipper/columns-zipper
+633 silly lifecycle No script for "prepublish" in "@vect/column", continuing
+634 silly lifecycle No script for "prepublish" in "@vect/columns-mapper", continuing
+635 silly lifecycle No script for "prepublish" in "@vect/columns-zipper", continuing
+636 silly lifecycle No script for "prepare" in "@vect/column", continuing
+637 silly lifecycle No script for "prepare" in "@vect/columns-mapper", continuing
+638 silly lifecycle No script for "prepare" in "@vect/columns-zipper", continuing
+639 verbose pack-directory packages/pkg-construct/entries-init
+640 verbose pack-directory packages/pkg-update/columns-update
+641 verbose pack-directory packages/pkg-util/util-pivot
+642 silly lifecycle No script for "prepublish" in "@vect/entries-init", continuing
+643 silly lifecycle No script for "prepublish" in "@vect/columns-update", continuing
+644 silly lifecycle No script for "prepublish" in "@vect/util-pivot", continuing
+645 silly lifecycle No script for "prepare" in "@vect/entries-init", continuing
+646 silly lifecycle No script for "prepare" in "@vect/columns-update", continuing
+647 silly lifecycle No script for "prepare" in "@vect/util-pivot", continuing
+648 verbose pack-directory packages/pkg-update/object-update
+649 silly lifecycle No script for "prepublish" in "@vect/object-update", continuing
+650 silly lifecycle No script for "prepare" in "@vect/object-update", continuing
+651 silly lifecycle No script for "prepublishOnly" in "@vect/vector-select", continuing
+652 silly lifecycle No script for "prepublishOnly" in "@vect/column", continuing
+653 silly lifecycle No script for "prepublishOnly" in "@vect/columns-zipper", continuing
+654 silly lifecycle No script for "prepublishOnly" in "@vect/util-pivot", continuing
+655 silly lifecycle No script for "prepublishOnly" in "@vect/columns-update", continuing
+656 silly lifecycle No script for "prepublishOnly" in "@vect/columns-mapper", continuing
+657 silly lifecycle No script for "prepublishOnly" in "@vect/entries-init", continuing
+658 silly lifecycle No script for "prepublishOnly" in "@vect/object-update", continuing
+659 silly lifecycle No script for "prepack" in "@vect/vector-select", continuing
+660 silly lifecycle No script for "prepack" in "@vect/column", continuing
+661 silly lifecycle No script for "prepack" in "@vect/columns-update", continuing
+662 silly lifecycle No script for "prepack" in "@vect/util-pivot", continuing
+663 silly lifecycle No script for "prepack" in "@vect/columns-mapper", continuing
+664 silly lifecycle No script for "prepack" in "@vect/columns-zipper", continuing
+665 silly lifecycle No script for "prepack" in "@vect/entries-init", continuing
+666 silly lifecycle No script for "prepack" in "@vect/object-update", continuing
+667 silly lifecycle No script for "postpack" in "@vect/vector-select", continuing
+668 verbose packed packages/pkg-select/vector-select
+669 silly lifecycle No script for "postpack" in "@vect/column", continuing
+670 verbose packed packages/pkg-core/column
+671 silly lifecycle No script for "postpack" in "@vect/columns-update", continuing
+672 verbose packed packages/pkg-update/columns-update
+673 silly lifecycle No script for "postpack" in "@vect/util-pivot", continuing
+674 verbose packed packages/pkg-util/util-pivot
+675 silly lifecycle No script for "postpack" in "@vect/entries-init", continuing
+676 verbose packed packages/pkg-construct/entries-init
+677 silly lifecycle No script for "postpack" in "@vect/columns-zipper", continuing
+678 verbose packed packages/pkg-zipper/columns-zipper
+679 silly lifecycle No script for "postpack" in "@vect/columns-mapper", continuing
+680 verbose packed packages/pkg-mapper/columns-mapper
+681 silly lifecycle No script for "postpack" in "@vect/object-update", continuing
+682 verbose packed packages/pkg-update/object-update
+683 verbose pack-directory packages/pkg-core/vector
+684 verbose pack-directory packages/pkg-select/columns-select
+685 silly lifecycle No script for "prepublish" in "@vect/vector", continuing
+686 silly lifecycle No script for "prepublish" in "@vect/columns-select", continuing
+687 silly lifecycle No script for "prepare" in "@vect/vector", continuing
+688 silly lifecycle No script for "prepare" in "@vect/columns-select", continuing
+689 verbose pack-directory packages/pkg-core/entries
+690 silly lifecycle No script for "prepublish" in "@vect/entries", continuing
+691 silly lifecycle No script for "prepare" in "@vect/entries", continuing
+692 verbose pack-directory packages/pkg-indicator/columns-indicator
+693 silly lifecycle No script for "prepublish" in "@vect/columns-indicator", continuing
+694 silly lifecycle No script for "prepare" in "@vect/columns-indicator", continuing
+695 verbose pack-directory packages/pkg-core/object
+696 silly lifecycle No script for "prepublish" in "@vect/object", continuing
+697 silly lifecycle No script for "prepare" in "@vect/object", continuing
+698 silly lifecycle No script for "prepublishOnly" in "@vect/vector", continuing
+699 silly lifecycle No script for "prepublishOnly" in "@vect/entries", continuing
+700 silly lifecycle No script for "prepublishOnly" in "@vect/columns-select", continuing
+701 silly lifecycle No script for "prepublishOnly" in "@vect/columns-indicator", continuing
+702 silly lifecycle No script for "prepublishOnly" in "@vect/object", continuing
+703 silly lifecycle No script for "prepack" in "@vect/vector", continuing
+704 silly lifecycle No script for "prepack" in "@vect/entries", continuing
+705 silly lifecycle No script for "prepack" in "@vect/columns-select", continuing
+706 silly lifecycle No script for "prepack" in "@vect/columns-indicator", continuing
+707 silly lifecycle No script for "prepack" in "@vect/object", continuing
+708 silly lifecycle No script for "postpack" in "@vect/vector", continuing
+709 verbose packed packages/pkg-core/vector
+710 silly lifecycle No script for "postpack" in "@vect/entries", continuing
+711 verbose packed packages/pkg-core/entries
+712 silly lifecycle No script for "postpack" in "@vect/object", continuing
+713 verbose packed packages/pkg-core/object
+714 silly lifecycle No script for "postpack" in "@vect/columns-indicator", continuing
+715 verbose packed packages/pkg-indicator/columns-indicator
+716 silly lifecycle No script for "postpack" in "@vect/columns-select", continuing
+717 verbose packed packages/pkg-select/columns-select
+718 verbose pack-directory packages/pkg-core/matrix
+719 silly lifecycle No script for "prepublish" in "@vect/matrix", continuing
+720 silly lifecycle No script for "prepare" in "@vect/matrix", continuing
+721 silly lifecycle No script for "prepublishOnly" in "@vect/matrix", continuing
+722 silly lifecycle No script for "prepack" in "@vect/matrix", continuing
+723 silly lifecycle No script for "postpack" in "@vect/matrix", continuing
+724 verbose packed packages/pkg-core/matrix
+725 verbose pack-directory packages/pkg-algebra/matrix-algebra
+726 silly lifecycle No script for "prepublish" in "@vect/matrix-algebra", continuing
+727 silly lifecycle No script for "prepare" in "@vect/matrix-algebra", continuing
+728 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-algebra", continuing
+729 silly lifecycle No script for "prepack" in "@vect/matrix-algebra", continuing
+730 silly lifecycle No script for "postpack" in "@vect/matrix-algebra", continuing
+731 verbose packed packages/pkg-algebra/matrix-algebra
+732 silly lifecycle No script for "postpack" in "root", continuing
+733 verbose publish @vect/enum-matrix-directions
+734 verbose publish @vect/enum-select-styles
+735 verbose publish @vect/merge-acquire
+736 verbose publish @vect/vector-merge
+737 verbose publish @vect/matrix-init
+738 verbose publish @vect/object-init
+739 verbose publish @vect/vector-init
+740 verbose publish @vect/nested
+741 verbose publish @vect/matrix-index
+742 verbose publish @vect/swap
+743 verbose publish @vect/column-indicator
+744 verbose publish @vect/entries-indicator
+745 verbose publish @vect/matrix-indicator
+746 verbose publish @vect/vector-indicator
+747 verbose publish @vect/vector-differentiator
+748 verbose publish @vect/column-mapper
+749 http fetch PUT 200 https://registry.npmjs.org/@vect%2fmerge-acquire 1351ms
+750 silly lifecycle No script for "publish" in "@vect/merge-acquire", continuing
+751 silly lifecycle No script for "postpublish" in "@vect/merge-acquire", continuing
+752 success published @vect/merge-acquire 0.6.12
+753 notice
+754 notice 📦  @vect/merge-acquire@0.6.12
+755 notice === Tarball Contents ===
+756 notice 1.1kB LICENSE
+756 notice 651B  dist/index.cjs
+756 notice 802B  package.json
+756 notice 1.5kB README.md
+756 notice 532B  dist/index.mjs
+757 notice === Tarball Details ===
+758 notice name:          @vect/merge-acquire
+758 notice version:       0.6.12
+758 notice filename:      vect-merge-acquire-0.6.12.tgz
+758 notice package size:  1.9 kB
+758 notice unpacked size: 4.6 kB
+758 notice shasum:        35cd90d63e0836110b12c795015bf2c609b2d310
+758 notice integrity:     sha512-e672e2awLehPt[...]rVDFrvKkI5kMQ==
+758 notice total files:   5
+759 notice
+760 verbose publish @vect/entries-mapper
+761 http fetch PUT 200 https://registry.npmjs.org/@vect%2fvector-init 1678ms
+762 silly lifecycle No script for "publish" in "@vect/vector-init", continuing
+763 silly lifecycle No script for "postpublish" in "@vect/vector-init", continuing
+764 success published @vect/vector-init 0.6.12
+765 notice
+766 notice 📦  @vect/vector-init@0.6.12
+767 notice === Tarball Contents ===
+768 notice 1.1kB LICENSE
+768 notice 2.8kB dist/index.cjs
+768 notice 884B  package.json
+768 notice 1.5kB README.md
+768 notice 2.5kB dist/index.mjs
+769 notice === Tarball Details ===
+770 notice name:          @vect/vector-init
+770 notice version:       0.6.12
+770 notice filename:      vect-vector-init-0.6.12.tgz
+770 notice package size:  2.7 kB
+770 notice unpacked size: 8.8 kB
+770 notice shasum:        f7a01b2f08c464a40b256aa25196fde767a7b5ac
+770 notice integrity:     sha512-5u825ZN+8GLaF[...]tj483wGwyfYow==
+770 notice total files:   5
+771 notice
+772 verbose publish @vect/object-mapper
+773 http fetch PUT 200 https://registry.npmjs.org/@vect%2fmatrix-init 1794ms
+774 silly lifecycle No script for "publish" in "@vect/matrix-init", continuing
+775 silly lifecycle No script for "postpublish" in "@vect/matrix-init", continuing
+776 success published @vect/matrix-init 0.6.12
+777 notice
+778 notice 📦  @vect/matrix-init@0.6.12
+779 notice === Tarball Contents ===
+780 notice 1.1kB LICENSE
+780 notice 1.2kB dist/index.cjs
+780 notice 854B  package.json
+780 notice 1.5kB README.md
+780 notice 1.0kB dist/index.mjs
+781 notice === Tarball Details ===
+782 notice name:          @vect/matrix-init
+782 notice version:       0.6.12
+782 notice filename:      vect-matrix-init-0.6.12.tgz
+782 notice package size:  2.2 kB
+782 notice unpacked size: 5.7 kB
+782 notice shasum:        161146b0fe16afd84ecae3ba9eb5e43d9172cabd
+782 notice integrity:     sha512-S6oBBFcDIAMcE[...]OftMQWDJgPqgw==
+782 notice total files:   5
+783 notice
+784 verbose publish @vect/vector-mapper
+785 http fetch PUT 200 https://registry.npmjs.org/@vect%2fnested 1789ms
+786 silly lifecycle No script for "publish" in "@vect/nested", continuing
+787 silly lifecycle No script for "postpublish" in "@vect/nested", continuing
+788 success published @vect/nested 0.6.12
+789 notice
+790 notice 📦  @vect/nested@0.6.12
+791 notice === Tarball Contents ===
+792 notice 1.1kB LICENSE
+792 notice 3.5kB dist/index.cjs
+792 notice 819B  package.json
+792 notice 1.4kB README.md
+792 notice 3.0kB dist/index.mjs
+793 notice === Tarball Details ===
+794 notice name:          @vect/nested
+794 notice version:       0.6.12
+794 notice filename:      vect-nested-0.6.12.tgz
+794 notice package size:  2.6 kB
+794 notice unpacked size: 9.9 kB
+794 notice shasum:        5fe85fbf2c17b70bf0c8524630cb5679f319f734
+794 notice integrity:     sha512-nIsvc9NVnCoFZ[...]mawpyzEEl3Oaw==
+794 notice total files:   5
+795 notice
+796 verbose publish @vect/entries-margin
+797 http fetch PUT 200 https://registry.npmjs.org/@vect%2fobject-init 1855ms
+798 silly lifecycle No script for "publish" in "@vect/object-init", continuing
+799 silly lifecycle No script for "postpublish" in "@vect/object-init", continuing
+800 success published @vect/object-init 0.6.12
+801 notice
+802 notice 📦  @vect/object-init@0.6.12
+803 notice === Tarball Contents ===
+804 notice 1.1kB LICENSE
+804 notice 1.8kB dist/index.cjs
+804 notice 862B  package.json
+804 notice 1.5kB README.md
+804 notice 1.5kB dist/index.mjs
+805 notice === Tarball Details ===
+806 notice name:          @vect/object-init
+806 notice version:       0.6.12
+806 notice filename:      vect-object-init-0.6.12.tgz
+806 notice package size:  2.3 kB
+806 notice unpacked size: 6.7 kB
+806 notice shasum:        6b404f7aa3bf0619d3eca07bbf6cdba415a68571
+806 notice integrity:     sha512-M6hF9UIOl2Ket[...]I+pw3AAES1/5g==
+806 notice total files:   5
+807 notice
+808 verbose publish @vect/vector-margin
+809 http fetch PUT 200 https://registry.npmjs.org/@vect%2fvector-merge 1886ms
+810 silly lifecycle No script for "publish" in "@vect/vector-merge", continuing
+811 silly lifecycle No script for "postpublish" in "@vect/vector-merge", continuing
+812 success published @vect/vector-merge 0.6.12
+813 notice
+814 notice 📦  @vect/vector-merge@0.6.12
+815 notice === Tarball Contents ===
+816 notice 1.1kB LICENSE
+816 notice 505B  dist/index.cjs
+816 notice 821B  package.json
+816 notice 1.5kB README.md
+816 notice 386B  dist/index.mjs
+817 notice === Tarball Details ===
+818 notice name:          @vect/vector-merge
+818 notice version:       0.6.12
+818 notice filename:      vect-vector-merge-0.6.12.tgz
+818 notice package size:  1.9 kB
+818 notice unpacked size: 4.3 kB
+818 notice shasum:        461eb37a16c8351f7826a7f58d592031712fb4f0
+818 notice integrity:     sha512-QbWWfL6v8tVNW[...]ymiitfuO2T5Zw==
+818 notice total files:   5
+819 notice
+820 verbose publish @vect/column-quantifier
+821 http fetch PUT 200 https://registry.npmjs.org/@vect%2fmatrix-index 1924ms
+822 silly lifecycle No script for "publish" in "@vect/matrix-index", continuing
+823 silly lifecycle No script for "postpublish" in "@vect/matrix-index", continuing
+824 success published @vect/matrix-index 0.6.12
+825 notice
+826 notice 📦  @vect/matrix-index@0.6.12
+827 notice === Tarball Contents ===
+828 notice 1.1kB LICENSE
+828 notice 714B  dist/index.cjs
+828 notice 799B  package.json
+828 notice 1.5kB README.md
+828 notice 581B  dist/index.mjs
+829 notice === Tarball Details ===
+830 notice name:          @vect/matrix-index
+830 notice version:       0.6.12
+830 notice filename:      vect-matrix-index-0.6.12.tgz
+830 notice package size:  2.0 kB
+830 notice unpacked size: 4.7 kB
+830 notice shasum:        2c5590cd63b5a100df29015b7feea70095c376fd
+830 notice integrity:     sha512-AoHexSE1AsMAo[...]n3pvpLM/4huSg==
+830 notice total files:   5
+831 notice
+832 verbose publish @vect/matrix-quantifier
+833 http fetch PUT 200 https://registry.npmjs.org/@vect%2fenum-matrix-directions 2061ms
+834 silly lifecycle No script for "publish" in "@vect/enum-matrix-directions", continuing
+835 silly lifecycle No script for "postpublish" in "@vect/enum-matrix-directions", continuing
+836 success published @vect/enum-matrix-directions 0.6.12
+837 notice
+838 notice 📦  @vect/enum-matrix-directions@0.6.12
+839 notice === Tarball Contents ===
+840 notice 1.1kB LICENSE
+840 notice 233B  dist/index.cjs
+840 notice 790B  package.json
+840 notice 1.6kB README.md
+840 notice 106B  dist/index.mjs
+841 notice === Tarball Details ===
+842 notice name:          @vect/enum-matrix-directions
+842 notice version:       0.6.12
+842 notice filename:      vect-enum-matrix-directions-0.6.12.tgz
+842 notice package size:  1.8 kB
+842 notice unpacked size: 3.8 kB
+842 notice shasum:        321dcb1f2e2072715b1cbff1a0cf10aa16cb8509
+842 notice integrity:     sha512-N9ErwdEskTX4v[...]kp5gyn5E1CULA==
+842 notice total files:   5
+843 notice
+844 verbose publish @vect/column-stat
+845 http fetch PUT 200 https://registry.npmjs.org/@vect%2fenum-select-styles 2092ms
+846 silly lifecycle No script for "publish" in "@vect/enum-select-styles", continuing
+847 silly lifecycle No script for "postpublish" in "@vect/enum-select-styles", continuing
+848 success published @vect/enum-select-styles 0.6.12
+849 notice
+850 notice 📦  @vect/enum-select-styles@0.6.12
+851 notice === Tarball Contents ===
+852 notice 1.1kB LICENSE
+852 notice 228B  dist/index.cjs
+852 notice 786B  package.json
+852 notice 1.5kB README.md
+852 notice 100B  dist/index.mjs
+853 notice === Tarball Details ===
+854 notice name:          @vect/enum-select-styles
+854 notice version:       0.6.12
+854 notice filename:      vect-enum-select-styles-0.6.12.tgz
+854 notice package size:  1.8 kB
+854 notice unpacked size: 3.8 kB
+854 notice shasum:        c2c25c4e3cb4e4c773881d6cab4153a94cbf025c
+854 notice integrity:     sha512-OBQTsKzYKlPYS[...]bCqPfb/+f5UOg==
+854 notice total files:   5
+855 notice
+856 verbose publish @vect/entries-stat
+857 http fetch PUT 200 https://registry.npmjs.org/@vect%2fswap 2143ms
+858 silly lifecycle No script for "publish" in "@vect/swap", continuing
+859 silly lifecycle No script for "postpublish" in "@vect/swap", continuing
+860 success published @vect/swap 0.6.12
+861 notice
+862 notice 📦  @vect/swap@0.6.12
+863 notice === Tarball Contents ===
+864 notice 1.1kB LICENSE
+864 notice 825B  dist/index.cjs
+864 notice 781B  package.json
+864 notice 1.5kB README.md
+864 notice 687B  dist/index.mjs
+865 notice === Tarball Details ===
+866 notice name:          @vect/swap
+866 notice version:       0.6.12
+866 notice filename:      vect-swap-0.6.12.tgz
+866 notice package size:  2.0 kB
+866 notice unpacked size: 4.9 kB
+866 notice shasum:        f72e5905f105d92a340a3f127a7fd2e93c45a3d6
+866 notice integrity:     sha512-3tU6hP2hWFpH5[...]Mhbae2Q9KG4+w==
+866 notice total files:   5
+867 notice
+868 verbose publish @vect/vector-stat
+869 http fetch PUT 200 https://registry.npmjs.org/@vect%2fcolumn-indicator 2167ms
+870 silly lifecycle No script for "publish" in "@vect/column-indicator", continuing
+871 silly lifecycle No script for "postpublish" in "@vect/column-indicator", continuing
+872 success published @vect/column-indicator 0.6.12
+873 notice
+874 notice 📦  @vect/column-indicator@0.6.12
+875 notice === Tarball Contents ===
+876 notice 1.1kB LICENSE
+876 notice 767B  dist/index.cjs
+876 notice 911B  package.json
+876 notice 1.9kB README.md
+876 notice 644B  dist/index.mjs
+877 notice === Tarball Details ===
+878 notice name:          @vect/column-indicator
+878 notice version:       0.6.12
+878 notice filename:      vect-column-indicator-0.6.12.tgz
+878 notice package size:  2.1 kB
+878 notice unpacked size: 5.3 kB
+878 notice shasum:        7ba2195b636f8a84c462ce14031de55607e9cf51
+878 notice integrity:     sha512-NCrEN/ak8dgg1[...]lwyMKGK/y/bkA==
+878 notice total files:   5
+879 notice
+880 verbose publish @vect/callable
+881 http fetch PUT 200 https://registry.npmjs.org/@vect%2fentries-indicator 2402ms
+882 silly lifecycle No script for "publish" in "@vect/entries-indicator", continuing
+883 silly lifecycle No script for "postpublish" in "@vect/entries-indicator", continuing
+884 success published @vect/entries-indicator 0.6.12
+885 notice
+886 notice 📦  @vect/entries-indicator@0.6.12
+887 notice === Tarball Contents ===
+888 notice 1.1kB LICENSE
+888 notice 931B  dist/index.cjs
+888 notice 907B  package.json
+888 notice 1.9kB README.md
+888 notice 794B  dist/index.mjs
+889 notice === Tarball Details ===
+890 notice name:          @vect/entries-indicator
+890 notice version:       0.6.12
+890 notice filename:      vect-entries-indicator-0.6.12.tgz
+890 notice package size:  2.2 kB
+890 notice unpacked size: 5.6 kB
+890 notice shasum:        52975c87be305ae61392187bf7bdd6a676a59d83
+890 notice integrity:     sha512-SEEdeY6JqdXq7[...]m/q1+ebGzRBkA==
+890 notice total files:   5
+891 notice
+892 verbose publish @vect/clone
+893 http fetch PUT 200 https://registry.npmjs.org/@vect%2fmatrix-indicator 2545ms
+894 silly lifecycle No script for "publish" in "@vect/matrix-indicator", continuing
+895 silly lifecycle No script for "postpublish" in "@vect/matrix-indicator", continuing
+896 success published @vect/matrix-indicator 0.6.12
+897 notice
+898 notice 📦  @vect/matrix-indicator@0.6.12
+899 notice === Tarball Contents ===
+900 notice 1.1kB LICENSE
+900 notice 852B  dist/index.cjs
+900 notice 897B  package.json
+900 notice 1.9kB README.md
+900 notice 715B  dist/index.mjs
+901 notice === Tarball Details ===
+902 notice name:          @vect/matrix-indicator
+902 notice version:       0.6.12
+902 notice filename:      vect-matrix-indicator-0.6.12.tgz
+902 notice package size:  2.2 kB
+902 notice unpacked size: 5.4 kB
+902 notice shasum:        edca0ed52b10140837cb878d9d201c148e4ba813
+902 notice integrity:     sha512-JNzdHV1fRFEGu[...]ArlK2sjegszXg==
+902 notice total files:   5
+903 notice
+904 verbose publish @vect/entries-unwind
+905 http fetch PUT 200 https://registry.npmjs.org/@vect%2fcolumn-stat 7253ms
+906 silly lifecycle No script for "publish" in "@vect/column-stat", continuing
+907 silly lifecycle No script for "postpublish" in "@vect/column-stat", continuing
+908 success published @vect/column-stat 0.6.12
+909 notice
+910 notice 📦  @vect/column-stat@0.6.12
+911 notice === Tarball Contents ===
+912 notice 1.1kB LICENSE
+912 notice 994B  dist/index.cjs
+912 notice 903B  package.json
+912 notice 1.9kB README.md
+912 notice 873B  dist/index.mjs
+913 notice === Tarball Details ===
+914 notice name:          @vect/column-stat
+914 notice version:       0.6.12
+914 notice filename:      vect-column-stat-0.6.12.tgz
+914 notice package size:  2.3 kB
+914 notice unpacked size: 5.8 kB
+914 notice shasum:        f0bab3f2e00455a37cf7252ca2711301c813802d
+914 notice integrity:     sha512-vfNVJkzvveNDN[...]5WKATsME4jegQ==
+914 notice total files:   5
+915 notice
+916 verbose publish @vect/rename
+917 http fetch PUT 200 https://registry.npmjs.org/@vect%2fvector-stat 12343ms
+918 silly lifecycle No script for "publish" in "@vect/vector-stat", continuing
+919 silly lifecycle No script for "postpublish" in "@vect/vector-stat", continuing
+920 success published @vect/vector-stat 0.6.12
+921 notice
+922 notice 📦  @vect/vector-stat@0.6.12
+923 notice === Tarball Contents ===
+924 notice 1.1kB LICENSE
+924 notice 1.8kB dist/index.cjs
+924 notice 885B  package.json
+924 notice 1.9kB README.md
+924 notice 1.7kB dist/index.mjs
+925 notice === Tarball Details ===
+926 notice name:          @vect/vector-stat
+926 notice version:       0.6.12
+926 notice filename:      vect-vector-stat-0.6.12.tgz
+926 notice package size:  2.5 kB
+926 notice unpacked size: 7.4 kB
+926 notice shasum:        08c23b3f9067cde836736cac40cdabde9fc3e902
+926 notice integrity:     sha512-rQvIn8lZ4xPFQ[...]o77CXRxer2VKw==
+926 notice total files:   5
+927 notice
+928 verbose publish @vect/entries-zipper
+929 silly FetchError: request to https://registry.npmjs.org/@vect%2fvector-indicator failed, reason: Socket timeout
+929 silly     at ClientRequest.<anonymous> (/home/hazen/banyan/vect/node_modules/minipass-fetch/lib/index.js:97:14)
+929 silly     at ClientRequest.emit (node:events:527:28)
+929 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+929 silly     at TLSSocket.emit (node:events:539:35)
+929 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+929 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+929 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+929 silly  FetchError: request to https://registry.npmjs.org/@vect%2fvector-indicator failed, reason: Socket timeout
+929 silly     at ClientRequest.<anonymous> (/home/hazen/banyan/vect/node_modules/minipass-fetch/lib/index.js:97:14)
+929 silly     at ClientRequest.emit (node:events:527:28)
+929 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+929 silly     at TLSSocket.emit (node:events:539:35)
+929 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+929 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+929 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+929 silly   code: 'ERR_SOCKET_TIMEOUT',
+929 silly   timeout: 15000,
+929 silly   errno: 'ERR_SOCKET_TIMEOUT',
+929 silly   type: 'system'
+929 silly }
+930 error ERR_SOCKET_TIMEOUT request to https://registry.npmjs.org/@vect%2fvector-indicator failed, reason: Socket timeout
+931 verbose publish @vect/matrix-zipper
+932 error FetchError: request to https://registry.npmjs.org/@vect%2fvector-indicator failed, reason: Socket timeout
+932 error     at ClientRequest.<anonymous> (/home/hazen/banyan/vect/node_modules/minipass-fetch/lib/index.js:97:14)
+932 error     at ClientRequest.emit (node:events:527:28)
+932 error     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+932 error     at TLSSocket.emit (node:events:539:35)
+932 error     at emitErrorNT (node:internal/streams/destroy:157:8)
+932 error     at emitErrorCloseNT (node:internal/streams/destroy:122:3)

@@ -2,148 +2,239 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var Algebra = require('@vect/vector-algebra');
-var Index = require('@vect/vector-index');
-var Indicate = require('@vect/vector-indicator');
-var Init = require('@vect/vector-init');
-var Mapper = require('@vect/vector-mapper');
-var Margin = require('@vect/vector-margin');
-var Merge = require('@vect/vector-merge');
-var Select = require('@vect/vector-select');
-var Update = require('@vect/vector-update');
-var Zipper = require('@vect/vector-zipper');
+var vectorZipper = require('@vect/vector-zipper');
+var vectorMapper = require('@vect/vector-mapper');
+var vectorInit = require('@vect/vector-init');
+var vectorUpdate = require('@vect/vector-update');
+var vectorSelect = require('@vect/vector-select');
+var vectorAlgebra = require('@vect/vector-algebra');
+var vectorIndex = require('@vect/vector-index');
+var vectorMargin = require('@vect/vector-margin');
+var vectorIndicator = require('@vect/vector-indicator');
 
-function _interopNamespace(e) {
-	if (e && e.__esModule) return e;
-	var n = Object.create(null);
-	if (e) {
-		Object.keys(e).forEach(function (k) {
-			if (k !== 'default') {
-				var d = Object.getOwnPropertyDescriptor(e, k);
-				Object.defineProperty(n, k, d.get ? d : {
-					enumerable: true,
-					get: function () { return e[k]; }
-				});
-			}
-		});
-	}
-	n["default"] = e;
-	return Object.freeze(n);
-}
 
-var Algebra__namespace = /*#__PURE__*/_interopNamespace(Algebra);
-var Index__namespace = /*#__PURE__*/_interopNamespace(Index);
-var Indicate__namespace = /*#__PURE__*/_interopNamespace(Indicate);
-var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
-var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
-var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
-var Merge__namespace = /*#__PURE__*/_interopNamespace(Merge);
-var Select__namespace = /*#__PURE__*/_interopNamespace(Select);
-var Update__namespace = /*#__PURE__*/_interopNamespace(Update);
-var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
 
-const {
-  iterate,
-  reviter,
-  mapper,
-  mutate
-} = Mapper__namespace;
-const {
-  marginCopy,
-  marginMapper,
-  marginMutate
-} = Margin__namespace;
-const {
-  zipper,
-  mutazip,
-  iterzip,
-  duozipper,
-  trizipper,
-  quazipper,
-  Duozipper,
-  Trizipper,
-  Quazipper
-} = Zipper__namespace;
-const {
-  maxBy,
-  minBy,
-  Max,
-  Min,
-  Piler,
-  Indicator
-} = Indicate__namespace;
-const {
-  draft,
-  iso,
-  init,
-  seq,
-  range
-} = Init__namespace;
-const {
-  splices,
-  partition
-} = Update__namespace;
-const {
-  divide,
-  leap,
-  select,
-  selectEntry,
-  shuffle
-} = Select__namespace;
-const {
-  acquire,
-  merge,
-  merges
-} = Merge__namespace;
-const {
-  union,
-  intersect,
-  difference
-} = Algebra__namespace;
-const {
-  first,
-  last
-} = Index__namespace;
-
-exports.Duozipper = Duozipper;
-exports.Indicator = Indicator;
-exports.Max = Max;
-exports.Min = Min;
-exports.Piler = Piler;
-exports.Quazipper = Quazipper;
-exports.Trizipper = Trizipper;
-exports.acquire = acquire;
-exports.difference = difference;
-exports.divide = divide;
-exports.draft = draft;
-exports.duozipper = duozipper;
-exports.first = first;
-exports.init = init;
-exports.intersect = intersect;
-exports.iso = iso;
-exports.iterate = iterate;
-exports.iterzip = iterzip;
-exports.last = last;
-exports.leap = leap;
-exports.mapper = mapper;
-exports.marginCopy = marginCopy;
-exports.marginMapper = marginMapper;
-exports.marginMutate = marginMutate;
-exports.maxBy = maxBy;
-exports.merge = merge;
-exports.merges = merges;
-exports.minBy = minBy;
-exports.mutate = mutate;
-exports.mutazip = mutazip;
-exports.partition = partition;
-exports.quazipper = quazipper;
-exports.range = range;
-exports.reviter = reviter;
-exports.select = select;
-exports.selectEntry = selectEntry;
-exports.seq = seq;
-exports.shuffle = shuffle;
-exports.splices = splices;
-exports.trizipper = trizipper;
-exports.union = union;
-exports.zipper = zipper;
+Object.defineProperty(exports, 'Duozipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.Duozipper; }
+});
+Object.defineProperty(exports, 'Quazipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.Quazipper; }
+});
+Object.defineProperty(exports, 'Trizipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.Trizipper; }
+});
+Object.defineProperty(exports, 'duozipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.duozipper; }
+});
+Object.defineProperty(exports, 'iterzip', {
+  enumerable: true,
+  get: function () { return vectorZipper.iterzip; }
+});
+Object.defineProperty(exports, 'mutazip', {
+  enumerable: true,
+  get: function () { return vectorZipper.mutazip; }
+});
+Object.defineProperty(exports, 'quazipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.quazipper; }
+});
+Object.defineProperty(exports, 'trizipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.trizipper; }
+});
+Object.defineProperty(exports, 'zipper', {
+  enumerable: true,
+  get: function () { return vectorZipper.zipper; }
+});
+Object.defineProperty(exports, 'indexed', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexed; }
+});
+Object.defineProperty(exports, 'indexedBy', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedBy; }
+});
+Object.defineProperty(exports, 'indexedOf', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedOf; }
+});
+Object.defineProperty(exports, 'indexedTo', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedTo; }
+});
+Object.defineProperty(exports, 'iterate', {
+  enumerable: true,
+  get: function () { return vectorMapper.iterate; }
+});
+Object.defineProperty(exports, 'mapper', {
+  enumerable: true,
+  get: function () { return vectorMapper.mapper; }
+});
+Object.defineProperty(exports, 'mutate', {
+  enumerable: true,
+  get: function () { return vectorMapper.mutate; }
+});
+Object.defineProperty(exports, 'reviter', {
+  enumerable: true,
+  get: function () { return vectorMapper.reviter; }
+});
+Object.defineProperty(exports, 'Range', {
+  enumerable: true,
+  get: function () { return vectorInit.Range; }
+});
+Object.defineProperty(exports, 'collect', {
+  enumerable: true,
+  get: function () { return vectorInit.collect; }
+});
+Object.defineProperty(exports, 'draft', {
+  enumerable: true,
+  get: function () { return vectorInit.draft; }
+});
+Object.defineProperty(exports, 'gather', {
+  enumerable: true,
+  get: function () { return vectorInit.gather; }
+});
+Object.defineProperty(exports, 'indexes', {
+  enumerable: true,
+  get: function () { return vectorInit.indexes; }
+});
+Object.defineProperty(exports, 'init', {
+  enumerable: true,
+  get: function () { return vectorInit.init; }
+});
+Object.defineProperty(exports, 'iso', {
+  enumerable: true,
+  get: function () { return vectorInit.iso; }
+});
+Object.defineProperty(exports, 'range', {
+  enumerable: true,
+  get: function () { return vectorInit.range; }
+});
+Object.defineProperty(exports, 'seq', {
+  enumerable: true,
+  get: function () { return vectorInit.seq; }
+});
+Object.defineProperty(exports, 'tap', {
+  enumerable: true,
+  get: function () { return vectorInit.tap; }
+});
+Object.defineProperty(exports, 'partition', {
+  enumerable: true,
+  get: function () { return vectorUpdate.partition; }
+});
+Object.defineProperty(exports, 'splices', {
+  enumerable: true,
+  get: function () { return vectorUpdate.splices; }
+});
+Object.defineProperty(exports, 'divide', {
+  enumerable: true,
+  get: function () { return vectorSelect.divide; }
+});
+Object.defineProperty(exports, 'leap', {
+  enumerable: true,
+  get: function () { return vectorSelect.leap; }
+});
+Object.defineProperty(exports, 'select', {
+  enumerable: true,
+  get: function () { return vectorSelect.select; }
+});
+Object.defineProperty(exports, 'selectEntry', {
+  enumerable: true,
+  get: function () { return vectorSelect.selectEntry; }
+});
+Object.defineProperty(exports, 'shuffle', {
+  enumerable: true,
+  get: function () { return vectorSelect.shuffle; }
+});
+Object.defineProperty(exports, 'acquire', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.acquire; }
+});
+Object.defineProperty(exports, 'difference', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.difference; }
+});
+Object.defineProperty(exports, 'intersect', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.intersect; }
+});
+Object.defineProperty(exports, 'merge', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.merge; }
+});
+Object.defineProperty(exports, 'merges', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.merges; }
+});
+Object.defineProperty(exports, 'union', {
+  enumerable: true,
+  get: function () { return vectorAlgebra.union; }
+});
+Object.defineProperty(exports, 'Swap', {
+  enumerable: true,
+  get: function () { return vectorIndex.Swap; }
+});
+Object.defineProperty(exports, 'first', {
+  enumerable: true,
+  get: function () { return vectorIndex.first; }
+});
+Object.defineProperty(exports, 'insertDown', {
+  enumerable: true,
+  get: function () { return vectorIndex.insertDown; }
+});
+Object.defineProperty(exports, 'insertUp', {
+  enumerable: true,
+  get: function () { return vectorIndex.insertUp; }
+});
+Object.defineProperty(exports, 'last', {
+  enumerable: true,
+  get: function () { return vectorIndex.last; }
+});
+Object.defineProperty(exports, 'len', {
+  enumerable: true,
+  get: function () { return vectorIndex.len; }
+});
+Object.defineProperty(exports, 'swap', {
+  enumerable: true,
+  get: function () { return vectorIndex.swap; }
+});
+Object.defineProperty(exports, 'marginCopy', {
+  enumerable: true,
+  get: function () { return vectorMargin.marginCopy; }
+});
+Object.defineProperty(exports, 'marginMapper', {
+  enumerable: true,
+  get: function () { return vectorMargin.marginMapper; }
+});
+Object.defineProperty(exports, 'marginMutate', {
+  enumerable: true,
+  get: function () { return vectorMargin.marginMutate; }
+});
+Object.defineProperty(exports, 'Indicator', {
+  enumerable: true,
+  get: function () { return vectorIndicator.Indicator; }
+});
+Object.defineProperty(exports, 'Max', {
+  enumerable: true,
+  get: function () { return vectorIndicator.Max; }
+});
+Object.defineProperty(exports, 'Min', {
+  enumerable: true,
+  get: function () { return vectorIndicator.Min; }
+});
+Object.defineProperty(exports, 'Piler', {
+  enumerable: true,
+  get: function () { return vectorIndicator.Piler; }
+});
+Object.defineProperty(exports, 'maxBy', {
+  enumerable: true,
+  get: function () { return vectorIndicator.maxBy; }
+});
+Object.defineProperty(exports, 'minBy', {
+  enumerable: true,
+  get: function () { return vectorIndicator.minBy; }
+});

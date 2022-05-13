@@ -1,6 +1,6 @@
 export function* indexedOf(vec) {
-  for (let i = 0, h = vec?.length; i < h; i++)
-    yield vec[i]
+  // for (let i = 0, h = vec?.length; i < h; i++) yield vec[i]
+  yield* vec
 }
 
 export function* indexedBy(vec, by) {

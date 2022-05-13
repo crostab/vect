@@ -1,30 +1,16 @@
-import * as ColumnGetter from '@vect/column-getter';
-import * as ColumnsMapper from '@vect/columns-mapper';
-import * as Indicator from '@vect/matrix-indicator';
-import * as Init from '@vect/matrix-init';
-import * as Mapper from '@vect/matrix-mapper';
-import { indexedTo as indexedTo$1, entryIndexedTo, tripletIndexedTo, indexed as indexed$1, entryIndexed, tripletIndexed } from '@vect/matrix-mapper';
-import * as Margin from '@vect/matrix-margin';
-import * as Quantifier from '@vect/matrix-quantifier';
-import * as Size from '@vect/matrix-index';
-import { column as column$1 } from '@vect/matrix-index';
-import * as Transpose from '@vect/matrix-transpose';
-import * as Zipper from '@vect/matrix-zipper';
-export { select } from '@vect/columns-select';
+export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/matrix-zipper';
+import { points, entries, triplets, pointsTo, entriesTo, tripletsTo } from '@vect/matrix-mapper';
+export { entries, entriesBy, entriesOf, entriesTo, entryIndexed, entryIndexedBy, entryIndexedOf, entryIndexedTo, indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, points, pointsBy, pointsOf, pointsTo, rows, rowsBy, rowsOf, rowsTo, selectMutate, tripletIndexed, tripletIndexedBy, tripletIndexedOf, tripletIndexedTo, triplets, tripletsBy, tripletsOf, tripletsTo } from '@vect/matrix-mapper';
+import { columns, columnsTo } from '@vect/columns-mapper';
+export { columns, columnsBy, columnsIterate, columnsMapper, columnsOf, columnsTo } from '@vect/columns-mapper';
+export { draft, init, iso, product, shallow } from '@vect/matrix-init';
+export { every, some } from '@vect/matrix-quantifier';
+export { transpose } from '@vect/matrix-algebra';
+export { Columns } from '@vect/column-getter';
+export { divide, select, selectEntries, selectObject } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
-import { first } from '@vect/vector-index';
-export { COLUMNWISE, POINTWISE, ROWWISE } from '@vect/enum-matrix-directions';
-import { indexedTo, indexed } from '@vect/vector-mapper';
-
-const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
-
-/**
- *
- * @param {*[][]} mx
- * @return {number[]}
- */
-
-const coins = mx => isMatrix(mx) ? first(mx).map((_, i) => i) : [];
+export { coins, column, height, isMatrix, size, width } from '@vect/matrix-index';
+import { indexed, indexedTo } from '@vect/vector-mapper';
 
 class Matrix extends Array {
   constructor(size) {
@@ -49,6 +35,20 @@ class Matrix extends Array {
     return (_this$ = this[0]) === null || _this$ === void 0 ? void 0 : _this$.length;
   }
 
+  get size() {
+    return [this.height, this.width];
+  }
+
+  transpose() {
+    const h = this.height,
+          w = this.width,
+          cols = new Matrix(w);
+
+    for (let j = 0; j < w; j++) for (let i = 0, col = cols[j] = Array(h); i < h; i++) col[i] = this[i][j];
+
+    return cols;
+  }
+
   collect(iter, lo = 0) {
     for (let row of iter) this[lo++] = row;
 
@@ -60,7 +60,12 @@ class Matrix extends Array {
   }
 
   column(y) {
-    return column$1.call(this, y);
+    let h = this.length,
+        col = Array(h);
+
+    for (--h; h >= 0; h--) col[h] = this[h][y];
+
+    return col;
   }
 
   *rowOf(x) {
@@ -72,11 +77,23 @@ class Matrix extends Array {
   }
 
   *rows(by, to) {
-    yield* this;
+    yield* indexed(this, by, to);
   }
 
   *columns(by, to) {
-    for (let j = 0, w = this.width; j < w; j++) yield this.column(j);
+    yield* columns(this, by, to);
+  }
+
+  *points(by, to) {
+    yield* points(this, by, to);
+  }
+
+  *entries(xy, by, to) {
+    yield* entries(this, xy, to);
+  }
+
+  *triplets(xyz, by, to) {
+    yield* triplets(this, xyz, by, to);
   }
 
   *rowsTo(to) {
@@ -84,98 +101,26 @@ class Matrix extends Array {
   }
 
   *columnsTo(to) {
-    for (let j = 0, w = this.width; j < w; j++) yield to(this.column(j), j);
-  } // return yield* columnsTo(this, to)
-
+    yield* columnsTo(this, to);
+  }
 
   *pointsTo(to) {
-    yield* indexedTo$1(this, to);
+    yield* pointsTo(this, to);
   }
 
   *entriesTo(xy, to) {
-    yield* entryIndexedTo(this, xy, to);
+    yield* entriesTo(this, xy, to);
   }
 
   *tripletsTo(xyz, to) {
-    yield* tripletIndexedTo(this, xyz, to);
-  }
-
-  *rowsBy(by, to) {
-    yield* indexed(this, by, to);
-  }
-
-  *columnsBy(by, to) {
-    for (let j = 0, w = this.width, col; j < w; j++) if (by(col = this.columnAt(j), j)) yield to(col, j);
-  }
-
-  *pointsBy(by, to) {
-    yield* indexed$1(this, by, to);
-  }
-
-  *entriesBy(xy, by, to) {
-    yield* entryIndexed(this, xy, to);
-  }
-
-  *tripletsBy(xyz, by, to) {
-    yield* tripletIndexed(this, xyz, by, to);
+    yield* tripletsTo(this, xyz, to);
   }
 
 }
 
-const {
-  draft,
-  fab,
-  iso,
-  init,
-  ini,
-  starter,
-  shallow
-} = Init;
-const {
-  iterate,
-  mutate,
-  mapper
-} = Mapper;
-const {
-  marginCopy,
-  marginMapper,
-  marginMutate
-} = Margin;
-const {
-  zipper,
-  mutazip,
-  iterzip,
-  duozipper,
-  trizipper,
-  quazipper,
-  Duozipper,
-  Trizipper,
-  Quazipper
-} = Zipper;
-const {
-  maxBy,
-  minBy,
-  Max,
-  Min
-} = Indicator;
-const {
-  every,
-  some
-} = Quantifier;
-const {
-  size,
-  width,
-  height
-} = Size;
-const {
-  transpose
-} = Transpose;
-const {
-  column,
-  Columns
-} = ColumnGetter;
-const {
-  mapper: columnsMapper
-} = ColumnsMapper;
+const POINTWISE = 0;
+const ROWWISE = 1;
+const COLUMNWISE = 2; // export { marginCopy, marginMapper, marginMutate }       from '@vect/matrix-margin'
+// export { maxBy, minBy, Max, Min }                       from '@vect/matrix-indicator'
 
-export { Columns, Duozipper, Matrix, Max, Min, Quazipper, Trizipper, coins, column, columnsMapper, draft, duozipper, every, fab, height, ini, init, isMatrix, iso, iterate, iterzip, mapper, marginCopy, marginMapper, marginMutate, maxBy, minBy, mutate, mutazip, quazipper, shallow, size, some, starter, transpose, trizipper, width, zipper };
+export { COLUMNWISE, Matrix, POINTWISE, ROWWISE };

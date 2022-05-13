@@ -23,6 +23,7 @@
     "@vect/columns-select": "^0.6.13",
     "@vect/columns-update": "^0.6.13",
     "@vect/enum-matrix-directions": "^0.6.13",
+    "@vect/matrix-algebra": "^0.6.13",
     "@vect/matrix-index": "^0.6.13",
     "@vect/matrix-indicator": "^0.6.13",
     "@vect/matrix-init": "^0.6.13",

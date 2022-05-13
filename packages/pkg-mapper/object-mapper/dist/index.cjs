@@ -77,12 +77,20 @@ function* indexedOf(o) {
   }
 }
 function* indexedBy(o, by) {
+  if (!by) {
+    return yield* indexedOf(o);
+  }
+
   if (o) for (let k in o) {
     const v = o[k];
     if (by(k, v)) yield [k, v];
   }
 }
 function* indexedTo(o, to) {
+  if (!to) {
+    return yield* indexedOf(o);
+  }
+
   if (o) for (let k in o) {
     yield to(k, o[k]);
   }

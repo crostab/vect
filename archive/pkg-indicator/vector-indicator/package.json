@@ -1,0 +1,44 @@
+{
+  "name": "@vect/vector-indicator",
+  "version": "0.6.13",
+  "description": "Indicators for vector",
+  "main": "dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/vector-indicator.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "dependencies": {
+    "@aryth/comparer": "^0.5.10",
+    "@typen/enum-data-types": "^0.1.19",
+    "@typen/enum-object-types": "^0.1.19"
+  },
+  "keywords": [
+    "array",
+    "vector",
+    "indicator",
+    "max",
+    "min",
+    "reduce"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "f6317f6ee6d1f9bc50f412bdf5692fb390a2b6d0"
+}

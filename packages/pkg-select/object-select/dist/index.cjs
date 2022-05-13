@@ -113,14 +113,21 @@ const lookupKey = function (field) {
   return current in this ? [current, projected] : void 0;
 };
 
+/** @deprecated use equivalent from @vect/object-index */
 const firstKey = o => {
   for (let k in o) return k;
 };
+/** @deprecated use equivalent from @vect/object-index */
+
 const firstValue = o => o[firstKey(o)];
+/** @deprecated use equivalent from @vect/object-index */
+
 const firstEntry = o => {
   const k = firstKey(o);
   return [k, o[k]];
 };
+/** @deprecated use equivalent from @vect/object-index */
+
 const lastKey = o => {
   let k;
 
@@ -130,7 +137,11 @@ const lastKey = o => {
 
   return k;
 };
+/** @deprecated use equivalent from @vect/object-index */
+
 const lastValue = o => o[lastKey(o)];
+/** @deprecated use equivalent from @vect/object-index */
+
 const lastEntry = o => {
   const k = lastKey(o);
   return [k, o[k]];

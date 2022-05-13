@@ -28,7 +28,8 @@ function mutate(vec, fn, l) {
 }
 
 function* indexedOf(vec) {
-  for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length; i < h; i++) yield vec[i];
+  // for (let i = 0, h = vec?.length; i < h; i++) yield vec[i]
+  yield* vec;
 }
 function* indexedBy(vec, by) {
   for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length, el; i < h; i++) if (by(el = vec[i], i)) yield el;

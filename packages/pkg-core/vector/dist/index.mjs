@@ -1,75 +1,9 @@
-import * as Algebra from '@vect/vector-algebra';
-import * as Index from '@vect/vector-index';
-import * as Indicate from '@vect/vector-indicator';
-import * as Init from '@vect/vector-init';
-import * as Mapper from '@vect/vector-mapper';
-import * as Margin from '@vect/vector-margin';
-import * as Merge from '@vect/vector-merge';
-import * as Select from '@vect/vector-select';
-import * as Update from '@vect/vector-update';
-import * as Zipper from '@vect/vector-zipper';
-
-const {
-  iterate,
-  reviter,
-  mapper,
-  mutate
-} = Mapper;
-const {
-  marginCopy,
-  marginMapper,
-  marginMutate
-} = Margin;
-const {
-  zipper,
-  mutazip,
-  iterzip,
-  duozipper,
-  trizipper,
-  quazipper,
-  Duozipper,
-  Trizipper,
-  Quazipper
-} = Zipper;
-const {
-  maxBy,
-  minBy,
-  Max,
-  Min,
-  Piler,
-  Indicator
-} = Indicate;
-const {
-  draft,
-  iso,
-  init,
-  seq,
-  range
-} = Init;
-const {
-  splices,
-  partition
-} = Update;
-const {
-  divide,
-  leap,
-  select,
-  selectEntry,
-  shuffle
-} = Select;
-const {
-  acquire,
-  merge,
-  merges
-} = Merge;
-const {
-  union,
-  intersect,
-  difference
-} = Algebra;
-const {
-  first,
-  last
-} = Index;
-
-export { Duozipper, Indicator, Max, Min, Piler, Quazipper, Trizipper, acquire, difference, divide, draft, duozipper, first, init, intersect, iso, iterate, iterzip, last, leap, mapper, marginCopy, marginMapper, marginMutate, maxBy, merge, merges, minBy, mutate, mutazip, partition, quazipper, range, reviter, select, selectEntry, seq, shuffle, splices, trizipper, union, zipper };
+export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/vector-zipper';
+export { indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, reviter } from '@vect/vector-mapper';
+export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap } from '@vect/vector-init';
+export { partition, splices } from '@vect/vector-update';
+export { divide, leap, select, selectEntry, shuffle } from '@vect/vector-select';
+export { acquire, difference, intersect, merge, merges, union } from '@vect/vector-algebra';
+export { Swap, first, insertDown, insertUp, last, len, swap } from '@vect/vector-index';
+export { marginCopy, marginMapper, marginMutate } from '@vect/vector-margin';
+export { Indicator, Max, Min, Piler, maxBy, minBy } from '@vect/vector-indicator';

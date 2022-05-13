@@ -2,6 +2,9 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var vectorMapper = require('@vect/vector-mapper');
+var columnsMapper = require('@vect/columns-mapper');
+
 /**
  * Iterate through elements on each (x of rows,y of columns) coordinate of a 2d-array.
  * @param {*[][]} mx
@@ -171,6 +174,38 @@ function* tripletIndexed(rows, xyz, by, to) {
   }
 }
 
+Object.defineProperty(exports, 'rows', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexed; }
+});
+Object.defineProperty(exports, 'rowsBy', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedBy; }
+});
+Object.defineProperty(exports, 'rowsOf', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedOf; }
+});
+Object.defineProperty(exports, 'rowsTo', {
+  enumerable: true,
+  get: function () { return vectorMapper.indexedTo; }
+});
+Object.defineProperty(exports, 'columns', {
+  enumerable: true,
+  get: function () { return columnsMapper.columns; }
+});
+Object.defineProperty(exports, 'columnsBy', {
+  enumerable: true,
+  get: function () { return columnsMapper.columnsBy; }
+});
+Object.defineProperty(exports, 'columnsOf', {
+  enumerable: true,
+  get: function () { return columnsMapper.columnsOf; }
+});
+Object.defineProperty(exports, 'columnsTo', {
+  enumerable: true,
+  get: function () { return columnsMapper.columnsTo; }
+});
 exports.entries = entryIndexed;
 exports.entriesBy = entryIndexedBy;
 exports.entriesOf = entryIndexedOf;

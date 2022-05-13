@@ -5,6 +5,7 @@ export function* indexedOf(o) {
 }
 
 export function* indexedBy(o, by) {
+  if (!by) { return yield* indexedOf(o) }
   if (o) for (let k in o) {
     const v = o[k]
     if (by(k, v)) yield [ k, v ]
@@ -12,6 +13,7 @@ export function* indexedBy(o, by) {
 }
 
 export function* indexedTo(o, to) {
+  if (!to) { return yield* indexedOf(o) }
   if (o) for (let k in o) {
     yield to(k, o[k])
   }
