@@ -12,7 +12,6 @@ export {
   mapVal as mapper,
   mapKey as mapKeys,
   mapVal as mapValues,
-  mapKeyVal as mapKeyValue,
   mapEntries,
 }                 from './src/mapper'
 export { mutate } from './src/mutate'
@@ -21,9 +20,4 @@ export {
   indexedBy,
   indexedTo,
   indexed,
-  indexedVia,
-  indexedOf as simpleIndexed,
-  indexedBy as filterIndexed,
-  indexedTo as mappedIndexed,
-  indexedVia as filterMappedIndexed
 }                 from './src/indexed'

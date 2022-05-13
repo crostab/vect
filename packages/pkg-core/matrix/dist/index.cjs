@@ -16,6 +16,7 @@ var columnsSelect = require('@vect/columns-select');
 var columnsUpdate = require('@vect/columns-update');
 var vectorIndex = require('@vect/vector-index');
 var enumMatrixDirections = require('@vect/enum-matrix-directions');
+var vectorMapper = require('@vect/vector-mapper');
 
 function _interopNamespace(e) {
   if (e && e.__esModule) return e;
@@ -55,6 +56,102 @@ const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
  */
 
 const coins = mx => isMatrix(mx) ? vectorIndex.first(mx).map((_, i) => i) : [];
+
+class Matrix extends Array {
+  constructor(size) {
+    super(size);
+  }
+
+  static of(...rows) {
+    return new Matrix(rows === null || rows === void 0 ? void 0 : rows.length).collect(rows);
+  }
+
+  static from(rows) {
+    return new Matrix(rows === null || rows === void 0 ? void 0 : rows.length).collect(rows);
+  }
+
+  get height() {
+    return this.length;
+  }
+
+  get width() {
+    var _this$;
+
+    return (_this$ = this[0]) === null || _this$ === void 0 ? void 0 : _this$.length;
+  }
+
+  collect(iter, lo = 0) {
+    for (let row of iter) this[lo++] = row;
+
+    return this;
+  }
+
+  row(x) {
+    return this[x];
+  }
+
+  column(y) {
+    return Size.column.call(this, y);
+  }
+
+  *rowOf(x) {
+    yield* this[x];
+  }
+
+  *columnOf(y) {
+    for (let i = 0, h = this.length; i < h; i++) yield this[i][y];
+  }
+
+  *rows(by, to) {
+    yield* this;
+  }
+
+  *columns(by, to) {
+    for (let j = 0, w = this.width; j < w; j++) yield this.column(j);
+  }
+
+  *rowsTo(to) {
+    yield* vectorMapper.indexedTo(this, to);
+  }
+
+  *columnsTo(to) {
+    for (let j = 0, w = this.width; j < w; j++) yield to(this.column(j), j);
+  } // return yield* columnsTo(this, to)
+
+
+  *pointsTo(to) {
+    yield* Mapper.indexedTo(this, to);
+  }
+
+  *entriesTo(xy, to) {
+    yield* Mapper.entryIndexedTo(this, xy, to);
+  }
+
+  *tripletsTo(xyz, to) {
+    yield* Mapper.tripletIndexedTo(this, xyz, to);
+  }
+
+  *rowsBy(by, to) {
+    yield* vectorMapper.indexed(this, by, to);
+  }
+
+  *columnsBy(by, to) {
+    for (let j = 0, w = this.width, col; j < w; j++) if (by(col = this.columnAt(j), j)) yield to(col, j);
+  }
+
+  *pointsBy(by, to) {
+    yield* Mapper.indexed(this, by, to);
+  }
+
+  *entriesBy(xy, by, to) {
+    yield* Mapper.entryIndexed(this, xy, to);
+  }
+
+  *tripletsBy(xyz, by, to) {
+    yield* Mapper.tripletIndexed(this, xyz, by, to);
+  }
+
+}
 
 const {
   draft,
@@ -150,6 +247,7 @@ Object.defineProperty(exports, 'ROWWISE', {
 });
 exports.Columns = Columns;
 exports.Duozipper = Duozipper;
+exports.Matrix = Matrix;
 exports.Max = Max;
 exports.Min = Min;
 exports.Quazipper = Quazipper;

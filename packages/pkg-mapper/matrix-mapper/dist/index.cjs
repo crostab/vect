@@ -171,6 +171,10 @@ function* tripletIndexed(rows, xyz, by, to) {
   }
 }
 
+exports.entries = entryIndexed;
+exports.entriesBy = entryIndexedBy;
+exports.entriesOf = entryIndexedOf;
+exports.entriesTo = entryIndexedTo;
 exports.entryIndexed = entryIndexed;
 exports.entryIndexedBy = entryIndexedBy;
 exports.entryIndexedOf = entryIndexedOf;
@@ -182,8 +186,16 @@ exports.indexedTo = indexedTo;
 exports.iterate = iterate;
 exports.mapper = mapper;
 exports.mutate = mutate;
+exports.points = indexed;
+exports.pointsBy = indexedBy;
+exports.pointsOf = indexedOf;
+exports.pointsTo = indexedTo;
 exports.selectMutate = selectMutate;
 exports.tripletIndexed = tripletIndexed;
 exports.tripletIndexedBy = tripletIndexedBy;
 exports.tripletIndexedOf = tripletIndexedOf;
 exports.tripletIndexedTo = tripletIndexedTo;
+exports.triplets = tripletIndexed;
+exports.tripletsBy = tripletIndexedBy;
+exports.tripletsOf = tripletIndexedOf;
+exports.tripletsTo = tripletIndexedTo;

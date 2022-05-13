@@ -16,14 +16,14 @@ export class Matrix extends Array {
     return this
   }
 
-  rowAt(x) { return this[x] }
-  columnAt(y) { return column.call(this, y) }
+  row(x) { return this[x] }
+  column(y) { return column.call(this, y) }
 
-  * row(x) { yield* this[x] }
-  * column(y) { for (let i = 0, h = this.length; i < h; i++) yield this[i][y] }
+  * rowOf(x) { yield* this[x] }
+  * columnOf(y) { for (let i = 0, h = this.length; i < h; i++) yield this[i][y] }
 
-  * rows() { yield* this }
-  * columns() { for (let j = 0, w = this.width; j < w; j++) yield this.column(j) }
+  * rows(by, to) { yield* this }
+  * columns(by, to) { for (let j = 0, w = this.width; j < w; j++) yield this.column(j) }
 
   * rowsTo(to) { yield* rowsTo(this, to) }
   * columnsTo(to) { for (let j = 0, w = this.width; j < w; j++) yield to(this.column(j), j) }  // return yield* columnsTo(this, to)

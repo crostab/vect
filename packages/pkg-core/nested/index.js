@@ -11,9 +11,4 @@ export {
   indexedBy,
   indexedTo,
   indexed,
-  indexedVia,
-  simpleIndexed,
-  filterIndexed,
-  mappedIndexed,
-  filterMappedIndexed,
 }                                                                       from './src/indexed'

@@ -67,9 +67,6 @@ function mutate(o, fn) {
   return o;
 }
 
-// from x => typeof x
-const FUN = 'function';
-
 function* indexedOf(o) {
   if (o) for (let k in o) {
     yield [k, o[k]];
@@ -96,16 +93,5 @@ function* indexed(o, by, to) {
     if (by(k, v)) yield to(k, v);
   }
 }
-/**
- * @param {Object<string,any>} o
- * @param {function|{ [by]:function, to:function }} [conf]
- * @returns {Generator<*, void, *>}
- */
 
-function* indexedVia(o, conf) {
-  const by = conf === null || conf === void 0 ? void 0 : conf.by,
-        to = (conf === null || conf === void 0 ? void 0 : conf.to) ?? conf;
-  yield* typeof by === FUN ? typeof to === FUN ? indexed(o, by, to) : indexedBy(o, by) : typeof to === FUN ? indexedTo(o, to) : indexedOf(o);
-}
-
-export { indexedBy as filterIndexed, indexedVia as filterMappedIndexed, indexed, indexedBy, indexedOf, indexedTo, indexedVia, iterateValues as iterate, iterateEntries, iterateKeys, iterateValues, mapEntries, mapEntry, mapKey, mapKeyVal, mapKeyVal as mapKeyValue, mapKey as mapKeys, mapVal, mapVal as mapValues, indexedTo as mappedIndexed, mapVal as mapper, mutate, indexedOf as simpleIndexed };
+export { indexed, indexedBy, indexedOf, indexedTo, iterateValues as iterate, iterateEntries, iterateKeys, iterateValues, mapEntries, mapEntry, mapKey, mapKeyVal, mapKey as mapKeys, mapVal, mapVal as mapValues, mapVal as mapper, mutate };

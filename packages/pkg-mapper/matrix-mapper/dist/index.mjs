@@ -167,4 +167,4 @@ function* tripletIndexed(rows, xyz, by, to) {
   }
 }
 
-export { entryIndexed, entryIndexedBy, entryIndexedOf, entryIndexedTo, indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, selectMutate, tripletIndexed, tripletIndexedBy, tripletIndexedOf, tripletIndexedTo };
+export { entryIndexed as entries, entryIndexedBy as entriesBy, entryIndexedOf as entriesOf, entryIndexedTo as entriesTo, entryIndexed, entryIndexedBy, entryIndexedOf, entryIndexedTo, indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, indexed as points, indexedBy as pointsBy, indexedOf as pointsOf, indexedTo as pointsTo, selectMutate, tripletIndexed, tripletIndexedBy, tripletIndexedOf, tripletIndexedTo, tripletIndexed as triplets, tripletIndexedBy as tripletsBy, tripletIndexedOf as tripletsOf, tripletIndexedTo as tripletsTo };
