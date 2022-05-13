@@ -1,6 +1,6 @@
 {
   "name": "@vect/util-pivot",
-  "version": "0.6.10",
+  "version": "0.6.11",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "@typen/enums": "^0.1.19",
-    "@vect/vector-init": "^0.6.10",
-    "@vect/vector-mapper": "^0.6.10",
-    "@vect/vector-zipper": "^0.6.10"
+    "@vect/vector-init": "^0.6.11",
+    "@vect/vector-mapper": "^0.6.11",
+    "@vect/vector-zipper": "^0.6.11"
   },
   "repository": {
     "type": "git",
