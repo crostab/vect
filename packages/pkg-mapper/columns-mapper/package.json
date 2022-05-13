@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-mapper",
-  "version": "0.6.13",
+  "version": "0.7.0",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@vect/column-getter": "^0.6.13",
-    "@vect/column-mapper": "^0.6.13",
-    "@vect/matrix-index": "^0.6.13"
+    "@vect/column-mapper": "^0.7.0",
+    "@vect/matrix-index": "^0.7.0"
   },
   "repository": {
     "type": "git",
