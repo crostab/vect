@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1024 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.763138,0,0,0.763138,65.8854,-1.18149)">
+        <text x="129.325px" y="313.422px" style="font-family:'Chalene-Medium', 'Chalene';font-weight:500;font-size:20.966px;fill:rgb(41,40,102);">E<tspan x="149.993px 173.45px 196.131px 223.32px 243.988px 265.453px 288.659px 310.166px 328.318px 341.212px 353.746px 367.772px 380.306px 394.076px 414.283px 434.952px 456.417px 479.622px 501.129px 519.281px " y="313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px 313.422px ">NUMERABLE &amp; ITERABLE</tspan></text>
+    </g>
+    <g transform="matrix(0.701686,0,0,0.701686,541.234,-113.889)">
+        <text x="129.325px" y="313.422px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">V<tspan x="152.1px 172.711px 195.851px 215.538px 240.697px " y="313.422px 313.422px 313.422px 313.422px 313.422px ">ECTOR</tspan></text>
+        <text x="129.325px" y="365.837px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">M<tspan x="158.069px 181.365px 202.715px 225.792px 239.87px " y="365.837px 365.837px 365.837px 365.837px 365.837px ">ATRIX</tspan></text>
+        <text x="129.325px" y="418.252px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">C<tspan x="147.834px 168.216px 180.451px 198.79px 222.261px " y="418.252px 418.252px 418.252px 418.252px 418.252px ">OLUMN</tspan>S</text>
+        <text x="129.325px" y="470.668px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">E<tspan x="148.9px 170.957px 189.802px 210.375px 222.459px 241.646px " y="470.668px 470.668px 470.668px 470.668px 470.668px 470.668px ">NTRIES</tspan></text>
+        <text x="129.325px" y="523.083px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">O<tspan x="155.321px 177.814px 196.951px 218.398px 242.375px " y="523.083px 523.083px 523.083px 523.083px 523.083px ">BJECT</tspan></text>
+        <text x="129.325px" y="575.498px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">N<tspan x="154.377px 175.781px 197.476px 218.539px 240.332px " y="575.498px 575.498px 575.498px 575.498px 575.498px ">ESTED</tspan></text>
+    </g>
+    <g transform="matrix(0.701686,0,0,0.701686,684.496,-113.889)">
+        <text x="129.325px" y="313.422px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">I<tspan x="138.154px 157.733px 175.854px 192.32px 210.294px 226.614px " y="313.422px 313.422px 313.422px 313.422px 313.422px 313.422px ">NDEXED</tspan></text>
+        <text x="129.325px" y="365.837px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">M<tspan x="153.506px 174.574px 192.018px 209.462px 226.979px " y="365.837px 365.837px 365.837px 365.837px 365.837px ">APPER</tspan></text>
+        <text x="129.325px" y="418.252px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">I<tspan x="139.309px 156.298px 174.017px 192.636px 211.571px 228.56px " y="418.252px 418.252px 418.252px 418.252px 418.252px 418.252px ">TERATE</tspan></text>
+        <text x="129.325px" y="470.668px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">M<tspan x="154.854px 174.934px 190.929px 210.717px 228.56px " y="470.668px 470.668px 470.668px 470.668px 470.668px ">UTATE</tspan></text>
+        <text x="129.325px" y="523.083px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">S<tspan x="149.824px 169.836px 187.076px 206.602px 228.657px " y="523.083px 523.083px 523.083px 523.083px 523.083px ">ELECT</tspan></text>
+        <text x="129.325px" y="575.498px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:24.322px;fill:rgb(41,40,102);">Z<tspan x="149.624px 163.381px 184.556px 205.731px 226.979px " y="575.498px 575.498px 575.498px 575.498px 575.498px ">IPPER</tspan></text>
+    </g>
+    <g id="VECT" transform="matrix(0.844232,0,0,0.844232,18.2806,27.8671)">
+        <g transform="matrix(0.147201,0,0,-0.147201,181.342,215.448)">
+            <path d="M601.756,516C607.354,516 612.549,513.091 615.475,508.319C618.402,503.548 618.638,497.598 616.1,492.609C569.459,400.928 400.208,68.241 370.475,9.796C367.729,4.399 362.186,1 356.131,1C336.625,1 293.344,1 273.852,1C267.806,1 262.269,4.389 259.519,9.774C229.707,68.152 59.798,400.863 12.957,492.587C10.409,497.576 10.639,503.531 13.564,508.309C16.489,513.087 21.688,516 27.29,516C57.278,516 104.79,516 125.179,516C131.209,516 136.734,512.629 139.491,507.266C167.407,452.976 316,164 316,164C316,164 461.957,452.633 489.534,507.169C492.273,512.585 497.826,516 503.896,516C524.336,516 571.807,516 601.756,516Z" style="fill:rgb(41,40,102);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(0.147201,0,0,-0.147201,273.637,215.448)">
+            <path d="M550,412.094C550,403.205 542.795,396 533.906,396C455.914,396 121,396 121,396L121,319L505.906,319C510.175,319 514.268,317.304 517.286,314.286C520.304,311.268 522,307.175 522,302.906C522,279.951 522,238.049 522,215.094C522,210.825 520.304,206.732 517.286,203.714C514.268,200.696 510.175,199 505.906,199C431.101,199 121,199 121,199L121,121L532.906,121C541.795,121 549,113.795 549,104.906C549,81.951 549,40.049 549,17.094C549,8.205 541.795,1 532.906,1C452.748,1 97.252,1 17.094,1C8.205,1 1,8.205 1,17.094C1,93.948 1,423.052 1,499.906C1,508.795 8.205,516 17.094,516C97.351,516 453.649,516 533.906,516C542.795,516 550,508.795 550,499.906C550,476.951 550,435.049 550,412.094Z" style="fill:rgb(41,40,102);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(0.147201,0,0,-0.147201,358.633,215.448)">
+            <path d="M567,17.094C567,8.205 559.795,1 550.906,1C476.449,1 169,1 169,1C122.333,1 82.667,16.5 50,47.5C17.333,78.5 1,117.333 1,164L1,353C1,399.667 17.333,438.5 50,469.5C82.667,500.5 122.333,516 169,516L567,516L567,396L169,396C137,396 121,381.667 121,353L121,164C121,135.333 137,121 169,121L550.906,121C559.795,121 567,113.795 567,104.906C567,81.951 567,40.049 567,17.094Z" style="fill:rgb(41,40,102);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(0.147201,0,0,-0.147201,443.475,215.448)">
+            <path d="M585,412.094C585,403.205 577.795,396 568.906,396C516.332,396 353,396 353,396L353,17.094C353,12.825 351.304,8.732 348.286,5.714C345.268,2.696 341.175,1 336.906,1C313.951,1 272.049,1 249.094,1C244.825,1 240.732,2.696 237.714,5.714C234.696,8.732 233,12.825 233,17.094C233,91.202 233,396 233,396L1,396L1,516L568.906,516C573.175,516 577.268,514.304 580.286,511.286C583.304,508.268 585,504.175 585,499.906C585,476.951 585,435.049 585,412.094Z" style="fill:rgb(41,40,102);fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,13.8469,25.0262)">
+        <text x="729.358px" y="171.59px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:17.067px;fill:rgb(62,194,210);">x</text>
+    </g>
+</svg>

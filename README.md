@@ -1,5 +1,5 @@
 <div style="text-align:center">
-	<img src="media/logo.default.png" />
+	<img src="media/logo.default.svg" />
 </div>
 
 ##### :clubs: @vect, easy to use array, 2d-array, entries and objects
