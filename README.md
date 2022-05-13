@@ -2,7 +2,7 @@
 	<img src="media/logo.default.svg" />
 </div>
 
-##### :clubs: @vect, easy to use array, 2d-array, entries and objects
+#### @vect - iterator extension for vector, matrix, columns, entries, object and nested
 
 [![npm version][badge-npm-version]][url-npm]
 [![github commit last][badge-github-last-commit]][url-github]
@@ -20,13 +20,12 @@
 [url-npm]: https://npmjs.org/package/@vect/vector
 
 #### Features
-- Decoupled modules. Submodules installable on need.
-- Identical interface shared in mappers, in zippers or in quantifiers.
-- 2d-array/entries as a data-type.
-- Quick initializing arrays and object.
-- Mutate mappers/margins/zippers supported.
-- Lightweight and fast.
-- ES-module support.
+- Flexible and friendly iterator extensions with concise api.
+- Functions for various types, applied with generator.
+- Fast initialize.
+- Categorized functions for installing on need.
+- Lightweight.
+- Module support.
 
 #### Install
 
