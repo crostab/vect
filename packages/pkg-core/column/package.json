@@ -1,6 +1,6 @@
 {
   "name": "@vect/column",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Util for 2d-array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,11 +18,11 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.6.9",
-    "@vect/column-indicator": "^0.6.9",
-    "@vect/column-mapper": "^0.6.9",
-    "@vect/column-quantifier": "^0.6.9",
-    "@vect/column-zipper": "^0.6.9"
+    "@vect/column-getter": "^0.6.10",
+    "@vect/column-indicator": "^0.6.10",
+    "@vect/column-mapper": "^0.6.10",
+    "@vect/column-quantifier": "^0.6.10",
+    "@vect/column-zipper": "^0.6.10"
   },
   "repository": {
     "type": "git",

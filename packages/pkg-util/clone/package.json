@@ -1,6 +1,6 @@
 {
   "name": "@vect/clone",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {

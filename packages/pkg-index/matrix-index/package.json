@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-index",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "An matrix index tool",
   "main": "dist/index.cjs",
   "exports": {
