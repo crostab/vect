@@ -20,7 +20,7 @@
   "dependencies": {
     "@aryth/comparer": "^0.5.10",
     "@aryth/rand": "^0.5.10",
-    "@vect/swap": "^0.6.13",
+    "@vect/vector-index": "^0.7.0",
     "@vect/vector-mapper": "^0.7.0"
   },
   "repository": {

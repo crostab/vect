@@ -2,29 +2,19 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var swap = require('@vect/swap');
+var vectorIndex = require('@vect/vector-index');
 
-const partition = (vec, indexes, hi) => {
-  hi = hi || indexes.length;
-  let i = 0,
-      cu = indexes[0],
-      nx;
-  const insertion = swap.insertDown.bind(vec);
+/**
+ * @param {*[]} vec - input array to be mutated
+ * @param {number[]} inds - indexes in ascending order, indicating which elements to remove
+ * @returns {*[]} mutated input array, with elements at provided indexes removed
+ */
 
-  while (++i < hi) if ((nx = indexes[i]) !== ++cu) insertion(nx, cu);
-
+const splices = (vec, inds) => {
+  const hi = inds === null || inds === void 0 ? void 0 : inds.length;
+  if (!hi) return vec;
+  vectorIndex.rollBunch(vec, inds).splice(inds[0], hi);
   return vec;
 };
 
-/**
- *
- * @param {*[]} vec
- * @param {number[]} indexes - integer array sorted ascending
- * @param {number} [hi] - length of indexes
- * @returns {*[]} - altered of original array
- */
-
-const splices = (vec, indexes, hi) => (hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length), partition(vec, indexes, hi).splice(indexes[0], hi), vec);
-
-exports.partition = partition;
 exports.splices = splices;

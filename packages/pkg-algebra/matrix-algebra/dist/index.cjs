@@ -2,17 +2,18 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var matrix = require('@vect/matrix');
+var matrixInit = require('@vect/matrix-init');
+var matrixIndex = require('@vect/matrix-index');
 
 const multiply = (a, b) => {
-  const [ha, wa] = matrix.size(a);
-  const [hb, wb] = matrix.size(b);
+  const [ha, wa] = matrixIndex.size(a),
+        [hb, wb] = matrixIndex.size(b);
 
   if (wa !== hb) {
     throw new Error('incompatible sizes');
   }
 
-  const mx = matrix.draft(ha, wb);
+  const mx = matrixInit.draft(ha, wb);
 
   for (let i = 0; i < ha; i++) {
     for (let j = 0; j < wb; j++) {
@@ -27,14 +28,6 @@ const multiply = (a, b) => {
   return mx;
 };
 
-const height = mx => mx === null || mx === void 0 ? void 0 : mx.length;
-
-const width = mx => {
-  var _mx$;
-
-  return mx !== null && mx !== void 0 && mx.length ? (_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length : null;
-};
-
 /**
  * Transpose a 2d-array.
  * @param {*[][]} mx
@@ -42,8 +35,8 @@ const width = mx => {
  */
 
 const transpose = mx => {
-  const h = height(mx),
-        w = width(mx),
+  const h = matrixIndex.height(mx),
+        w = matrixIndex.width(mx),
         cols = Array(w);
 
   for (let j = 0; j < w; j++) for (let i = 0, col = cols[j] = Array(h); i < h; i++) col[i] = mx[i][j];

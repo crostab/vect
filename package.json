@@ -10,7 +10,7 @@
     "upint": "yarn upgrade-interactive",
     "pub": "lerna publish --force-publish",
     "build": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs",
-    "build-specific": "lerna exec --scope=@vect/vector-init -- rollup -c ../../../rollup.config.mjs",
+    "build-specific": "lerna exec --scope=@vect/vector-index -- rollup -c ../../../rollup.config.mjs",
     "watch": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../../rollup.config.mjs -w"
   },
@@ -46,7 +46,7 @@
     "@valjoux/strategies": "^0.3.12",
     "@valjoux/timestamp-pretty": "^0.3.12",
     "lerna": "^4.0.0",
-    "rollup": "^2.72.1",
+    "rollup": "^2.73.0",
     "rollup-plugin-fileinfo": "^0.3.1",
     "rollup-plugin-terser": "^7.0.2"
   }

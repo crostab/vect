@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var comparer = require('@aryth/comparer');
 var rand = require('@aryth/rand');
-var swap = require('@vect/swap');
+var vectorIndex = require('@vect/vector-index');
 var vectorMapper = require('@vect/vector-mapper');
 
 const leap = function (o, start, gap) {
@@ -41,7 +41,7 @@ const shuffle = function (o, size) {
   const lo = comparer.max(0, l - (size ?? l)),
         rs = {};
 
-  while (--l >= lo) rs[k = swap.swap.call(keys, rand.rand(l), l)] = o[k];
+  while (--l >= lo) rs[k = vectorIndex.swap.call(keys, rand.rand(l), l)] = o[k];
 
   return rs;
 };

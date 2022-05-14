@@ -1,8 +1,9 @@
-import { size, draft } from '@vect/matrix';
+import { draft } from '@vect/matrix-init';
+import { size, height, width } from '@vect/matrix-index';
 
 const multiply = (a, b) => {
-  const [ha, wa] = size(a);
-  const [hb, wb] = size(b);
+  const [ha, wa] = size(a),
+        [hb, wb] = size(b);
 
   if (wa !== hb) {
     throw new Error('incompatible sizes');
@@ -21,14 +22,6 @@ const multiply = (a, b) => {
   }
 
   return mx;
-};
-
-const height = mx => mx === null || mx === void 0 ? void 0 : mx.length;
-
-const width = mx => {
-  var _mx$;
-
-  return mx !== null && mx !== void 0 && mx.length ? (_mx$ = mx[0]) === null || _mx$ === void 0 ? void 0 : _mx$.length : null;
 };
 
 /**

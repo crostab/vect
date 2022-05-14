@@ -1,6 +1,6 @@
 import { max }  from '@aryth/comparer'
 import { rand } from '@aryth/rand'
-import { swap } from '@vect/swap'
+import { swap } from '@vect/vector-index'
 
 /**
  *

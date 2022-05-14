@@ -1,4 +1,4 @@
-import { insertDown } from '@vect/swap'
+import { insertDown } from '@vect/vector-index'
 
 export const partition = (vec, indexes, hi) => {
   hi = hi || indexes.length
