@@ -1,6 +1,6 @@
 import { DecoTable, says, xr } from '@spare/logger'
 import { delogNeL } from '@spare/deco'
-import { swap }     from '@vect/swap'
+import { swap }     from '@vect/vector-index'
 import { ROWWISE }  from '@vect/matrix'
 import { round } from '@aryth/math'
 import { insertUp, insertDown } from './insertion.test'

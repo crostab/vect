@@ -1,4 +1,4 @@
-import { swap } from '@vect/swap'
+import { swap } from '@vect/vector-index'
 
 export function divideEdge (vec, indexes) {
   if (!isContinuous(indexes)) partition(vec, indexes)

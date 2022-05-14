@@ -12,10 +12,10 @@ import { says, xr } from '@spare/logger'
 
 const vecForAsc = [0, 1, 2, 3, 4, 5, 6]
 vecForAsc |> deco |> says['original']
-insertUp.call(vecForAsc, 1, 4)
+rollUp.call(vecForAsc, 1, 4)
 vecForAsc |> deco |> says['insertUp']
 
 const vecForDesc = [0, 1, 2, 3, 4, 5, 6]
 vecForDesc |> deco |> says['original']
-insertDown.call(vecForDesc, 4, 1)
+rollLo.call(vecForDesc, 4, 1)
 vecForDesc |> deco |> says['insertUp']

@@ -1,5 +1,2 @@
-export { select } from './src/select'
-export { selectEntry } from './src/selectEntry'
-export { divide } from './src/divide'
-export { shuffle } from './src/shuffle'
-export { leap } from './src/leap'
+export { select, selectEntry, selectTriplet, divide, separate } from './src/select'
+export { shuffle, leap }                                        from './src/shuffle'
