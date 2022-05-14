@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-algebra",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -18,8 +18,8 @@
     "test": "node -r @babel/register test/matrix-algebra.test.js"
   },
   "dependencies": {
-    "@vect/matrix-index": "^0.7.0",
-    "@vect/matrix-init": "^0.7.0"
+    "@vect/matrix-index": "^0.7.1",
+    "@vect/matrix-init": "^0.7.1"
   },
   "repository": {
     "type": "git",
