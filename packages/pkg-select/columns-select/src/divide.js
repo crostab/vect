@@ -1,25 +1,34 @@
-import { iterate, mapper }     from '@vect/vector-mapper'
-import { divide as divideRow } from '@vect/vector-select'
+import { rollBunch } from '@vect/vector-index'
 
 /**
  * The indexes should be integer array sorted by ascending.
  * Return selected rows and rest rows.
  * 'Pick' rows is new matrix, and the 'rest' points to the input matrix.
  * @param {*[]} mx
- * @param {number[]} indexes - integer array sorted ascending
- * @param {number} [hi] - length of indexes
+ * @param {number[]} inds - integer array sorted ascending
  * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
-export const divide = (mx, indexes, hi) => {
-  hi = hi ?? indexes?.length
-  let h = mx?.length, y
-  if (hi === 0) return { pick: Array(h), rest: mx }
-  const pick = Array(h)
-  if (hi === 1) return [y] = indexes, {
-    pick: pick,
-    rest: mapper(mx, (row, i) => (pick[i] = row.splice(y, 1), row), h)
+export const divide = (mx, inds) => {
+  const n = inds?.length, ht = mx?.length
+  if (n === 0) {
+    return { pick: Array(ht), rest: mx }
   }
-  const rest = mx
-  iterate(mx, (row, i) => {({ pick: pick[i], rest: rest[i] } = divideRow(row, indexes, hi))})
-  return { pick, rest }
+  if (n === 1) {
+    const pick = Array(ht), rest = mx, y = inds[0]
+    for (let i = 0; i < ht; i++) { pick[i] = mx[i].splice(y, 1) }
+    return { pick, rest }
+  }
+  else {
+    const pick = Array(ht), rest = mx
+    for (let i = 0; i < ht; i++) { pick[i] = rollBunch(mx[i], inds).splice(inds[0], n)}
+    return { pick, rest }
+  }
+}
+
+export const separate = (mx, inds) => {
+  const n = inds?.length, ht = mx?.length, pick = Array(ht)
+  if (n === 0) { return [ pick, mx ] }
+  if (n === 1) { for (let i = 0, [ y ] = inds; i < ht; i++) { pick[i] = mx[i].splice(y, 1) } }
+  else { for (let i = 0; i < ht; i++) { pick[i] = rollBunch(mx[i], inds).splice(inds[0], n)} }
+  return [ pick, mx ]
 }

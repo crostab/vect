@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var columnMapper = require('@vect/column-mapper');
 var vectorSelect = require('@vect/vector-select');
+var vectorIndex = require('@vect/vector-index');
 var vectorMapper = require('@vect/vector-mapper');
 
 /**
@@ -24,38 +25,71 @@ const select = (mx, ys) => {
  * Return selected rows and rest rows.
  * 'Pick' rows is new matrix, and the 'rest' points to the input matrix.
  * @param {*[]} mx
- * @param {number[]} indexes - integer array sorted ascending
- * @param {number} [hi] - length of indexes
+ * @param {number[]} inds - integer array sorted ascending
  * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
 
-const divide = (mx, indexes, hi) => {
-  hi = hi ?? (indexes === null || indexes === void 0 ? void 0 : indexes.length);
-  let h = mx === null || mx === void 0 ? void 0 : mx.length,
-      y;
-  if (hi === 0) return {
-    pick: Array(h),
-    rest: mx
-  };
-  const pick = Array(h);
-  if (hi === 1) return [y] = indexes, {
-    pick: pick,
-    rest: vectorMapper.mapper(mx, (row, i) => (pick[i] = row.splice(y, 1), row), h)
-  };
-  const rest = mx;
-  vectorMapper.iterate(mx, (row, i) => {
-    ({
-      pick: pick[i],
-      rest: rest[i]
-    } = vectorSelect.divide(row, indexes, hi));
-  });
-  return {
-    pick,
-    rest
-  };
+const divide = (mx, inds) => {
+  const n = inds === null || inds === void 0 ? void 0 : inds.length,
+        ht = mx === null || mx === void 0 ? void 0 : mx.length;
+
+  if (n === 0) {
+    return {
+      pick: Array(ht),
+      rest: mx
+    };
+  }
+
+  if (n === 1) {
+    const pick = Array(ht),
+          rest = mx,
+          y = inds[0];
+
+    for (let i = 0; i < ht; i++) {
+      pick[i] = mx[i].splice(y, 1);
+    }
+
+    return {
+      pick,
+      rest
+    };
+  } else {
+    const pick = Array(ht),
+          rest = mx;
+
+    for (let i = 0; i < ht; i++) {
+      pick[i] = vectorIndex.rollBunch(mx[i], inds).splice(inds[0], n);
+    }
+
+    return {
+      pick,
+      rest
+    };
+  }
+};
+const separate = (mx, inds) => {
+  const n = inds === null || inds === void 0 ? void 0 : inds.length,
+        ht = mx === null || mx === void 0 ? void 0 : mx.length,
+        pick = Array(ht);
+
+  if (n === 0) {
+    return [pick, mx];
+  }
+
+  if (n === 1) {
+    for (let i = 0, [y] = inds; i < ht; i++) {
+      pick[i] = mx[i].splice(y, 1);
+    }
+  } else {
+    for (let i = 0; i < ht; i++) {
+      pick[i] = vectorIndex.rollBunch(mx[i], inds).splice(inds[0], n);
+    }
+  }
+
+  return [pick, mx];
 };
 
-const selectEntries = (mx, keyInd, valInd) => vectorMapper.mapper(mx, row => vectorSelect.selectEntry(row, keyInd, valInd));
+const selectEntries = (mx, ki, vi) => vectorMapper.mapper(mx, row => vectorSelect.selectEntry(row, ki, vi));
 
 const selectObject = (mx, keyInd, valInd) => {
   let o = {},
@@ -70,3 +104,4 @@ exports.divide = divide;
 exports.select = select;
 exports.selectEntries = selectEntries;
 exports.selectObject = selectObject;
+exports.separate = separate;
