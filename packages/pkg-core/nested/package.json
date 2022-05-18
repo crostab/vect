@@ -1,6 +1,6 @@
 {
   "name": "@vect/nested",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
