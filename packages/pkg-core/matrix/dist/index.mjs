@@ -7,7 +7,7 @@ export { draft, init, iso, product, shallow } from '@vect/matrix-init';
 export { every, some } from '@vect/matrix-quantifier';
 export { transpose } from '@vect/matrix-algebra';
 export { Columns } from '@vect/column-getter';
-export { divide, select, selectEntries, selectObject } from '@vect/columns-select';
+export { divide, select, selectEntries, selectObject, separate } from '@vect/columns-select';
 export { pop, push, shift, splices, unshift } from '@vect/columns-update';
 export { coins, column, height, isMatrix, size, width } from '@vect/matrix-index';
 import { indexed, indexedTo } from '@vect/vector-mapper';

@@ -365,6 +365,10 @@ Object.defineProperty(exports, 'selectObject', {
   enumerable: true,
   get: function () { return columnsSelect.selectObject; }
 });
+Object.defineProperty(exports, 'separate', {
+  enumerable: true,
+  get: function () { return columnsSelect.separate; }
+});
 Object.defineProperty(exports, 'pop', {
   enumerable: true,
   get: function () { return columnsUpdate.pop; }

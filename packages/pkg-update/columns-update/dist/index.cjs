@@ -32,7 +32,7 @@ const splices = (mx, ys) => {
   const hi = (ys === null || ys === void 0 ? void 0 : ys.length) ?? 0;
   if (hi === 0) return mx;
   if (hi === 1) return vectorMapper.mapper(mx, r => (r.splice(ys[0], 1), r));
-  return mx.map(row => vectorUpdate.splices(row, ys, hi));
+  return mx.map(row => vectorUpdate.splices(row, ys));
 };
 
 exports.pop = pop;
