@@ -6,7 +6,7 @@
  * @param {number} [w]
  * @returns {*[]}
  */
-export const mapper = (mx, fn, h, w) => {
+export function mapper(mx, fn, h, w) {
   h = h || mx?.length, w = w || h && mx[0]?.length
   const tx = Array(h)
   for (let i = 0, j, r, tr; i < h; i++)
@@ -14,6 +14,7 @@ export const mapper = (mx, fn, h, w) => {
       tr[j] = fn(r[j], i, j)
   return tx
 }
+
 
 /**
  *
@@ -23,14 +24,14 @@ export const mapper = (mx, fn, h, w) => {
  * @param {number} [w]
  * @returns {undefined}
  */
-export const iterate = function (mx, fn, h, w) {
+export function iterate(mx, fn, h, w) {
   h = h || mx?.length, w = w || h && mx[0]?.length
   for (let i = 0, j, r; i < h; i++)
     for (r = mx[i], j = 0; j < w; j++)
       fn.call(this, r[j], i, j)
 }
 
-export const mutate = (mx, fn, h, w) => {
+export function mutate(mx, fn, h, w) {
   h = h || mx?.length, w = w || h && mx[0]?.length
   for (let i = 0, j, r; i < h; i++)
     for (j = 0, r = mx[i]; j < w; j++)
@@ -38,7 +39,7 @@ export const mutate = (mx, fn, h, w) => {
   return mx
 }
 
-export const selectMutate = (mx, ys, fn, h) => {
+export function selectMutate(mx, ys, fn, h) {
   h = h || mx?.length
   const depth = ys.length
   for (let i = 0, y, r, j; i < h; i++)

@@ -6,13 +6,14 @@
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mapper = (entries, keyTo, valTo, l) => {
+export function mapper(entries, keyTo, valTo, l) {
   l = l ?? entries?.length, valTo = valTo || keyTo
   const vec = Array(l)
   for (let i = 0, r; i < l; i++)
-    r = entries[i], vec[i] = [keyTo(r[0], i), valTo(r[1], i)]
+    r = entries[i], vec[i] = [ keyTo(r[0], i), valTo(r[1], i) ]
   return vec
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -20,13 +21,14 @@ export const mapper = (entries, keyTo, valTo, l) => {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mapKeys = (entries, keyTo, l) => {
+export function mapKeys(entries, keyTo, l) {
   l = l ?? entries?.length
   const vec = Array(l)
   for (let i = 0, r; i < l; i++)
-    r = entries[i], vec[i] = [keyTo(r[0], i), r[1]]
+    r = entries[i], vec[i] = [ keyTo(r[0], i), r[1] ]
   return vec
 }
+
 
 /**
  *
@@ -35,11 +37,11 @@ export const mapKeys = (entries, keyTo, l) => {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mapValues = (entries, valTo, l) => {
+export function mapValues(entries, valTo, l) {
   l = l ?? entries?.length
   const vec = Array(l)
   for (let i = 0, r; i < l; i++)
-    r = entries[i], vec[i] = [r[0], valTo(r[1], i)]
+    r = entries[i], vec[i] = [ r[0], valTo(r[1], i) ]
   return vec
 }
 

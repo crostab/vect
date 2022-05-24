@@ -17,11 +17,11 @@ function columnMutate(mx, fn, l) {
 const ColumnMutate = y => columnMutate.bind({
   y
 });
-const iterate = function (mx, y, to, l) {
+function iterate(mx, y, to, l) {
   l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
   for (let i = 0; i < l; i++) to.call(this, mx[i][y], i);
-};
+}
 function columnIterate(mx, to, l) {
   l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
 
@@ -80,12 +80,16 @@ const ColumnMapper = (y, duplicate = true) => duplicate ? columnMapperDuplicate.
 }) : columnMapper.bind({
   y
 });
-const mutate = (mx, y, fn, l) => columnMutate.call({
-  y
-}, mx, fn, l);
-const mapper = (mx, y, fn, l) => columnMapper.call({
-  y
-}, mx, fn, l);
+function mutate(mx, y, fn, l) {
+  return columnMutate.call({
+    y
+  }, mx, fn, l);
+}
+function mapper(mx, y, fn, l) {
+  return columnMapper.call({
+    y
+  }, mx, fn, l);
+}
 
 function* indexedOf(mx, y) {
   for (let h = mx.length, i = 0; i < h; i++) yield mx[i][y];

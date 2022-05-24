@@ -2,18 +2,18 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const iterateKeys = function (o, fn) {
+function iterateKeys(o, fn) {
   for (let k in o) fn.call(this, k);
-};
+}
 function iterateValues(o, fn) {
   for (let k in o) fn.call(this, o[k]);
 }
-const iterateEntries = function (o, fn, l) {
+function iterateEntries(o, fn, l) {
   const entries = Object.entries(o);
   l = l ?? entries.length;
 
   for (let i = 0; i < l; i++) fn.call(this, entries[i], i);
-};
+}
 
 function mapKey(o, keyToKey) {
   const t = {};

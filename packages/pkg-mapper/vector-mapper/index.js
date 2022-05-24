@@ -1,5 +1,2 @@
-export { iterate }                                  from './src/iterate'
-export { reviter }                                  from './src/reviter'
-export { mapper }                                   from './src/mapper'
-export { mutate }                                   from './src/mutate'
+export { iterate, mapper, mutate, reviter }         from './src/mapper'
 export { indexed, indexedBy, indexedTo, indexedOf } from './src/indexed'

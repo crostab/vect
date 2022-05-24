@@ -14,7 +14,7 @@ export function columnMutate(mx, fn, l) {
 export const ColumnMutate = (y) => columnMutate.bind({ y })
 
 
-export const iterate = function (mx, y, to, l) {
+export function iterate(mx, y, to, l) {
   l = l || mx?.length
   for (let i = 0; i < l; i++)
     to.call(this, mx[i][y], i)
@@ -66,10 +66,8 @@ export const ColumnMapper = (y, duplicate = true) => duplicate
   : columnMapper.bind({ y })
 
 
-export const mutate = (mx, y, fn, l) =>
-  columnMutate.call({ y }, mx, fn, l)
+export function mutate(mx, y, fn, l) { return columnMutate.call({y}, mx, fn, l) }
 
-export const mapper = (mx, y, fn, l) =>
-  columnMapper.call({ y }, mx, fn, l)
+export function mapper(mx, y, fn, l) { return columnMapper.call({y}, mx, fn, l) }
 
 

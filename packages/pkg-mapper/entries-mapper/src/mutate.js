@@ -6,13 +6,14 @@
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mutate = (entries, keyTo, valTo, l) => {
+export function mutate(entries, keyTo, valTo, l) {
   l = l ?? entries?.length, valTo = valTo || keyTo
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyTo(r[0], i), r[1] = valTo(r[1], i)
   }
   return entries
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -20,13 +21,14 @@ export const mutate = (entries, keyTo, valTo, l) => {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mutateKeys = (entries, keyTo, l) => {
+export function mutateKeys(entries, keyTo, l) {
   l = l ?? entries?.length
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyTo(r[0], i)
   }
   return entries
 }
+
 
 /**
  *
@@ -35,7 +37,7 @@ export const mutateKeys = (entries, keyTo, l) => {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-export const mutateValues = (entries, valTo, l) => {
+export function mutateValues(entries, valTo, l) {
   l = l ?? entries?.length
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[1] = valTo(r[1], i)

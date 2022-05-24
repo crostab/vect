@@ -1,6 +1,6 @@
 import { width, column } from '@vect/matrix-index';
 
-const mapper = (mx, colTo) => {
+function mapper(mx, colTo) {
   const h = mx === null || mx === void 0 ? void 0 : mx.length,
         w = width(mx),
         vec = Array(w),
@@ -9,14 +9,14 @@ const mapper = (mx, colTo) => {
   for (let j = 0; j < w; j++) vec[j] = colTo(col(j, h), j);
 
   return vec;
-};
-const iterate = function (mx, onCol) {
+}
+function iterate(mx, onCol) {
   const h = mx === null || mx === void 0 ? void 0 : mx.length,
         w = width(mx),
         col = column.bind(mx);
 
   for (let j = 0; j < w; j++) onCol.call(this, col(j, h), j);
-};
+}
 
 function* indexedOf(mx) {
   for (let j = 0, w = width(mx); j < w; j++) yield column.call(mx, j);
