@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-update",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Update object",
   "main": "./dist/index.cjs",
   "exports": {
@@ -11,8 +11,8 @@
     "dist"
   ],
   "dependencies": {
-    "@vect/object-index": "^0.7.3",
-    "@vect/vector-index": "^0.7.3"
+    "@vect/object-index": "^0.7.4",
+    "@vect/vector-index": "^0.7.4"
   },
   "publishConfig": {
     "access": "public"

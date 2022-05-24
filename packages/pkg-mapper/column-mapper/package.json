@@ -1,6 +1,6 @@
 {
   "name": "@vect/column-mapper",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
