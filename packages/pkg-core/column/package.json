@@ -1,6 +1,6 @@
 {
   "name": "@vect/column",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "Util for 2d-array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -20,9 +20,9 @@
   "dependencies": {
     "@vect/column-getter": "^0.6.13",
     "@vect/column-indicator": "^0.6.13",
-    "@vect/column-mapper": "^0.7.5",
+    "@vect/column-mapper": "^0.7.6",
     "@vect/column-quantifier": "^0.6.13",
-    "@vect/column-zipper": "^0.7.5"
+    "@vect/column-zipper": "^0.7.6"
   },
   "repository": {
     "type": "git",
