@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -14,16 +14,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/vector-algebra": "^0.7.4",
-    "@vect/vector-index": "^0.7.4",
+    "@vect/vector-algebra": "^0.7.5",
+    "@vect/vector-index": "^0.7.5",
     "@vect/vector-indicator": "^0.6.13",
-    "@vect/vector-init": "^0.7.4",
-    "@vect/vector-mapper": "^0.7.4",
+    "@vect/vector-init": "^0.7.5",
+    "@vect/vector-mapper": "^0.7.5",
     "@vect/vector-margin": "^0.6.13",
     "@vect/vector-merge": "^0.6.13",
-    "@vect/vector-select": "^0.7.4",
-    "@vect/vector-update": "^0.7.4",
-    "@vect/vector-zipper": "^0.7.4"
+    "@vect/vector-select": "^0.7.5",
+    "@vect/vector-update": "^0.7.5",
+    "@vect/vector-zipper": "^0.7.5"
   },
   "scripts": {
     "pub": "npm publish",

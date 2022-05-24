@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-init",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {

@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-zipper",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Zip function",
   "main": "./dist/index.cjs",
   "exports": {
