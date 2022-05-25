@@ -11,8 +11,7 @@ import { swap }     from '@vect/vector-index'
 export const shuffle = function (ve, size) {
   let l = ve?.length
   const lo = max(0, l - (size ?? l))
-  while (--l >= lo)
-    swap.call(ve, l, rand(l))
+  while (--l >= lo) swap.call(ve, l, rand(l))
   return lo ? (ve.splice(0, lo), ve) : ve
 }
 

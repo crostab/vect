@@ -24,6 +24,14 @@ export const rollBunch = (vec, inds) => {
   return vec
 }
 
+export function rollTop(vec, inds) {
+  for (let lo = 0, hi = inds.length; lo < hi; lo++) {
+    const ind = inds[lo]
+    if (ind > lo) rollLo.call(vec, ind, lo)
+  }
+  return vec
+}
+
 
 /**
  * Roll vec[i] up to vec[nx] where i <= nx

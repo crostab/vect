@@ -22,6 +22,14 @@ const rollBunch = (vec, inds) => {
 
   return vec;
 };
+function rollTop(vec, inds) {
+  for (let lo = 0, hi = inds.length; lo < hi; lo++) {
+    const ind = inds[lo];
+    if (ind > lo) rollLo.call(vec, ind, lo);
+  }
+
+  return vec;
+}
 /**
  * Roll vec[i] up to vec[nx] where i <= nx
  * @param i
@@ -51,4 +59,4 @@ function rollLo(i, lo) {
 }
 const Swap = vec => swap.bind(vec);
 
-export { Swap, first, rollLo as insertDown, rollUp as insertUp, last, len, rollBunch, rollLo, rollUp, swap };
+export { Swap, first, rollLo as insertDown, rollUp as insertUp, last, len, rollBunch, rollLo, rollTop, rollUp, swap };

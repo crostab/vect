@@ -10,11 +10,11 @@ var vectorIndex = require('@vect/vector-index');
  * @returns {*[]} mutated input array, with elements at provided indexes removed
  */
 
-const splices = (vec, inds) => {
+function splices(vec, inds) {
   const hi = inds === null || inds === void 0 ? void 0 : inds.length;
   if (!hi) return vec;
   vectorIndex.rollBunch(vec, inds).splice(inds[0], hi);
   return vec;
-};
+}
 
 exports.splices = splices;

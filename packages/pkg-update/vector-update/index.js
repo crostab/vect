@@ -6,7 +6,7 @@ import { rollBunch } from '@vect/vector-index'
  * @param {number[]} inds - indexes in ascending order, indicating which elements to remove
  * @returns {*[]} mutated input array, with elements at provided indexes removed
  */
-export const splices = (vec, inds) => {
+export function splices(vec, inds) {
   const hi = inds?.length
   if (!hi) return vec
   rollBunch(vec, inds).splice(inds[0], hi)
