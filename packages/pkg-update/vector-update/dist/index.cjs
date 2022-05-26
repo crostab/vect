@@ -11,10 +11,13 @@ var vectorIndex = require('@vect/vector-index');
  */
 
 function splices(vec, inds) {
-  const hi = inds === null || inds === void 0 ? void 0 : inds.length;
-  if (!hi) return vec;
-  vectorIndex.rollBunch(vec, inds).splice(inds[0], hi);
+  vectorIndex.rollBunch(vec, inds).splice(inds[0], inds.length);
+  return vec;
+}
+function keep(vec, inds) {
+  vectorIndex.rollTop(vec, inds).splice(inds.length);
   return vec;
 }
 
+exports.keep = keep;
 exports.splices = splices;

@@ -20,8 +20,6 @@ export { select, divide, separate, selectEntries, selectObject } from '@vect/col
 export { pop, push, shift, unshift, splices }                    from '@vect/columns-update'
 export { coins, isMatrix, column, height, width, size }          from '@vect/matrix-index'
 
-export { Matrix } from './src/Matrix'
-
 export const POINTWISE = 0
 export const ROWWISE = 1
 export const COLUMNWISE = 2

@@ -9,6 +9,7 @@ export function* indexedBy(vec, by) {
 }
 
 export function* indexedTo(vec, to) {
+  if (!to) { return yield* indexedOf(vec) }
   for (let i = 0, h = vec?.length; i < h; i++)
     yield to(vec[i], i)
 }

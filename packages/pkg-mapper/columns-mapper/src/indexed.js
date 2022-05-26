@@ -9,6 +9,7 @@ export function* indexedBy(mx, by) {
 }
 
 export function* indexedTo(mx, to) {
+  if (!to) { return yield* indexedOf(mx) }
   for (let j = 0, w = width(mx); j < w; j++) yield to(column.call(mx, j), j)
 }
 

@@ -4,8 +4,8 @@ export {
 
 export { iterate, reviter, mapper, mutate, indexed, indexedBy, indexedOf, indexedTo } from '@vect/vector-mapper'
 export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap }         from '@vect/vector-init'
-export { splices, partition }                                                         from '@vect/vector-update'
-export { divide, leap, select, selectEntry, shuffle }                                 from '@vect/vector-select'
+export { splices, keep }                                                              from '@vect/vector-update'
+export { select, selectEntry, selectTriplet, divide, separate, shuffle, leap }        from '@vect/vector-select'
 export { union, intersect, difference, merge, acquire, merges }                       from '@vect/vector-algebra'
 export { first, last, Swap, insertDown, insertUp, len, swap }                         from '@vect/vector-index'
 

@@ -1,4 +1,4 @@
-import { rollBunch } from '@vect/vector-index';
+import { rollBunch, rollTop } from '@vect/vector-index';
 
 /**
  * @param {*[]} vec - input array to be mutated
@@ -7,10 +7,12 @@ import { rollBunch } from '@vect/vector-index';
  */
 
 function splices(vec, inds) {
-  const hi = inds === null || inds === void 0 ? void 0 : inds.length;
-  if (!hi) return vec;
-  rollBunch(vec, inds).splice(inds[0], hi);
+  rollBunch(vec, inds).splice(inds[0], inds.length);
+  return vec;
+}
+function keep(vec, inds) {
+  rollTop(vec, inds).splice(inds.length);
   return vec;
 }
 
-export { splices };
+export { keep, splices };
