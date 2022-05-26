@@ -1,4 +1,4 @@
-import { rollBunch } from '@vect/vector-index'
+import { rollBunch, rollTop } from '@vect/vector-index'
 
 
 /**
@@ -7,9 +7,12 @@ import { rollBunch } from '@vect/vector-index'
  * @returns {*[]} mutated input array, with elements at provided indexes removed
  */
 export function splices(vec, inds) {
-  const hi = inds?.length
-  if (!hi) return vec
-  rollBunch(vec, inds).splice(inds[0], hi)
+  rollBunch(vec, inds).splice(inds[0], inds.length)
+  return vec
+}
+
+export function keep(vec, inds) {
+  rollTop(vec, inds).splice(inds.length)
   return vec
 }
 
