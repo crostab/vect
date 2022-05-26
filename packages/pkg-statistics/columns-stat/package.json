@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-stat",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Indicators for columns",
   "main": "./dist/index.cjs",
   "exports": {
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.1.19",
-    "@vect/matrix-index": "^0.7.8",
-    "@vect/vector-init": "^0.7.8"
+    "@vect/matrix-index": "^0.7.9",
+    "@vect/vector-init": "^0.7.9"
   },
   "keywords": [
     "matrix",

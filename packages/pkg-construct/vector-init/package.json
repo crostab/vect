@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-init",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
