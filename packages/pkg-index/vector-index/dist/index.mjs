@@ -30,6 +30,15 @@ function rollTop(vec, inds) {
 
   return vec;
 }
+function fitRoll(inds) {
+  for (let hi = inds.length - 1; hi > 0; hi--) {
+    const cu = inds[hi];
+
+    for (let i = 0; i < hi; i++) if (inds[i] > cu) inds[hi]++;
+  }
+
+  return inds;
+}
 /**
  * Roll vec[i] up to vec[nx] where i <= nx
  * @param i
@@ -59,4 +68,4 @@ function rollLo(i, lo) {
 }
 const Swap = vec => swap.bind(vec);
 
-export { Swap, first, rollLo as insertDown, rollUp as insertUp, last, len, rollBunch, rollLo, rollTop, rollUp, swap };
+export { Swap, first, fitRoll, rollLo as insertDown, rollUp as insertUp, last, len, rollBunch, rollLo, rollTop, rollUp, swap };
