@@ -29,6 +29,10 @@ function* indexedBy(mx, by) {
   for (let j = 0, w = matrixIndex.width(mx), col; j < w; j++) if (by(col = matrixIndex.column.call(mx, j), j)) yield col;
 }
 function* indexedTo(mx, to) {
+  if (!to) {
+    return yield* indexedOf(mx);
+  }
+
   for (let j = 0, w = matrixIndex.width(mx); j < w; j++) yield to(matrixIndex.column.call(mx, j), j);
 }
 function* indexed(mx, by, to) {

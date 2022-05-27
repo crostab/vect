@@ -35,6 +35,7 @@ export function rollTop(vec, inds) {
 export function fitRoll(inds) {
   for (let hi = inds.length - 1; hi > 0; hi--) {
     const cu = inds[hi]
+    if (!~cu) continue
     for (let i = 0; i < hi; i++) if (inds[i] > cu) inds[hi]++
   }
   return inds

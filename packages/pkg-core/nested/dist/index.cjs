@@ -111,6 +111,10 @@ function* indexedBy(nested, by) {
   }
 }
 function* indexedTo(nested, to) {
+  if (!to) {
+    return yield* indexedOf(nested);
+  }
+
   let row;
   if (nested) for (let x in nested) {
     if (row = nested[x]) for (let y in row) {

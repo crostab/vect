@@ -36,6 +36,10 @@ function* indexedBy(vec, by) {
   for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length, el; i < h; i++) if (by(el = vec[i], i)) yield el;
 }
 function* indexedTo(vec, to) {
+  if (!to) {
+    return yield* indexedOf(vec);
+  }
+
   for (let i = 0, h = vec === null || vec === void 0 ? void 0 : vec.length; i < h; i++) yield to(vec[i], i);
 }
 function* indexed(vec, by, to) {

@@ -12,10 +12,8 @@ const glyphToLayerToMetrics = {
 }
 
 const test = () => {
-  const generator = indexed(glyphToLayerToMetrics,
-    (x, y, v) => ({ x, y, v: v.l }),
-  );
-  [...generator]  |> deco |> logger
+  const iter = indexed(glyphToLayerToMetrics, (x, y, v) => ({ x, y, v: v.l }),);
+  [ ...iter ]  |> deco |> logger
 }
 
 test()

@@ -71,6 +71,10 @@ function* indexedBy(mx, by) {
   }
 }
 function* indexedTo(mx, to) {
+  if (!to) {
+    return yield* indexedOf(mx);
+  }
+
   if (mx) for (let i = 0, h = mx.length; i < h; i++) {
     const row = mx[i];
     if (row) for (let j = 0, w = row.length; j < w; j++) {

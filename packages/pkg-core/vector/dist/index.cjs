@@ -122,9 +122,9 @@ Object.defineProperty(exports, 'tap', {
   enumerable: true,
   get: function () { return vectorInit.tap; }
 });
-Object.defineProperty(exports, 'partition', {
+Object.defineProperty(exports, 'keep', {
   enumerable: true,
-  get: function () { return vectorUpdate.partition; }
+  get: function () { return vectorUpdate.keep; }
 });
 Object.defineProperty(exports, 'splices', {
   enumerable: true,
@@ -145,6 +145,14 @@ Object.defineProperty(exports, 'select', {
 Object.defineProperty(exports, 'selectEntry', {
   enumerable: true,
   get: function () { return vectorSelect.selectEntry; }
+});
+Object.defineProperty(exports, 'selectTriplet', {
+  enumerable: true,
+  get: function () { return vectorSelect.selectTriplet; }
+});
+Object.defineProperty(exports, 'separate', {
+  enumerable: true,
+  get: function () { return vectorSelect.separate; }
 });
 Object.defineProperty(exports, 'shuffle', {
   enumerable: true,

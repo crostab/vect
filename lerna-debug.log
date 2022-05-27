@@ -33,10 +33,10 @@
 19 info Assuming all packages changed
 20 verbose updated @vect/enum-matrix-directions
 21 verbose updated @vect/enum-select-styles
-22 verbose updated @vect/matrix-algebra
+22 verbose updated @vect/matrix-transpose
 23 verbose updated @vect/matrix-transpose
 24 verbose updated @vect/merge-acquire
-25 verbose updated @vect/vector-algebra
+25 verbose updated @vect/vector-transpose
 26 verbose updated @vect/vector-merge
 27 verbose updated @vect/entries-init
 28 verbose updated @vect/matrix-init
@@ -160,7 +160,7 @@
 146 silly lifecycle No script for "version" in "@vect/vector-margin", continuing
 147 silly lifecycle No script for "preversion" in "@vect/matrix-transpose", continuing
 148 silly lifecycle No script for "version" in "@vect/callable", continuing
-149 silly lifecycle No script for "preversion" in "@vect/vector-algebra", continuing
+149 silly lifecycle No script for "preversion" in "@vect/vector-transpose", continuing
 150 silly lifecycle No script for "version" in "@vect/entries-unwind", continuing
 151 silly lifecycle No script for "preversion" in "@vect/column-getter", continuing
 152 silly lifecycle No script for "version" in "@vect/clone", continuing
@@ -186,7 +186,7 @@
 172 silly lifecycle No script for "version" in "@vect/matrix-transpose", continuing
 173 silly lifecycle No script for "version" in "@vect/vector-roller", continuing
 174 silly lifecycle No script for "version" in "@vect/columns-stat", continuing
-175 silly lifecycle No script for "version" in "@vect/vector-algebra", continuing
+175 silly lifecycle No script for "version" in "@vect/vector-transpose", continuing
 176 silly lifecycle No script for "version" in "@vect/column-getter", continuing
 177 silly lifecycle No script for "preversion" in "@vect/column", continuing
 178 silly lifecycle No script for "preversion" in "@vect/columns-mapper", continuing
@@ -217,18 +217,18 @@
 203 silly lifecycle No script for "version" in "@vect/columns-indicator", continuing
 204 silly lifecycle No script for "version" in "@vect/object", continuing
 205 silly lifecycle No script for "version" in "@vect/matrix", continuing
-206 silly lifecycle No script for "preversion" in "@vect/matrix-algebra", continuing
-207 silly lifecycle No script for "version" in "@vect/matrix-algebra", continuing
+206 silly lifecycle No script for "preversion" in "@vect/matrix-transpose", continuing
+207 silly lifecycle No script for "version" in "@vect/matrix-transpose", continuing
 208 silly lifecycle No script for "version" in "root", continuing
 209 silly gitAdd [
 209 silly gitAdd   'packages/pkg-construct/matrix-init/package.json',
 209 silly gitAdd   'packages/pkg-construct/object-init/package.json',
 209 silly gitAdd   'packages/enum/enum-select-styles/package.json',
-209 silly gitAdd   'packages/pkg-algebra/merge-acquire/package.json',
+209 silly gitAdd   'packages/pkg-transpose/merge-acquire/package.json',
 209 silly gitAdd   'packages/pkg-core/nested/package.json',
 209 silly gitAdd   'packages/pkg-indicator/vector-indicator/package.json',
 209 silly gitAdd   'packages/enum/enum-matrix-directions/package.json',
-209 silly gitAdd   'packages/pkg-algebra/vector-merge/package.json',
+209 silly gitAdd   'packages/pkg-transpose/vector-merge/package.json',
 209 silly gitAdd   'packages/pkg-index/matrix-index/package.json',
 209 silly gitAdd   'packages/pkg-indicator/entries-indicator/package.json',
 209 silly gitAdd   'packages/pkg-indicator/matrix-indicator/package.json',
@@ -258,10 +258,10 @@
 209 silly gitAdd   'packages/pkg-zipper/column-zipper/package.json',
 209 silly gitAdd   'packages/pkg-update/vector-update/package.json',
 209 silly gitAdd   'packages/pkg-stat/matrix-stat/package.json',
-209 silly gitAdd   'packages/pkg-algebra/matrix-transpose/package.json',
+209 silly gitAdd   'packages/pkg-transpose/matrix-transpose/package.json',
 209 silly gitAdd   'packages/pkg-iterator/vector-roller/package.json',
 209 silly gitAdd   'packages/pkg-stat/columns-stat/package.json',
-209 silly gitAdd   'packages/pkg-algebra/vector-algebra/package.json',
+209 silly gitAdd   'packages/pkg-transpose/vector-transpose/package.json',
 209 silly gitAdd   'packages/pkg-index/column-getter/package.json',
 209 silly gitAdd   'packages/pkg-index/object-index/package.json',
 209 silly gitAdd   'packages/pkg-index/vector-index/package.json',
@@ -282,7 +282,7 @@
 209 silly gitAdd   'packages/pkg-indicator/columns-indicator/package.json',
 209 silly gitAdd   'packages/pkg-core/object/package.json',
 209 silly gitAdd   'packages/pkg-core/matrix/package.json',
-209 silly gitAdd   'packages/pkg-algebra/matrix-algebra/package.json',
+209 silly gitAdd   'packages/pkg-transpose/matrix-transpose/package.json',
 209 silly gitAdd   'lerna.json'
 209 silly gitAdd ]
 210 silly gitCommit v0.6.12
@@ -291,10 +291,10 @@
 213 verbose git [ 'tag', 'v0.6.12', '-m', 'v0.6.12' ]
 214 silly lifecycle No script for "postversion" in "@vect/enum-matrix-directions", continuing
 215 silly lifecycle No script for "postversion" in "@vect/enum-select-styles", continuing
-216 silly lifecycle No script for "postversion" in "@vect/matrix-algebra", continuing
+216 silly lifecycle No script for "postversion" in "@vect/matrix-transpose", continuing
 217 silly lifecycle No script for "postversion" in "@vect/matrix-transpose", continuing
 218 silly lifecycle No script for "postversion" in "@vect/merge-acquire", continuing
-219 silly lifecycle No script for "postversion" in "@vect/vector-algebra", continuing
+219 silly lifecycle No script for "postversion" in "@vect/vector-transpose", continuing
 220 silly lifecycle No script for "postversion" in "@vect/vector-merge", continuing
 221 silly lifecycle No script for "postversion" in "@vect/entries-init", continuing
 222 silly lifecycle No script for "postversion" in "@vect/matrix-init", continuing
@@ -375,8 +375,8 @@
 297 silly lifecycle No script for "prepack" in "root", continuing
 298 verbose pack-directory packages/enum/enum-matrix-directions
 299 verbose pack-directory packages/enum/enum-select-styles
-300 verbose pack-directory packages/pkg-algebra/merge-acquire
-301 verbose pack-directory packages/pkg-algebra/vector-merge
+300 verbose pack-directory packages/pkg-transpose/merge-acquire
+301 verbose pack-directory packages/pkg-transpose/vector-merge
 302 verbose pack-directory packages/pkg-construct/matrix-init
 303 verbose pack-directory packages/pkg-construct/object-init
 304 verbose pack-directory packages/pkg-construct/vector-init
@@ -456,7 +456,7 @@
 378 silly lifecycle No script for "postpack" in "@vect/vector-init", continuing
 379 verbose packed packages/pkg-construct/vector-init
 380 silly lifecycle No script for "postpack" in "@vect/vector-merge", continuing
-381 verbose packed packages/pkg-algebra/vector-merge
+381 verbose packed packages/pkg-transpose/vector-merge
 382 silly lifecycle No script for "postpack" in "@vect/matrix-init", continuing
 383 verbose packed packages/pkg-construct/matrix-init
 384 silly lifecycle No script for "postpack" in "@vect/enum-matrix-directions", continuing
@@ -464,7 +464,7 @@
 386 silly lifecycle No script for "postpack" in "@vect/nested", continuing
 387 verbose packed packages/pkg-core/nested
 388 silly lifecycle No script for "postpack" in "@vect/merge-acquire", continuing
-389 verbose packed packages/pkg-algebra/merge-acquire
+389 verbose packed packages/pkg-transpose/merge-acquire
 390 silly lifecycle No script for "postpack" in "@vect/object-init", continuing
 391 verbose packed packages/pkg-construct/object-init
 392 silly lifecycle No script for "postpack" in "@vect/column-indicator", continuing
@@ -618,12 +618,12 @@
 540 verbose pack-directory packages/pkg-update/vector-update
 541 silly lifecycle No script for "prepublish" in "@vect/vector-update", continuing
 542 silly lifecycle No script for "prepare" in "@vect/vector-update", continuing
-543 verbose pack-directory packages/pkg-algebra/matrix-transpose
+543 verbose pack-directory packages/pkg-transpose/matrix-transpose
 544 silly lifecycle No script for "prepublish" in "@vect/matrix-transpose", continuing
 545 silly lifecycle No script for "prepare" in "@vect/matrix-transpose", continuing
-546 verbose pack-directory packages/pkg-algebra/vector-algebra
-547 silly lifecycle No script for "prepublish" in "@vect/vector-algebra", continuing
-548 silly lifecycle No script for "prepare" in "@vect/vector-algebra", continuing
+546 verbose pack-directory packages/pkg-transpose/vector-transpose
+547 silly lifecycle No script for "prepublish" in "@vect/vector-transpose", continuing
+548 silly lifecycle No script for "prepare" in "@vect/vector-transpose", continuing
 549 verbose pack-directory packages/pkg-index/column-getter
 550 silly lifecycle No script for "prepublish" in "@vect/column-getter", continuing
 551 silly lifecycle No script for "prepare" in "@vect/column-getter", continuing
@@ -650,7 +650,7 @@
 572 silly lifecycle No script for "prepublishOnly" in "@vect/columns-stat", continuing
 573 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-stat", continuing
 574 silly lifecycle No script for "prepublishOnly" in "@vect/column-getter", continuing
-575 silly lifecycle No script for "prepublishOnly" in "@vect/vector-algebra", continuing
+575 silly lifecycle No script for "prepublishOnly" in "@vect/vector-transpose", continuing
 576 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-transpose", continuing
 577 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-mapper", continuing
 578 silly lifecycle No script for "prepublishOnly" in "@vect/object-index", continuing
@@ -666,7 +666,7 @@
 588 silly lifecycle No script for "prepack" in "@vect/matrix-stat", continuing
 589 silly lifecycle No script for "prepack" in "@vect/column-getter", continuing
 590 silly lifecycle No script for "prepack" in "@vect/matrix-transpose", continuing
-591 silly lifecycle No script for "prepack" in "@vect/vector-algebra", continuing
+591 silly lifecycle No script for "prepack" in "@vect/vector-transpose", continuing
 592 silly lifecycle No script for "prepack" in "@vect/matrix-mapper", continuing
 593 silly lifecycle No script for "prepack" in "@vect/vector-index", continuing
 594 silly lifecycle No script for "prepack" in "@vect/object-select", continuing
@@ -687,13 +687,13 @@
 609 silly lifecycle No script for "postpack" in "@vect/column-getter", continuing
 610 verbose packed packages/pkg-index/column-getter
 611 silly lifecycle No script for "postpack" in "@vect/matrix-transpose", continuing
-612 verbose packed packages/pkg-algebra/matrix-transpose
+612 verbose packed packages/pkg-transpose/matrix-transpose
 613 silly lifecycle No script for "postpack" in "@vect/object-select", continuing
 614 verbose packed packages/pkg-select/object-select
 615 silly lifecycle No script for "postpack" in "@vect/columns-stat", continuing
 616 verbose packed packages/pkg-stat/columns-stat
-617 silly lifecycle No script for "postpack" in "@vect/vector-algebra", continuing
-618 verbose packed packages/pkg-algebra/vector-algebra
+617 silly lifecycle No script for "postpack" in "@vect/vector-transpose", continuing
+618 verbose packed packages/pkg-transpose/vector-transpose
 619 silly lifecycle No script for "postpack" in "@vect/matrix-mapper", continuing
 620 verbose packed packages/pkg-mapper/matrix-mapper
 621 silly lifecycle No script for "postpack" in "@vect/matrix-margin", continuing
@@ -800,13 +800,13 @@
 722 silly lifecycle No script for "prepack" in "@vect/matrix", continuing
 723 silly lifecycle No script for "postpack" in "@vect/matrix", continuing
 724 verbose packed packages/pkg-core/matrix
-725 verbose pack-directory packages/pkg-algebra/matrix-algebra
-726 silly lifecycle No script for "prepublish" in "@vect/matrix-algebra", continuing
-727 silly lifecycle No script for "prepare" in "@vect/matrix-algebra", continuing
-728 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-algebra", continuing
-729 silly lifecycle No script for "prepack" in "@vect/matrix-algebra", continuing
-730 silly lifecycle No script for "postpack" in "@vect/matrix-algebra", continuing
-731 verbose packed packages/pkg-algebra/matrix-algebra
+725 verbose pack-directory packages/pkg-transpose/matrix-transpose
+726 silly lifecycle No script for "prepublish" in "@vect/matrix-transpose", continuing
+727 silly lifecycle No script for "prepare" in "@vect/matrix-transpose", continuing
+728 silly lifecycle No script for "prepublishOnly" in "@vect/matrix-transpose", continuing
+729 silly lifecycle No script for "prepack" in "@vect/matrix-transpose", continuing
+730 silly lifecycle No script for "postpack" in "@vect/matrix-transpose", continuing
+731 verbose packed packages/pkg-transpose/matrix-transpose
 732 silly lifecycle No script for "postpack" in "root", continuing
 733 verbose publish @vect/enum-matrix-directions
 734 verbose publish @vect/enum-select-styles

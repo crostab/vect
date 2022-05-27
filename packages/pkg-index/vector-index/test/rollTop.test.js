@@ -1,7 +1,7 @@
-import { deco }    from '@spare/deco'
-import { says }    from '@spare/logger'
-import { indexed } from '@vect/object-mapper'
-import { rollTop } from '../index'
+import { deco }             from '@spare/deco'
+import { says }             from '@spare/logger'
+import { indexed }          from '@vect/object-mapper'
+import { fitRoll, rollTop } from '../index'
 
 /**
  * Roll vec[i]
@@ -68,9 +68,8 @@ const indexesCollection = [
   [ 2, 0, 1, 5 ],
   [ 0, 7, 1, 2 ],
   [ 6, 2, 4, 3 ],
-  [ 4, 2, 0 ]
+  [ 4, -1, 2, 0 ]
 ]
-
 
 
 for (let [ key, vec ] of indexed(candidates)) {
