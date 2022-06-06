@@ -1,16 +1,17 @@
 import { max, min } from '@aryth/comparer'
 import { rand }     from '@aryth/rand'
+import { keys }     from '@vect/object-index'
 
-export const leap = function (o, start, gap) {
-  const keys = this?.keys ?? Object.keys(o)
-  const wd = keys?.length, df = max(gap, wd), rs = {}
+export function leap(o, start, gap) {
+  const ks = (Array.isArray(this) ? this : this?.keys) ?? keys(o)
+  const wd = ks?.length, df = max(gap, wd), rs = {}
   let
     lo = start ? min(start, wd - 1) : rand(wd),
     hi = lo + df,
-    i = lo,
+    i  = lo,
     k
   while (lo++ < hi) {
-    rs[k = keys[i++]] = o[k]
+    rs[k = ks[i++]] = o[k]
     if (i === wd) i = 0
   }
   return rs

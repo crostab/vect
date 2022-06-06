@@ -15,13 +15,14 @@
   },
   "scripts": {
     "pub": "npm publish",
-    "test": "node -r @babel/register test/object-select.test.js"
+    "test": "node -r @babel/register test/select.test.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.5.10",
-    "@aryth/rand": "^0.5.10",
+    "@aryth/comparer": "^0.6.1",
+    "@aryth/rand": "^0.6.1",
     "@vect/vector-index": "^0.7.11",
-    "@vect/vector-mapper": "^0.7.11"
+    "@vect/vector-mapper": "^0.7.11",
+    "@vect/object-select": "^0.7.11"
   },
   "repository": {
     "type": "git",

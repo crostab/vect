@@ -1,6 +1,7 @@
 import { max }  from '@aryth/comparer'
 import { rand } from '@aryth/rand'
 import { swap } from '@vect/vector-index'
+import { keys } from '@vect/object-index'
 
 /**
  *
@@ -11,10 +12,10 @@ import { swap } from '@vect/vector-index'
  * @returns {Object} new object
  */
 export const shuffle = function (o, size) {
-  const keys = this?.keys ?? Object.keys(o)
-  let l = keys?.length, k
+  const ks = (Array.isArray(this) ? this : this?.keys) ?? keys(o)
+  let l = ks?.length, k
   const lo = max(0, l - (size ?? l)), rs = {}
   while (--l >= lo)
-    rs[k = swap.call(keys, rand(l), l)] = o[k]
+    rs[k = swap.call(ks, rand(l), l)] = o[k]
   return rs
 }

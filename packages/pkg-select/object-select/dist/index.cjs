@@ -7,9 +7,17 @@ var rand = require('@aryth/rand');
 var vectorIndex = require('@vect/vector-index');
 var vectorMapper = require('@vect/vector-mapper');
 
-const leap = function (o, start, gap) {
-  const keys = (this === null || this === void 0 ? void 0 : this.keys) ?? Object.keys(o);
-  const wd = keys === null || keys === void 0 ? void 0 : keys.length,
+/** @type {function(Object):Array} */
+
+
+const keys = Object.keys;
+/** @type {function(Object):Array} */
+
+const vals = Object.values;
+
+function leap(o, start, gap) {
+  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);
+  const wd = ks === null || ks === void 0 ? void 0 : ks.length,
         df = comparer.max(gap, wd),
         rs = {};
   let lo = start ? comparer.min(start, wd - 1) : rand.rand(wd),
@@ -18,12 +26,12 @@ const leap = function (o, start, gap) {
       k;
 
   while (lo++ < hi) {
-    rs[k = keys[i++]] = o[k];
+    rs[k = ks[i++]] = o[k];
     if (i === wd) i = 0;
   }
 
   return rs;
-};
+}
 
 /**
  *
@@ -35,52 +43,16 @@ const leap = function (o, start, gap) {
  */
 
 const shuffle = function (o, size) {
-  const keys = (this === null || this === void 0 ? void 0 : this.keys) ?? Object.keys(o);
-  let l = keys === null || keys === void 0 ? void 0 : keys.length,
+  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);
+  let l = ks === null || ks === void 0 ? void 0 : ks.length,
       k;
   const lo = comparer.max(0, l - (size ?? l)),
         rs = {};
 
-  while (--l >= lo) rs[k = vectorIndex.swap.call(keys, rand.rand(l), l)] = o[k];
+  while (--l >= lo) rs[k = vectorIndex.swap.call(ks, rand.rand(l), l)] = o[k];
 
   return rs;
 };
-
-function select(o) {
-  const keys = Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys;
-  const l = keys === null || keys === void 0 ? void 0 : keys.length,
-        ob = {};
-
-  for (let i = 0, k; i < l; i++) ob[k = keys[i]] = o[k];
-
-  return ob;
-}
-/**
- *
- * @param {Object} o
- * @param {*[]} keys
- */
-
-const selectObject = (o, keys) => select.call(keys, o);
-const SelectObject = keys => select.bind(keys);
-
-const values = function (o) {
-  const {
-    keys
-  } = this;
-  const l = keys === null || keys === void 0 ? void 0 : keys.length,
-        ve = Array(l);
-
-  for (let i = 0; i < l; i++) ve[i] = o[keys[i]];
-
-  return ve;
-};
-const selectValues = (o, keys) => values.call({
-  keys
-}, o);
-const SelectValues = keys => values.bind({
-  keys
-});
 
 /**
  * @typedef {string|number} str
@@ -112,6 +84,56 @@ const lookupKey = function (field) {
   let [current, projected] = field;
   return current in this ? [current, projected] : void 0;
 };
+
+const filter = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(k, v)) t[k] = v;
+  }
+
+  return t;
+};
+const filterByValue = (o, pred) => {
+  const t = {};
+
+  for (let k in o) {
+    const v = o[k];
+    if (pred(v)) t[k] = v;
+  }
+
+  return t;
+};
+
+function select(o) {
+  const hi = this === null || this === void 0 ? void 0 : this.length;
+  if (!hi) return keys(o);
+  const ob = {};
+
+  for (let i = 0, k; i < hi; i++) ob[k = this[i]] = o[k];
+
+  return ob;
+}
+function values(o) {
+  const hi = this === null || this === void 0 ? void 0 : this.length;
+  if (!hi) return vals(o);
+  const ve = Array(hi);
+
+  for (let i = 0; i < hi; i++) ve[i] = o[this[i]];
+
+  return ve;
+}
+/**
+ *
+ * @param {Object} o
+ * @param {*[]} keys
+ */
+
+const selectObject = (o, keys) => select.call(keys, o);
+const SelectObject = keys => select.bind(keys);
+const selectValues = (o, keys) => values.call(keys, o);
+const SelectValues = keys => values.bind(keys);
 
 /** @deprecated use equivalent from @vect/object-index */
 const firstKey = o => {
@@ -145,27 +167,6 @@ const lastValue = o => o[lastKey(o)];
 const lastEntry = o => {
   const k = lastKey(o);
   return [k, o[k]];
-};
-
-const filter = (o, pred) => {
-  const t = {};
-
-  for (let k in o) {
-    const v = o[k];
-    if (pred(k, v)) t[k] = v;
-  }
-
-  return t;
-};
-const filterByValue = (o, pred) => {
-  const t = {};
-
-  for (let k in o) {
-    const v = o[k];
-    if (pred(v)) t[k] = v;
-  }
-
-  return t;
 };
 
 exports.SelectObject = SelectObject;
