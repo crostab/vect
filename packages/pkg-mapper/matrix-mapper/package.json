@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-mapper",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
@@ -11,9 +11,9 @@
     "dist"
   ],
   "dependencies": {
-    "@vect/columns-mapper": "^0.7.11",
-    "@vect/matrix-index": "^0.7.11",
-    "@vect/vector-mapper": "^0.7.11"
+    "@vect/columns-mapper": "^0.7.12",
+    "@vect/matrix-index": "^0.7.12",
+    "@vect/vector-mapper": "^0.7.12"
   },
   "publishConfig": {
     "access": "public"
