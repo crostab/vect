@@ -7,6 +7,7 @@ var rand = require('@aryth/rand');
 var objectIndex = require('@vect/object-index');
 var vectorIndex = require('@vect/vector-index');
 var vectorMapper = require('@vect/vector-mapper');
+var objectInit = require('@vect/object-init');
 
 function leap(o, start, gap) {
   const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? objectIndex.keys(o);
@@ -101,7 +102,7 @@ const filterByValue = (o, pred) => {
 
 function select(o) {
   const hi = this === null || this === void 0 ? void 0 : this.length;
-  if (!hi) return objectIndex.keys(o);
+  if (!hi) return objectInit.slice(o);
   const ob = {};
 
   for (let i = 0, k; i < hi; i++) ob[k = this[i]] = o[k];

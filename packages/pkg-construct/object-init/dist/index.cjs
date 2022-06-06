@@ -88,6 +88,13 @@ const initByValues = (entries, fn) => {
 
   return o;
 };
+function slice(o) {
+  const t = {};
+
+  for (let k in o) t[k] = o[k];
+
+  return t;
+}
 
 exports.entriesToObject = entriesToObject;
 exports.gather = gather;
@@ -98,5 +105,6 @@ exports.iso = iso;
 exports.mapToObject = vectorToObject;
 exports.ob = ob;
 exports.pair = pair;
+exports.slice = slice;
 exports.vectorToObject = vectorToObject;
 exports.wind = wind;

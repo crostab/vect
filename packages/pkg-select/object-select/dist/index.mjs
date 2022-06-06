@@ -3,6 +3,7 @@ import { rand } from '@aryth/rand';
 import { keys, vals } from '@vect/object-index';
 import { swap } from '@vect/vector-index';
 import { iterate } from '@vect/vector-mapper';
+import { slice } from '@vect/object-init';
 
 function leap(o, start, gap) {
   const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);
@@ -97,7 +98,7 @@ const filterByValue = (o, pred) => {
 
 function select(o) {
   const hi = this === null || this === void 0 ? void 0 : this.length;
-  if (!hi) return keys(o);
+  if (!hi) return slice(o);
   const ob = {};
 
   for (let i = 0, k; i < hi; i++) ob[k = this[i]] = o[k];

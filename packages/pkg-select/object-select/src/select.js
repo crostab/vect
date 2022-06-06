@@ -1,8 +1,9 @@
-import { keys, vals } from '@vect/object-index'
+import { vals }  from '@vect/object-index'
+import { slice } from '@vect/object-init'
 
 export function select(o) {
   const hi = this?.length
-  if (!hi) return keys(o)
+  if (!hi) return slice(o)
   const ob = {}
   for (let i = 0, k; i < hi; i++) ob[k = this[i]] = o[k]
   return ob

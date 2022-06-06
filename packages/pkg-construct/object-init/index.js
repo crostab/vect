@@ -8,7 +8,7 @@ import { FUN } from '@typen/enum-data-types'
  */
 export const ob = (...entries) => {
   let o = {}
-  for (let [ k, v ] of entries) o[k] = v
+  for (let [k, v] of entries) o[k] = v
   return o
 }
 
@@ -48,7 +48,7 @@ export const init = (vec, fn) => {
 
 export const gather = (iter) => {
   let o = {}
-  for (let [ k, v ] of iter) o[k] = v
+  for (let [k, v] of iter) o[k] = v
   return o
 }
 
@@ -59,7 +59,7 @@ export const gather = (iter) => {
  */
 export const entriesToObject = (entries) => {
   let o = {}
-  for (let [ k, v ] of entries) o[k] = v
+  for (let [k, v] of entries) o[k] = v
   return o
 }
 
@@ -71,8 +71,14 @@ export const vectorToObject = (vec, fn) => {
 
 export const initByValues = (entries, fn) => {
   let o = {}
-  for (let [ k, v ] of entries) o[k] = fn(v)
+  for (let [k, v] of entries) o[k] = fn(v)
   return o
+}
+
+export function slice(o) {
+  const t = {}
+  for (let k in o) t[k] = o[k]
+  return t
 }
 
 export {

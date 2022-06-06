@@ -14,3 +14,5 @@ select(StringObjectCollection[pastas], selection)|> deco  |> says['selected']
 selection |>  says['selected call']
 select.call(selection, StringObjectCollection[pastas])|> deco  |> says['selected call']
 
+select(StringObjectCollection[pastas]) |> deco  |> says['slice']
+
