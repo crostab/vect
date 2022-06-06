@@ -1,7 +1,7 @@
-import { babel }                  from '@rollup/plugin-babel'
-import json                       from '@rollup/plugin-json'
-import { nodeResolve }            from '@rollup/plugin-node-resolve'
-import { readFileSync }           from 'fs'
+import { babel }        from '@rollup/plugin-babel'
+import json             from '@rollup/plugin-json'
+import { nodeResolve }  from '@rollup/plugin-node-resolve'
+import { readFileSync } from 'fs'
 // import { decoObject, decoString } from '@spare/logger'
 // import { fileInfo }               from 'rollup-plugin-fileinfo'
 
@@ -26,12 +26,8 @@ export default {
       sourceMap: true,
       exclude: 'node_modules/**',
       babelHelpers: 'bundled',
-      presets: [
-        [ '@babel/preset-env', { targets: { node: '16' } } ]
-      ],
-      plugins: [
-        [ '@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' } ],
-      ]
+      presets: [['@babel/preset-env', { targets: { node: '16' } }],],
+      plugins: [['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],]
     }),
     json(),
     // fileInfo(),
