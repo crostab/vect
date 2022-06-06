@@ -1,9 +1,9 @@
-import { SimpleVectorCollection } from '@foba/foo'
+import { simpleVectorCollection }                 from '@foba/foo'
 import { logger }                                 from '@spare/logger'
 import { marginCopy, marginMapper, marginMutate } from '../index'
 import { xr }                                     from '@spare/xr'
 
-const SimpleVectorCollection = SimpleVectorCollection({ h: 12 })
+const SimpleVectorCollection = simpleVectorCollection({ h: 12 })
 
 'marginCopy' |> logger
 for (const [key, vector] of Object.entries(SimpleVectorCollection))

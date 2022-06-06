@@ -113,6 +113,10 @@ function* entryIndexedBy(rows, [k, v], by) {
   }
 }
 function* entryIndexedTo(rows, [k, v], to) {
+  if (!to) {
+    return yield* entryIndexedOf(rows, [k, v]);
+  }
+
   for (let row of rows) {
     yield to(row[k], row[v]);
   }

@@ -4,7 +4,7 @@ export const first = o => {
 export const firstValue = o => o[first(o)]
 export const firstEntry = o => {
   const k = first(o)
-  return [ k, o[k] ]
+  return [k, o[k]]
 }
 
 export const last = o => {
@@ -15,8 +15,13 @@ export const last = o => {
 export const lastValue = o => o[last(o)]
 export const lastEntry = o => {
   const k = last(o)
-  return [ k, o[k] ]
+  return [k, o[k]]
 }
+
+
+/** @type {function(Object):Array} */ export const keys = Object.keys
+/** @type {function(Object):Array} */ export const vals = Object.values
+/** @type {function(Object):Array} */ export const ents = Object.entries
 
 export function getOr(x, fn = Object) { return (this[x] ?? (this[x] = fn())) }
 

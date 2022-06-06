@@ -24,6 +24,15 @@ const lastEntry = o => {
   const k = last(o);
   return [k, o[k]];
 };
+/** @type {function(Object):Array} */
+
+const keys = Object.keys;
+/** @type {function(Object):Array} */
+
+const vals = Object.values;
+/** @type {function(Object):Array} */
+
+const ents = Object.entries;
 function getOr(x, fn = Object) {
   return this[x] ?? (this[x] = fn());
 }
@@ -43,13 +52,16 @@ const isEmpty = o => {
   return true;
 };
 
+exports.ents = ents;
 exports.first = first;
 exports.firstEntry = firstEntry;
 exports.firstValue = firstValue;
 exports.getOr = getOr;
 exports.getOrVec = getOrVec;
 exports.isEmpty = isEmpty;
+exports.keys = keys;
 exports.last = last;
 exports.lastEntry = lastEntry;
 exports.lastValue = lastValue;
 exports.len = len;
+exports.vals = vals;

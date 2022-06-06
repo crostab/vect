@@ -55,6 +55,21 @@ const head = nested => {
   });
   return vec;
 };
+function getRow(x) {
+  return this[x] ?? (this[x] = {});
+}
+function getOr(x, y, fn = Object) {
+  const row = this[x] ?? (this[x] = {});
+  return row[y] ?? (row[y] = fn());
+}
+function getOrObj(x, y) {
+  const row = this[x] ?? (this[x] = {});
+  return row[y] ?? (row[y] = []);
+}
+function getOrVec(x, y) {
+  const row = this[x] ?? (this[x] = {});
+  return row[y] ?? (row[y] = []);
+}
 
 const nestedToRows = nested => {
   const inners = [];
@@ -72,19 +87,8 @@ function appendCell(x, y, v) {
   vec.push(v);
 }
 function assignCell(x, y, k, v) {
-  const o = getOr.call(this, x, v);
-  o[k] = v;
-}
-function getRow(x) {
-  return this[x] ?? (this[x] = {});
-}
-function getOr(x, y, fn = Object) {
-  const row = this[x] ?? (this[x] = {});
-  return row[y] ?? (row[y] = fn());
-}
-function getOrVec(x, y) {
-  const row = this[x] ?? (this[x] = {});
-  return row[y] ?? (row[y] = []);
+  const obj = getOrObj.call(this, x, v);
+  obj[k] = v;
 }
 
 const transpose = nested => {
@@ -139,6 +143,7 @@ function* indexed(nested, by, to) {
 exports.appendCell = appendCell;
 exports.assignCell = assignCell;
 exports.getOr = getOr;
+exports.getOrObj = getOrObj;
 exports.getOrVec = getOrVec;
 exports.getRow = getRow;
 exports.head = head;

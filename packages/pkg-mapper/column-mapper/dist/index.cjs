@@ -99,7 +99,7 @@ function* indexedOf(mx, y) {
   for (let h = mx.length, i = 0; i < h; i++) yield mx[i][y];
 }
 function* indexedBy(mx, y, by) {
-  for (let h = mx.length, i = 0; i < h; i++) if (by(mx[i][y], i)) yield mx[i][y];
+  for (let h = mx.length, i = 0, v; i < h; i++) if (by(v = mx[i][y], i)) yield mx[i][y];
 }
 function* indexedTo(mx, y, to) {
   for (let h = mx.length, i = 0; i < h; i++) yield to(mx[i][y], i);
