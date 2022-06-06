@@ -1,15 +1,8 @@
 import { max, min } from '@aryth/comparer';
 import { rand } from '@aryth/rand';
+import { keys, vals } from '@vect/object-index';
 import { swap } from '@vect/vector-index';
 import { iterate } from '@vect/vector-mapper';
-
-/** @type {function(Object):Array} */
-
-
-const keys = Object.keys;
-/** @type {function(Object):Array} */
-
-const vals = Object.values;
 
 function leap(o, start, gap) {
   const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);

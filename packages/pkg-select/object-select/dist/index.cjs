@@ -4,19 +4,12 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var comparer = require('@aryth/comparer');
 var rand = require('@aryth/rand');
+var objectIndex = require('@vect/object-index');
 var vectorIndex = require('@vect/vector-index');
 var vectorMapper = require('@vect/vector-mapper');
 
-/** @type {function(Object):Array} */
-
-
-const keys = Object.keys;
-/** @type {function(Object):Array} */
-
-const vals = Object.values;
-
 function leap(o, start, gap) {
-  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);
+  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? objectIndex.keys(o);
   const wd = ks === null || ks === void 0 ? void 0 : ks.length,
         df = comparer.max(gap, wd),
         rs = {};
@@ -43,7 +36,7 @@ function leap(o, start, gap) {
  */
 
 const shuffle = function (o, size) {
-  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? keys(o);
+  const ks = (Array.isArray(this) ? this : this === null || this === void 0 ? void 0 : this.keys) ?? objectIndex.keys(o);
   let l = ks === null || ks === void 0 ? void 0 : ks.length,
       k;
   const lo = comparer.max(0, l - (size ?? l)),
@@ -108,7 +101,7 @@ const filterByValue = (o, pred) => {
 
 function select(o) {
   const hi = this === null || this === void 0 ? void 0 : this.length;
-  if (!hi) return keys(o);
+  if (!hi) return objectIndex.keys(o);
   const ob = {};
 
   for (let i = 0, k; i < hi; i++) ob[k = this[i]] = o[k];
@@ -117,7 +110,7 @@ function select(o) {
 }
 function values(o) {
   const hi = this === null || this === void 0 ? void 0 : this.length;
-  if (!hi) return vals(o);
+  if (!hi) return objectIndex.vals(o);
   const ve = Array(hi);
 
   for (let i = 0; i < hi; i++) ve[i] = o[this[i]];
