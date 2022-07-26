@@ -38,6 +38,19 @@ function product(side, head, xyTo) {
 
   return mx;
 }
+function reshape(vec, h, w) {
+  const mx = Array(h);
+
+  for (let i = 0, b = 0; i < h; i++) {
+    const row = mx[i] = Array(w);
+
+    for (let j = 0; j < w; j++) row[j] = vec[b + j];
+
+    b += w;
+  }
+
+  return mx;
+}
 /** @deprecated */
 
 function starter(h = 1, w = 1, {
@@ -54,5 +67,6 @@ exports.draft = draft;
 exports.init = init;
 exports.iso = iso;
 exports.product = product;
+exports.reshape = reshape;
 exports.shallow = shallow;
 exports.starter = starter;
