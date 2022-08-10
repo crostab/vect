@@ -2,6 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+/** @type {function(*):boolean} */
+const isVector = Array.isArray;
 const first = ve => ve[0];
 const last = ve => ve[ve.length - 1];
 const len = ve => ve === null || ve === void 0 ? void 0 : ve.length;
@@ -78,6 +80,7 @@ exports.first = first;
 exports.fitRoll = fitRoll;
 exports.insertDown = rollLo;
 exports.insertUp = rollUp;
+exports.isVector = isVector;
 exports.last = last;
 exports.len = len;
 exports.rollBunch = rollBunch;

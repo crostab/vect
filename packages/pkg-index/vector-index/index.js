@@ -1,3 +1,6 @@
+/** @type {function(*):boolean} */
+export const isVector = Array.isArray
+
 export const first = (ve) => ve[0]
 
 export const last = (ve) => ve[ve.length - 1]

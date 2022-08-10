@@ -1,3 +1,5 @@
+/** @type {function(*):boolean} */
+const isVector = Array.isArray;
 const first = ve => ve[0];
 const last = ve => ve[ve.length - 1];
 const len = ve => ve === null || ve === void 0 ? void 0 : ve.length;
@@ -69,4 +71,4 @@ function rollLo(i, lo) {
 }
 const Swap = vec => swap.bind(vec);
 
-export { Swap, first, fitRoll, rollLo as insertDown, rollUp as insertUp, last, len, rollBunch, rollLo, rollTop, rollUp, swap };
+export { Swap, first, fitRoll, rollLo as insertDown, rollUp as insertUp, isVector, last, len, rollBunch, rollLo, rollTop, rollUp, swap };
