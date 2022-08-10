@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-zipper",
-  "version": "0.7.15",
+  "version": "0.7.16",
   "description": "Zip function",
   "main": "./dist/index.cjs",
   "exports": {

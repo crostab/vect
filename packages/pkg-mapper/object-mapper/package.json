@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-mapper",
-  "version": "0.7.15",
+  "version": "0.7.16",
   "description": "An array util tool",
   "main": "./dist/index.cjs",
   "exports": {
