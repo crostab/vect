@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.7.16",
+  "version": "0.7.17",
   "description": "Util for 2d-array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -19,21 +19,21 @@
   },
   "dependencies": {
     "@vect/column-getter": "^0.6.13",
-    "@vect/columns-mapper": "^0.7.16",
-    "@vect/columns-select": "^0.7.16",
-    "@vect/columns-update": "^0.7.16",
+    "@vect/columns-mapper": "^0.7.17",
+    "@vect/columns-select": "^0.7.17",
+    "@vect/columns-update": "^0.7.17",
     "@vect/enum-matrix-directions": "^0.6.13",
-    "@vect/matrix-algebra": "^0.7.16",
-    "@vect/matrix-index": "^0.7.16",
+    "@vect/matrix-algebra": "^0.7.17",
+    "@vect/matrix-index": "^0.7.17",
     "@vect/matrix-indicator": "^0.6.13",
-    "@vect/matrix-init": "^0.7.16",
-    "@vect/matrix-mapper": "^0.7.16",
+    "@vect/matrix-init": "^0.7.17",
+    "@vect/matrix-mapper": "^0.7.17",
     "@vect/matrix-margin": "^0.6.13",
     "@vect/matrix-quantifier": "^0.6.13",
     "@vect/matrix-transpose": "^0.6.13",
-    "@vect/matrix-zipper": "^0.7.16",
-    "@vect/vector-index": "^0.7.16",
-    "@vect/vector-mapper": "^0.7.16"
+    "@vect/matrix-zipper": "^0.7.17",
+    "@vect/vector-index": "^0.7.17",
+    "@vect/vector-mapper": "^0.7.17"
   },
   "repository": {
     "type": "git",
