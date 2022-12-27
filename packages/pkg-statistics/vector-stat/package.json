@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector-stat",
-  "version": "0.7.17",
+  "version": "0.7.18",
   "description": "Indicators for vector",
   "main": "./dist/index.cjs",
   "exports": {
