@@ -34,12 +34,15 @@ $ npm install @vect/<tool-name>
 ```
 
 #### Tools
+Consolidated functions
 |                                          |                                |      |                  |
 |------------------------------------------|--------------------------------|------|------------------|
 | [**vector**](packages/pkg-core/vector)   | Functions for 1d-array(vector) | core | ![v][vector-dm]  |
 | [**matrix**](packages/pkg-core/matrix)   | Functions for 2d-array(matrix) | core | ![v][matrix-dm]  |
 | [**column**](packages/pkg-core/column)   | Functions for matrix column    | core | ![v][column-dm]  |
 | [**entries**](packages/pkg-core/entries) | Functions for entries          | core | ![v][entries-dm] |
+| [**object**](packages/pkg-core/object)   | Functions for object           | core | ![v][object-dm]  |
+| [**nested**](packages/pkg-core/column)   | Functions for nested object    | core | ![v][nested-dm]  |
 |                                          |                                |      |                  |
 
 [//]: <> (Local routes)
@@ -47,8 +50,11 @@ $ npm install @vect/<tool-name>
 [matrix-dm]: https://flat.badgen.net/npm/dm/@vect/matrix
 [column-dm]: https://flat.badgen.net/npm/dm/@vect/column
 [entries-dm]: https://flat.badgen.net/npm/dm/@vect/entries
+[object-dm]: https://flat.badgen.net/npm/dm/@vect/object
+[nested-dm]: https://flat.badgen.net/npm/dm/@vect/nested
 
 #### Mappers
+Iterator or mapping functions 
 |                                                          |                                    |        |                         |
 |----------------------------------------------------------|------------------------------------|--------|-------------------------|
 | [**vector-mapper**](packages/pkg-mapper/vector-mapper)   | Mapper/iterate for vector          | mapper | ![v][vector-mapper-dm]  |
