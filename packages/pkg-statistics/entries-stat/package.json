@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-stat",
-  "version": "0.7.18",
+  "version": "0.7.19",
   "description": "Indicators for entries",
   "main": "./dist/index.cjs",
   "exports": {

@@ -1,6 +1,6 @@
 {
   "name": "@vect/object",
-  "version": "0.7.18",
+  "version": "0.7.19",
   "description": "Util for object",
   "main": "./dist/index.cjs",
   "exports": {
@@ -14,12 +14,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@vect/object-index": "^0.7.18",
-    "@vect/object-init": "^0.7.18",
-    "@vect/object-mapper": "^0.7.18",
-    "@vect/object-select": "^0.7.18",
-    "@vect/object-update": "^0.7.18",
-    "@vect/object-zipper": "^0.7.18"
+    "@vect/object-index": "^0.7.19",
+    "@vect/object-init": "^0.7.19",
+    "@vect/object-mapper": "^0.7.19",
+    "@vect/object-select": "^0.7.19",
+    "@vect/object-update": "^0.7.19",
+    "@vect/object-zipper": "^0.7.19"
   },
   "scripts": {
     "pub": "npm publish",
