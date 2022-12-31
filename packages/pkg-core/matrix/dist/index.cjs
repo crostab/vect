@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var matrixZipper = require('@vect/matrix-zipper');
 var matrixMapper = require('@vect/matrix-mapper');
 var columnsMapper = require('@vect/columns-mapper');

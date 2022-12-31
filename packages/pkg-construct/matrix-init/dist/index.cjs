@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var nullish = require('@typen/nullish');
 
 function draft(h, w) {

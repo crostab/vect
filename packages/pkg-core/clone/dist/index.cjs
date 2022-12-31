@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var enumDataTypes = require('@typen/enum-data-types');
 var enumObjectTypes = require('@typen/enum-object-types');
 var typ = require('@typen/typ');

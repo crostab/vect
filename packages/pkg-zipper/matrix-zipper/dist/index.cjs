@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function duozipper(ma, mb) {
   var _ma$;
   let {

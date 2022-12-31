@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var vectorMapper = require('@vect/vector-mapper');
 
 const union = (a, b) => {

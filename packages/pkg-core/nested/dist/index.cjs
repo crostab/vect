@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 const iterate = (nested, onVXY) => {
   let inner;
   if (nested) for (let x in nested) {

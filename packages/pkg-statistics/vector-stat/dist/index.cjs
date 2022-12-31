@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 class Stat {
   static sum(iter) {
     let sum = 0;

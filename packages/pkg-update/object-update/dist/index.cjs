@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var objectIndex = require('@vect/object-index');
 
 const nullish = x => x === null || x === void 0;

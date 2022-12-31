@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var columnGetter = require('@vect/column-getter');
 
 const zipper = (ma, mb, zipOnColumns, h, w) => {

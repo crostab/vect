@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var vectorIndex = require('@vect/vector-index');
 var comparer = require('@aryth/comparer');
 var rand = require('@aryth/rand');

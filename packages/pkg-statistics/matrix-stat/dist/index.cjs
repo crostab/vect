@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var enumDataTypes = require('@typen/enum-data-types');
 var matrixIndex = require('@vect/matrix-index');
 

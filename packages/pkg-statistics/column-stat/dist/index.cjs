@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var enumDataTypes = require('@typen/enum-data-types');
 
 const stat = function (mx, y, l) {

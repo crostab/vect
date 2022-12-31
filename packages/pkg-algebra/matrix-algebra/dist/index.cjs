@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var matrixInit = require('@vect/matrix-init');
 var matrixIndex = require('@vect/matrix-index');
 

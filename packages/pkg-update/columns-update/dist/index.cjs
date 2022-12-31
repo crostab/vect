@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var vectorMapper = require('@vect/vector-mapper');
 var vectorZipper = require('@vect/vector-zipper');
 var vectorUpdate = require('@vect/vector-update');

@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /** @type {function(*):boolean} */
 const isVector = Array.isArray;
 const first = ve => ve[0];

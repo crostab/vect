@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 const isMatrix = mx => Array.isArray(mx) && Array.isArray(mx[0]);
 const size = mx => {
   let h, r;

@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function iterateKeys(o, fn) {
   for (let k in o) fn.call(this, k);
 }

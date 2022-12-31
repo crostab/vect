@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var columnMapper = require('@vect/column-mapper');
 var vectorSelect = require('@vect/vector-select');
 var vectorIndex = require('@vect/vector-index');

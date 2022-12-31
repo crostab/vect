@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function columnMutate(mx, fn, l) {
   l = l || (mx === null || mx === void 0 ? void 0 : mx.length);
   for (let i = 0, r, {

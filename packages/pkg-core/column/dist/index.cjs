@@ -1,15 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var ColumnGetter = require('@vect/column-getter');
 var Indicator = require('@vect/column-indicator');
 var Mapper = require('@vect/column-mapper');
 var Quantifier = require('@vect/column-quantifier');
 var Zipper = require('@vect/column-zipper');
 
-function _interopNamespace(e) {
-             if (e && e.__esModule) return e;
+function _interopNamespaceDefault(e) {
              var n = Object.create(null);
              if (e) {
                           Object.keys(e).forEach(function (k) {
@@ -22,15 +19,15 @@ function _interopNamespace(e) {
                                        }
                           });
              }
-             n["default"] = e;
+             n.default = e;
              return Object.freeze(n);
 }
 
-var ColumnGetter__namespace = /*#__PURE__*/_interopNamespace(ColumnGetter);
-var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
-var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
-var Quantifier__namespace = /*#__PURE__*/_interopNamespace(Quantifier);
-var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+var ColumnGetter__namespace = /*#__PURE__*/_interopNamespaceDefault(ColumnGetter);
+var Indicator__namespace = /*#__PURE__*/_interopNamespaceDefault(Indicator);
+var Mapper__namespace = /*#__PURE__*/_interopNamespaceDefault(Mapper);
+var Quantifier__namespace = /*#__PURE__*/_interopNamespaceDefault(Quantifier);
+var Zipper__namespace = /*#__PURE__*/_interopNamespaceDefault(Zipper);
 
 const {
   iterate,

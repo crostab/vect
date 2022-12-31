@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var Indicator = require('@vect/entries-indicator');
 var Init = require('@vect/entries-init');
 var Mapper = require('@vect/entries-mapper');
@@ -9,8 +7,7 @@ var Margin = require('@vect/entries-margin');
 var Unwind = require('@vect/entries-unwind');
 var Zipper = require('@vect/entries-zipper');
 
-function _interopNamespace(e) {
-	if (e && e.__esModule) return e;
+function _interopNamespaceDefault(e) {
 	var n = Object.create(null);
 	if (e) {
 		Object.keys(e).forEach(function (k) {
@@ -23,16 +20,16 @@ function _interopNamespace(e) {
 			}
 		});
 	}
-	n["default"] = e;
+	n.default = e;
 	return Object.freeze(n);
 }
 
-var Indicator__namespace = /*#__PURE__*/_interopNamespace(Indicator);
-var Init__namespace = /*#__PURE__*/_interopNamespace(Init);
-var Mapper__namespace = /*#__PURE__*/_interopNamespace(Mapper);
-var Margin__namespace = /*#__PURE__*/_interopNamespace(Margin);
-var Unwind__namespace = /*#__PURE__*/_interopNamespace(Unwind);
-var Zipper__namespace = /*#__PURE__*/_interopNamespace(Zipper);
+var Indicator__namespace = /*#__PURE__*/_interopNamespaceDefault(Indicator);
+var Init__namespace = /*#__PURE__*/_interopNamespaceDefault(Init);
+var Mapper__namespace = /*#__PURE__*/_interopNamespaceDefault(Mapper);
+var Margin__namespace = /*#__PURE__*/_interopNamespaceDefault(Margin);
+var Unwind__namespace = /*#__PURE__*/_interopNamespaceDefault(Unwind);
+var Zipper__namespace = /*#__PURE__*/_interopNamespaceDefault(Zipper);
 
 const {
   draft,

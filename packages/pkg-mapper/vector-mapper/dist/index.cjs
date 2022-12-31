@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function mapper(vec, fn, l) {
   l = l || (vec === null || vec === void 0 ? void 0 : vec.length);
   const ve = Array(l);
