@@ -9,17 +9,16 @@ const EntryFactory = {
   voidEntry() {
     return [undefined, undefined];
   }
-
 };
 const draft = size => Array(size).fill(null).map(EntryFactory.voidEntry);
 const wind = (keys, values) => vectorZipper.zipper(keys, values, (k, v) => [k, v]);
+
 /**
  * Shallow.
  * @param {string[]} keys
  * @param {*} value
  * @return {[string,*][]}
  */
-
 const iso = (keys, value) => vectorMapper.mapper(keys, key => [key, value]);
 
 exports.draft = draft;

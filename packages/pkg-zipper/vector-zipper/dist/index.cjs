@@ -9,9 +9,7 @@ function duozipper(a, b) {
     lo
   } = this;
   const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
-
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], i);
-
   return zip;
 }
 function trizipper(a, b, c) {
@@ -21,9 +19,7 @@ function trizipper(a, b, c) {
     lo
   } = this;
   const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
-
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], i);
-
   return zip;
 }
 function quazipper(a, b, c, d) {
@@ -33,9 +29,7 @@ function quazipper(a, b, c, d) {
     lo
   } = this;
   const zip = Array(hi = hi ?? (a === null || a === void 0 ? void 0 : a.length));
-
   for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], d[i], i);
-
   return zip;
 }
 const Duozipper = (fn, lo, hi) => duozipper.bind({
@@ -62,7 +56,6 @@ const Quazipper = (fn, lo, hi) => quazipper.bind({
  * @param {number} [hi]
  * @returns {*[]}
  */
-
 const zipper = (a, b, fn, hi) => duozipper.call({
   fn,
   hi
@@ -70,17 +63,13 @@ const zipper = (a, b, fn, hi) => duozipper.call({
 
 const mutazip = (va, vb, fn, hi) => {
   hi = hi ?? (va === null || va === void 0 ? void 0 : va.length);
-
   for (let i = 0; i < hi; i++) va[i] = fn(va[i], vb[i], i);
-
   return va;
 };
 
 const iterzip = (va, vb, action, hi) => {
   hi = hi ?? (va === null || va === void 0 ? void 0 : va.length);
-
   for (let i = 0; i < hi; i++) action(va[i], vb[i], i);
-
   return void 0;
 };
 

@@ -12,11 +12,9 @@ const firstEntry = o => {
 };
 const last = o => {
   let k;
-
   for (let x in o) {
     k = x;
   }
-
   return k;
 };
 const lastValue = o => o[last(o)];
@@ -24,14 +22,12 @@ const lastEntry = o => {
   const k = last(o);
   return [k, o[k]];
 };
-/** @type {function(Object):Array} */
 
+/** @type {function(Object):Array} */
 const keys = Object.keys;
 /** @type {function(Object):Array} */
-
 const vals = Object.values;
 /** @type {function(Object):Array} */
-
 const ents = Object.entries;
 function getOr(x, fn = Object) {
   return this[x] ?? (this[x] = fn());
@@ -41,14 +37,11 @@ function getOrVec(x) {
 }
 const len = o => {
   let hi = 0;
-
   for (let k in o) hi++;
-
   return hi;
 };
 const isEmpty = o => {
   for (let k in o) return false;
-
   return true;
 };
 

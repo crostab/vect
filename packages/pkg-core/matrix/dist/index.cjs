@@ -15,7 +15,9 @@ var matrixIndex = require('@vect/matrix-index');
 
 const POINTWISE = 0;
 const ROWWISE = 1;
-const COLUMNWISE = 2; // export { marginCopy, marginMapper, marginMutate }       from '@vect/matrix-margin'
+const COLUMNWISE = 2;
+
+// export { marginCopy, marginMapper, marginMutate }       from '@vect/matrix-margin'
 // export { maxBy, minBy, Max, Min }                       from '@vect/matrix-indicator'
 
 Object.defineProperty(exports, 'Duozipper', {

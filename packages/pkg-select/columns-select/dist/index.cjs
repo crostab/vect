@@ -12,7 +12,6 @@ var vectorMapper = require('@vect/vector-mapper');
  * @param {number[]} ys
  * @returns {*[][]}
  */
-
 const select = (mx, ys) => {
   const hi = (ys === null || ys === void 0 ? void 0 : ys.length) ?? 0;
   if (hi === 0) return mx;
@@ -28,39 +27,32 @@ const select = (mx, ys) => {
  * @param {number[]} inds - integer array sorted ascending
  * @returns {{pick: *[][], rest: *[][]}} - rest points to altered original matrix, pick is an new matrix.
  */
-
 const divide = (mx, inds) => {
   const n = inds === null || inds === void 0 ? void 0 : inds.length,
-        ht = mx === null || mx === void 0 ? void 0 : mx.length;
-
+    ht = mx === null || mx === void 0 ? void 0 : mx.length;
   if (n === 0) {
     return {
       pick: Array(ht),
       rest: mx
     };
   }
-
   if (n === 1) {
     const pick = Array(ht),
-          rest = mx,
-          y = inds[0];
-
+      rest = mx,
+      y = inds[0];
     for (let i = 0; i < ht; i++) {
       pick[i] = mx[i].splice(y, 1);
     }
-
     return {
       pick,
       rest
     };
   } else {
     const pick = Array(ht),
-          rest = mx;
-
+      rest = mx;
     for (let i = 0; i < ht; i++) {
       pick[i] = vectorIndex.rollBunch(mx[i], inds).splice(inds[0], n);
     }
-
     return {
       pick,
       rest
@@ -69,13 +61,11 @@ const divide = (mx, inds) => {
 };
 const separate = (mx, inds) => {
   const n = inds === null || inds === void 0 ? void 0 : inds.length,
-        ht = mx === null || mx === void 0 ? void 0 : mx.length,
-        pick = Array(ht);
-
+    ht = mx === null || mx === void 0 ? void 0 : mx.length,
+    pick = Array(ht);
   if (n === 0) {
     return [pick, mx];
   }
-
   if (n === 1) {
     for (let i = 0, [y] = inds; i < ht; i++) {
       pick[i] = mx[i].splice(y, 1);
@@ -85,7 +75,6 @@ const separate = (mx, inds) => {
       pick[i] = vectorIndex.rollBunch(mx[i], inds).splice(inds[0], n);
     }
   }
-
   return [pick, mx];
 };
 
@@ -93,7 +82,7 @@ const selectEntries = (mx, ki, vi) => vectorMapper.mapper(mx, row => vectorSelec
 
 const selectObject = (mx, keyInd, valInd) => {
   let o = {},
-      x;
+    x;
   vectorMapper.iterate(mx, row => {
     if (!((x = row[keyInd]) in o)) o[x] = row[valInd];
   });

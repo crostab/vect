@@ -39,8 +39,8 @@
     "@typen/num-strict": "^0.1.19",
     "@valjoux/strategies": "^0.3.21",
     "@valjoux/timestamp-pretty": "^0.3.21",
-    "lerna": "^5.0.0",
-    "rollup": "^2.79.1",
+    "lerna": "^6.3.0",
+    "rollup": "^3.9.0",
     "rollup-plugin-fileinfo": "^0.3.8"
   }
 }

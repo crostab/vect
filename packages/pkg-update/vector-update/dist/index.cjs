@@ -9,7 +9,6 @@ var vectorIndex = require('@vect/vector-index');
  * @param {number[]} inds - indexes in ascending order, indicating which elements to remove
  * @returns {*[]} mutated input array, with elements at provided indexes removed
  */
-
 function splices(vec, inds) {
   vectorIndex.rollBunch(vec, inds).splice(inds[0], inds.length);
   return vec;

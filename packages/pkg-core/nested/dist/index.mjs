@@ -42,8 +42,9 @@ const indexedMutate = (nested, fnXYV) => {
 
 const side = nested => {
   return Object.keys(nested);
-}; // distinct(Object.values(this.pairs).map(Object.keys).flat())
+};
 
+// distinct(Object.values(this.pairs).map(Object.keys).flat())
 const head = nested => {
   const vec = [];
   iterateY(nested, y => {
@@ -114,7 +115,6 @@ function* indexedTo(nested, to) {
   if (!to) {
     return yield* indexedOf(nested);
   }
-
   let row;
   if (nested) for (let x in nested) {
     if (row = nested[x]) for (let y in row) {
@@ -126,7 +126,6 @@ function* indexed(nested, by, to) {
   if (!to) {
     return yield* !by ? indexedOf(nested) : indexedBy(nested, by);
   }
-
   let row;
   if (nested) for (let x in nested) {
     if (row = nested[x]) for (let y in row) {

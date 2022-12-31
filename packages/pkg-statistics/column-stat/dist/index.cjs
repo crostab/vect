@@ -12,12 +12,11 @@ const stat = function (mx, y, l) {
     to
   } = this;
   let i = 0,
-      x = init ? init() : mx[i++][y];
-
+    x = init ? init() : mx[i++][y];
   for (; i < l; i++) x = acc(x, mx[i][y], i);
-
   return to ? to(x, l) : x;
 };
+
 /**
  *
  * @param {Object|Function} config
@@ -26,7 +25,6 @@ const stat = function (mx, y, l) {
  * @param {Function|function(*,number?):*} [config.to] - method to to statByInitVal value from the container
  * @returns {Function|function(*[],number?):*}
  */
-
 const Stat = (config = {}) => typeof config === enumDataTypes.FUN ? stat.bind({
   acc: config
 }) : stat.bind(config);

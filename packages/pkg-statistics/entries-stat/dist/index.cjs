@@ -11,23 +11,22 @@ const stat = function (entries, l) {
     value
   } = this;
   let i = 0,
-      j = 0,
-      k = key.init ? key.init() : entries[i++][0],
-      v = value.init ? value.init() : entries[j++][1];
+    j = 0,
+    k = key.init ? key.init() : entries[i++][0],
+    v = value.init ? value.init() : entries[j++][1];
   const keyAcc = key.acc,
-        valueAcc = value.acc;
+    valueAcc = value.acc;
   if (i < j) k = keyAcc(k, entries[i++][0]);
   if (j < i) v = valueAcc(v, entries[j++][1]);
-
   for (let entry; i < l && (entry = entries[i]); i++) {
     k = keyAcc(k, entry[0], i);
     v = valueAcc(v, entry[1], i);
   }
-
   if (key.to) k = key.to(k);
   if (value.to) v = value.to(v);
   return [k, v];
 };
+
 /**
  *
  * @param {Object|Function} key
@@ -40,7 +39,6 @@ const stat = function (entries, l) {
  * @param {Function|function(*,number?):*} [value.to] - method to to statByInitVal value from the container
  * @returns {Function|function(*[],number?):*}
  */
-
 const Stat = ({
   key,
   value

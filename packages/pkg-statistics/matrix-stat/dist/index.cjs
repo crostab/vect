@@ -14,17 +14,15 @@ const stat = function (mx) {
     to
   } = this;
   let i = 0,
-      j = 0,
-      x = init ? init() : mx[i][j++];
-
+    j = 0,
+    x = init ? init() : mx[i][j++];
   for (let row; i < h && (row = mx[i]); i++) {
     for (; j < w; j++) x = acc(x, row[j], i, j);
-
     j = 0;
   }
-
   return to ? to(x, h, w) : x;
 };
+
 /**
  *
  * @param {Object|Function} config
@@ -33,7 +31,6 @@ const stat = function (mx) {
  * @param {Function|function(*,number?):*} [config.to] - method to to statByInitVal value from the container
  * @returns {Function|function(*[],number?):*}
  */
-
 const Stat = (config = {}) => typeof config === enumDataTypes.FUN ? stat.bind({
   acc: config
 }) : stat.bind(config);

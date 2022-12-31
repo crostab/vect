@@ -13,7 +13,6 @@ function clone(node) {
   if (t === enumDataTypes.FUN) return node;
   if (t === enumDataTypes.BOO) return node;
   if (t === enumDataTypes.UND || t === enumDataTypes.SYM) return node;
-
   if (t === enumDataTypes.OBJ) {
     const pt = typ.typ(node);
     if (pt === enumObjectTypes.ARRAY) return cloneArray(node);
@@ -23,43 +22,40 @@ function clone(node) {
     if (pt === enumObjectTypes.MAP) return cloneMap(node);
     return node;
   }
-
   return node;
 }
+
 /**
  * @param {*[]} o
  * @return {*[]}
  */
-
 function cloneArray(o) {
   return o.map(clone);
 }
+
 /**
  * TODO: Unable to clone circular and nested object.
  * @param {{}} o
  * @return {{}}
  */
-
 function cloneObject(o) {
   const t = {};
-
   for (let k in o) t[k] = clone(o[k]);
-
   return t;
 }
+
 /**
  * @param {Map<*, *>} o
  * @return {Map<*, *>}
  */
-
 function cloneSet(o) {
   return new Set(cloneArray([...o]));
 }
+
 /**
  * @param {Map<*, *>} o
  * @return {Map<*, *>}
  */
-
 function cloneMap(o) {
   return new Map([...o.entries()].map(([k, v]) => [k, clone(v)]));
 }

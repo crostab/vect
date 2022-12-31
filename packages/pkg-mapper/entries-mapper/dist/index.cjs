@@ -12,11 +12,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
  */
 function iterate(entries, onKey, onVal, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), onVal = onVal || onKey;
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], onKey.call(this, r[0], i), onVal.call(this, r[1], i);
   }
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -24,14 +24,13 @@ function iterate(entries, onKey, onVal, l) {
  * @param {number} [l]
  * @returns {undefined}
  */
-
 function iterateKeys(entries, onKey, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], onKey.call(this, r[0], i);
   }
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -39,10 +38,8 @@ function iterateKeys(entries, onKey, l) {
  * @param {number} [l]
  * @returns {undefined}
  */
-
 function iterateValues(entries, onVal, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], onVal.call(this, r[1], i);
   }
@@ -59,11 +56,10 @@ function iterateValues(entries, onVal, l) {
 function mapper(entries, keyTo, valTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valTo = valTo || keyTo;
   const vec = Array(l);
-
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyTo(r[0], i), valTo(r[1], i)];
-
   return vec;
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -71,15 +67,13 @@ function mapper(entries, keyTo, valTo, l) {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-
 function mapKeys(entries, keyTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
-
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [keyTo(r[0], i), r[1]];
-
   return vec;
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -87,13 +81,10 @@ function mapKeys(entries, keyTo, l) {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-
 function mapValues(entries, valTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
   const vec = Array(l);
-
   for (let i = 0, r; i < l; i++) r = entries[i], vec[i] = [r[0], valTo(r[1], i)];
-
   return vec;
 }
 
@@ -107,13 +98,12 @@ function mapValues(entries, valTo, l) {
  */
 function mutate(entries, keyTo, valTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length), valTo = valTo || keyTo;
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyTo(r[0], i), r[1] = valTo(r[1], i);
   }
-
   return entries;
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -121,16 +111,14 @@ function mutate(entries, keyTo, valTo, l) {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-
 function mutateKeys(entries, keyTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[0] = keyTo(r[0], i);
   }
-
   return entries;
 }
+
 /**
  *
  * @param {[*,*][]} entries
@@ -138,14 +126,11 @@ function mutateKeys(entries, keyTo, l) {
  * @param {number} [l]
  * @returns {[*,*][]}
  */
-
 function mutateValues(entries, valTo, l) {
   l = l ?? (entries === null || entries === void 0 ? void 0 : entries.length);
-
   for (let i = 0, r; i < l; i++) {
     r = entries[i], r[1] = valTo(r[1], i);
   }
-
   return entries;
 }
 

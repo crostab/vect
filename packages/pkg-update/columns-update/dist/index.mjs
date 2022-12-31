@@ -10,7 +10,6 @@ const pop = matrix => mapper(matrix, row => row.pop());
  * @param {*[]} column
  * @returns {*}
  */
-
 const push = (matrix, column) => void zipper(matrix, column, (row, el) => row.push(el));
 
 const shift = matrix => mapper(matrix, row => row.shift());
@@ -21,7 +20,6 @@ const shift = matrix => mapper(matrix, row => row.shift());
  * @param {*[]} column
  * @returns {*}
  */
-
 const unshift = (matrix, column) => zipper(matrix, column, (row, el) => row.unshift(el));
 
 const splices = (mx, ys) => {
