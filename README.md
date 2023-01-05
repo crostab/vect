@@ -2,7 +2,7 @@
 	<img src="media/logo.default.svg" />
 </div>
 
-#### @vect - iterator extension for vector, matrix, columns, entries, object and nested
+#### @vect - extend functions for object, array, 2d-array, entries, and nested object.
 
 [![npm version][badge-npm-version]][url-npm]
 [![github commit last][badge-github-last-commit]][url-github]
@@ -20,12 +20,10 @@
 [url-npm]: https://npmjs.org/package/@vect/vector
 
 #### Features
-- Flexible and friendly iterator extensions with concise api.
-- Functions for various types, applied with generator.
-- Fast initialize.
-- Categorized functions for installing on need.
+- Extend functions for object, array, 2d-array, entries, and nested object.
+- Modularized & install on demand.
 - Lightweight.
-- Module support.
+- Support both ESM and CJS module.
 
 #### Install
 
@@ -92,7 +90,7 @@ Iterator or mapping functions
 [entries-zipper-dm]: https://flat.badgen.net/npm/dm/@vect/entries-zipper
 [object-zipper-dm]: https://flat.badgen.net/npm/dm/@vect/object-zipper
 
-#### Indicators
+#### Indicators [Deprecated]
 |                                                                  |                               |           |                            |
 |------------------------------------------------------------------|-------------------------------|-----------|----------------------------|
 | [**vector-indicator**](archive/pkg-indicator/vector-indicator)   | Indicator for vector          | indicator | ![v][vector-indicator-dm]  |
@@ -122,6 +120,23 @@ Iterator or mapping functions
 [object-select-dm]: https://flat.badgen.net/npm/dm/@vect/object-select
 [columns-select-dm]: https://flat.badgen.net/npm/dm/@vect/columns-select
 
+#### Statistics
+|                                                             |                                |            |                       |
+|-------------------------------------------------------------|--------------------------------|------------|-----------------------|
+| [**vector-stat**](archive/pkg-indicator/vector-indicator)   | Statistics for vector          | statistics | ![v][vector-stat-dm]  |
+| [**matrix-stat**](archive/pkg-indicator/matrix-indicator)   | Statistics for matrix elements | statistics | ![v][matrix-stat-dm]  |
+| [**column-stat**](archive/pkg-indicator/column-indicator)   | Statistics for matrix column   | statistics | ![v][column-stat-dm]  |
+| [**columns-stat**](archive/pkg-indicator/columns-indicator) | Statistics for matrix columns  | statistics | ![v][columns-stat-dm] |
+| [**entries-stat**](archive/pkg-indicator/entries-indicator) | Statistics for entries         | statistics | ![v][entries-stat-dm] |
+|                                                             |                                |            |                       |
+
+[//]: <> (Local routes)
+[vector-stat-dm]: https://flat.badgen.net/npm/dm/@vect/vector-stat
+[matrix-stat-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-stat
+[column-stat-dm]: https://flat.badgen.net/npm/dm/@vect/column-stat
+[columns-stat-dm]: https://flat.badgen.net/npm/dm/@vect/columns-stat
+[entries-stat-dm]: https://flat.badgen.net/npm/dm/@vect/entries-stat
+
 #### Update
 |                                                          |                                    |        |                         |
 |----------------------------------------------------------|------------------------------------|--------|-------------------------|
@@ -133,7 +148,7 @@ Iterator or mapping functions
 [vector-update-dm]: https://flat.badgen.net/npm/dm/@vect/vector-update
 [columns-update-dm]: https://flat.badgen.net/npm/dm/@vect/columns-update
 
-#### Margins
+#### Margins [Deprecate]
 |                                                         |                    |        |                         |
 |---------------------------------------------------------|--------------------|--------|-------------------------|
 | [**vector-margin**](archive/pkg-margin/vector-margin)   | Margin for vector  | margin | ![v][vector-margin-dm]  |
@@ -157,7 +172,7 @@ Iterator or mapping functions
 [matrix-quantifier-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-quantifier
 [column-quantifier-dm]: https://flat.badgen.net/npm/dm/@vect/column-quantifier
 
-#### Misc
+#### Misc [Deprecate]
 |                                  |                         |      |                   |
 |----------------------------------|-------------------------|------|-------------------|
 | [**callable**](archive/callable) | Create a callable class | misc | ![v][callable-dm] |

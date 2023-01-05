@@ -17,7 +17,7 @@
   "devDependencies": {
     "@analys/crostab": "^0.6.14",
     "@aryth/rand": "^0.6.8",
-    "@babel/core": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-pipeline-operator": "^7.18.9",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
@@ -40,7 +40,7 @@
     "@valjoux/strategies": "^0.3.21",
     "@valjoux/timestamp-pretty": "^0.3.21",
     "lerna": "^6.3.0",
-    "rollup": "^3.9.0",
+    "rollup": "^3.9.1",
     "rollup-plugin-fileinfo": "^0.3.8"
   }
 }
