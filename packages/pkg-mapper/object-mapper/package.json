@@ -1,7 +1,7 @@
 {
   "name": "@vect/object-mapper",
   "version": "0.7.19",
-  "description": "An array util tool",
+  "description": "Iterate through an object, with returned value or without returned value, or iterate using generator.",
   "main": "./dist/index.cjs",
   "exports": {
     "import": "./dist/index.mjs",
