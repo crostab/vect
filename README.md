@@ -51,6 +51,48 @@ Consolidated functions
 [object-dm]: https://flat.badgen.net/npm/dm/@vect/object
 [nested-dm]: https://flat.badgen.net/npm/dm/@vect/nested
 
+#### Constructs
+Functions to create new instances
+|                                                          |                          |      |                        |
+|----------------------------------------------------------|--------------------------|------|------------------------|
+| [**vector-init**](packages/pkg-construct/vector-init)    | Construct vector         | init | ![v][vector-init-dm]   |
+| [**matrix-init**](packages/pkg-construct/matrix-init)    | Construct matrix         | init | ![v][matrix-init-dm]   |
+| [**entries-init**](packages/pkg-construct/entries-init)  | Construct entries        | init | ![v][entries-init-dm]  |
+| [**object-init**](packages/pkg-construct/object-init)    | Construct object         | init | ![v][object-init-dm]   |
+|                                                          |                          |      |                        |
+
+[//]: <> (Local routes)
+[vector-init-dm]: https://flat.badgen.net/npm/dm/@vect/vector-init
+[matrix-init-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-init
+[entries-init-dm]: https://flat.badgen.net/npm/dm/@vect/entries-init
+[object-init-dm]: https://flat.badgen.net/npm/dm/@vect/object-init
+
+#### Algebra
+Algebra space for array and 2d-array
+|                                                          |                          |      |                        |
+|----------------------------------------------------------|--------------------------|------|------------------------|
+| [**vector-algebra**](packages/pkg-algebra/vector-algebra)    | algebra space for vector         | algebra | ![v][vector-algebra-dm]   |
+| [**matrix-algebra**](packages/pkg-algebra/matrix-algebra)    | algebra space for matrix         | algebra | ![v][matrix-algebra-dm]   |
+|                                                          |                          |      |                        |
+
+[//]: <> (Local routes)
+[vector-algebra-dm]: https://flat.badgen.net/npm/dm/@vect/vector-algebra
+[matrix-algebra-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-algebra
+
+#### Index
+Element operation for array, 2d-array and object
+|                                                          |                          |      |                        |
+|----------------------------------------------------------|--------------------------|------|------------------------|
+| [**vector-index**](packages/pkg-index/vector-index)    | element operation for vector         | index | ![v][vector-index-dm]   |
+| [**matrix-index**](packages/pkg-index/matrix-index)    | element operation for matrix         | index | ![v][matrix-index-dm]   |
+| [**object-index**](packages/pkg-index/object-index)    | element operation for object         | index | ![v][object-index-dm]   |
+|                                                          |                          |      |                        |
+
+[//]: <> (Local routes)
+[vector-index-dm]: https://flat.badgen.net/npm/dm/@vect/vector-index
+[matrix-index-dm]: https://flat.badgen.net/npm/dm/@vect/matrix-index
+[object-index-dm]: https://flat.badgen.net/npm/dm/@vect/object-index
+
 #### Mappers
 Iterator or mapping functions 
 |                                                          |                                    |        |                         |
