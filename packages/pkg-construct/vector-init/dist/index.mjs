@@ -24,6 +24,7 @@ const seqTrimDigit = (size, fn, digit = 2) => {
 };
 
 // noinspection DuplicatedCode
+
 function draft(size) {
   return Array(size);
 }
