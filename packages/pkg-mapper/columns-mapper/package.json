@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-mapper",
-  "version": "0.7.20",
+  "version": "0.7.23",
   "description": "Iterate through columns of an 2d-array(matrix), with returned value or without returned value, or iterate using generator.",
   "main": "./dist/index.cjs",
   "exports": {
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@vect/column-getter": "^0.6.13",
-    "@vect/column-mapper": "^0.7.20",
-    "@vect/matrix-index": "^0.7.20"
+    "@vect/column-mapper": "^0.7.23",
+    "@vect/matrix-index": "^0.7.23"
   },
   "repository": {
     "type": "git",
