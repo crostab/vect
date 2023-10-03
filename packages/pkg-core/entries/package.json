@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries",
-  "version": "0.7.23",
+  "version": "0.7.24",
   "description": "Util for array",
   "main": "./dist/index.cjs",
   "exports": {
@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "@vect/entries-indicator": "^0.6.13",
-    "@vect/entries-init": "^0.7.23",
-    "@vect/entries-mapper": "^0.7.23",
+    "@vect/entries-init": "^0.7.24",
+    "@vect/entries-mapper": "^0.7.24",
     "@vect/entries-margin": "^0.6.13",
     "@vect/entries-unwind": "^0.6.13",
-    "@vect/entries-zipper": "^0.7.23"
+    "@vect/entries-zipper": "^0.7.24"
   },
   "scripts": {
     "pub": "npm publish",

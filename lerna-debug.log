@@ -1,4 +1,84 @@
-185 error Error: Command failed with exit code 1: git add -- packages/pkg-construct/object-init/package.json packages/pkg-construct/matrix-init/package.json packages/pkg-mapper/entries-mapper/package.json packages/pkg-construct/vector-init/package.json packages/pkg-core/clone/package.json packages/pkg-mapper/object-mapper/package.json packages/pkg-index/matrix-index/package.json packages/pkg-mapper/vector-mapper/package.json packages/pkg-core/nested/package.json packages/pkg-mapper/column-mapper/package.json packages/pkg-statistics/entries-stat/package.json packages/pkg-statistics/column-stat/package.json packages/pkg-zipper/columns-zipper/package.json packages/pkg-statistics/vector-stat/package.json packages/pkg-zipper/object-zipper/package.json packages/pkg-zipper/entries-zipper/package.json packages/pkg-zipper/matrix-zipper/package.json packages/pkg-zipper/vector-zipper/package.json packages/pkg-zipper/column-zipper/package.json packages/pkg-algebra/matrix-algebra/package.json packages/pkg-statistics/columns-stat/package.json packages/pkg-algebra/vector-algebra/package.json packages/pkg-statistics/matrix-stat/package.json packages/pkg-index/object-index/package.json packages/pkg-index/vector-index/package.json packages/pkg-mapper/columns-mapper/package.json packages/pkg-core/column/package.json packages/pkg-construct/entries-init/package.json packages/pkg-select/object-select/package.json packages/pkg-update/vector-update/package.json packages/pkg-update/object-update/package.json packages/pkg-mapper/matrix-mapper/package.json packages/pkg-core/entries/package.json packages/pkg-select/vector-select/package.json packages/pkg-update/columns-update/package.json packages/pkg-core/object/package.json packages/pkg-core/vector/package.json packages/pkg-select/columns-select/package.json packages/pkg-core/matrix/package.json lerna.json yarn.lock
+185 error Error: Command failed with exit code 1: git add -- packages/pkg-construct/object-init/package.json packages/pkg-construct/matrix-init/package.json packages/pkg-core/nested/package.json packages/pkg-core/clone/package.json packages/pkg-mapper/column-mapper/package.json packages/pkg-mapper/vector-mapper/package.json packages/pkg-mapper/object-mapper/package.json packages/pkg-index/matrix-index/package.json packages/pkg-mapper/entries-mapper/package.json packages/pkg-construct/vector-init/package.json packages/pkg-statistics/entries-stat/package.json packages/pkg-statistics/column-stat/package.json packages/pkg-statistics/vector-stat/package.json packages/pkg-zipper/columns-zipper/package.json packages/pkg-zipper/object-zipper/package.json packages/pkg-zipper/entries-zipper/package.json packages/pkg-zipper/vector-zipper/package.json packages/pkg-zipper/matrix-zipper/package.json packages/pkg-zipper/column-zipper/package.json packages/pkg-algebra/vector-algebra/package.json packages/pkg-index/object-index/package.json packages/pkg-index/vector-index/package.json packages/pkg-mapper/columns-mapper/package.json packages/pkg-algebra/matrix-algebra/package.json packages/pkg-statistics/matrix-stat/package.json packages/pkg-statistics/columns-stat/package.json packages/pkg-construct/entries-init/package.json packages/pkg-select/object-select/package.json packages/pkg-core/column/package.json packages/pkg-update/vector-update/package.json packages/pkg-update/object-update/package.json packages/pkg-mapper/matrix-mapper/package.json packages/pkg-core/entries/package.json packages/pkg-select/vector-select/package.json packages/pkg-core/object/package.json packages/pkg-update/columns-update/package.json packages/pkg-select/columns-select/package.json packages/pkg-core/vector/package.json packages/pkg-core/matrix/package.json lerna.json yarn.lock
+185 error warning: LF will be replaced by CRLF in lerna.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-algebra/matrix-algebra/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-algebra/vector-algebra/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-construct/entries-init/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-construct/matrix-init/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-construct/object-init/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-construct/vector-init/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/clone/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/column/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/entries/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/matrix/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/nested/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/object/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-core/vector/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-index/matrix-index/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-index/object-index/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-index/vector-index/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/column-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/columns-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/entries-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/matrix-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/object-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-mapper/vector-mapper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-select/columns-select/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-select/object-select/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-select/vector-select/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-statistics/column-stat/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-statistics/columns-stat/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-statistics/entries-stat/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-statistics/matrix-stat/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-statistics/vector-stat/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-update/columns-update/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-update/object-update/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-update/vector-update/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/column-zipper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/columns-zipper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/entries-zipper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/matrix-zipper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/object-zipper/package.json.
+185 error The file will have its original line endings in your working directory
+185 error warning: LF will be replaced by CRLF in packages/pkg-zipper/vector-zipper/package.json.
+185 error The file will have its original line endings in your working directory
 185 error The following paths are ignored by one of your .gitignore files:
 185 error yarn.lock
 185 error     at makeError (C:\Users\leagy\gyrogit\js\vect\node_modules\@lerna\child-process\node_modules\execa\lib\error.js:60:11)
