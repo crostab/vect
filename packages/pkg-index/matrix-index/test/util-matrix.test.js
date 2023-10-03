@@ -7,7 +7,7 @@ export class SizeTest {
   static test () {
     const candidates = MatricesOrNotEmb
     for (let [k, candidate] of Object.entries(candidates)) {
-      xr(k, size(candidate)) |> logger
+       logger(xr(k, size(candidate)))
     }
   }
 }
