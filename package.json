@@ -1,27 +1,22 @@
 {
-  "name": "root",
+  "name": "vect",
   "private": true,
-  "workspaces": [
-    "packages/*/*"
-  ],
+  "type": "module",
+  "author": "Xaylam",
+  "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
     "upint": "yarn upgrade-interactive",
     "pub": "lerna publish --force-publish",
-    "build": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs",
-    "build-specific": "lerna exec --scope=@vect/vector-index -- rollup -c ../../../rollup.config.mjs",
-    "watch": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs -w",
-    "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../../rollup.config.mjs -w"
+    "build": "rollup -c rollup.config.js",
+    "watch": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs -w"
   },
   "devDependencies": {
+    "@acq/path": "^0.3.32",
     "@analys/crostab": "^0.6.14",
     "@aryth/rand": "^0.6.9",
-    "@babel/core": "^7.23.0",
-    "@babel/plugin-proposal-pipeline-operator": "^7.22.15",
-    "@babel/preset-env": "^7.22.20",
-    "@babel/register": "^7.22.15",
-    "@babel/runtime": "^7.23.1",
+    "@changesets/cli": "^2.27.9",
     "@foba/foo": "^0.6.1",
     "@foba/matrix": "^0.6.1",
     "@foba/matrix-number": "^0.6.1",
@@ -30,17 +25,14 @@
     "@foba/util": "^0.6.1",
     "@foba/vector": "^0.6.1",
     "@foba/vector-number": "^0.6.1",
-    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.2.1",
     "@spare/deco": "^0.15.16",
     "@spare/logger": "^0.15.16",
     "@spare/xr": "^0.15.16",
     "@typen/num-strict": "^0.1.19",
     "@valjoux/strategies": "^0.3.21",
     "@valjoux/timestamp-pretty": "^0.3.21",
-    "lerna": "^7.3.0",
-    "rollup": "^3.29.4",
+    "rollup": "^4.24.0",
     "rollup-plugin-fileinfo": "^0.3.8"
   }
 }

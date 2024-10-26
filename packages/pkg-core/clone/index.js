@@ -1,1 +1,0 @@
-export { clone, cloneArray, cloneObject, cloneMap, cloneSet } from './src/clone'
