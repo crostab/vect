@@ -3,6 +3,7 @@
 temp
 node_modules
 yarn.lock
+dist
 .yarn/*
 #!.yarn/cache
 !.yarn/patches
