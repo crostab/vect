@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-stat",
-  "version": "0.7.24",
+  "version": "0.8.0",
   "description": "Indicators for matrix",
   "type": "module",
   "exports": "./dist/index.js",
