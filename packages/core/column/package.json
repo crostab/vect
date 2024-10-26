@@ -1,0 +1,39 @@
+{
+  "name": "@vect/column",
+  "version": "0.7.24",
+  "description": "Util for 2d-array",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "dependencies": {
+    "@vect/column-getter": "^0.6.13",
+    "@vect/column-indicator": "^0.6.13",
+    "@vect/column-mapper": "workspace:^",
+    "@vect/column-quantifier": "^0.6.13",
+    "@vect/column-zipper": "workspace:^"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "matrix",
+    "2d-array"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "ea88f6e34b2ef185010319c87355672d59ed3b35"
+}

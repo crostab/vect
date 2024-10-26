@@ -1,0 +1,45 @@
+{
+  "name": "@vect/columns-stat",
+  "version": "0.7.24",
+  "description": "Indicators for columns",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/columns-stat.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "dependencies": {
+    "@typen/enum-data-types": "^0.1.19",
+    "@vect/matrix-index": "workspace:^",
+    "@vect/vector-init": "workspace:^"
+  },
+  "keywords": [
+    "matrix",
+    "2-d array",
+    "column",
+    "stat",
+    "max",
+    "min",
+    "reduce"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "ea88f6e34b2ef185010319c87355672d59ed3b35"
+}

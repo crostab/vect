@@ -1,0 +1,45 @@
+{
+  "name": "@vect/matrix-algebra",
+  "version": "0.7.24",
+  "description": "An array util tool",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/matrix-algebra.test.js"
+  },
+  "dependencies": {
+    "@vect/matrix-index": "workspace:^",
+    "@vect/matrix-init": "workspace:^"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/vect.git"
+  },
+  "keywords": [
+    "array",
+    "vector",
+    "matrix",
+    "object",
+    "multiply",
+    "multiplication",
+    "exponent",
+    "exponential"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/vect"
+  },
+  "homepage": "https://github.com/hoyeungw/vect#readme",
+  "gitHead": "ea88f6e34b2ef185010319c87355672d59ed3b35"
+}
