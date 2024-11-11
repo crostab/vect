@@ -32,5 +32,3 @@ for await (const category of CATEGORIES) {
 }
 
 export default Object.values(tasks)
-
-

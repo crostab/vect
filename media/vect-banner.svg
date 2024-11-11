@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1296 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="vect-letters" transform="matrix(0.549904,0,0,0.680835,545.616,259.561)">
+        <path d="M518.471,112.273L481.981,39.511L506.959,39.511C506.959,39.511 523.747,74.317 523.747,74.317L540.491,39.511L565.468,39.511L529.039,112.273L518.471,112.273Z" style="fill:rgb(61,66,139);"/>
+        <path d="M578.52,110.695L578.52,39.511L631.692,39.511L631.692,57.46L601.483,57.46L601.483,63.142L631.692,63.142L631.692,81.177L601.483,81.177L601.483,92.66L631.692,92.66L631.692,110.695L578.52,110.695Z" style="fill:rgb(61,66,139);"/>
+        <path d="M727.092,86.262L727.092,103.398C716.195,109.758 706.515,112.273 695.331,112.273C669.635,112.273 648.149,95.936 648.149,75.231C648.149,54.38 669.456,38.188 695.331,38.188C706.574,38.188 717.01,41.136 727.092,47.02L727.092,64.13L717.255,64.13C712.54,58.695 705.597,56.223 695.225,56.223C681.902,56.223 671.481,64.712 671.481,75.231C671.481,85.606 682.122,94.153 695.225,94.153C705.436,94.153 712.212,92.01 717.279,86.262L727.092,86.262Z" style="fill:rgb(61,66,139);"/>
+        <path d="M763.037,110.695L763.037,57.716L742.176,57.716L742.176,39.511L806.913,39.511L806.913,57.716L786.105,57.716L786.105,110.695L763.037,110.695Z" style="fill:rgb(61,66,139);"/>
+    </g>
+    <g transform="matrix(0.158606,0,0,0.158606,815.653,96)">
+        <g transform="matrix(1.2,0,0,1.22574,468,461.91)">
+            <path d="M322.5,181.188C343.211,181.188 360,197.625 360,217.9L360,320.695C360,340.971 343.211,357.407 322.5,357.407L217.5,357.407C196.789,357.407 180,340.971 180,320.695L180,217.9C180,197.625 196.789,181.188 217.5,181.188L322.5,181.188Z" style="fill:rgb(112,123,180);"/>
+        </g>
+        <g transform="matrix(1.2,0,0,1.22574,216,209.91)">
+            <path d="M322.5,181.188C343.211,181.188 360,197.625 360,217.9L360,320.695C360,340.971 343.211,357.407 322.5,357.407L217.5,357.407C196.789,357.407 180,340.971 180,320.695L180,217.9C180,197.625 196.789,181.188 217.5,181.188L322.5,181.188Z" style="fill:rgb(90,105,175);"/>
+        </g>
+        <g transform="matrix(1.2,0,0,1.22574,-36,-42.0898)">
+            <path d="M322.5,181.188C343.211,181.188 360,197.625 360,217.9L360,320.695C360,340.971 343.211,357.407 322.5,357.407L217.5,357.407C196.789,357.407 180,340.971 180,320.695L180,217.9C180,197.625 196.789,181.188 217.5,181.188L322.5,181.188Z" style="fill:rgb(56,72,131);"/>
+        </g>
+        <g transform="matrix(2.75601,0,0,2.3314,588.247,-270)">
+            <path d="M80.461,167.282L80.461,115.81L129.445,115.81C156.498,115.81 178.429,141.736 178.429,173.716L178.429,521.147C178.429,553.127 156.498,579.052 129.445,579.052L80.461,579.052L80.461,527.581L125.091,527.581C130.502,527.581 134.888,522.396 134.888,516C134.888,461.75 134.888,233.113 134.888,178.863C134.888,172.467 130.502,167.282 125.091,167.282C109.421,167.282 80.461,167.282 80.461,167.282Z" style="fill:rgb(132,141,197);"/>
+        </g>
+        <g transform="matrix(2.75601,0,0,2.3314,-131.753,-270)">
+            <path d="M145.773,579.052L96.789,579.052C69.736,579.052 47.805,553.127 47.805,521.147L47.805,173.716C47.805,141.736 69.736,115.81 96.789,115.81L145.773,115.81L145.773,167.282L101.143,167.282C95.733,167.282 91.347,172.467 91.347,178.863C91.347,233.113 91.347,461.75 91.347,516C91.347,522.396 95.733,527.581 101.143,527.581C116.814,527.581 145.773,527.581 145.773,527.581L145.773,579.052Z" style="fill:rgb(132,141,197);"/>
+        </g>
+    </g>
+    <g id="methods" transform="matrix(1,0,0,1.2059,-190.914,-57.2318)">
+        <g transform="matrix(1,0,0,0.829257,541.589,69.4549)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">Z<tspan x="153.821px 169.808px 191.691px 213.574px 235.336px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">IPPER</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,541.589,33.3305)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">S<tspan x="151.184px 171.627px 190.702px 211.145px 236.373px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">ELECT</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,541.589,-2.79383)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">M<tspan x="156.189px 179.427px 196.83px 217.859px 237.093px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">UTATE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,541.589,-38.9182)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">I<tspan x="141.401px 159.97px 177.82px 198.16px 218.524px 237.093px " y="305.611px 305.611px 305.611px 305.611px 305.611px 305.611px ">TERATE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,541.589,-75.0425)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">M<tspan x="156.382px 178.97px 197.8px 216.629px 235.336px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">APPER</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,541.589,-111.167)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">I<tspan x="139.521px 161.862px 182.605px 198.575px 216.351px 232.321px " y="305.611px 305.611px 305.611px 305.611px 305.611px 305.611px ">NDEXED</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-302.648,48.9783)">
+        <g transform="matrix(17.0667,0,0,17.0667,740.007,171.59)">
+        </g>
+        <text x="729.358px" y="171.59px" style="font-family:'Chalene-Bold', 'Chalene';font-weight:700;font-size:17.067px;fill:rgb(62,194,210);">x</text>
+    </g>
+    <g id="objects" transform="matrix(1,0,0,1.2059,276.897,-265.085)">
+        <g transform="matrix(1,0,0,0.829257,-142.222,241.819)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">N<tspan x="154.594px 173.492px 193.805px 213.423px 232.321px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">ESTED</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,-142.222,205.694)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">O<tspan x="155.92px 176.693px 193.583px 212.586px 236.373px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">BJECT</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,-142.222,169.57)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">E<tspan x="146.538px 170.122px 188.055px 207.026px 218.465px 235.677px " y="305.611px 305.611px 305.611px 305.611px 305.611px 305.611px ">NTRIES</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,-142.222,133.445)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">C<tspan x="146.833px 167.148px 178.064px 195.511px 216.583px 235.677px " y="305.611px 305.611px 305.611px 305.611px 305.611px 305.611px ">OLUMNS</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,-142.222,97.3211)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">M<tspan x="157.353px 179.547px 199.946px 221.382px 235.287px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">ATRIX</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,0.829257,-142.222,61.1968)">
+            <g transform="matrix(25,0,0,25,249.325,305.611)">
+            </g>
+            <text x="129.325px" y="305.611px" style="font-family:'DolceFut-SemiBold', 'DolceFut';font-weight:600;font-size:25px;fill:rgb(41,40,102);">V<tspan x="150.476px 168.758px 191.825px 209.461px 235.336px " y="305.611px 305.611px 305.611px 305.611px 305.611px ">ECTOR</tspan></text>
+        </g>
+    </g>
+</svg>

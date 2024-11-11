@@ -5,12 +5,13 @@
   "author": "Xaylam",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "prewatch": "npm run bootstrap",
-    "upint": "yarn upgrade-interactive",
-    "pub": "lerna publish --force-publish",
+    "upint": "pnpm up -i -r --latest",
+    "check": "pnpm outdated",
+    "changeset-add": "pnpm changeset add",
+    "changeset-ver": "pnpm changeset version",
+    "changeset-pub": "pnpm changeset publish",
     "build": "rollup -c rollup.config.js",
-    "watch": "lerna exec --parallel -- rollup -c ../../../rollup.config.mjs -w"
+    "watch": "rollup -c rollup.config.js -w"
   },
   "devDependencies": {
     "@acq/path": "^0.3.32",
