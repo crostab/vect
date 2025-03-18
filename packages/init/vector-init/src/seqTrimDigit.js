@@ -1,4 +1,4 @@
-import { TrimDigit } from './trimDigit'
+import { TrimDigit } from './trimDigit.js'
 
 export const seqTrimDigit = (size, fn, digit = 2) => {
   const ve = Array(size)

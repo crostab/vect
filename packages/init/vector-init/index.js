@@ -1,7 +1,7 @@
 // noinspection DuplicatedCode
 
 import { nullish }      from '@typen/nullish'
-import { seqTrimDigit } from './src/seqTrimDigit'
+import { seqTrimDigit } from './src/seqTrimDigit.js'
 
 export function draft(size) { return Array(size) }
 
