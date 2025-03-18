@@ -1,7 +1,7 @@
 import { deco }    from '@spare/deco'
 import { says }    from '@spare/xr'
 import { fitRoll } from '@vect/vector-index'
-import { keep }    from '../index'
+import { keep }    from '../index.js'
 
 const vec = [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 // const vec = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ]

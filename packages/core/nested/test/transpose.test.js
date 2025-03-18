@@ -1,5 +1,5 @@
 import { deco, logger } from '@spare/logger'
-import { transpose }    from '../src/algebra'
+import { transpose }    from '../src/algebra.js'
 
 const glyphToLayerToMetrics = {
   A: { Lt: { l: 10, r: 10 }, Rg: { l: 8, r: 8 }, Bd: { l: 6, r: 6 } },

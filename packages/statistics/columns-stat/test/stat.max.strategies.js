@@ -4,7 +4,7 @@ import { decoCrostab, decoMatrix, logger, says } from '@spare/logger'
 import { strategies }                            from '@valjoux/strategies'
 import { mapper as mapperColumns }               from '@vect/columns-mapper/src/mapper'
 import { Stat as StatVector }                    from '@vect/vector-stat/src/stat'
-import { Stat }                                  from '../src/stat'
+import { Stat }                                  from '../src/stat.js'
 
 const maxOnVector = StatVector(max)
 NumberMatrixCollection.zigZagMatrix(10) |> decoMatrix |> logger

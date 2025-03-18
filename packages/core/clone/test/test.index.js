@@ -1,6 +1,6 @@
 import { deco }   from '@spare/deco'
 import { logger } from '@spare/logger'
-import { clone }  from '../src/clone'
+import { clone }  from '../src/clone.js'
 
 const object = {
   mx: [ [ 1, 2, 3 ], [ 1, 2, 3 ], [ 1, 2, 3 ] ],

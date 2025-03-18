@@ -3,7 +3,7 @@ import { deco }                            from '@spare/deco'
 import { decoCrostab, decoMatrix, logger } from '@spare/logger'
 import { size }                            from '@vect/matrix-index'
 import { mapKeys, mapper as mapValue }     from '@vect/object-mapper'
-import { mapper as mapperIter, mapper as mapperEmbed } from './mapperIter'
+import { mapper as mapperIter, mapper as mapperEmbed } from './mapperIter.js'
 import {strategies} from '@valjoux/strategies'
 const SmallMatrices = mapKeys(SimpleMatrixCollection({ h: 6, w: 4 }), key => key + '_num')
 const LargeMatrices = SimpleMatrixCollection({ h: 64, w: 16 })

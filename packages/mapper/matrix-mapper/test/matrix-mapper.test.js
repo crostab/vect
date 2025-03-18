@@ -1,8 +1,8 @@
 import { SimpleMatrixCollection }           from '@foba/foo'
 import { delogger }                 from '@spare/deco'
 import { DecoMatrix, logger, says } from '@spare/logger'
-import { mapper }                   from '../src/mapper'
-import { mutate }                   from '../src/mutate'
+import { mapper }                   from '../src/mapper.js'
+import { mutate }                   from '../src/mutate.js'
 
 const decoMatrix = DecoMatrix({ bracket: true })
 

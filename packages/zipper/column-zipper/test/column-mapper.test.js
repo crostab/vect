@@ -1,9 +1,9 @@
 import { SimpleMatrixCollection }             from '@foba/foo'
 import { Deco }                               from '@spare/deco'
 import { DecoMatrix, delogger, logger, says } from '@spare/logger'
-import { ColumnZipper }                       from '../src/ColumnZipper'
-import { mutazip }                            from '../src/mutazip'
-import { Duozipper }                          from '../src/seriesZipper'
+import { ColumnZipper }                       from '../src/ColumnZipper.js'
+import { mutazip }                            from '../src/mutazip.js'
+import { Duozipper }                          from '../src/seriesZipper.js'
 
 SimpleMatrixCollection |> Deco({ vo: 1 }) |> says['original']
 const mb = [

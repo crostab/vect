@@ -2,9 +2,9 @@ import { SimpleVectorCollection } from '@foba/foo'
 import { decoCrostab, says } from '@spare/logger'
 import { strategies } from '@valjoux/strategies'
 import { mapper as mapperObject } from '@vect/object-mapper'
-import { divide } from '../../src/divide'
-import { divideEdge } from './divideEdge'
-import { divideNat } from './divideNat'
+import { divide } from '../../src/divide.js'
+import { divideEdge } from './divideEdge.js'
+import { divideNat } from './divideNat.js'
 import { deco } from '@spare/deco'
 
 const spliceIndexesGenerator = function * () {

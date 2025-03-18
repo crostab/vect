@@ -1,7 +1,7 @@
 import { deco }             from '@spare/deco'
 import { says }             from '@spare/logger'
 import { indexed }          from '@vect/object-mapper'
-import { fitRoll, rollTop } from '../index'
+import { fitRoll, rollTop } from '../index.js'
 
 /**
  * Roll vec[i]

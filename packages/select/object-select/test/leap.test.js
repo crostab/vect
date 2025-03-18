@@ -1,4 +1,4 @@
-import { leap } from '../src/leap'
+import { leap } from '../src/leap.js'
 import { delogger } from '@spare/deco'
 
 const o = {

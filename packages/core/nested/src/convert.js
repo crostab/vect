@@ -1,4 +1,4 @@
-import { iterate } from './mapper'
+import { iterate } from './mapper.js'
 
 export const nestedToRows = (nested) => {
   const inners = []

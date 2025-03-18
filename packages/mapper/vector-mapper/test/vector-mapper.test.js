@@ -1,7 +1,7 @@
-import { mapper } from '../src/mapper'
+import { mapper } from '../src/mapper.js'
 import { logger } from '@spare/logger'
 import { delogger } from '@spare/deco'
-import { mutate } from '../src/mutate'
+import { mutate } from '../src/mutate.js'
 
 class MapVectorTest {
   static test () {

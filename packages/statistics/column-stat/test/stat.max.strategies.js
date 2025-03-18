@@ -2,7 +2,7 @@ import { max }                                   from '@aryth/comparer'
 import { NumberMatrixCollection }                from '@foba/matrix'
 import { decoCrostab, decoMatrix, logger, says } from '@spare/logger'
 import { strategies }                            from '@valjoux/strategies'
-import { Stat }                                  from '../src/stat'
+import { Stat }                                  from '../src/stat.js'
 
 NumberMatrixCollection.zigZagMatrix(4) |> decoMatrix |> logger
 const { lapse, result } = strategies({

@@ -3,7 +3,7 @@ import { makeEmbedded }     from '@foba/util'
 import { decoCrostab }      from '@spare/logger'
 import { says }             from '@spare/xr'
 import { ObjectCollection } from '@foba/object-string'
-import { ents, keys, vals } from '../../index'
+import { ents, keys, vals } from '../../index.js'
 
 const { lapse, result } = strategies({
   repeat: 1E+5,

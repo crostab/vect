@@ -1,6 +1,6 @@
 import { deco }        from '@spare/deco'
 import { logger, Xr }  from '@spare/logger'
-import { first, last } from '../index'
+import { first, last } from '../index.js'
 
 const candidates = [
   // null,

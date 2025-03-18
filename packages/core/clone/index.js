@@ -1,1 +1,1 @@
-export { clone, cloneArray, cloneObject, cloneMap, cloneSet } from './src/clone'
+export { clone, cloneArray, cloneObject, cloneMap, cloneSet } from './src/clone.js'

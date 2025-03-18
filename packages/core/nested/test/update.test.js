@@ -1,4 +1,4 @@
-import { appendCell, assignCell, updateCell } from '../src/update'
+import { appendCell, assignCell, updateCell } from '../src/update.js'
 
 const nested = {}
 

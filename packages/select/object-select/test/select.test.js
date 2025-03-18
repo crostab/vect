@@ -1,7 +1,7 @@
 import { StringObjectCollection } from '@foba/object'
 import { deco }                   from '@spare/deco'
 import { says }                   from '@spare/xr'
-import { select }                 from '../src/select'
+import { select }                 from '../src/select.js'
 
 const pastas = 'Pastas'
 StringObjectCollection[pastas] |> deco |> says['original']

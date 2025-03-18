@@ -1,4 +1,4 @@
-import { entryIndexed } from '../src/entryIndexed'
+import { entryIndexed } from '../src/entryIndexed.js'
 
 const matrix = [
   [ 1, 10, 100 ],

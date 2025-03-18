@@ -1,6 +1,6 @@
 import { decoMatrix } from '@spare/logger'
 import { says }       from '@spare/xr'
-import { separate }   from '../src/divide'
+import { separate }   from '../src/divide.js'
 
 const matrix = [ [ 0, 5, 7, 8 ], [ 8, 10, 11, 11 ], [ 12, 14, 16, 23 ] ]
 

@@ -1,8 +1,8 @@
 import { decoMatrix as decoX, logger, says, xr } from '@spare/logger'
-import { unshift } from '../src/unshift'
-import { pop } from '../src/pop'
-import { shift } from '../src/shift'
-import { push } from '../src/push'
+import { unshift } from '../src/unshift.js'
+import { pop } from '../src/pop.js'
+import { shift } from '../src/shift.js'
+import { push } from '../src/push.js'
 import { deco } from '@spare/deco'
 
 const candidates = {

@@ -1,7 +1,7 @@
-import { zipper } from '../src/zipper'
+import { zipper } from '../src/zipper.js'
 import { logger } from '@spare/logger'
 import { delogger } from '@spare/deco'
-import { mutazip } from '../src/mutazip'
+import { mutazip } from '../src/mutazip.js'
 
 class MapVectorTest {
   static test () {

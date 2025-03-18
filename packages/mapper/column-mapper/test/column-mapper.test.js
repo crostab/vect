@@ -1,8 +1,8 @@
 import { SimpleMatrixCollection }                       from '@foba/foo'
 import { deca }                                 from '@spare/deco'
 import { decoMatrix, DecoVector, logger, says } from '@spare/logger'
-import { ColumnMapper }                         from '../src/ColumnMapper'
-import { ColumnMutate }                         from '../src/ColumnMutate'
+import { ColumnMapper }                         from '../src/ColumnMapper.js'
+import { ColumnMutate }                         from '../src/ColumnMutate.js'
 
 SimpleMatrixCollection |> deca({ vo: 1 }) |> says.candidates
 

@@ -1,7 +1,7 @@
 import { ObjectCollection } from '@foba/object-string'
 import { says }             from '@spare/logger'
 import { deco }             from '@spare/deco'
-import { selectValues }     from '../src/select'
+import { selectValues }     from '../src/select.js'
 
 ObjectCollection.Pastas |> deco |> says.original
 

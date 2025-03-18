@@ -1,4 +1,4 @@
-import { iterateY } from './mapper'
+import { iterateY } from './mapper.js'
 
 export const side = (nested) => {
   return Object.keys(nested)

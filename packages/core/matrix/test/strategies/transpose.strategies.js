@@ -4,8 +4,8 @@ import { decoCrostab }              from '@spare/logger'
 import { says }                     from '@spare/xr'
 import { strategies }               from '@valjoux/strategies'
 import { gather }                   from '@vect/vector-init'
-import { height, transpose, width } from '../../index'
-import { Matrix }                   from '../../src/Matrix'
+import { height, transpose, width } from '../../index.js'
+import { Matrix }                   from '../../src/Matrix.js'
 
 const { lapse, result } = strategies({
   repeat: 1E+6,

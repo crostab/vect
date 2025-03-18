@@ -1,7 +1,7 @@
 import { decoMatrix, logger } from '@spare/logger'
 import { says }               from '@spare/xr'
 import { Stat }               from '@vect/vector-stat'
-import { Matrix }             from '../src/Matrix'
+import { Matrix }             from '../src/Matrix.js'
 
 const matrix = Matrix.of([ 1, 5, 9, 10 ], [ 10, 10, 12, 12 ], [ 14, 15, 20, 27 ])
 

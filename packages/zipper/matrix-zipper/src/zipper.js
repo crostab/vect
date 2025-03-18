@@ -1,4 +1,4 @@
-import { duozipper } from './seriesZipper'
+import { duozipper } from './seriesZipper.js'
 
 /**
  * Zip 2 matrices by each elements from both.

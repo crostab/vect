@@ -1,5 +1,5 @@
 import { decoMatrix, logger } from '@spare/logger'
-import { select }             from '../src/select'
+import { select }             from '../src/select.js'
 
 const samples = [
   { index: 0, foo: 'a', bar: 2, zen: 10 },

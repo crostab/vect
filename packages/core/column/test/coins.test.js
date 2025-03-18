@@ -1,8 +1,8 @@
 import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
 import { decoCrostab }                       from '@spare/logger'
 import { strategies }                        from '@valjoux/strategies'
-import { coins }                             from '../function/coins'
-import { isMatrix }                          from '../function/isMatrix'
+import { coins }                             from '../function/coins.js'
+import { isMatrix }                          from '../function/isMatrix.js'
 
 // CrosXMatricesRobust |> deco |> logger
 //
@@ -12,7 +12,7 @@ import { isMatrix }                          from '../function/isMatrix'
 export function CoinsTest() {
   const { lapse, result } = strategies({
     repeat: 3E+6,
-    candidates: CrosXMatricesRobust |> makeEmbedded,
+    candidates: makeEmbedded(CrosXMatricesRobust),
     methods: {
       stable: x => x?.length,
       coins,
@@ -20,12 +20,11 @@ export function CoinsTest() {
       edge: mx => isMatrix(mx) ? Object.keys(mx[0]) : [],
     }
   })
-  'lapse' |> console.log
-  lapse |> decoCrostab |> console.log
-  '' |> console.log
-  'result' |> console.log
-  result |> decoCrostab |> console.log
-
+  console.log('lapse')
+  console.log(decoCrostab(lapse))
+  console.log('')
+  console.log('result')
+  console.log(decoCrostab(result))
 }
 
 CoinsTest()

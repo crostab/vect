@@ -1,5 +1,5 @@
 import { strategies } from '@valjoux/strategies'
-import { mapper } from '../..'
+import { mapper } from '../...js'
 import { SimpleVectorCollection } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
 import { decoCrostab, says } from '@spare/logger'

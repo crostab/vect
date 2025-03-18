@@ -1,6 +1,6 @@
 import { deco }    from '@spare/deco'
 import { logger }  from '@spare/logger'
-import { splices } from '../index'
+import { splices } from '../index.js'
 
 const vec = [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 

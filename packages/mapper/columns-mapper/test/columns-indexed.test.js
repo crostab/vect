@@ -3,8 +3,8 @@ import { decoCrostab }        from '@spare/logger'
 import { says }               from '@spare/xr'
 import { strategies }         from '@valjoux/strategies'
 import { gather }             from '@vect/vector-init'
-import { indexed, indexedTo } from '../src/indexed'
-import { mapper }             from '../src/mapper'
+import { indexed, indexedTo } from '../src/indexed.js'
+import { mapper }             from '../src/mapper.js'
 
 const { lapse, result } = strategies({
   repeat: 1E+5,

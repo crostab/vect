@@ -1,2 +1,2 @@
-export { multiply }  from './src/algebra'
-export { transpose } from './src/transpose'
+export { multiply }  from './src/algebra.js'
+export { transpose } from './src/transpose.js'

@@ -1,4 +1,4 @@
-import { getOrObj, getOrVec } from './indexes'
+import { getOrObj, getOrVec } from './indexes.js'
 
 export function updateCell(x, y, v) {
   (this[x] ?? (this[x] = {}))[y] = v

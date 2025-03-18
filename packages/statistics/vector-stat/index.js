@@ -1,4 +1,4 @@
-export { Stat } from './src/Stat'
+export { Stat } from './src/Stat.js'
 
 export const stat = function (vec, l) {
   l = l ?? vec?.length

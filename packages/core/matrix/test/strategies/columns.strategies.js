@@ -6,8 +6,8 @@ import { strategies }       from '@valjoux/strategies'
 import { size }             from '@vect/matrix-index'
 import { init }             from '@vect/vector-init'
 import { Stat }             from '@vect/vector-stat'
-import { columnsMapper }    from '../../index'
-import { Matrix }           from '../../src/Matrix'
+import { columnsMapper }    from '../../index.js'
+import { Matrix }           from '../../src/Matrix.js'
 
 const { lapse, result } = strategies({
   repeat: 1E+4,

@@ -3,8 +3,8 @@ import { strategies }             from '@valjoux/strategies'
 import { mapper as mapperMatrix } from '@vect/matrix-mapper'
 import { size }                   from '@vect/matrix-index'
 import { mapper as mapperVector } from '@vect/vector-mapper'
-import { Duozipper, Quazipper }   from '../../src/seriesZipper'
-import { zipper }                 from '../../src/zipper'
+import { Duozipper, Quazipper }   from '../../src/seriesZipper.js'
+import { zipper }                 from '../../src/zipper.js'
 
 const alpha = [
   [1, 0, 0],

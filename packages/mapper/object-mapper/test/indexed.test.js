@@ -1,4 +1,4 @@
-import { indexed } from '../src/indexed'
+import { indexed } from '../src/indexed.js'
 
 export const o = {
   a: 1,

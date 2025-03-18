@@ -1,1 +1,1 @@
-export { Stat, stat } from './src/stat'
+export { Stat, stat } from './src/stat.js'

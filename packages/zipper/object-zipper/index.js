@@ -1,3 +1,3 @@
-export { zipper }  from './src/zipper'
-export { mutazip } from './src/mutazip'
-export { iterzip } from './src/iterzip'
+export { zipper }  from './src/zipper.js'
+export { mutazip } from './src/mutazip.js'
+export { iterzip } from './src/iterzip.js'

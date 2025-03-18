@@ -3,7 +3,7 @@ import { acquire }     from '@vect/merge-acquire'
 import { rand }        from '@aryth/rand'
 import { strategies } from '@valjoux/strategies'
 import { decoCrostab, says } from '@spare/logger'
-import {leap } from '../src/leap'
+import {leap } from '../src/leap.js'
 
 const range = [0, 1, 2, 3, 4]
 

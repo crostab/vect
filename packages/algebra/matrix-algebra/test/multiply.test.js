@@ -1,5 +1,5 @@
 import { decoMatrix, logger } from '@spare/logger'
-import { multiply }           from '../src/algebra'
+import { multiply }           from '../src/algebra.js'
 
 export const test = () => {
   const ma = [
@@ -13,7 +13,7 @@ export const test = () => {
     [1, 2, 3]
   ]
   const mx = multiply(ma, mb)
-  mx |> decoMatrix |> logger
+  logger(decoMatrix(mx))
 }
 
 test()

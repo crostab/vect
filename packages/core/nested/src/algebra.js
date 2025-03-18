@@ -1,5 +1,5 @@
-import { indexedIterate } from './mapper'
-import { updateCell }     from './update'
+import { indexedIterate } from './mapper.js'
+import { updateCell }     from './update.js'
 
 export const transpose = (nested) => {
   const o = {}

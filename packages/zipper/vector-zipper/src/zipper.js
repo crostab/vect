@@ -1,4 +1,4 @@
-import { duozipper } from './seriesZipper'
+import { duozipper } from './seriesZipper.js'
 
 /**
  * zip two arrays, return the zipped array

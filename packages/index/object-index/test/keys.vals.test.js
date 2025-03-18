@@ -1,5 +1,5 @@
 import { ObjectCollection } from '@foba/object-string'
-import { ents, keys, vals } from '../index'
+import { ents, keys, vals } from '../index.js'
 
 const o = ObjectCollection.Pastas
 

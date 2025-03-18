@@ -1,8 +1,8 @@
 import { deco }                 from '@spare/deco'
 import { decoMatrix, says, xr } from '@spare/logger'
-import { transpose }            from '../src/algebra'
-import { nestedToRows }         from '../src/convert'
-import { head, side }           from '../src/indexes'
+import { transpose }            from '../src/algebra.js'
+import { nestedToRows }         from '../src/convert.js'
+import { head, side }           from '../src/indexes.js'
 
 const glyphToLayerToMetrics = {
   A: { Lt: { l: 10, r: 10 }, Rg: { l: 8, r: 8 }, Bd: { l: 6, r: 6 } },

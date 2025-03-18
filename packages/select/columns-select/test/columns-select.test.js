@@ -1,6 +1,6 @@
 import { SimpleMatrixCollection } from '@foba/foo'
 import { deco, decoMatrix, says } from '@spare/logger'
-import { select } from '../src/select'
+import { select } from '../src/select.js'
 
 for (const [key, matrix] of Object.entries(SimpleMatrixCollection)) {
   matrix |> deco |> says[key]

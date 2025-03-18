@@ -1,7 +1,7 @@
 import { FobaStr, FobaNum } from '@foba/vector'
 import { decoMatrix, logger, says } from '@spare/logger'
 import { deco } from '@spare/deco'
-import { splices } from '../src/splices'
+import { splices } from '../src/splices.js'
 
 const mx = [
   FobaStr.flop({ size: 6 }),

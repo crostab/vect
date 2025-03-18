@@ -22,7 +22,7 @@
     "url": "git+https://github.com/hoyeungw/vect.git"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.19"
+    "@typen/enum-data-types": "^0.2.0"
   },
   "keywords": [
     "array",

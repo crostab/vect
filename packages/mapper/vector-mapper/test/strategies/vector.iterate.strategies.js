@@ -2,7 +2,7 @@ import { strategies } from '@valjoux/strategies'
 import { SimpleVectorCollection } from '@foba/foo'
 import { makeEmbedded } from '@foba/util'
 import { decoCrostab, says } from '@spare/logger'
-import { iterate } from '../../src/iterate'
+import { iterate } from '../../src/iterate.js'
 import { mapper as mapperObject } from '@vect/object-mapper'
 
 const ShortVectors = SimpleVectorCollection({ h: 15 })

@@ -2,7 +2,7 @@ import { CrosXMatricesRobust, makeEmbedded } from '@foba/foo'
 import { deco }                              from '@spare/deco'
 import { decoCrostab, logger }               from '@spare/logger'
 import { strategies }                        from '@valjoux/strategies'
-import { isMatrix }                          from '../src/isMatrix'
+import { isMatrix }                          from '../src/isMatrix.js'
 
 export const isMatrixTest = () => {
   const { lapse, result } = strategies({

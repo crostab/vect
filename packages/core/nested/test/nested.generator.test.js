@@ -1,6 +1,6 @@
 import { deco }    from '@spare/deco'
 import { logger }  from '@spare/logger'
-import { indexed } from '../src/indexed'
+import { indexed } from '../src/indexed.js'
 
 const glyphToLayerToMetrics = {
   A: { Lt: { l: 10, r: 10 }, Rg: { l: 8, r: 8 }, Bd: { l: 6, r: 6 } },

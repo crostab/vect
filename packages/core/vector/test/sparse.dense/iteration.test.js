@@ -16,8 +16,8 @@ const { lapse, result } = strategies({
     },
   }
 })
-'lapse' |> console.log
-lapse |> decoCrostab |> console.log
-'' |> console.log
-'result' |> console.log
-result |> decoCrostab |> console.log
+console.log('lapse')
+console.log(decoCrostab(lapse))
+console.log('')
+console.log('result')
+console.log(decoCrostab(result))

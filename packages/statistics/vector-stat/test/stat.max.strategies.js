@@ -2,7 +2,7 @@ import { max }               from '@aryth/comparer'
 import { VectorCollection }  from '@foba/vector-number'
 import { decoCrostab, says } from '@spare/logger'
 import { strategies }        from '@valjoux/strategies'
-import { Stat }              from '../src/stat'
+import { Stat }              from '../src/stat.js'
 
 
 const { lapse, result } = strategies({

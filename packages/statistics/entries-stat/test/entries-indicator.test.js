@@ -4,7 +4,7 @@ import { decoCrostab }         from '@spare/logger'
 import { strategies }          from '@valjoux/strategies'
 import { Stat as ColumnsStat } from '@vect/columns-stat/src/stat'
 import { wind }                from '@vect/entries-init'
-import { Stat }                from '../src/stat'
+import { Stat }                from '../src/stat.js'
 
 const { lapse, result } = strategies({
   repeat: 2E+6,

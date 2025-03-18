@@ -1,6 +1,6 @@
 import { decoMatrix, says } from '@spare/logger'
-import { mutazip }          from '../src/mutazip'
-import { Duozipper }        from '../src/seriesZipper'
+import { mutazip }          from '../src/mutazip.js'
+import { Duozipper }        from '../src/seriesZipper.js'
 
 class MapVectorTest {
   static test() {

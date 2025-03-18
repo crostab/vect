@@ -5,11 +5,11 @@ export {
   ColumnIterate,
   ColumnMapper,
   ColumnMutate
-} from './src/mapper'
+} from './src/mapper.js'
 
 export {
   indexed,
   indexedTo,
   indexedOf,
   indexedBy
-} from './src/indexed'
+} from './src/indexed.js'

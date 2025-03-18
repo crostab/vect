@@ -4,7 +4,7 @@ import { decoCrostab, logger } from '@spare/logger'
 import { strategies }          from '@valjoux/strategies'
 import { transpose }           from '@vect/matrix'
 import { mapper }              from '@vect/object-mapper'
-import { zipper }              from '../src/zipper'
+import { zipper }              from '../src/zipper.js'
 
 class ColumnsMapperTest {
   static testMapper () {

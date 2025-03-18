@@ -11,7 +11,7 @@
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "@typen/nullish": "^0.1.19",
+    "@typen/nullish": "^0.2.0",
     "@vect/object-index": "workspace:^",
     "@vect/vector-index": "workspace:^"
   },
