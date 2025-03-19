@@ -1,0 +1,5 @@
+export { pop }     from './pop.js'
+export { push }    from './push.js'
+export { shift }   from './shift.js'
+export { unshift } from './unshift.js'
+export { splices } from './splices.js'

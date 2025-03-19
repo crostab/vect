@@ -1,0 +1,6 @@
+export { iterate, iterateXY, iterateY, indexedIterate, indexedMutate, } from './mapper.js'
+export { side, head, getRow, getOr, getOrObj, getOrVec, }               from './indexes.js'
+export { nestedToRows }                                                 from './convert.js'
+export { transpose }                                                    from './algebra.js'
+export { updateCell, appendCell, assignCell, updateCell as update, }    from './update.js'
+export { indexedOf, indexedBy, indexedTo, indexed, }                    from './indexed.js'
