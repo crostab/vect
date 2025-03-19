@@ -1,11 +1,11 @@
 {
   "name": "@vect/vector-select",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A math util library",
   "type": "module",
-  "exports": "./dist/index.js",
+  "exports": "./index.js",
   "files": [
-    "dist"
+    "index.js"
   ],
   "engines": {
     "node": ">=22.0.0"
