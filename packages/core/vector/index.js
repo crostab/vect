@@ -1,18 +1,9 @@
-export {
-  zipper, mutazip, iterzip, duozipper, trizipper, quazipper, Duozipper, Trizipper, Quazipper
-} from '@vect/vector-zipper'
-
-export { iterate, reviter, mapper, mutate, indexed, indexedBy, indexedOf, indexedTo } from '@vect/vector-mapper'
-export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap }         from '@vect/vector-init'
-export { splices, keep }                                                              from '@vect/vector-update'
-export { select, selectEntry, selectTriplet, divide, separate, shuffle, leap }        from '@vect/vector-select'
-export { union, intersect, difference, merge, acquire, merges }                       from '@vect/vector-algebra'
-export { first, last, Swap, insertDown, insertUp, len, swap }                         from '@vect/vector-index'
-
-/** @deprecate */
-export { marginCopy, marginMapper, marginMutate }                                     from '@vect/vector-margin'
-/** @deprecate */
-export { maxBy, minBy, Max, Min, Piler, Indicator }                                   from '@vect/vector-indicator'
-
-// export  { acquire, merge, merges } from '@vect/vector-merge'
-
+export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/vector-zipper';
+export { indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, reviter } from '@vect/vector-mapper';
+export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap } from '@vect/vector-init';
+export { keep, splices } from '@vect/vector-update';
+export { divide, leap, select, selectEntry, selectTriplet, separate, shuffle } from '@vect/vector-select';
+export { acquire, difference, intersect, merge, merges, union } from '@vect/vector-algebra';
+export { Swap, first, insertDown, insertUp, last, len, swap } from '@vect/vector-index';
+export { marginCopy, marginMapper, marginMutate } from '@vect/vector-margin';
+export { Indicator, Max, Min, Piler, maxBy, minBy } from '@vect/vector-indicator';

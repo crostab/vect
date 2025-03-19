@@ -1,21 +1,16 @@
-import { SimpleMatrixCollection }           from '@foba/foo'
-import { delogger }                 from '@spare/deco'
+import { SimpleMatrixCollection }   from '@foba/foo'
 import { DecoMatrix, logger, says } from '@spare/logger'
-import { mapper }                   from '../src/mapper.js'
-import { mutate }                   from '../src/mutate.js'
+import { test }                     from 'node:test'
+import { mapper, mutate }           from '../src/mapper.js'
 
 const decoMatrix = DecoMatrix({ bracket: true })
 
-class MatrixMapperTest {
-  static test () {
-    for (const [key, mx] of Object.entries(SimpleMatrixCollection)) {
-      key |> logger
-      mapper(mx, (x, i, j) => `(${i},${j}) ${x}`) |> decoMatrix |> says['mapper']
-      mutate(mx, x => x * 2) |> decoMatrix |> says['mutate']
-      mx |> decoMatrix |> says['original']
-      '' |> delogger
-    }
+test('mapper test', done => {
+  for (const [ key, mx ] of Object.entries(SimpleMatrixCollection)) {
+    logger(key)
+    says['mapper'](decoMatrix(mapper(mx, (x, i, j) => `(${i},${j}) ${x}`)))
+    says['mutate'](decoMatrix(mutate(mx, x => x * 2)))
+    says['original'](decoMatrix(mx))
+    logger('')
   }
-}
-
-MatrixMapperTest.test()
+})

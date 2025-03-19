@@ -18,8 +18,8 @@
     "test": "node -r @babel/register test/select.test.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.7.6",
-    "@aryth/rand": "^0.7.6",
+    "@aryth/comparer": "^0.7.7",
+    "@aryth/rand": "^0.7.7",
     "@vect/object-index": "workspace:^",
     "@vect/object-init": "workspace:^",
     "@vect/vector-index": "workspace:^",

@@ -1,52 +1,54 @@
-import { nullish } from '@typen/nullish'
+import { nullish } from '@typen/nullish';
 
-export function draft(h, w) {
-  const mx = Array(h)
-  for (--h; h >= 0; h--) mx[h] = Array(w)
+function draft(h, w) {
+  const mx = Array(h);
+  for (--h; h >= 0; h--) mx[h] = Array(w);
   return mx
 }
 
-export function iso(h, w, v) {
-  const mx = Array(h)
+function iso(h, w, v) {
+  const mx = Array(h);
   for (let i = 0, j, row; i < h; i++)
     for (j = 0, mx[i] = row = Array(w); j < w; j++)
-      row[j] = v
+      row[j] = v;
   return mx
 }
 
-export function init(h, w, fn) {
-  const mx = Array(h)
+function init(h, w, fn) {
+  const mx = Array(h);
   for (let i = 0, j, row; i < h; i++)
     for (j = 0, mx[i] = row = Array(w); j < w; j++)
-      row[j] = fn(i, j)
+      row[j] = fn(i, j);
   return mx
 }
 
-export function product(side, head, xyTo) {
-  const h = side.length, w = head.length, mx = Array(h)
+function product(side, head, xyTo) {
+  const h = side.length, w = head.length, mx = Array(h);
   for (let i = 0, j, row; i < h; i++) {
     for (j = 0, mx[i] = row = Array(w); j < w; j++) {
-      row[j] = xyTo(side[i], head[j], i, j)
+      row[j] = xyTo(side[i], head[j], i, j);
     }
   }
   return mx
 }
 
-export function reshape(vec, h, w) {
-  const mx = Array(h)
+function reshape(vec, h, w) {
+  const mx = Array(h);
   for (let i = 0, b = 0; i < h; i++) {
-    const row = mx[i] = Array(w)
-    for (let j = 0; j < w; j++) row[j] = vec[b + j]
-    b += w
+    const row = mx[i] = Array(w);
+    for (let j = 0; j < w; j++) row[j] = vec[b + j];
+    b += w;
   }
   return mx
 }
 
 /** @deprecated */
-export function starter(h = 1, w = 1, { value, fn }) {
+function starter(h = 1, w = 1, { value, fn }) {
   if (!nullish(value)) return iso(h, w, value)
   if (fn) return init(h, w, fn)
   return draft(h, w)
 }
 
-export const shallow = (mx) => mx.map(r => r.slice())
+const shallow = (mx) => mx.map(r => r.slice());
+
+export { draft, init, iso, product, reshape, shallow, starter };

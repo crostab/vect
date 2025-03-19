@@ -1,5 +1,33 @@
-export { pop }     from './src/pop.js'
-export { push }    from './src/push.js'
-export { shift }   from './src/shift.js'
-export { unshift } from './src/unshift.js'
-export { splices } from './src/splices.js'
+import { mapper } from '@vect/vector-mapper';
+import { zipper } from '@vect/vector-zipper';
+import { splices as splices$1 } from '@vect/vector-update';
+
+const pop = matrix => mapper(matrix, row => row.pop());
+
+/**
+ * push each element of column to each row of matrix, return void 0
+ * @param {*[][]} matrix
+ * @param {*[]} column
+ * @returns {*}
+ */
+const push = (matrix, column) =>
+  void zipper(matrix, column, (row, el) => row.push(el));
+
+const shift = matrix => mapper(matrix, row => row.shift());
+
+/**
+ * unshift each element of column to each row of matrix, return void 0
+ * @param {*[][]} matrix
+ * @param {*[]} column
+ * @returns {*}
+ */
+const unshift = (matrix, column) => zipper(matrix, column, (row, el) => row.unshift(el));
+
+const splices = (mx, ys) => {
+  const hi = ys?.length ?? 0;
+  if (hi === 0) return mx
+  if (hi === 1) return mapper(mx, r => (r.splice(ys[0], 1), r))
+  return mx.map(row => splices$1(row, ys))
+};
+
+export { pop, push, shift, splices, unshift };

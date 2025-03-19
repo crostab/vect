@@ -1,8 +1,8 @@
-import json from '@rollup/plugin-json'
-import { fileInfo } from 'rollup-plugin-fileinfo'
-import { readFile } from 'fs/promises'
-import { resolve } from "node:path";
 import { subFolders } from '@acq/path'
+import json           from '@rollup/plugin-json'
+import { readFile }   from 'fs/promises'
+import { resolve }    from 'node:path'
+import { fileInfo }   from 'rollup-plugin-fileinfo'
 
 const BASE = resolve(process.cwd(), 'packages')
 const CATEGORIES = await subFolders(BASE)
@@ -17,16 +17,16 @@ for await (const category of CATEGORIES) {
     // tasks[name] = null
     const { dependencies } = JSON.parse(await readFile(resolve(path, 'package.json'), 'utf8'))
     tasks[name] = {
-      input: resolve(path, 'index.js'),
+      input: resolve(path, 'src', 'index.js'),
       output: {
-        file: resolve(path, 'dist', 'index.js'),
-        format: 'esm'
+        file: resolve(path, 'index.js'),
+        format: 'esm',
       },
       external: Object.keys(dependencies ?? {}),
       plugins: [
         json(),
         fileInfo(),
-      ]
+      ],
     }
   }
 }

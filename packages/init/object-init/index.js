@@ -1,87 +1,83 @@
-import { FUN } from '@typen/enum-data-types'
-
+import { FUN } from '@typen/enum-data-types';
 
 /**
  * Shallow.
  * @param {...[*,*]} entries - An array of key-value pair, [key, value]
  * @returns {Object|Object<string,*>}
  */
-export const ob = (...entries) => {
-  let o = {}
-  for (let [k, v] of entries) o[k] = v
+const ob = (...entries) => {
+  let o = {};
+  for (let [k, v] of entries) o[k] = v;
   return o
-}
+};
 
 /**
  * @param {string[]} keys
  * @param {*} value
  * @return {Object<string,*>}
  */
-export const iso = (keys, value) => {
-  let o = {}
-  for (let k of keys) o[k] = value
+const iso = (keys, value) => {
+  let o = {};
+  for (let k of keys) o[k] = value;
   return o
-}
+};
 
-export const wind = (keys, values) => {
-  const o = {}, { length } = keys
-  for (let i = 0; i < length; i++) o[keys[i]] = values[i]
+const wind = (keys, values) => {
+  const o = {}, { length } = keys;
+  for (let i = 0; i < length; i++) o[keys[i]] = values[i];
   return o
-}
+};
 
-export const pair = (key, value) => {
-  const o = {}
-  o[key] = value
+const pair = (key, value) => {
+  const o = {};
+  o[key] = value;
   return o
-}
+};
 
 /**
  * @param {Array} vec
  * @param {function} [fn]
  * @returns {Object}
  */
-export const init = (vec, fn) => {
+const init = (vec, fn) => {
   return typeof fn === FUN
     ? vectorToObject(vec, fn)
     : entriesToObject(vec)
-}
+};
 
-export const gather = (iter) => {
-  let o = {}
-  for (let [k, v] of iter) o[k] = v
+const gather = (iter) => {
+  let o = {};
+  for (let [k, v] of iter) o[k] = v;
   return o
-}
+};
 
 /**
  *
  * @param {[*,*][]} entries
  * @returns {{}}
  */
-export const entriesToObject = (entries) => {
-  let o = {}
-  for (let [k, v] of entries) o[k] = v
+const entriesToObject = (entries) => {
+  let o = {};
+  for (let [k, v] of entries) o[k] = v;
   return o
-}
+};
 
-export const vectorToObject = (vec, fn) => {
-  let o = {}
-  for (let k of vec) o[k] = fn(k)
+const vectorToObject = (vec, fn) => {
+  let o = {};
+  for (let k of vec) o[k] = fn(k);
   return o
-}
+};
 
-export const initByValues = (entries, fn) => {
-  let o = {}
-  for (let [k, v] of entries) o[k] = fn(v)
+const initByValues = (entries, fn) => {
+  let o = {};
+  for (let [k, v] of entries) o[k] = fn(v);
   return o
-}
+};
 
-export function slice(o) {
-  const t = {}
-  for (let k in o) t[k] = o[k]
+function slice(o) {
+  const t = {};
+  for (let k in o) t[k] = o[k];
   return t
 }
 
-export {
-  vectorToObject as mapToObject,
-  vectorToObject as initFromKeys
-}
+export { entriesToObject, gather, init, initByValues, vectorToObject as initFromKeys, iso, vectorToObject as mapToObject, ob, pair, slice, vectorToObject, wind };

@@ -10,5 +10,5 @@ const candidates = [
 ]
 
 for (let vec of candidates) {
-  Xr(vec |> deco).first(first(vec)).last(last(vec)) |> logger
+  logger(Xr(deco(vec)).first(first(vec)).last(last(vec)))
 }
