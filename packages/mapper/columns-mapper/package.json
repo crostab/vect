@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-mapper",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Iterate through columns of an 2d-array(matrix), with returned value or without returned value, or iterate using generator.",
   "type": "module",
   "exports": "./index.js",

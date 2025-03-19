@@ -1,13 +1,15 @@
 import { mapper } from '@vect/vector-mapper';
-import { zipper } from '@vect/vector-zipper';
 
-const EntryFactory = {
-  voidEntry() { return [undefined, undefined] }
+const voidEntry = () => [ undefined, undefined ];
+
+const draft = (length) => Array.from({ length }, voidEntry);
+
+const wind = (keys, vals) => {
+  const hi = Math.min(keys.length, vals.length);
+  const entries = Array(hi);
+  for (let i = 0; i < hi; i++) entries[i] = [ keys[i], vals[i] ];
+  return entries
 };
-
-const draft = (size) => Array(size).fill(null).map(EntryFactory.voidEntry);
-
-const wind = (keys, values) => zipper(keys, values, (k, v) => [k, v]);
 
 /**
  * Shallow.
@@ -15,6 +17,14 @@ const wind = (keys, values) => zipper(keys, values, (k, v) => [k, v]);
  * @param {*} value
  * @return {[string,*][]}
  */
-const iso = (keys, value) => mapper(keys, key => [key, value]);
+const iso = (keys, value) => mapper(keys, key => [ key, value ]);
 
-export { EntryFactory, draft, iso, wind };
+const unwind = (entries) => {
+  const hi = entries?.length;
+  if (!hi) return []
+  const ks = Array(hi), vs = Array(hi);
+  for (let i = 0, ent; i < hi; i++) { ent = entries[i], ks[i] = ent[0], vs[i] = ent[1]; }
+  return [ ks, vs ]
+};
+
+export { draft, iso, unwind, voidEntry, wind };

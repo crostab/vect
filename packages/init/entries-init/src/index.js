@@ -1,13 +1,16 @@
 import { mapper } from '@vect/vector-mapper'
-import { zipper } from '@vect/vector-zipper'
 
-export const EntryFactory = {
-  voidEntry() { return [undefined, undefined] }
+
+export const voidEntry = () => [ undefined, undefined ]
+
+export const draft = (length) => Array.from({ length }, voidEntry)
+
+export const wind = (keys, vals) => {
+  const hi = Math.min(keys.length, vals.length)
+  const entries = Array(hi)
+  for (let i = 0; i < hi; i++) entries[i] = [ keys[i], vals[i] ]
+  return entries
 }
-
-export const draft = (size) => Array(size).fill(null).map(EntryFactory.voidEntry)
-
-export const wind = (keys, values) => zipper(keys, values, (k, v) => [k, v])
 
 /**
  * Shallow.
@@ -15,4 +18,12 @@ export const wind = (keys, values) => zipper(keys, values, (k, v) => [k, v])
  * @param {*} value
  * @return {[string,*][]}
  */
-export const iso = (keys, value) => mapper(keys, key => [key, value])
+export const iso = (keys, value) => mapper(keys, key => [ key, value ])
+
+export const unwind = (entries) => {
+  const hi = entries?.length
+  if (!hi) return []
+  const ks = Array(hi), vs = Array(hi)
+  for (let i = 0, ent; i < hi; i++) { ent = entries[i], ks[i] = ent[0], vs[i] = ent[1] }
+  return [ ks, vs ]
+}
