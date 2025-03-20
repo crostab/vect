@@ -1,4 +1,4 @@
-export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/vector-zipper';
+export { duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/vector-zipper';
 export { indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, reviter } from '@vect/vector-mapper';
 export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap } from '@vect/vector-init';
 export { keep, splices } from '@vect/vector-update';

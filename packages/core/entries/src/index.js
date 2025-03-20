@@ -7,6 +7,6 @@ import * as Zipper    from '@vect/entries-zipper'
 export const { draft, wind, iso, voidEntry, unwind } = Init
 export const { iterate, mapper, mutate } = Mapper
 export const { marginCopy, marginMapper, marginMutate } = Margin
-export const { zipper, mutazip, iterzip, duozipper, trizipper, quazipper, Duozipper, Trizipper, Quazipper } = Zipper
+export const { zipper, mutazip, iterzip, duozipper, trizipper, quazipper } = Zipper
 export const { maxBy, minBy, Max, Min } = Indicator
 

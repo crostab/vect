@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-stat",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Indicators for columns",
   "type": "module",
   "exports": "./index.js",
