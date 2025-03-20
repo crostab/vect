@@ -1,4 +1,4 @@
-import { zipper, mutazip, zipKeys, zipEntries } from '..'
+import { mutazip, zipEntries, zipKeys, zipper } from '..'
 
 const ot = {
   AMEE: 'Red Planet',
@@ -9,6 +9,6 @@ const ot = {
 
 zipper(ot, value => value.length)
 zipKeys(ot, key => key.slice(0, 4))
-zipEntries(ot, ([key, value], i) => [`${key}_${i}`, value.length])
+zipEntries(ot, ([ key, value ], i) => [ `${key}_${i}`, value.length ])
 mutazip(ot, value => value.length)
 

@@ -1,64 +1,64 @@
-function duozipper(ma, mb) {
-  let { fn, t, b, l, r } = this;
-  t = t ?? 0 , b = b ?? ma?.length , l = l ?? 0 , r = r ?? ( b && ma[0]?.length );
-  const mx = Array(b);
-  for (let i = t; i < b; i++) {
-    for (let j = l, rowA = ma[i], rowB = mb[i], row = mx[i] = Array(r); j < r; j++)
-      row[j] = fn(rowA[j], rowB[j], i, j);
-  }
-  return mx
-}
-
-function trizipper(ma, mb, mc) {
-  let { fn, t, b, l, r } = this;
-  t = t ?? 0 , b = b ?? ma?.length , l = l ?? 0 , r = r ?? ( b && ma[0]?.length );
-  const mx = Array(b);
-  for (let i = t; i < b; i++) {
-    for (let j = l, rowA = ma[i], rowB = mb[i], rowC = mc[i], row = mx[i] = Array(r); j < r; j++)
-      row[j] = fn(rowA[j], rowB[j], rowC[j], i, j);
-  }
-  return mx
-}
-
-function quazipper(ma, mb, mc, md) {
-  let { fn, t, b, l, r } = this;
-  t = t ?? 0 , b = b ?? ma?.length , l = l ?? 0 , r = r ?? ( b && ma[0]?.length );
-  const mx = Array(b);
-  for (let i = t; i < b; i++) {
-    for (let j = l, rowA = ma[i], rowB = mb[i], rowC = mc[i], rowD = md[i], row = mx[i] = Array(r); j < r; j++)
-      row[j] = fn(rowA[j], rowB[j], rowC[j], rowD[j], i, j);
-  }
-  return mx
-}
-
-const Duozipper = (fn) => duozipper.bind({ fn });
-const Trizipper = (fn) => trizipper.bind({ fn });
-const Quazipper = (fn) => quazipper.bind({ fn });
-
-/**
- * Zip 2 matrices by each elements from both.
- * @param {*[][]} ma
- * @param {*[][]} mb
- * @param {function} fn
- * @returns {*[]}
- */
-const zipper = (ma, mb, fn) =>
-  duozipper.call({ fn }, ma, mb);
-
-const mutazip = (ma, mb, fn, w, h) => {
-  h = h ?? ma?.length, w = w ?? ( h && ma[0]?.length );
-  for (let i = 0; i < h; i++)
-    for (let j = 0, ra = ma[i], rb = mb[i]; j < w; j++)
-      ra[j] = fn(ra[j], rb[j], i, j);
-  return ma
-};
-
-const iterzip = (ma, mb, fn, w, h) => {
-  h = h ?? ma?.length, w = w ?? ( h && ma[0]?.length );
-  for (let i = 0; i < h; i++)
-    for (let j = 0, ra = ma[i], rb = mb[i]; j < w; j++)
-      fn(ra[j], rb[j], i, j);
+const iterzip = (mxa, mxb, proc) => {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  for (let i = 0; i < ht; i++)
+    for (let j = 0, ra = mxa[i], rb = mxb[i]; j < wd; j++)
+      proc(ra[j], rb[j], i, j)
   return void 0
-};
+}
 
-export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper };
+const mutazip = (mxa, mxb, pair) => {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  for (let i = 0; i < ht; i++)
+    for (let j = 0, ra = mxa[i], rb = mxb[i]; j < wd; j++)
+      ra[j] = pair(ra[j], rb[j], i, j)
+  return mxa
+}
+
+const zip = (mxa, mxb, pair) => {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  const mx = Array(ht)
+  for (let i = 0; i < ht; i++) {
+    const row = mx[i] = Array(wd)
+    for (let j = 0, ra = mxa[i], rb = mxb[i]; j < wd; j++)
+      row[j] = pair(ra[j], rb[j], i, j)
+  }
+  return mx
+}
+
+function duozipper(mxa, mxb, pair) {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  const mx = Array(ht)
+  for (let i = 0; i < ht; i++) {
+    for (let j = 0, rowA = mxa[i], rowB = mxb[i], row = mx[i] = Array(wd); j < wd; j++)
+      row[j] = pair(rowA[j], rowB[j], i, j)
+  }
+  return mx
+}
+
+function trizipper(mxa, mxb, mxc, pair) {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  const mx = Array(ht)
+  for (let i = 0; i < ht; i++) {
+    for (let j = 0, rowA = mxa[i], rowB = mxb[i], rowC = mxc[i], row = mx[i] = Array(wd); j < wd; j++)
+      row[j] = pair(rowA[j], rowB[j], rowC[j], i, j)
+  }
+  return mx
+}
+
+function quazipper(mxa, mxb, mxc, mxd, pair) {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  const mx = Array(ht)
+  for (let i = 0; i < ht; i++) {
+    for (let j = 0, rowA = mxa[i], rowB = mxb[i], rowC = mxc[i], rowD = mxd[i], row = mx[i] = Array(wd); j < wd; j++)
+      row[j] = pair(rowA[j], rowB[j], rowC[j], rowD[j], i, j)
+  }
+  return mx
+}
+
+export { duozipper, iterzip, mutazip, quazipper, trizipper, zip, zip as zipper }

@@ -10,18 +10,29 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
+
 [badge-npm-version]: https://flat.badgen.net/npm/v/@vect/vector-zipper
+
 [badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@vect/vector-zipper
+
 [badge-npm-download-total]:https://flat.badgen.net/npm/dt/@vect/vector-zipper
+
 [badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@vect/vector-zipper
+
 [badge-npm-license]: https://flat.badgen.net/npm/license/@vect/vector-zipper
+
 [badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@vect/vector-zipper
+
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/vect
+
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/vect
 
 [//]: <> (Link)
+
 [url-npm]: https://npmjs.org/package/@vect/vector-zipper
+
 [url-pp]: https://packagephobia.now.sh/result?prev=@vect/vector-zipper
+
 [url-github]: https://github.com/hoyeungw/vect
 
 ##### Map through each element of an array.
@@ -32,13 +43,16 @@
 - **Mutate** map an array and return the array itself
 
 #### Install
+
 ```console
 $ npm install @vect/vector-zipper
 ```
 
 #### Usage
+
 ```js
 ```
 
 #### Meta
+
 [LICENSE (MIT)](LICENSE)

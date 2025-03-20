@@ -1,19 +1,19 @@
-const zipper = (oa, ob, fn) => {
-  const zip = {};
-  for (let k in oa) zip[k] = fn(oa[k], ob[k]);
-  return zip
-};
-
-const mutazip = (oa, ob, fn) => {
-  for (let k in oa)
-    oa[k] = fn(oa[k], ob[k]);
-  return oa
-};
-
-const iterzip = (oa, ob, action) => {
-  for (let k in oa)
-    action(oa[k], ob[k]);
+const iterzip = (oba, obb, proc) => {
+  for (let k in oba)
+    proc(oba[k], obb[k])
   return void 0
-};
+}
 
-export { iterzip, mutazip, zipper };
+const mutazip = (oba, obb, pair) => {
+  for (let k in oba)
+    oba[k] = pair(oba[k], obb[k])
+  return oba
+}
+
+const zip = (oba, obb, pair) => {
+  const zip = {}
+  for (let k in oba) zip[k] = pair(oba[k], obb[k])
+  return zip
+}
+
+export { iterzip, mutazip, zip, zip as zipper }

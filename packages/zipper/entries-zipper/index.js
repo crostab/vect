@@ -1,112 +1,88 @@
-function duozipper(ea, eb) {
-  let { key, value, lo, hi } = this;
-  value = value ?? key, hi = hi ?? ea?.length;
-  const zip = Array(hi);
-  for (let i = lo ?? 0, a, b; i < hi; i++) {
-    ( a = ea[i], b = eb[i] );
-    zip[i] = [ key(a[0], b[0], i), value(a[1], b[1], i) ];
+function duozipper(ena, enb, kPair, vPair) {
+  vPair = vPair ?? kPair
+  const hi = ena?.length
+  const ents = Array(hi)
+  for (let i = 0, a, b; i < hi; i++) {
+    (a = ena[i], b = enb[i])
+    ents[i] = [ kPair(a[0], b[0], i), vPair(a[1], b[1], i) ]
   }
-  return zip
+  return ents
 }
 
-function trizipper(ea, eb, ec) {
-  let { key, value, lo, hi } = this;
-  value = value ?? key, hi = hi ?? ea?.length;
-  const zip = Array(hi);
-  for (let i = lo ?? 0, a, b, c; i < hi; i++) {
-    ( a = ea[i], b = eb[i], c = ec[i] );
-    zip[i] = [ key(a[0], b[0], c[0], i), value(a[1], b[1], c[1], i) ];
+function trizipper(ena, enb, enc, kPair, vPair) {
+  vPair = vPair ?? kPair
+  const hi = ena?.length
+  const ents = Array(hi)
+  for (let i = 0, a, b, c; i < hi; i++) {
+    (a = ena[i], b = enb[i], c = enc[i])
+    ents[i] = [ kPair(a[0], b[0], c[0], i), vPair(a[1], b[1], c[1], i) ]
   }
-  return zip
+  return ents
 }
 
-function quazipper(ea, eb, ec, ed) {
-  let { key, value, lo, hi } = this;
-  value = value ?? key, hi = hi ?? ea?.length;
-  const zip = Array(hi);
-  for (let i = lo ?? 0, a, b, c, d; i < hi; i++) {
-    ( a = ea[i], b = eb[i], c = ec[i], d = ed[i] );
-    zip[i] = [ key(a[0], b[0], c[0], d[0], i), value(a[1], b[1], c[1], d[1], i) ];
+function quazipper(ena, enb, enc, end, kPair, vPair) {
+  vPair = vPair ?? kPair
+  const hi = ena?.length
+  const ents = Array(hi)
+  for (let i = 0, a, b, c, d; i < hi; i++) {
+    (a = ena[i], b = enb[i], c = enc[i], d = end[i])
+    ents[i] = [ kPair(a[0], b[0], c[0], d[0], i), vPair(a[1], b[1], c[1], d[1], i) ]
   }
-  return zip
+  return ents
 }
 
 /**
  *
- * @param {function(*,*,number):*} key
- * @param {function(*,*,number):*} [value]
- * @param {number} [lo]
- * @param {number} [hi]
- * @returns {function|function([*,*][],[*,*][],number?):[*,*][]}
- */
-const Duozipper = (key, value, { lo, hi } = {}) => duozipper.bind({ key, value, lo, hi });
-
-/**
- *
- * @param {function(*,*,*,number):*} key
- * @param {function(*,*,*,number):*} [value]
- * @param {number} [lo]
- * @param {number} [hi]
- * @returns {function|function([*,*][],[*,*][],[*,*][],number?):[*,*][]}
- */
-const Trizipper = (key, value, { lo, hi } = {}) => trizipper.bind({ key, value, lo, hi });
-
-/**
- *
- * @param {function(*,*,*,*,number):*} key
- * @param {function(*,*,*,*,number):*} [value]
- * @param {number} [lo]
- * @param {number} [hi]
- * @returns {function|function([*,*][],[*,*][],[*,*][],[*,*][],number?):[*,*][]}
- */
-const Quazipper = (key, value, { lo, hi } = {}) => quazipper.bind({ key, value, lo, hi });
-
-/**
- *
- * @param {[*,*][]} entA
- * @param {[*,*][]} entB
- * @param {function} keyMap
- * @param {function} [valMap]
- * @param {number} [hi]
+ * @param {[*,*][]} ena
+ * @param {[*,*][]} enb
+ * @param {function} kProc
+ * @param {function} [vProc]
  * @returns {[*,*][]}
  */
-const zipper = (entA, entB, keyMap, valMap, hi) =>
-  duozipper.call({ key: keyMap, value: valMap, hi }, entA, entB);
-
-/**
- *
- * @param {[*,*][]} entA
- * @param {[*,*][]} entB
- * @param {function} keyMap
- * @param {function} [valMap]
- * @param {number} [hi]
- * @returns {[*,*][]}
- */
-const mutazip = (entA, entB, keyMap, valMap, hi) => {
-  hi = hi ?? entA?.length, valMap = valMap ?? keyMap;
-  for (let i = 0, a, b; i < hi && ( a = entA[i] ) && ( b = entB[i] ); i++) {
-    a[0] = keyMap(a[0], b[0], i);
-    a[1] = valMap(a[1], b[1], i);
-  }
-  return entA
-};
-
-/**
- *
- * @param {[*,*][]} entA
- * @param {[*,*][]} entB
- * @param {function} keyAction
- * @param {function} [valueAction]
- * @param {number} [hi]
- * @returns {[*,*][]}
- */
-const iterzip = (entA, entB, keyAction, valueAction, hi) => {
-  hi = hi ?? entA?.length, valueAction = valueAction ?? keyAction;
-  for (let i = 0, a, b; i < hi && ( a = entA[i] ) && ( b = entB[i] ); i++) {
-    keyAction(a[0], b[0], i);
-    valueAction(a[1], b[1], i);
+const iterzip = (ena, enb, kProc, vProc) => {
+  const hi = ena?.length
+  vProc = vProc ?? kProc
+  for (let i = 0, a, b; i < hi && (a = ena[i]) && (b = enb[i]); i++) {
+    kProc(a[0], b[0], i)
+    vProc(a[1], b[1], i)
   }
   return void 0
-};
+}
 
-export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper };
+/**
+ *
+ * @param {[*,*][]} ena
+ * @param {[*,*][]} enb
+ * @param {function} kPair
+ * @param {function} [vPair]
+ * @returns {[*,*][]}
+ */
+const mutazip = (ena, enb, kPair, vPair) => {
+  const hi = ena?.length
+  vPair = vPair ?? kPair
+  for (let i = 0, a, b; i < hi && (a = ena[i]) && (b = enb[i]); i++) {
+    a[0] = kPair(a[0], b[0], i)
+    a[1] = vPair(a[1], b[1], i)
+  }
+  return ena
+}
+
+/**
+ *
+ * @param {[*,*][]} ena
+ * @param {[*,*][]} enb
+ * @param {function} kPair
+ * @param {function} [vPair]
+ * @returns {[*,*][]}
+ */
+const zip = (ena, enb, kPair, vPair) => {
+  const hi = ena?.length
+  vPair = vPair ?? kPair
+  const ent = Array(hi)
+  for (let i = 0, a, b; i < hi && (a = ena[i]) && (b = enb[i]); i++) {
+    ent[i] = [ kPair(a[0], b[0], i), vPair(a[1], b[1], i) ]
+  }
+  return ent
+}
+
+export { duozipper, iterzip, mutazip, quazipper, trizipper, zip, zip as zipper }

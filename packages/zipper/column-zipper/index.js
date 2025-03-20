@@ -1,46 +1,49 @@
-import { draft } from '@vect/matrix-init';
+import { draft } from '@vect/matrix-init'
 
-function duozipper(ma, mb) {
-  let { y, fn, mx, lo, hi } = this;
-  hi = hi ?? ma?.length, mx = mx ?? draft(hi, y);
-  for (let i = lo ?? 0; i < hi; i++)
-    mx[i][y] = fn(ma[i][y], mb[i][y], i);
-  return mx
-}
-
-function trizipper(ma, mb, mc) {
-  let { y, fn, mx, lo, hi } = this;
-  hi = hi ?? ma?.length, mx = mx ?? draft(hi, y);
-  for (let i = lo ?? 0; i < hi; i++)
-    mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], i);
-  return mx
-}
-
-function quazipper(ma, mb, mc, md) {
-  let { y, fn, mx, lo, hi } = this;
-  hi = hi ?? ma?.length, mx = mx ?? draft(hi, y);
-  for (let i = lo ?? 0; i < hi; i++)
-    mx[i][y] = fn(ma[i][y], mb[i][y], mc[i][y], md[i][y], i);
-  return mx
-}
-
-const Duozipper = (y, fn, { mx, lo, hi } = {}) => duozipper.bind({ y, fn, mx, lo, hi });
-const Trizipper = (y, fn, { mx, lo, hi } = {}) => trizipper.bind({ y, fn, mx, lo, hi });
-const Quazipper = (y, fn, { mx, lo, hi } = {}) => quazipper.bind({ y, fn, mx, lo, hi });
-
-const zipper = (ma, mb, y, fn, hi) => duozipper.call({ y, fn, hi }, ma, mb);
-
-const mutazip = (mx, mb, y, fn, hi) => { return duozipper.call({ y, fn, mx, hi }, mx, mb) };
-
-const ColumnZipper = (y) => (ma, mb, fn, hi) => duozipper.call({ y, fn, hi }, ma, mb);
-
-const ColumnMutazip = (y) => (mx, mb, fn, hi) => duozipper.call({ y, fn, mx, hi }, mx, mb);
-
-function iterzip(ma, mb, y, action, hi) {
-  hi = hi ?? ma?.length;
+function iterzip(mxa, mxb, y, proc) {
+  const hi = mxa?.length
   for (let i = 0; i < hi; i++)
-    action(ma[i][y], mb[i][y], i);
+    proc(mxa[i][y], mxb[i][y], i)
   return void 0
 }
 
-export { ColumnMutazip, ColumnZipper, Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper };
+const mutazip = (mxa, mxb, y, pair) => {
+  const hi = mxa?.length
+  for (let i = 0; i < hi; i++)
+    mxa[i][y] = pair(mxa[i][y], mxb[i][y], i)
+  return mxa
+}
+
+const zip = (mxa, mxb, y, pair) => {
+  const hi = mxa?.length
+  const mx = draft(hi, y)
+  for (let i = 0; i < hi; i++)
+    mx[i][y] = pair(mxa[i][y], mxb[i][y], i)
+  return mx
+}
+
+function duozipper(mxa, mxb, y, pair) {
+  const hi = mxa?.length
+  const mx = draft(hi, y)
+  for (let i = 0; i < hi; i++)
+    mx[i][y] = pair(mxa[i][y], mxb[i][y], i)
+  return mx
+}
+
+function trizipper(mxa, mxb, mxc, y, pair) {
+  const hi = mxa?.length
+  const mx = draft(hi, y)
+  for (let i = 0; i < hi; i++)
+    mx[i][y] = pair(mxa[i][y], mxb[i][y], mxc[i][y], i)
+  return mx
+}
+
+function quazipper(mxa, mxb, mxc, mxd, y, pair) {
+  const hi = mxa?.length
+  const mx = draft(hi, y)
+  for (let i = 0; i < hi; i++)
+    mx[i][y] = pair(mxa[i][y], mxb[i][y], mxc[i][y], mxd[i][y], i)
+  return mx
+}
+
+export { duozipper, iterzip, mutazip, quazipper, trizipper, zip, zip as zipper }

@@ -1,33 +1,33 @@
-import { strategies } from '@valjoux/strategies'
-import {decoCrostab} from '@spare/logger'
-import { mapper } from '@vect/vector-mapper'
-import { zipper } from '@vect/matrix-zipper'
-import { size }   from '@vect/matrix-index'
+import { decoCrostab } from '@spare/logger'
+import { strategies }  from '@valjoux/strategies'
+import { size }        from '@vect/matrix-index'
+import { zipper }      from '@vect/matrix-zipper'
+import { mapper }      from '@vect/vector-mapper'
 
 const alpha = [
-  [1, 0, 0],
-  [1, 0, 0],
-  [1, 0, 0],
+  [ 1, 0, 0 ],
+  [ 1, 0, 0 ],
+  [ 1, 0, 0 ],
 ]
 const beta = [
-  [0, 2, 0],
-  [0, 2, 0],
-  [0, 2, 0],
+  [ 0, 2, 0 ],
+  [ 0, 2, 0 ],
+  [ 0, 2, 0 ],
 ]
 const gamma = [
-  [0, 0, 3],
-  [0, 0, 3],
-  [0, 0, 3],
+  [ 0, 0, 3 ],
+  [ 0, 0, 3 ],
+  [ 0, 0, 3 ],
 ]
 const delta = [
-  [1, 2, 3],
-  [1, 2, 3],
-  [1, 2, 3],
+  [ 1, 2, 3 ],
+  [ 1, 2, 3 ],
+  [ 1, 2, 3 ],
 ]
 
-function duozipperFut (xa, xb) {
+function duozipperFut(xa, xb) {
   let zipper = this
-  let [ht, wd] = size(xa)
+  let [ ht, wd ] = size(xa)
   const mx = Array(ht)
   for (let i = 0, j, tr, ra, rb; i < ht; i++) {
     (ra = xa[i] , rb = xb[i])
@@ -40,7 +40,7 @@ function duozipperFut (xa, xb) {
 const seriesZipper = function (...matrices) {
   const { zipper } = this
   const l = matrices.length
-  const [ht, wd] = size(matrices[0])
+  const [ ht, wd ] = size(matrices[0])
   const mx = Array(ht)
   for (let i = 0, j, r, rs; i < ht; i++) {
     rs = mapper(matrices, mx => mx[i], l)
@@ -51,19 +51,19 @@ const seriesZipper = function (...matrices) {
 }
 
 export class SeriesZipperStrategies {
-  static test () {
+  static test() {
     const { lapse, result } = strategies({
       repeat: 1E+6,
       candidates: {
-        simple: [alpha, beta],
-        again: [gamma, delta],
-        third: [alpha, gamma],
+        simple: [ alpha, beta ],
+        again: [ gamma, delta ],
+        third: [ alpha, gamma ],
       },
       methods: {
         duozip: (xa, xb) => zipper(xa, xb, (a, b) => a + b),
         duozipperFut: duozipperFut.bind((a, b) => a + b),
-        seriesZipper: seriesZipper.bind({ zipper: (a, b) => a + b })
-      }
+        seriesZipper: seriesZipper.bind({ zipper: (a, b) => a + b }),
+      },
     })
     'lapse' |> console.log
     lapse |> decoCrostab |> console.log

@@ -9,6 +9,6 @@ import { zipper as zipVec } from '@vect/vector-zipper'
  * @returns {*[]}
  */
 export const zipper = (ma, mb, fn) => {
-  const [ht, wd] = size(ma)
+  const [ ht, wd ] = size(ma)
   return zipVec(ma, mb, (ra, rb, i) => zipVec(ra, rb, (x, y, j) => fn(x, y, i, j), wd), ht)
 }

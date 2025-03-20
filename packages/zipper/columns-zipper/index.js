@@ -1,19 +1,21 @@
-import { Columns } from '@vect/column-getter';
+import { Columns } from '@vect/column-getter'
 
-const zipper = (ma, mb, zipOnColumns, h, w) => {
-  h = h || ma?.length, w = w || h && ma[0]?.length;
-  const banner = Array(w);
-  for (let c = 0, ca = Columns(ma), cb = Columns(mb); c < w; c++)
-    banner[c] = zipOnColumns(ca(c, h), cb(c, h), c);
-  return banner
-};
+const zip = (mxa, mxb, pairCol) => {
+  const ht = mxa?.length
+  const wd = ht && mxa[0]?.length
+  const result = Array(wd)
+  for (let col = 0, ca = Columns(mxa), cb = Columns(mxb); col < wd; col++)
+    result[col] = pairCol(ca(col, ht), cb(col, ht), col)
+  return result
+}
 
-const zipperBand = (mx, band, zipColBand, h, w) => {
-  h = h || mx?.length, w = w || h && mx[0]?.length;
-  const vec = Array(w);
-  for (let ci = 0, columns = Columns(mx); ci < w; ci++)
-    vec[ci] = zipColBand(columns(ci, h), band, ci);
-  return vec
-};
+const zipValue = (mx, value, pairCol) => {
+  const ht = mx?.length
+  const wd = ht && mx[0]?.length
+  const result = Array(wd)
+  for (let col = 0, columns = Columns(mx); col < wd; col++)
+    result[col] = pairCol(columns(col, ht), value, col)
+  return result
+}
 
-export { zipper, zipperBand };
+export { zip, zipValue as zipBand, zipValue, zip as zipper }

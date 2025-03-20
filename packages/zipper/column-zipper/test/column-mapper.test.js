@@ -9,7 +9,7 @@ SimpleMatrixCollection |> Deco({ vo: 1 }) |> says['original']
 const mb = [
   [ 0, 0, 0, 0 ],
   [ 0, 0, 0, 0 ],
-  [ 0, 0, 0, 0 ]
+  [ 0, 0, 0, 0 ],
 ]
 
 class ColumnZipperTest {
@@ -26,17 +26,17 @@ class ColumnZipperTest {
     const m0 = [
       [ 0, 0, 0, 0 ],
       [ 0, 0, 0, 0 ],
-      [ 0, 0, 0, 0 ]
+      [ 0, 0, 0, 0 ],
     ]
     const ma = [
       [ 1, 2, 3, 4 ],
       [ 1, 2, 3, 4 ],
-      [ 1, 2, 3, 4 ]
+      [ 1, 2, 3, 4 ],
     ]
     const mb = [
       [ 1, 1, 1, 1 ],
       [ 2, 2, 2, 2 ],
-      [ 3, 3, 3, 3 ]
+      [ 3, 3, 3, 3 ],
     ]
     Duozipper(1, (a, b) => a + b, { mx: m0 })(m0, ma) |> delogger
     const decoX = DecoMatrix({ direct: 0 })

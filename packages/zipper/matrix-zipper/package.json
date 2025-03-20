@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-zipper",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Zip function",
   "type": "module",
   "exports": "./index.js",

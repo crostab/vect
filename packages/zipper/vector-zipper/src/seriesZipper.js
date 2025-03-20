@@ -1,24 +1,20 @@
-export function duozipper(a, b) {
-  let { fn, hi, lo } = this
-  const zip = Array(hi = hi ?? a?.length)
-  for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], i)
-  return zip
+export function duozipper(vca, vcb, pair) {
+  const hi = vca?.length
+  const vec = Array(hi)
+  for (let i = 0; i < hi; i++) vec[i] = pair(vca[i], vcb[i], i)
+  return vec
 }
 
-export function trizipper(a, b, c) {
-  let { fn, hi, lo } = this
-  const zip = Array(hi = hi ?? a?.length)
-  for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], i)
-  return zip
+export function trizipper(vca, vcb, vcc, pair) {
+  const hi = vca?.length
+  const vec = Array(hi)
+  for (let i = 0; i < hi; i++) vec[i] = pair(vca[i], vcb[i], vcc[i], i)
+  return vec
 }
 
-export function quazipper(a, b, c, d) {
-  let { fn, hi, lo } = this
-  const zip = Array(hi = hi ?? a?.length)
-  for (let i = lo ?? 0; i < hi; i++) zip[i] = fn(a[i], b[i], c[i], d[i], i)
-  return zip
+export function quazipper(vca, vcb, vcc, vcd, pair) {
+  const hi = vca?.length
+  const vec = Array(hi)
+  for (let i = 0; i < hi; i++) vec[i] = pair(vca[i], vcb[i], vcc[i], vcd[i], i)
+  return vec
 }
-
-export const Duozipper = (fn, lo, hi) => duozipper.bind({ fn, hi, lo })
-export const Trizipper = (fn, lo, hi) => trizipper.bind({ fn, hi, lo })
-export const Quazipper = (fn, lo, hi) => quazipper.bind({ fn, hi, lo })

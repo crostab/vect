@@ -1,30 +1,30 @@
 import { decoCrostab }            from '@spare/logger'
 import { strategies }             from '@valjoux/strategies'
-import { mapper as mapperMatrix } from '@vect/matrix-mapper'
 import { size }                   from '@vect/matrix-index'
+import { mapper as mapperMatrix } from '@vect/matrix-mapper'
 import { mapper as mapperVector } from '@vect/vector-mapper'
 import { Duozipper, Quazipper }   from '../../src/seriesZipper.js'
 import { zipper }                 from '../../src/zipper.js'
 
 const alpha = [
-  [1, 0, 0],
-  [1, 0, 0],
-  [1, 0, 0],
+  [ 1, 0, 0 ],
+  [ 1, 0, 0 ],
+  [ 1, 0, 0 ],
 ]
 const beta = [
-  [0, 2, 0],
-  [0, 2, 0],
-  [0, 2, 0],
+  [ 0, 2, 0 ],
+  [ 0, 2, 0 ],
+  [ 0, 2, 0 ],
 ]
 const gamma = [
-  [0, 0, 3],
-  [0, 0, 3],
-  [0, 0, 3],
+  [ 0, 0, 3 ],
+  [ 0, 0, 3 ],
+  [ 0, 0, 3 ],
 ]
 const delta = [
-  [1, 2, 3],
-  [1, 2, 3],
-  [1, 2, 3],
+  [ 1, 2, 3 ],
+  [ 1, 2, 3 ],
+  [ 1, 2, 3 ],
 ]
 
 const edge = function (xa, xb, xc, xd) {
@@ -40,7 +40,7 @@ const dev = function (...xos) {
 const series = function (...matrices) {
   const { zipper } = this
   const l = matrices.length
-  const [ht, wd] = size(matrices[0])
+  const [ ht, wd ] = size(matrices[0])
   const mx = Array(ht)
   for (let i = 0, j, r, rs; i < ht; i++) {
     rs = mapperVector(matrices, mx => mx[i], l)
@@ -53,7 +53,7 @@ const series = function (...matrices) {
 const seriesDev = function (...matrices) {
   const { zipper, matrix } = this
   const l = matrices.length
-  const [ht, wd] = size(matrix)
+  const [ ht, wd ] = size(matrix)
   for (let i = 0, j, r, rs; i < ht; i++) {
     rs = mapperVector(matrices, x => x[i], l)
     for (j = 0, r = matrix[i]; j < wd; j++)
@@ -62,20 +62,20 @@ const seriesDev = function (...matrices) {
   return matrix
 }
 
-const skeleton = [[, , ,], [, , ,], [, , ,]]
+const skeleton = [ [ , ,  ], [ , ,  ], [ , ,  ] ]
 const aggregate = (a, b, c, d) => a + b + c + d
 
 export class SeriesZipperStrategies {
-  static test () {
+  static test() {
     const { lapse, result } = strategies({
       repeat: 4E+5,
       candidates: {
-        simple: [alpha, beta, gamma, delta],
-        again: [alpha, beta, gamma, delta],
-        third: [alpha, beta, gamma, delta],
+        simple: [ alpha, beta, gamma, delta ],
+        again: [ alpha, beta, gamma, delta ],
+        third: [ alpha, beta, gamma, delta ],
       },
       methods: {
-        bench: (a, b, c, d) => [a[0], b[1], c[2], d[3]],
+        bench: (a, b, c, d) => [ a[0], b[1], c[2], d[3] ],
         reduce: (...matrices) => matrices.reduce((xa, xb) => zipper(xa, xb, (a, b) => a + b)),
         duozipper: Duozipper((a, b) => a + b),
         quazipper: Quazipper(aggregate),
@@ -83,7 +83,7 @@ export class SeriesZipperStrategies {
         dev: dev.bind({ mapper: mapperMatrix, zipper: aggregate, matrix: skeleton }),
         series: series.bind({ zipper: aggregate }),
         seriesDev: seriesDev.bind({ zipper: aggregate, matrix: skeleton }),
-      }
+      },
     })
     'lapse' |> console.log
     lapse |> decoCrostab |> console.log
