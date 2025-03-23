@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-mapper",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Iterate through a list of entries, with returned value or without returned value, or iterate using generator.",
   "type": "module",
   "exports": "./index.js",

@@ -1,5 +1,5 @@
-export { Duozipper, Quazipper, Trizipper, duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/matrix-zipper';
 export { entries, entriesBy, entriesOf, entriesTo, entryIndexed, entryIndexedBy, entryIndexedOf, entryIndexedTo, indexed, indexedBy, indexedOf, indexedTo, iterate, mapper, mutate, points, pointsBy, pointsOf, pointsTo, rows, rowsBy, rowsOf, rowsTo, selectMutate, tripletIndexed, tripletIndexedBy, tripletIndexedOf, tripletIndexedTo, triplets, tripletsBy, tripletsOf, tripletsTo } from '@vect/matrix-mapper';
+export { duozipper, iterzip, mutazip, quazipper, trizipper, zipper } from '@vect/matrix-zipper';
 export { columns, columnsBy, columnsIterate, columnsMapper, columnsOf, columnsTo } from '@vect/columns-mapper';
 export { draft, init, iso, product, shallow } from '@vect/matrix-init';
 export { every, some } from '@vect/matrix-quantifier';

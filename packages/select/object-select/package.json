@@ -1,6 +1,6 @@
 {
   "name": "@vect/object-select",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Select from object/array",
   "type": "module",
   "exports": "./index.js",
