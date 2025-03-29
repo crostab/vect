@@ -1,6 +1,6 @@
 {
   "name": "@vect/columns-mapper",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Iterate through columns of an 2d-array(matrix), with returned value or without returned value, or iterate using generator.",
   "type": "module",
   "exports": "./index.js",
@@ -18,8 +18,6 @@
     "test": "node -r @babel/register test/columns-mapper.test.js"
   },
   "dependencies": {
-    "@vect/column-getter": "^0.6.13",
-    "@vect/column-mapper": "workspace:^",
     "@vect/matrix-index": "workspace:^"
   },
   "repository": {

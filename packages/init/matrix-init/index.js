@@ -1,5 +1,3 @@
-import { nullish } from '@typen/nullish';
-
 function draft(h, w) {
   const mx = Array(h);
   for (--h; h >= 0; h--) mx[h] = Array(w);
@@ -44,7 +42,7 @@ function reshape(vec, h, w) {
 
 /** @deprecated */
 function starter(h = 1, w = 1, { value, fn }) {
-  if (!nullish(value)) return iso(h, w, value)
+  if (value !== undefined && value !== null) return iso(h, w, value)
   if (fn) return init(h, w, fn)
   return draft(h, w)
 }

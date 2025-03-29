@@ -23,26 +23,38 @@ export function init(size, to) {
   return Array(size).fill(null).map((_, i) => to(i))
 }
 
-export function collect(key, size) {
+
+/**
+ * @param {string} key - The key to access the value from the object.
+ * @param {number} [size] - The size of the array to create.
+ * @returns {*[]}
+ * @this {Object}
+ * renamed from 'collect'
+ */
+export function aug(key, size) {
   const vec = Array(size)
   for (let i = 0; i < size; i++) vec[i] = this[key]
   return vec
 }
 
-export function gather(iter) {
-  const vec = Array()
+export function collect(iter) {
+  const vec = []
   for (let x of iter) vec.push(x)
   return vec
 }
 
-export function tap(...list) {
-  const vec = Array(list.length)
-  for (let x of list) if (!nullish(x)) vec.push(x)
+export { collect as gather }
+
+export function tap(...any) {
+  const vec = [], hi = any.length
+  for (let x, i = 0; i < hi; i++)
+    if ((x = any[i]) !== null && x !== undefined)
+      vec.push(x)
   return vec
 }
 
 export function seq(size, fn, digit) {
-  if (!nullish(digit)) return seqTrimDigit(size, fn, digit)
+  if (digit !== undefined && digit !== null) return seqTrimDigit(size, fn, digit)
   const vec = Array(size)
   for (let i = 0; i < size; i++) vec[i] = fn(i)
   return vec
@@ -83,5 +95,3 @@ export class Range {
 }
 
 export function range(lo, hi) { return new Range(lo, hi) }
-
-

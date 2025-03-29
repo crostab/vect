@@ -1,7 +1,7 @@
 import { nullish } from '@typen/nullish';
 import { round } from '@aryth/math';
 
-function trimDigit (n) { return round(n * this.m) / this.m }
+function trimDigit(n) { return round(n * this.m) / this.m }
 
 /**
  *
@@ -44,26 +44,36 @@ function init(size, to) {
   return Array(size).fill(null).map((_, i) => to(i))
 }
 
-function collect(key, size) {
+
+/**
+ * @param {string} key - The key to access the value from the object.
+ * @param {number} [size] - The size of the array to create.
+ * @returns {*[]}
+ * @this {Object}
+ * renamed from 'collect'
+ */
+function aug(key, size) {
   const vec = Array(size);
   for (let i = 0; i < size; i++) vec[i] = this[key];
   return vec
 }
 
-function gather(iter) {
-  const vec = Array();
+function collect(iter) {
+  const vec = [];
   for (let x of iter) vec.push(x);
   return vec
 }
 
-function tap(...list) {
-  const vec = Array(list.length);
-  for (let x of list) if (!nullish(x)) vec.push(x);
+function tap(...any) {
+  const vec = [], hi = any.length;
+  for (let x, i = 0; i < hi; i++)
+    if ((x = any[i]) !== null && x !== undefined)
+      vec.push(x);
   return vec
 }
 
 function seq(size, fn, digit) {
-  if (!nullish(digit)) return seqTrimDigit(size, fn, digit)
+  if (digit !== undefined && digit !== null) return seqTrimDigit(size, fn, digit)
   const vec = Array(size);
   for (let i = 0; i < size; i++) vec[i] = fn(i);
   return vec
@@ -105,4 +115,4 @@ class Range {
 
 function range(lo, hi) { return new Range(lo, hi) }
 
-export { Range, collect, draft, gather, indexes, init, iso, range, seq, tap };
+export { Range, aug, collect, draft, collect as gather, indexes, init, iso, range, seq, tap };

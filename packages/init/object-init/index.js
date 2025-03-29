@@ -7,7 +7,7 @@ import { FUN } from '@typen/enum-data-types';
  */
 const ob = (...entries) => {
   let o = {};
-  for (let [k, v] of entries) o[k] = v;
+  for (let [ k, v ] of entries) o[k] = v;
   return o
 };
 
@@ -47,7 +47,7 @@ const init = (vec, fn) => {
 
 const gather = (iter) => {
   let o = {};
-  for (let [k, v] of iter) o[k] = v;
+  for (let [ k, v ] of iter) o[k] = v;
   return o
 };
 
@@ -58,7 +58,7 @@ const gather = (iter) => {
  */
 const entriesToObject = (entries) => {
   let o = {};
-  for (let [k, v] of entries) o[k] = v;
+  for (let [ k, v ] of entries) o[k] = v;
   return o
 };
 
@@ -70,7 +70,7 @@ const vectorToObject = (vec, fn) => {
 
 const initByValues = (entries, fn) => {
   let o = {};
-  for (let [k, v] of entries) o[k] = fn(v);
+  for (let [ k, v ] of entries) o[k] = fn(v);
   return o
 };
 

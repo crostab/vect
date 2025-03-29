@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-mapper",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Iterate through a 2d-array(matrix), with returned value or without returned value, or iterate using generator.",
   "type": "module",
   "exports": "./index.js",
@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@vect/columns-mapper": "workspace:^",
-    "@vect/matrix-index": "workspace:^",
     "@vect/vector-mapper": "workspace:^"
   },
   "publishConfig": {

@@ -1,6 +1,6 @@
 import { round } from '@aryth/math'
 
-function trimDigit (n) { return round(n * this.m) / this.m }
+function trimDigit(n) { return round(n * this.m) / this.m }
 
 /**
  *

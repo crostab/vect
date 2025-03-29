@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "@acq/path": "^0.4.0",
-    "@analys/crostab": "^0.7.3",
-    "@aryth/rand": "^0.7.7",
+    "@analys/crostab": "^0.7.4",
+    "@aryth/rand": "^0.7.8",
     "@changesets/cli": "^2.28.1",
     "@foba/foo": "^0.6.1",
     "@foba/matrix": "^0.6.1",
@@ -27,13 +27,13 @@
     "@foba/vector": "^0.6.1",
     "@foba/vector-number": "^0.6.1",
     "@rollup/plugin-json": "^6.0.0",
-    "@spare/deco": "^0.16.23",
-    "@spare/logger": "^0.16.23",
-    "@spare/xr": "^0.16.23",
+    "@spare/deco": "^0.16.26",
+    "@spare/logger": "^0.16.26",
+    "@spare/xr": "^0.16.26",
     "@typen/num-strict": "^0.2.0",
-    "@valjoux/strategies": "^0.4.1",
-    "@valjoux/timestamp-pretty": "^0.4.1",
-    "rollup": "^4.36.0",
+    "@valjoux/strategies": "^0.4.4",
+    "@valjoux/timestamp-pretty": "^0.4.4",
+    "rollup": "^4.37.0",
     "rollup-plugin-fileinfo": "^0.3.8"
   }
 }

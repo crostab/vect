@@ -1,6 +1,6 @@
 {
   "name": "@vect/vector",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Util for array",
   "type": "module",
   "exports": "./index.js",

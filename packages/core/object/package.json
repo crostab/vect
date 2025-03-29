@@ -1,6 +1,6 @@
 {
   "name": "@vect/object",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Util for object",
   "type": "module",
   "exports": "./index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix-init",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "An array util tool",
   "type": "module",
   "exports": "./index.js",
@@ -18,7 +18,6 @@
     "test": "node -r @babel/register test/matrix-init.test.js"
   },
   "dependencies": {
-    "@typen/nullish": "^0.2.0"
   },
   "repository": {
     "type": "git",

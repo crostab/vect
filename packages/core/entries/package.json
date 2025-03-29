@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Util for array",
   "type": "module",
   "exports": "./index.js",
@@ -18,7 +18,6 @@
     "@vect/entries-init": "workspace:^",
     "@vect/entries-mapper": "workspace:^",
     "@vect/entries-margin": "^0.6.13",
-    "@vect/entries-unwind": "^0.6.13",
     "@vect/entries-zipper": "workspace:^"
   },
   "scripts": {

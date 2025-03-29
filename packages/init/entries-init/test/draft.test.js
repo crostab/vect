@@ -1,4 +1,4 @@
-import { test } from 'node:test'
+import { test }  from 'node:test'
 import { draft } from '../src/index.js'
 
 test('draft test', () => {

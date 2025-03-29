@@ -1,6 +1,6 @@
 {
   "name": "@vect/entries-init",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "An array util tool",
   "type": "module",
   "exports": "./index.js",
@@ -18,8 +18,7 @@
     "test": "node -r @babel/register test/entries-init.test.js"
   },
   "dependencies": {
-    "@vect/vector-mapper": "workspace:^",
-    "@vect/vector-zipper": "workspace:^"
+    "@vect/vector-mapper": "workspace:^"
   },
   "repository": {
     "type": "git",

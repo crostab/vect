@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Util for 2d-array",
   "type": "module",
   "exports": "./index.js",
@@ -22,7 +22,6 @@
     "@vect/columns-mapper": "workspace:^",
     "@vect/columns-select": "workspace:^",
     "@vect/columns-update": "workspace:^",
-    "@vect/enum-matrix-directions": "^0.6.13",
     "@vect/matrix-algebra": "workspace:^",
     "@vect/matrix-index": "workspace:^",
     "@vect/matrix-indicator": "^0.6.13",
@@ -30,10 +29,7 @@
     "@vect/matrix-mapper": "workspace:^",
     "@vect/matrix-margin": "^0.6.13",
     "@vect/matrix-quantifier": "^0.6.13",
-    "@vect/matrix-transpose": "^0.6.13",
-    "@vect/matrix-zipper": "workspace:^",
-    "@vect/vector-index": "workspace:^",
-    "@vect/vector-mapper": "workspace:^"
+    "@vect/matrix-zipper": "workspace:^"
   },
   "repository": {
     "type": "git",
