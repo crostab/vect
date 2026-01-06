@@ -1,6 +1,6 @@
 {
   "name": "@vect/matrix",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "Util for 2d-array",
   "type": "module",
   "exports": "./index.js",

@@ -20,3 +20,4 @@ test('distinct', () => {
   console.log(distinctTo(list, x => x % 3))
   console.log(distinct(list, x => x % 3 === 0, x => x * 2))
 })
+
