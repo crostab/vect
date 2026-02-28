@@ -33,7 +33,7 @@
     "@typen/num-strict": "^0.2.0",
     "@valjoux/strategies": "^0.4.4",
     "@valjoux/timestamp-pretty": "^0.4.4",
-    "rollup": "^4.55.1",
+    "rollup": "^4.59.0",
     "rollup-plugin-fileinfo": "^0.3.8"
   }
 }
